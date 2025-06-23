@@ -98,14 +98,14 @@ const Industries = () => {
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#001153] via-[#1a2a6b] to-[#334380] opacity-95">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-50 mb-4">
             Industries We Serve
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-50 max-w-3xl mx-auto">
             Tailored solutions for your industry's unique challenges
           </p>
         </div>
@@ -115,11 +115,13 @@ const Industries = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`${industry.gradient} rounded-lg p-4 text-white shadow-sm hover:-translate-y-1 duration-500 transition-transform`}
+              className={`${industry.gradient} rounded-lg p-4 text-white shadow-sm hover:-translate-y-2 duration-500 transition-transform`}
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mb-3">
-                  <span className="text-lg text-blue-600">{industry.icon}</span>
+                  <span className="text-lg text-blue-600">
+                    {industry.icon}
+                  </span>
                 </div>
                 <h3 className="font-medium text-sm md:text-base">
                   {industry.name}
