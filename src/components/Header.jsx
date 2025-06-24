@@ -245,7 +245,7 @@ const Header = () => {
                               </svg>
                             </button>
                             <div
-                              className="absolute left-full top-0 ml-1 w-56 rounded-md shadow-lg py-1 z-50"
+                              className="absolute left-full top-0 w-56 rounded-md shadow-lg py-1 z-50"
                               style={{
                                 backgroundColor: colors.white,
                                 boxShadow: `0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,

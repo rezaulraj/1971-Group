@@ -195,7 +195,7 @@ const Benefits = () => {
                 y: -8,
                 transition: { duration: 0.3 },
               }}
-              className={`bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border-l-4 border-t-4 ${benefit.borderColor} shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col`}
+              className={`bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col`}
             >
               <div
                 className={`flex items-center justify-center w-12 h-12 mb-4 rounded-lg ${benefit.iconColor} bg-white/5`}

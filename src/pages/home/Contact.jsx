@@ -6,6 +6,7 @@ import {
   FaMapMarkerAlt,
   FaPaperPlane,
   FaCheck,
+  FaArrowRight,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -243,6 +244,15 @@ const Contact = () => {
                       </p>
                     </div>
                   </div>
+                </div>
+                <div className="mt-6">
+                  <button
+                    className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-br from-blue-500 bg-purple-700 transition-all duration-300 text-white cursor-pointer hover:shadow-lg hover:scale-105"
+                    
+                  >
+                    Book a Call
+                    <FaArrowRight className="ml-2 animate-pulse" />
+                  </button>
                 </div>
               </div>
             </motion.div>
