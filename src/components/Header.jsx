@@ -176,7 +176,7 @@ const Header = () => {
                 onMouseLeave={closeAllDropdowns}
               >
                 <button
-                  className={`px-3 py-2 rounded-md text-sm lg:text-base font-medium ${
+                  className={`px-3 py-2 rounded-md text-sm lg:text-lg font-medium font-lato text-gray-300 ${
                     activeDropdown === index
                       ? `text-white bg-primaryLight`
                       : `text-gray-100 hover:text-white hover:bg-primaryLight`

@@ -27,7 +27,7 @@ const HeroHome = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Main Hero Section */}
-      <section className="relative pt-24 pb-0 md:pt-32 lg:pt-40">
+      <section className="relative pt-16 pb-0 md:pt-24 lg:pt-30">
         {/* Gradient Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-[#001153] via-[#1a2a6b] to-[#334380] opacity-95"></div>
