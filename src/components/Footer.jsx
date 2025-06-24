@@ -7,7 +7,6 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { SiVisa, SiMastercard, SiBitcoin } from "react-icons/si";
-import logowhite from "/logowt.png";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-8">
