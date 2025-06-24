@@ -6,7 +6,8 @@ import Industries from "../../home/Industies";
 import WhyUs from "../../home/WhyUs";
 import Benefits from "./Benefits";
 import SecretSauce from "./SecretSauce";
-
+import CaseStudies from "./CaseStudies";
+import Contact from "../../home/Contact"
 const AllServicePage = () => {
   return (
     <div className="min-h-screen">
@@ -17,6 +18,8 @@ const AllServicePage = () => {
       <WhyUs />
       <Benefits />
       <SecretSauce />
+      <CaseStudies />
+      <Contact />
     </div>
   );
 };
