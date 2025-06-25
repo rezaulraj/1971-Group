@@ -137,7 +137,7 @@ const WhyUs = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose Us?
+            Our Global Reach
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Whether you're building a team from scratch or need help with

@@ -44,15 +44,15 @@ const Header = () => {
         },
         {
           level: "Hr",
-          path: "/hr",
+          path: "/hr-services",
         },
         {
           level: "Staffing",
-          path: "/staffing",
+          path: "/staffing-services",
         },
         {
           level: "Subscription",
-          path: "/subscription",
+          path: "/subscription-services",
         },
       ],
     },

@@ -5,6 +5,9 @@ import NotFound from "./components/NotFound";
 import AllServicePage from "./pages/services/all-services/AllServicePage";
 import HourlyRecruiting from "./pages/services/hourly-recruiting/HourlyRecruiting";
 import PayPerHiar from "./pages/services/pay-per-hire/PayPerHiar";
+import HRPage from "./pages/services/hr/HRPage";
+import StaffingPage from "./pages/services/staffing/StaffingPage";
+import SubscriptionPage from "./pages/services/subscription/SubscriptionPage";
 function App() {
   return (
     <>
@@ -14,6 +17,9 @@ function App() {
           <Route path="/all-services" element={<AllServicePage />} />
           <Route path="/hourly-recruiting" element={<HourlyRecruiting />} />
           <Route path="/pay-par-hire" element={<PayPerHiar />} />
+          <Route path="/hr-services" element={<HRPage />} />
+          <Route path="/staffing-services" element={<StaffingPage />} />
+          <Route path="/subscription-services" element={<SubscriptionPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
