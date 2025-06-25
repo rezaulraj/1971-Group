@@ -172,120 +172,133 @@ const Header = () => {
               <div
                 key={index}
                 className="relative group"
-                onMouseEnter={() => toggleDropdown(index)}
-                onMouseLeave={closeAllDropdowns}
+                onMouseEnter={() => item.subNavs && toggleDropdown(index)}
+                onMouseLeave={item.subNavs ? closeAllDropdowns : undefined}
               >
-                <button
-                  className={`px-3 py-2 rounded-md text-sm lg:text-lg font-medium font-lato text-gray-300 ${
-                    activeDropdown === index
-                      ? `text-white bg-primaryLight`
-                      : `text-gray-100 hover:text-white hover:bg-primaryLight`
-                  } transition-all duration-300 flex items-center`}
-                  style={{
-                    fontFamily: "'Lato', sans-serif",
-                    fontWeight: 500,
-                  }}
-                  onClick={() =>
-                    item.subNavs ? toggleDropdown(index) : closeAllDropdowns()
-                  }
-                >
-                  {item.level}
-                  {item.subNavs && (
-                    <svg
-                      className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                        activeDropdown === index ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  )}
-                </button>
-
-                {item.subNavs && activeDropdown === index && (
-                  <div
-                    className="absolute left-0 w-56 rounded-md shadow-lg py-1 z-50"
+                {item.path ? (
+                  <a
+                    href={item.path}
+                    className={`px-3 py-2 rounded-md text-sm lg:text-lg font-medium font-lato text-gray-300 hover:text-white hover:bg-primaryLight transition-all duration-300 flex items-center`}
                     style={{
-                      backgroundColor: colors.white,
-                      boxShadow: `0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,
-                      border: `1px solid ${colors.mediumGray}`,
+                      fontFamily: "'Lato', sans-serif",
+                      fontWeight: 500,
                     }}
                   >
-                    {item.subNavs.map((subItem, subIndex) => (
-                      <div key={subIndex}>
-                        {subItem.childNavs ? (
-                          <div className="relative">
-                            <button
-                              className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-100"
-                              style={{
-                                color: colors.text,
-                                transition: "all 0.3s ease",
-                              }}
-                            >
-                              <span>{subItem.level}</span>
-                              <svg
-                                className="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M9 5l7 7-7 7"
-                                />
-                              </svg>
-                            </button>
-                            <div
-                              className="absolute left-full top-0 w-56 rounded-md shadow-lg py-1 z-50"
-                              style={{
-                                backgroundColor: colors.white,
-                                boxShadow: `0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,
-                                border: `1px solid ${colors.mediumGray}`,
-                              }}
-                            >
-                              {subItem.childNavs.map(
-                                (childItem, childIndex) => (
-                                  <a
-                                    key={childIndex}
-                                    href={childItem.path}
-                                    className="block px-4 py-2 text-sm hover:bg-gray-100"
-                                    style={{
-                                      color: colors.text,
-                                      transition: "all 0.3s ease",
-                                      fontFamily: "'Poppins', sans-serif",
-                                    }}
+                    {item.level}
+                  </a>
+                ) : (
+                  <>
+                    <button
+                      className={`px-3 py-2 rounded-md text-sm lg:text-lg font-medium font-lato text-gray-300 ${
+                        activeDropdown === index
+                          ? `text-white bg-primaryLight`
+                          : `text-gray-100 hover:text-white hover:bg-primaryLight`
+                      } transition-all duration-300 flex items-center`}
+                      style={{
+                        fontFamily: "'Lato', sans-serif",
+                        fontWeight: 500,
+                      }}
+                      onClick={() => toggleDropdown(index)}
+                    >
+                      {item.level}
+                      {item.subNavs && (
+                        <svg
+                          className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                            activeDropdown === index ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      )}
+                    </button>
+
+                    {item.subNavs && activeDropdown === index && (
+                      <div
+                        className="absolute left-0 w-56 rounded-md shadow-lg py-1 z-50"
+                        style={{
+                          backgroundColor: colors.white,
+                          boxShadow: `0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,
+                          border: `1px solid ${colors.mediumGray}`,
+                        }}
+                      >
+                        {item.subNavs.map((subItem, subIndex) => (
+                          <div key={subIndex}>
+                            {subItem.childNavs ? (
+                              <div className="relative group">
+                                <button
+                                  className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-100"
+                                  style={{
+                                    color: colors.text,
+                                    transition: "all 0.3s ease",
+                                  }}
+                                >
+                                  <span>{subItem.level}</span>
+                                  <svg
+                                    className="h-4 w-4"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
                                   >
-                                    {childItem.level}
-                                  </a>
-                                )
-                              )}
-                            </div>
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M9 5l7 7-7 7"
+                                    />
+                                  </svg>
+                                </button>
+                                <div
+                                  className="absolute left-full top-0 hidden group-hover:block w-56 rounded-md shadow-lg py-1 z-50"
+                                  style={{
+                                    backgroundColor: colors.white,
+                                    boxShadow: `0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,
+                                    border: `1px solid ${colors.mediumGray}`,
+                                  }}
+                                >
+                                  {subItem.childNavs.map(
+                                    (childItem, childIndex) => (
+                                      <a
+                                        key={childIndex}
+                                        href={childItem.path}
+                                        className="block px-4 py-2 text-sm hover:bg-gray-100"
+                                        style={{
+                                          color: colors.text,
+                                          transition: "all 0.3s ease",
+                                          fontFamily: "'Poppins', sans-serif",
+                                        }}
+                                      >
+                                        {childItem.level}
+                                      </a>
+                                    )
+                                  )}
+                                </div>
+                              </div>
+                            ) : (
+                              <a
+                                href={subItem.path}
+                                className="block px-4 py-2 text-sm cursor-pointer hover:bg-gray-100"
+                                style={{
+                                  color: colors.text,
+                                  transition: "all 0.3s ease",
+                                  fontFamily: "'Poppins', sans-serif",
+                                }}
+                              >
+                                {subItem.level}
+                              </a>
+                            )}
                           </div>
-                        ) : (
-                          <a
-                            href={subItem.path}
-                            className="block px-4 py-2 text-sm cursor-pointer hover:bg-gray-100"
-                            style={{
-                              color: colors.text,
-                              transition: "all 0.3s ease",
-                              fontFamily: "'Poppins', sans-serif",
-                            }}
-                          >
-                            {subItem.level}
-                          </a>
-                        )}
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    )}
+                  </>
                 )}
               </div>
             ))}
@@ -303,10 +316,6 @@ const Header = () => {
                 border: `2px solid ${colors.secondary}`,
                 boxShadow: `0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)`,
                 transform: "translateY(0)",
-                ":hover": {
-                  backgroundColor: colors.secondaryLight,
-                  transform: "translateY(-2px)",
-                },
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = colors.secondaryLight;
@@ -334,120 +343,138 @@ const Header = () => {
           >
             {navItems.map((item, index) => (
               <div key={index} className="px-2 pt-2">
-                <button
-                  className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium ${
-                    activeDropdown === index
-                      ? `text-white bg-primaryLighter`
-                      : `text-gray-200 hover:text-white hover:bg-primaryLighter`
-                  }`}
-                  style={{
-                    transition: "all 0.3s ease",
-                    fontFamily: "'Poppins', sans-serif",
-                  }}
-                  onClick={() =>
-                    item.subNavs ? toggleDropdown(index) : closeAllDropdowns()
-                  }
-                >
-                  {item.level}
-                  {item.subNavs && (
-                    <svg
-                      className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                        activeDropdown === index ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  )}
-                </button>
-
-                {item.subNavs && activeDropdown === index && (
-                  <div
-                    className="pl-4 mt-1 space-y-1"
+                {item.path ? (
+                  <a
+                    href={item.path}
+                    className="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-primaryLighter"
                     style={{
-                      backgroundColor: colors.primaryLighter,
-                      borderRadius: "6px",
-                      padding: "8px",
+                      transition: "all 0.3s ease",
+                      fontFamily: "'Poppins', sans-serif",
                     }}
+                    onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.subNavs.map((subItem, subIndex) => (
-                      <div key={subIndex}>
-                        {subItem.childNavs ? (
-                          <div>
-                            <button
-                              className="w-full flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
-                              style={{
-                                transition: "all 0.3s ease",
-                                fontFamily: "'Poppins', sans-serif",
-                              }}
-                              onClick={() =>
-                                toggleDropdown(`${index}-${subIndex}`)
-                              }
-                            >
-                              {subItem.level}
-                              <svg
-                                className="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M9 5l7 7-7 7"
-                                />
-                              </svg>
-                            </button>
-                            {activeDropdown === `${index}-${subIndex}` && (
-                              <div
-                                className="pl-4 space-y-1"
-                                style={{
-                                  backgroundColor: colors.primary,
-                                  borderRadius: "4px",
-                                  padding: "6px",
-                                }}
-                              >
-                                {subItem.childNavs.map(
-                                  (childItem, childIndex) => (
-                                    <a
-                                      key={childIndex}
-                                      href={childItem.path}
-                                      className="block px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
-                                      style={{
-                                        transition: "all 0.3s ease",
-                                        fontFamily: "'Poppins', sans-serif",
-                                      }}
-                                    >
-                                      {childItem.level}
-                                    </a>
-                                  )
+                    {item.level}
+                  </a>
+                ) : (
+                  <>
+                    <button
+                      className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium ${
+                        activeDropdown === index
+                          ? `text-white bg-primaryLighter`
+                          : `text-gray-200 hover:text-white hover:bg-primaryLighter`
+                      }`}
+                      style={{
+                        transition: "all 0.3s ease",
+                        fontFamily: "'Poppins', sans-serif",
+                      }}
+                      onClick={() => toggleDropdown(index)}
+                    >
+                      {item.level}
+                      {item.subNavs && (
+                        <svg
+                          className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                            activeDropdown === index ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      )}
+                    </button>
+
+                    {item.subNavs && activeDropdown === index && (
+                      <div
+                        className="pl-4 mt-1 space-y-1"
+                        style={{
+                          backgroundColor: colors.primaryLighter,
+                          borderRadius: "6px",
+                          padding: "8px",
+                        }}
+                      >
+                        {item.subNavs.map((subItem, subIndex) => (
+                          <div key={subIndex}>
+                            {subItem.childNavs ? (
+                              <div>
+                                <button
+                                  className="w-full flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
+                                  style={{
+                                    transition: "all 0.3s ease",
+                                    fontFamily: "'Poppins', sans-serif",
+                                  }}
+                                  onClick={() =>
+                                    toggleDropdown(`${index}-${subIndex}`)
+                                  }
+                                >
+                                  {subItem.level}
+                                  <svg
+                                    className="h-4 w-4"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M9 5l7 7-7 7"
+                                    />
+                                  </svg>
+                                </button>
+                                {activeDropdown === `${index}-${subIndex}` && (
+                                  <div
+                                    className="pl-4 space-y-1"
+                                    style={{
+                                      backgroundColor: colors.primary,
+                                      borderRadius: "4px",
+                                      padding: "6px",
+                                    }}
+                                  >
+                                    {subItem.childNavs.map(
+                                      (childItem, childIndex) => (
+                                        <a
+                                          key={childIndex}
+                                          href={childItem.path}
+                                          className="block px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
+                                          style={{
+                                            transition: "all 0.3s ease",
+                                            fontFamily: "'Poppins', sans-serif",
+                                          }}
+                                          onClick={() =>
+                                            setMobileMenuOpen(false)
+                                          }
+                                        >
+                                          {childItem.level}
+                                        </a>
+                                      )
+                                    )}
+                                  </div>
                                 )}
                               </div>
+                            ) : (
+                              <a
+                                href={subItem.path}
+                                className="block px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
+                                style={{
+                                  transition: "all 0.3s ease",
+                                  fontFamily: "'Poppins', sans-serif",
+                                }}
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {subItem.level}
+                              </a>
                             )}
                           </div>
-                        ) : (
-                          <a
-                            href={subItem.path}
-                            className="block px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
-                            style={{
-                              transition: "all 0.3s ease",
-                              fontFamily: "'Poppins', sans-serif",
-                            }}
-                          >
-                            {subItem.level}
-                          </a>
-                        )}
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    )}
+                  </>
                 )}
               </div>
             ))}

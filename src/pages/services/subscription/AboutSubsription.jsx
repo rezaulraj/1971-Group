@@ -49,7 +49,7 @@ const subscriptionData = {
     {
       id: 1,
       icon: <FaMicrophone className="text-purple-500 text-2xl mr-3" />,
-      title: "Interview with OnHires' CEO",
+      title: "Interview with 1971 Group' CEO",
       subtitle:
         '"Inside Subscription-Based Hiring" — An exclusive conversation with Vasco Grieg on how subscription recruitment differs from traditional models:',
       content:

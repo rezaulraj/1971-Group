@@ -167,9 +167,6 @@ const Clients = () => {
               <div className="absolute -top-20 -left-20 w-40 h-40 bg-blue-400 rounded-full filter blur-[80px] opacity-20"></div>
 
               <div className="relative z-10">
-                <RiDoubleQuotesL className="text-blue-300/30 text-7xl absolute -top-2 -left-2" />
-                <RiDoubleQuotesR className="text-blue-300/30 text-7xl absolute -bottom-2 -right-2" />
-
                 <div className="pl-8">
                   <div className="flex mb-6">
                     {[...Array(5)].map((_, i) => (

@@ -8,6 +8,7 @@ import PayPerHiar from "./pages/services/pay-per-hire/PayPerHiar";
 import HRPage from "./pages/services/hr/HRPage";
 import StaffingPage from "./pages/services/staffing/StaffingPage";
 import SubscriptionPage from "./pages/services/subscription/SubscriptionPage";
+import Compnay from "./pages/company/Compnay";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/hr-services" element={<HRPage />} />
           <Route path="/staffing-services" element={<StaffingPage />} />
           <Route path="/subscription-services" element={<SubscriptionPage />} />
+          <Route path="/company" element={<Compnay />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
