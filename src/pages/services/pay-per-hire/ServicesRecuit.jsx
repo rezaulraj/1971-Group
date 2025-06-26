@@ -7,9 +7,9 @@ const ServicesRecuit = () => {
   const services = [
     {
       icon: <FiLayers className="w-6 h-6 text-blue-600" />,
-      title: "Limitless IT Recruitment with OnHires",
+      title: "Limitless IT Recruitment with 1971 group",
       description:
-        "At OnHires, we believe nothing is impossible—our expert team is equipped to handle even the most complex IT hiring challenges.",
+        "At 1971 group, we believe nothing is impossible—our expert team is equipped to handle even the most complex IT hiring challenges.",
       image: itservices,
       bg: "bg-blue-50",
     },

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import HeroBlog from "./HeroBlog";
+import Blogs from "./Blogs";
 
 const BlogPage = () => {
   return (
-    <div>BlogPage</div>
-  )
-}
+    <div className="min-h-screen">
+      <HeroBlog />
+      <Blogs />
+    </div>
+  );
+};
 
-export default BlogPage  
+export default BlogPage;

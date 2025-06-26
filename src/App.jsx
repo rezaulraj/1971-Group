@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Layout from "./components/Layout";
 import HomePage from "./pages/home/HomePage";
 import NotFound from "./components/NotFound";
@@ -9,22 +10,46 @@ import HRPage from "./pages/services/hr/HRPage";
 import StaffingPage from "./pages/services/staffing/StaffingPage";
 import SubscriptionPage from "./pages/services/subscription/SubscriptionPage";
 import Compnay from "./pages/company/Compnay";
+import BlogPage from "./pages/resources/blog/BlogPage";
+import BlogDetails from "./pages/resources/blog/BlogDetailes";
+import GuidePage from "./pages/resources/guide/GuidePage";
+import GuideDetails from "./pages/resources/guide/GuideDetails";
+
+// Scroll to top component
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/all-services" element={<AllServicePage />} />
-          <Route path="/hourly-recruiting" element={<HourlyRecruiting />} />
-          <Route path="/pay-par-hire" element={<PayPerHiar />} />
-          <Route path="/hr-services" element={<HRPage />} />
-          <Route path="/staffing-services" element={<StaffingPage />} />
-          <Route path="/subscription-services" element={<SubscriptionPage />} />
-          <Route path="/company" element={<Compnay />} />
+          <Route index element={<HomePage />} />
+          <Route path="recruitment-services" element={<AllServicePage />} />
+          <Route
+            path="hourly-recruiting-services"
+            element={<HourlyRecruiting />}
+          />
+          <Route path="pay-par-hire-services" element={<PayPerHiar />} />
+          <Route path="hr-services" element={<HRPage />} />
+          <Route path="staffing-services" element={<StaffingPage />} />
+          <Route path="subscription-services" element={<SubscriptionPage />} />
+          <Route path="company" element={<Compnay />} />
+          <Route path="blogs" element={<BlogPage />} />
+          <Route path="blogs/:slug" element={<BlogDetails />} />
+          <Route path="guides" element={<GuidePage />} />
+          <Route path="/guides/:slug" element={<GuideDetails />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      <ScrollToTop />
     </>
   );
 }

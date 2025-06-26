@@ -30,15 +30,15 @@ const Header = () => {
           childNavs: [
             {
               level: "All Services",
-              path: "/all-services",
+              path: "/recruitment-services",
             },
             {
               level: "Hourly Recruiting",
-              path: "/hourly-recruiting",
+              path: "/hourly-recruiting-services",
             },
             {
               level: "Pay Per Hire",
-              path: "/pay-par-hire",
+              path: "/pay-par-hire-services",
             },
           ],
         },
@@ -83,10 +83,6 @@ const Header = () => {
         {
           level: "Blog",
           path: "/blogs",
-        },
-        {
-          level: "Case Study",
-          path: "/case-study",
         },
         {
           level: "Guides",

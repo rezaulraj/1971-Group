@@ -9,7 +9,7 @@ const WhatWeDo = () => {
       description:
         "We provide full-cycle recruiting & HR services that are tailored to the business needs.",
       icon: <FaSearch className="text-xl" />,
-      link: "#",
+      link: "/recruitment-services",
       gradient:
         "linear-gradient(135deg, rgba(0,112,243,0.95) 0%, rgba(0,60,150,0.95) 100%)",
       borderColor: "#00b4d8",
@@ -22,7 +22,7 @@ const WhatWeDo = () => {
       description:
         "We help companies create a well-known brand that will stand out on the market and boost hiring metrics.",
       icon: <FaUserTie className="text-xl" />,
-      link: "#",
+      link: "/hr-services",
       gradient:
         "linear-gradient(135deg, rgba(131,58,180,0.95) 0%, rgba(81,29,124,0.95) 100%)",
       borderColor: "#c77dff",
@@ -35,7 +35,7 @@ const WhatWeDo = () => {
       description:
         "We provide staffing services for fast-growing companies and help to grow your team and increase the productivity.",
       icon: <FaHandshake className="text-xl" />,
-      link: "#",
+      link: "/staffing-services",
       gradient:
         "linear-gradient(135deg, rgba(0,180,216,0.95) 0%, rgba(0,95,115,0.95) 100%)",
       borderColor: "#48cae4",
