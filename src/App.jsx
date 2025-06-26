@@ -14,6 +14,7 @@ import BlogPage from "./pages/resources/blog/BlogPage";
 import BlogDetails from "./pages/resources/blog/BlogDetailes";
 import GuidePage from "./pages/resources/guide/GuidePage";
 import GuideDetails from "./pages/resources/guide/GuideDetails";
+import Web3Page from "./pages/industries/Web3Page";
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -46,6 +47,7 @@ function App() {
           <Route path="blogs/:slug" element={<BlogDetails />} />
           <Route path="guides" element={<GuidePage />} />
           <Route path="/guides/:slug" element={<GuideDetails />} />
+          <Route path="web3" element={<Web3Page />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

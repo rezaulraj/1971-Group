@@ -125,7 +125,7 @@ const Header = () => {
               <img
                 src={logo}
                 alt="1971 Group"
-                className="h-16 md:h-20 mb-4 md:mb-0 filter -brightness-50 invert"
+                className="h-12 mb-4 md:mb-0 filter -brightness-50 invert"
               />
             </a>
           </div>
