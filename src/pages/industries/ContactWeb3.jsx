@@ -177,7 +177,7 @@ const ContactWeb3 = () => {
         </div>
 
         {/* Right form - Glass card */}
-        <div className="relative rounded-2xl overflow-hidden bg-gray-800/40 backdrop-blur-lg border-2 border-gray-700/50 p-8 shadow-xl">
+        <div className="relative rounded-2xl overflow-hidden bg-gray-800/20 backdrop-blur-lg border-2 border-gray-700/50 p-8 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative">
