@@ -8,6 +8,10 @@ import Partners from "./Partners";
 import WeHireWeb3 from "./WeHireWeb3";
 import Speciality from "./Speciality";
 import Download from "./Download";
+import CaseStudy from "./CaseStudy";
+import FrequentlyAskedWeb3 from "./FreaquentlyAskedWeb3";
+import Web3Blog from "./Web3Blog";
+import ContactWeb3 from "./ContactWeb3";
 
 const Web3Page = () => {
   return (
@@ -21,6 +25,10 @@ const Web3Page = () => {
       <WeHireWeb3 />
       <Speciality />
       <Download />
+      <CaseStudy />
+      <FrequentlyAskedWeb3 />
+      <Web3Blog />
+      <ContactWeb3 />
     </div>
   );
 };
