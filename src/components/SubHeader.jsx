@@ -134,7 +134,7 @@ const SubHeader = () => {
 
                   {/* SubNav Dropdown - Glass Effect */}
                   {activeDropdown === index && (
-                    <div className="absolute left-0 top-full mt-1 w-56 z-40">
+                    <div className="absolute left-0 top-full mt-0 w-56 z-40">
                       <div className="bg-white/5 backdrop-blur-xl rounded-lg shadow-xl border border-gray-700/30 overflow-hidden">
                         {item.subNavs.map((subItem, subIndex) => (
                           <div
