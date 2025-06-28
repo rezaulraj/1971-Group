@@ -2,6 +2,9 @@ import React from "react";
 import HeroAi from "./HeroAi";
 import WhatWeDoAi from "./WhatWeDoAi";
 import AiNumberJobInc from "./AiNumberJobInc";
+import WeHire from "./WeHire";
+import TalentWork from "./TalentWork";
+import TalentWorkText from "./TalentWorkText";
 
 const AiPage = () => {
   return (
@@ -9,6 +12,10 @@ const AiPage = () => {
       <HeroAi />
       <WhatWeDoAi />
       <AiNumberJobInc />
+      <WeHire />
+
+      <TalentWorkText />
+      <TalentWork />
     </div>
   );
 };
