@@ -5,6 +5,10 @@ import AiNumberJobInc from "./AiNumberJobInc";
 import WeHire from "./WeHire";
 import TalentWork from "./TalentWork";
 import TalentWorkText from "./TalentWorkText";
+import DownloadAi from "./DownloadAi";
+import BlogAi from "./BlogAi";
+import FreaquentlyAskedAi from "./FreaquentlyAskedAi";
+import ContactAi from "./ContactAi";
 
 const AiPage = () => {
   return (
@@ -13,9 +17,12 @@ const AiPage = () => {
       <WhatWeDoAi />
       <AiNumberJobInc />
       <WeHire />
-
       <TalentWorkText />
       <TalentWork />
+      <DownloadAi />
+      <BlogAi />
+      <FreaquentlyAskedAi />
+      <ContactAi />
     </div>
   );
 };
