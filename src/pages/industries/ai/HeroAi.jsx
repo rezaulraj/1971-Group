@@ -9,12 +9,14 @@ import {
   FaChartLine,
   FaDatabase,
   FaShieldAlt,
+  FaEthereum,
+  FaBitcoin,
+  FaLink,
 } from "react-icons/fa";
-import { SiTensorflow, SiOpenai } from "react-icons/si";
+import { SiTensorflow, SiOpenai, SiBinance, SiSolana } from "react-icons/si";
+
 import herobig from "../../../assets/ai/herobig.webp";
 import herosmall from "../../../assets/ai/herosmall.webp";
-import { FaEthereum, FaBitcoin, FaLink } from "react-icons/fa";
-import { SiBinance, SiSolana } from "react-icons/si";
 import clogo1 from "../../../assets/home/l1.webp";
 import clogo2 from "../../../assets/home/l2.webp";
 import clogo3 from "../../../assets/home/l3.webp";
@@ -28,11 +30,10 @@ const HeroAi = () => {
   const [bubbles, setBubbles] = useState([]);
 
   useEffect(() => {
-    // Light effects setup - using teal and orange
     const colors = [
-      "rgba(0, 200, 200, 0.2)", // Teal
-      "rgba(50, 50, 50, 0.1)", // Dark gray
-      "rgba(255, 120, 0, 0.2)", // Orange
+      "rgba(0, 200, 200, 0.2)",
+      "rgba(50, 50, 50, 0.1)",
+      "rgba(255, 120, 0, 0.2)",
     ];
     const lightEffects = Array.from({ length: 9 }, (_, i) => ({
       id: i,
@@ -44,7 +45,6 @@ const HeroAi = () => {
     }));
     setLights(lightEffects);
 
-    // AI icon bubbles setup with teal/orange accents
     const aiIcons = [
       <FaRobot className="text-teal-400" size={32} />,
       <FaBrain className="text-orange-400" size={32} />,
@@ -72,24 +72,22 @@ const HeroAi = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background gradient - teal to black to orange */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-teal-900 via-black to-orange-900"></div>
 
-      {/* Big image as background at top right */}
+      {/* Decorative BG images */}
       <div
-        className="absolute right-0 top-0 w-1/2 h-[80vh] bg-cover bg-no-repeat bg-right z-10"
+        className="absolute right-0 top-10 w-1/2 h-[80vh] bg-cover bg-no-repeat bg-right z-10"
         style={{ backgroundImage: `url(${herobig})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-l from-teal-900/20 via-transparent to-transparent"></div>
       </div>
-
-      {/* Small image as background at bottom left */}
       <div
         className="absolute left-6 top-[30%] w-1/2 h-[80vh] bg-cover bg-no-repeat rounded-lg overflow-hidden z-10"
         style={{ backgroundImage: `url(${herosmall})` }}
       ></div>
 
-      {/* Floating light effects */}
+      {/* Floating Lights */}
       {lights.map((light) => (
         <div
           key={light.id}
@@ -107,7 +105,7 @@ const HeroAi = () => {
         />
       ))}
 
-      {/* Centered content */}
+      {/* Hero content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
         <div className="max-w-5xl text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
@@ -116,12 +114,10 @@ const HeroAi = () => {
               companies
             </span>
           </h1>
-          <div className="max-w-2xl mx-auto">
-            <p className="text-lg md:text-xl text-gray-300 mb-12">
-              We help you to quickly hire AI specialists for all business needs
-              of startups, fast-growing companies and enterprises
-            </p>
-          </div>
+          <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            We help you to quickly hire AI specialists for all business needs of
+            startups, fast-growing companies and enterprises
+          </p>
 
           <button className="px-12 py-5 rounded-xl bg-gradient-to-r from-teal-600 to-orange-600 text-white font-bold text-lg transition-all duration-500 transform hover:scale-105 group hover:shadow-lg hover:shadow-orange-500/30">
             <span className="flex items-center justify-center">
@@ -132,21 +128,21 @@ const HeroAi = () => {
         </div>
       </div>
 
-      {/* AI Icon Bubbles */}
+      {/* AI Bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
         {bubbles.map((bubble) => (
           <div
             key={bubble.id}
-            className="absolute flex items-center justify-center rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-teal-400/30 transition-all duration-300"
+            className="absolute flex items-center justify-center rounded-full bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 animate-float"
             style={{
               left: `${bubble.x}%`,
               top: `${bubble.y}%`,
               width: `${bubble.size}px`,
               height: `${bubble.size}px`,
-              animation: `float ${bubble.speed}s ease-in infinite`,
+              animationDuration: `${bubble.speed}s`,
               animationDelay: `${bubble.delay}s`,
               opacity: bubble.opacity,
-              transform: `translate(-50%, -50%)`,
+              transform: "translate(-50%, -50%)",
             }}
           >
             <div className="hover:scale-110 transition-transform duration-300">
@@ -156,54 +152,28 @@ const HeroAi = () => {
         ))}
       </div>
 
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-        {[...Array(30)].map((_, i) => (
+      {/* Floating crypto icons */}
+      <div className="absolute inset-0 overflow-hidden z-10 pointer-events-none">
+        {[FaEthereum, SiBinance, FaBitcoin, SiSolana, FaLink].map((Icon, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-teal-400/20"
+            className="absolute text-teal-400/10 animate-float"
             style={{
-              width: `${Math.random() * 10 + 3}px`,
-              height: `${Math.random() * 10 + 3}px`,
+              fontSize: `${Math.random() * 40 + 30}px`,
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              animation: `float ${
-                Math.random() * 15 + 10
-              }s linear infinite both`,
-              opacity: Math.random() * 0.5 + 0.1,
+              animationDuration: `${Math.random() * 40 + 20}s`,
+              animationDelay: `${Math.random() * 5}s`,
             }}
-          />
+          >
+            <Icon className="opacity-20 hover:opacity-40 transition-opacity" />
+          </div>
         ))}
       </div>
 
-      {/* Client Section */}
-      <section className="relative py-28 overflow-hidden ">
-        {/* Glassmorphism Container */}
-        {/* <div className="absolute inset-0 backdrop-blur-xl bg-white/5 z-0"></div> */}
-
-        {/* Floating Crypto Icons */}
-        <div className="absolute inset-0 overflow-hidden z-1">
-          {[FaEthereum, SiBinance, FaBitcoin, SiSolana, FaLink].map(
-            (Icon, i) => (
-              <div
-                key={i}
-                className="absolute text-teal-400/10 animate-float"
-                style={{
-                  fontSize: `${Math.random() * 40 + 30}px`,
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                  animationDuration: `${Math.random() * 40 + 20}s`,
-                  animationDelay: `${Math.random() * 5}s`,
-                }}
-              >
-                <Icon className="opacity-20 hover:opacity-40 transition-opacity" />
-              </div>
-            )
-          )}
-        </div>
-
+      {/* Logo Marquee */}
+      <section className="relative py-28 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          {/* Glassmorphism Title Card */}
           <div className="max-w-2xl mx-auto mb-20 p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg hover:shadow-teal-500/10 transition-all duration-300">
             <h3 className="text-center text-2xl md:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-orange-300">
               TRUSTED BY AI PIONEERS
@@ -214,7 +184,6 @@ const HeroAi = () => {
             </p>
           </div>
 
-          {/* Glass Logo Marquee */}
           <div className="relative h-32 overflow-hidden group">
             <div className="absolute inset-0 backdrop-blur-sm bg-black/30 rounded-xl border border-white/5"></div>
 
@@ -232,6 +201,7 @@ const HeroAi = () => {
                 </div>
               ))}
             </div>
+
             <div className="absolute flex items-center h-full space-x-16 animate-marquee2 whitespace-nowrap">
               {duplicatedLogos.map((logo, index) => (
                 <div
@@ -247,51 +217,13 @@ const HeroAi = () => {
               ))}
             </div>
 
-            {/* Gradient fades */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-900/90 to-transparent z-20"></div>
-            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-900/90 to-transparent z-20"></div>
+            {/* Gradient edge fade */}
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-900/90 to-transparent z-20" />
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-900/90 to-transparent z-20" />
           </div>
         </div>
       </section>
-
-      {/* Animation styles */}
-      <style jsx global>{`
-        @keyframes float {
-          0% {
-            transform: translateY(0) translateX(0);
-            opacity: 0.1;
-          }
-          50% {
-            opacity: 0.8;
-          }
-          100% {
-            transform: translateY(-100vh) translateX(20px);
-            opacity: 0;
-          }
-        }
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        @keyframes marquee2 {
-          0% {
-            transform: translateX(50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 50s linear infinite;
-        }
-        .animate-marquee2 {
-          animation: marquee2 50s linear infinite;
-        }
-      `}</style>
+      
     </div>
   );
 };

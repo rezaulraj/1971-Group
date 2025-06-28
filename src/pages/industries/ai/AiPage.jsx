@@ -1,12 +1,14 @@
 import React from "react";
 import HeroAi from "./HeroAi";
-import TrustedByAi from "./TrustedByAi";
+import WhatWeDoAi from "./WhatWeDoAi";
+import AiNumberJobInc from "./AiNumberJobInc";
 
 const AiPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-950 via-black to-orange-950">
+    <div className="min-h-screen bg-gradient-to-br from-orange-950 via-black to-orange-950 overflow-x-hidden">
       <HeroAi />
-      {/* <TrustedByAi /> */}
+      <WhatWeDoAi />
+      <AiNumberJobInc />
     </div>
   );
 };
