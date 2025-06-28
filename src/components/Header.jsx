@@ -1,25 +1,11 @@
 import React, { useState } from "react";
 import logo from "/logo.png?url";
+import { FiChevronDown, FiChevronRight, FiX, FiMenu } from "react-icons/fi";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeChildDropdown, setActiveChildDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Color variables
-  const colors = {
-    primary: "#001153", // Deep navy blue
-    primaryLight: "#1a2a6b", // Lighter navy
-    primaryLighter: "#334380", // Even lighter navy
-    secondary: "#ffaa13", // Vibrant orange
-    secondaryLight: "#ffc246", // Lighter orange
-    secondaryLighter: "#ffe0a3", // Pale orange
-    accent: "#4ecdc4", // Teal accent
-    white: "#ffffff",
-    lightGray: "#f8f9fa",
-    mediumGray: "#e9ecef",
-    darkGray: "#495057",
-    text: "#212529",
-  };
 
   const navItems = [
     {
@@ -28,325 +14,186 @@ const Header = () => {
         {
           level: "Recruitments",
           childNavs: [
-            {
-              level: "All Services",
-              path: "/recruitment-services",
-            },
-            {
-              level: "Hourly Recruiting",
-              path: "/hourly-recruiting-services",
-            },
-            {
-              level: "Pay Per Hire",
-              path: "/pay-par-hire-services",
-            },
+            { level: "All Services", path: "/recruitment-services" },
+            { level: "Hourly Recruiting", path: "/hourly-recruiting-services" },
+            { level: "Pay Per Hire", path: "/pay-par-hire-services" },
           ],
         },
-        {
-          level: "Hr",
-          path: "/hr-services",
-        },
-        {
-          level: "Staffing",
-          path: "/staffing-services",
-        },
-        {
-          level: "Subscription",
-          path: "/subscription-services",
-        },
+        { level: "HR", path: "/hr-services" },
+        { level: "Staffing", path: "/staffing-services" },
+        { level: "Subscription", path: "/subscription-services" },
       ],
     },
     {
       level: "Industries",
       subNavs: [
-        {
-          level: "Web3",
-          path: "/web3",
-        },
-        {
-          level: "Ai",
-          path: "/ai",
-        },
-        {
-          level: "FinTech",
-          path: "/fintech",
-        },
-        {
-          level: "Cloud Computing",
-          path: "/cloud-computing",
-        },
+        { level: "Web3", path: "/web3" },
+        { level: "AI", path: "/ai" },
+        { level: "FinTech", path: "/fintech" },
+        { level: "Cloud Computing", path: "/cloud-computing" },
       ],
     },
     {
       level: "Resources",
       subNavs: [
-        {
-          level: "Blog",
-          path: "/blogs",
-        },
-        {
-          level: "Guides",
-          path: "/guides",
-        },
+        { level: "Blog", path: "/blogs" },
+        { level: "Guides", path: "/guides" },
       ],
     },
-    {
-      level: "Company",
-      path: "/company",
-    },
-    {
-      level: "Vacancies",
-      path: "/vacancies",
-    },
+    { level: "Company", path: "/company" },
+    { level: "Vacancies", path: "/vacancies" },
   ];
 
   const toggleDropdown = (index) => {
-    setActiveDropdown(activeDropdown === index ? null : index);
+    setActiveDropdown(index === activeDropdown ? null : index);
+    setActiveChildDropdown(null);
   };
 
-  const closeAllDropdowns = () => {
-    setActiveDropdown(null);
+  const toggleChildDropdown = (childIndex) => {
+    setActiveChildDropdown(
+      childIndex === activeChildDropdown ? null : childIndex
+    );
   };
 
   return (
-    <header
-      className="shadow-sm sticky top-0 z-50"
-      style={{
-        backgroundColor: colors.primary,
-        background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryLight} 100%)`,
-        borderBottom: `2px solid ${colors.secondary}`,
-      }}
-    >
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
-          {/* Left Logo */}
-          <div className="flex items-center">
-            <a href="/" className="flex items-center">
-              <img
-                src={logo}
-                alt="1971 Group"
-                className="h-12 mb-4 md:mb-0 filter -brightness-50 invert"
-              />
-            </a>
-          </div>
+    <header className="bg-white sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <a href="/">
+          <img src={logo} alt="1971 Group" className="h-12" />
+        </a>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white hover:text-secondaryLight focus:outline-none"
-              style={{ transition: "color 0.3s ease" }}
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-gray-800 p-2 rounded-md hover:bg-gray-100 transition"
+          >
+            {mobileMenuOpen ? (
+              <FiX className="h-6 w-6" />
+            ) : (
+              <FiMenu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex gap-6 items-center">
+          {navItems.map((item, index) => (
+            <div
+              key={index}
+              className="relative group"
+              onMouseEnter={() => item.subNavs && setActiveDropdown(index)}
+              onMouseLeave={() => {
+                setActiveDropdown(null);
+                setActiveChildDropdown(null);
+              }}
             >
-              <svg
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {mobileMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
-
-          {/* Middle Navigation - Desktop */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-4">
-            {navItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative group"
-                onMouseEnter={() => item.subNavs && toggleDropdown(index)}
-                onMouseLeave={item.subNavs ? closeAllDropdowns : undefined}
-              >
-                {item.path ? (
-                  <a
-                    href={item.path}
-                    className={`px-3 py-2 rounded-md text-sm lg:text-lg font-medium font-lato text-gray-300 hover:text-white hover:bg-primaryLight transition-all duration-300 flex items-center`}
-                    style={{
-                      fontFamily: "'Lato', sans-serif",
-                      fontWeight: 500,
-                    }}
+              {item.path ? (
+                <a
+                  href={item.path}
+                  className="text-gray-800 text-lg font-semibold hover:text-[#5cc082] transition-colors px-3 py-2"
+                >
+                  {item.level}
+                </a>
+              ) : (
+                <>
+                  <button
+                    onClick={() => toggleDropdown(index)}
+                    className={`text-gray-800 font-semibold text-lg flex items-center gap-1 px-3 py-2 transition-colors ${
+                      activeDropdown === index
+                        ? "text-[#5cc082]"
+                        : "hover:text-[#5cc082]"
+                    }`}
                   >
                     {item.level}
-                  </a>
-                ) : (
-                  <>
-                    <button
-                      className={`px-3 py-2 rounded-md text-sm lg:text-lg font-medium font-lato text-gray-300 ${
-                        activeDropdown === index
-                          ? `text-white bg-primaryLight`
-                          : `text-gray-100 hover:text-white hover:bg-primaryLight`
-                      } transition-all duration-300 flex items-center`}
-                      style={{
-                        fontFamily: "'Lato', sans-serif",
-                        fontWeight: 500,
-                      }}
-                      onClick={() => toggleDropdown(index)}
-                    >
-                      {item.level}
-                      {item.subNavs && (
-                        <svg
-                          className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                            activeDropdown === index ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </button>
+                    <FiChevronDown
+                      className={`w-4 h-4 transition-transform ${
+                        activeDropdown === index ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
-                    {item.subNavs && activeDropdown === index && (
-                      <div
-                        className="absolute left-0 w-56 rounded-md shadow-lg py-1 z-50"
-                        style={{
-                          backgroundColor: colors.white,
-                          boxShadow: `0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,
-                          border: `1px solid ${colors.mediumGray}`,
-                        }}
-                      >
-                        {item.subNavs.map((subItem, subIndex) => (
-                          <div key={subIndex}>
-                            {subItem.childNavs ? (
-                              <div className="relative group">
-                                <button
-                                  className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-100"
-                                  style={{
-                                    color: colors.text,
-                                    transition: "all 0.3s ease",
-                                  }}
-                                >
-                                  <span>{subItem.level}</span>
-                                  <svg
-                                    className="h-4 w-4"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth={2}
-                                      d="M9 5l7 7-7 7"
-                                    />
-                                  </svg>
-                                </button>
-                                <div
-                                  className="absolute left-full top-0 hidden group-hover:block w-56 rounded-md shadow-lg py-1 z-50"
-                                  style={{
-                                    backgroundColor: colors.white,
-                                    boxShadow: `0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,
-                                    border: `1px solid ${colors.mediumGray}`,
-                                  }}
-                                >
+                  {/* SubNav Dropdown */}
+                  {activeDropdown === index && (
+                    <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md w-56 z-40 border border-gray-100">
+                      {item.subNavs.map((subItem, subIndex) => (
+                        <div
+                          key={subIndex}
+                          className="border-b border-gray-100 last:border-b-0"
+                        >
+                          {subItem.childNavs ? (
+                            <>
+                              <button
+                                onClick={() => toggleChildDropdown(subIndex)}
+                                className={`w-full text-left px-4 py-3 font-medium flex justify-between items-center transition-colors ${
+                                  activeChildDropdown === subIndex
+                                    ? "text-[#5cc082] bg-gray-50"
+                                    : "text-gray-800 hover:bg-gray-50"
+                                }`}
+                              >
+                                {subItem.level}
+                                <FiChevronRight
+                                  className={`w-4 h-4 transition-transform ${
+                                    activeChildDropdown === subIndex
+                                      ? "rotate-90"
+                                      : ""
+                                  }`}
+                                />
+                              </button>
+                              {/* ChildNav */}
+                              {activeChildDropdown === subIndex && (
+                                <div className="bg-gray-50 pl-6">
                                   {subItem.childNavs.map(
-                                    (childItem, childIndex) => (
+                                    (child, childIndex) => (
                                       <a
                                         key={childIndex}
-                                        href={childItem.path}
-                                        className="block px-4 py-2 text-sm hover:bg-gray-100"
-                                        style={{
-                                          color: colors.text,
-                                          transition: "all 0.3s ease",
-                                          fontFamily: "'Poppins', sans-serif",
-                                        }}
+                                        href={child.path}
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#5cc082] hover:bg-gray-100 transition-colors"
                                       >
-                                        {childItem.level}
+                                        {child.level}
                                       </a>
                                     )
                                   )}
                                 </div>
-                              </div>
-                            ) : (
-                              <a
-                                href={subItem.path}
-                                className="block px-4 py-2 text-sm cursor-pointer hover:bg-gray-100"
-                                style={{
-                                  color: colors.text,
-                                  transition: "all 0.3s ease",
-                                  fontFamily: "'Poppins', sans-serif",
-                                }}
-                              >
-                                {subItem.level}
-                              </a>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
-            ))}
-          </nav>
+                              )}
+                            </>
+                          ) : (
+                            <a
+                              href={subItem.path}
+                              className="block px-4 py-3 text-gray-800 hover:text-[#5cc082] hover:bg-gray-50 transition-colors"
+                            >
+                              {subItem.level}
+                            </a>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
+        </nav>
 
-          {/* Right Hire Talent Button - Desktop */}
-          <div className="hidden md:block">
-            <button
-              className="px-6 py-2 rounded-md text-sm lg:text-base font-medium transition-all duration-300 hover:shadow-lg"
-              style={{
-                backgroundColor: colors.secondary,
-                color: colors.primary,
-                fontWeight: 600,
-                fontFamily: "'Poppins', sans-serif",
-                border: `2px solid ${colors.secondary}`,
-                boxShadow: `0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)`,
-                transform: "translateY(0)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = colors.secondaryLight;
-                e.currentTarget.style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = colors.secondary;
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
-            >
-              Hire Talent
-            </button>
-          </div>
+        {/* Hire Talent */}
+        <div className="hidden md:block">
+          <button className="bg-[#5cc082] text-white px-6 py-2 rounded-md hover:bg-[#4daa72] transition-colors font-semibold shadow-md hover:shadow-lg">
+            Hire Talent
+          </button>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div
-            className="md:hidden mt-2 pb-3 space-y-1"
-            style={{
-              backgroundColor: colors.primaryLight,
-              borderRadius: "8px",
-              marginTop: "12px",
-            }}
-          >
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="px-4 py-3">
             {navItems.map((item, index) => (
-              <div key={index} className="px-2 pt-2">
+              <div key={index} className="mb-1">
                 {item.path ? (
                   <a
                     href={item.path}
-                    className="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-primaryLighter"
-                    style={{
-                      transition: "all 0.3s ease",
-                      fontFamily: "'Poppins', sans-serif",
-                    }}
+                    className="block py-3 px-4 text-gray-800 font-medium rounded-md hover:bg-gray-50 transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.level}
@@ -354,113 +201,69 @@ const Header = () => {
                 ) : (
                   <>
                     <button
-                      className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium ${
-                        activeDropdown === index
-                          ? `text-white bg-primaryLighter`
-                          : `text-gray-200 hover:text-white hover:bg-primaryLighter`
-                      }`}
-                      style={{
-                        transition: "all 0.3s ease",
-                        fontFamily: "'Poppins', sans-serif",
-                      }}
                       onClick={() => toggleDropdown(index)}
+                      className={`w-full text-left py-3 px-4 font-medium rounded-md flex justify-between items-center transition-colors ${
+                        activeDropdown === index
+                          ? "bg-gray-50 text-[#5cc082]"
+                          : "text-gray-800 hover:bg-gray-50"
+                      }`}
                     >
                       {item.level}
-                      {item.subNavs && (
-                        <svg
-                          className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                            activeDropdown === index ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
+                      <FiChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          activeDropdown === index ? "rotate-180" : ""
+                        }`}
+                      />
                     </button>
-
-                    {item.subNavs && activeDropdown === index && (
-                      <div
-                        className="pl-4 mt-1 space-y-1"
-                        style={{
-                          backgroundColor: colors.primaryLighter,
-                          borderRadius: "6px",
-                          padding: "8px",
-                        }}
-                      >
+                    {activeDropdown === index && (
+                      <div className="mt-1 ml-4 bg-gray-50 rounded-md overflow-hidden">
                         {item.subNavs.map((subItem, subIndex) => (
-                          <div key={subIndex}>
+                          <div
+                            key={subIndex}
+                            className="border-t border-gray-100 first:border-t-0"
+                          >
                             {subItem.childNavs ? (
-                              <div>
+                              <>
                                 <button
-                                  className="w-full flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
-                                  style={{
-                                    transition: "all 0.3s ease",
-                                    fontFamily: "'Poppins', sans-serif",
-                                  }}
-                                  onClick={() =>
-                                    toggleDropdown(`${index}-${subIndex}`)
-                                  }
+                                  onClick={() => toggleChildDropdown(subIndex)}
+                                  className={`w-full text-left py-2 px-4 text-sm flex justify-between items-center transition-colors ${
+                                    activeChildDropdown === subIndex
+                                      ? "text-[#5cc082] bg-gray-100"
+                                      : "text-gray-700 hover:bg-gray-100"
+                                  }`}
                                 >
                                   {subItem.level}
-                                  <svg
-                                    className="h-4 w-4"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth={2}
-                                      d="M9 5l7 7-7 7"
-                                    />
-                                  </svg>
+                                  <FiChevronRight
+                                    className={`w-4 h-4 transition-transform ${
+                                      activeChildDropdown === subIndex
+                                        ? "rotate-90"
+                                        : ""
+                                    }`}
+                                  />
                                 </button>
-                                {activeDropdown === `${index}-${subIndex}` && (
-                                  <div
-                                    className="pl-4 space-y-1"
-                                    style={{
-                                      backgroundColor: colors.primary,
-                                      borderRadius: "4px",
-                                      padding: "6px",
-                                    }}
-                                  >
+                                {activeChildDropdown === subIndex && (
+                                  <div className="ml-4">
                                     {subItem.childNavs.map(
-                                      (childItem, childIndex) => (
+                                      (child, childIndex) => (
                                         <a
                                           key={childIndex}
-                                          href={childItem.path}
-                                          className="block px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
-                                          style={{
-                                            transition: "all 0.3s ease",
-                                            fontFamily: "'Poppins', sans-serif",
-                                          }}
+                                          href={child.path}
+                                          className="block py-2 px-4 text-xs text-gray-600 hover:text-[#5cc082] hover:bg-gray-100 transition-colors"
                                           onClick={() =>
                                             setMobileMenuOpen(false)
                                           }
                                         >
-                                          {childItem.level}
+                                          {child.level}
                                         </a>
                                       )
                                     )}
                                   </div>
                                 )}
-                              </div>
+                              </>
                             ) : (
                               <a
                                 href={subItem.path}
-                                className="block px-3 py-2 rounded-md text-sm font-medium text-gray-200 hover:text-white"
-                                style={{
-                                  transition: "all 0.3s ease",
-                                  fontFamily: "'Poppins', sans-serif",
-                                }}
+                                className="block py-2 px-4 text-sm text-gray-700 hover:text-[#5cc082] hover:bg-gray-100 transition-colors"
                                 onClick={() => setMobileMenuOpen(false)}
                               >
                                 {subItem.level}
@@ -474,23 +277,12 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <div className="px-2 pt-2">
-              <button
-                className="w-full px-3 py-3 rounded-md text-base font-medium transition-all duration-300"
-                style={{
-                  backgroundColor: colors.secondary,
-                  color: colors.primary,
-                  fontWeight: 600,
-                  fontFamily: "'Poppins', sans-serif",
-                  boxShadow: `0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)`,
-                }}
-              >
-                Hire Talent
-              </button>
-            </div>
+            <button className="mt-4 w-full bg-[#5cc082] text-white py-3 rounded-md font-semibold hover:bg-[#4daa72] transition-colors shadow-md">
+              Hire Talent
+            </button>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };

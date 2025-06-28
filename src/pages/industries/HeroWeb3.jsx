@@ -78,10 +78,10 @@ const HeroWeb3 = () => {
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex items-center group">
-                    <div className="mr-4 p-2 bg-white/10 rounded-full group-hover:bg-blue-500/30 transition-colors duration-300">
+                    <div className="mr-4 p-2 bg-white/30 rounded-full group-hover:bg-blue-500/30 transition-colors duration-300">
                       {item.icon}
                     </div>
-                    <span className="group-hover:text-blue-300 transition-colors duration-300">
+                    <span className="group-hover:text-blue-300 text-gray-400 transition-colors duration-300">
                       {item.text}
                     </span>
                   </div>
