@@ -62,7 +62,7 @@ const SubHeader = () => {
           <img
             src={logo}
             alt="1971 Group"
-            className="h-12 filter -brightness-50 invert"
+            className="h-12 filter brightness-5 invert"
           />
         </a>
 

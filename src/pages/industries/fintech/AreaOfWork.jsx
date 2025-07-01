@@ -12,6 +12,7 @@ import {
   FaCreditCard,
   FaShieldAlt,
 } from "react-icons/fa";
+import { RiBankCardFill } from "react-icons/ri";
 
 const AreaOfWork = () => {
   const services = [
@@ -51,7 +52,7 @@ const AreaOfWork = () => {
       color: "from-emerald-500 to-green-600",
     },
     {
-      icon: <FaMobileAlt className="text-3xl" />,
+      icon: <RiBankCardFill className="text-3xl" />,
       title: "Online banking",
       color: "from-blue-400 to-sky-500",
     },

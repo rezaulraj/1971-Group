@@ -19,6 +19,7 @@ import Web3Page from "./pages/industries/Web3Page";
 import AiPage from "./pages/industries/ai/AiPage";
 import SubLayout from "./components/SubLayout";
 import FintechPage from "./pages/industries/fintech/FintechPage";
+import CloudPage from "./pages/industries/cloud/CloudPage";
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -59,6 +60,7 @@ function App() {
           <Route path="web3" element={<Web3Page />} />
           <Route path="ai" element={<AiPage />} />
           <Route path="fintech" element={<FintechPage />} />
+          <Route path="cloud-computing" element={<CloudPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
