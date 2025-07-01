@@ -36,6 +36,7 @@ const SubHeader = () => {
       level: "Resources",
       subNavs: [
         { level: "Blog", path: "/blogs" },
+        { level: "Case Study", path: "/case-study" },
         { level: "Guides", path: "/guides" },
       ],
     },
