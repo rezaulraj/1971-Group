@@ -18,6 +18,7 @@ import GuideDetails from "./pages/resources/guide/GuideDetails";
 import Web3Page from "./pages/industries/Web3Page";
 import AiPage from "./pages/industries/ai/AiPage";
 import SubLayout from "./components/SubLayout";
+import FintechPage from "./pages/industries/fintech/FintechPage";
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -57,6 +58,7 @@ function App() {
         <Route path="/" element={<SubLayout />}>
           <Route path="web3" element={<Web3Page />} />
           <Route path="ai" element={<AiPage />} />
+          <Route path="fintech" element={<FintechPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
