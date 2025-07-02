@@ -54,7 +54,7 @@ const CloudBlog = () => {
                   {article.title}
                 </h3>
                 <a
-                  href="#"
+                  href="/blogs"
                   className="inline-flex items-center text-cyan-300 font-medium group-hover:text-white transition-colors"
                 >
                   <span>{article.link}</span>

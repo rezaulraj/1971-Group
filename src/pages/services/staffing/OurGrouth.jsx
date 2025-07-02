@@ -23,9 +23,12 @@ const ServiceCard = ({ icon: Icon, title, description }) => (
           Check Prices
           <FaArrowRight className="ml-1 text-sm" />
         </button>
-        <button className="text-gray-600 font-medium hover:text-gray-800 flex items-center">
+        <a
+          href="/blogs"
+          className="text-gray-600 font-medium hover:text-gray-800 flex items-center"
+        >
           More Details
-        </button>
+        </a>
       </div>
     </div>
   </div>

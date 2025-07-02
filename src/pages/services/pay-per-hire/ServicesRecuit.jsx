@@ -70,10 +70,13 @@ const ServicesRecuit = () => {
                   {service.description}
                 </p>
                 <div className="text-center">
-                  <button className="inline-flex items-center px-6 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors group">
+                  <a
+                    href="/blogs"
+                    className="inline-flex items-center px-6 py-2 border border-transparent text-sm font-medium rounded-md text-white  bg-blue-600 hover:bg-blue-700 transition-colors group"
+                  >
                     Learn more
                     <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

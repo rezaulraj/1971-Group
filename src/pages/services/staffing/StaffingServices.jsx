@@ -13,7 +13,7 @@ const StaffingServices = () => {
       description:
         "Learn how to write impactful job descriptions that clearly reflect your company's vision and hiring needs—boosting the effectiveness of your recruitment process.",
       image: service1,
-      link: "#",
+      link: "/blogs",
     },
     {
       icon: <FaBullseye className="text-2xl" />,
@@ -21,7 +21,7 @@ const StaffingServices = () => {
       description:
         "Discover how exclusive recruitment helps secure top-tier talent for high-level positions—ideal for industries with intense competition or niche requirements.",
       image: service2,
-      link: "#",
+      link: "/blogs",
     },
     {
       icon: <FaLock className="text-2xl" />,
@@ -29,7 +29,7 @@ const StaffingServices = () => {
       description:
         "Explore the most in-demand cybersecurity specialists worldwide, the essential skills they bring, and current salary benchmarks based on the latest global hiring data.",
       image: service3,
-      link: "#",
+      link: "/blogs",
     },
   ];
 

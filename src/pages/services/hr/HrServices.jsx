@@ -12,7 +12,7 @@ const HrServices = () => {
       description:
         "Discover how to craft job descriptions that reflect your company's mission and objectives—ensuring alignment between role expectations and business strategy.",
       image: herohr1,
-      link: "#",
+      link: "/blogs",
     },
     {
       icon: <FaBullseye className="text-purple-400 text-2xl" />,
@@ -20,7 +20,7 @@ const HrServices = () => {
       description:
         "Ideal for filling high-stakes roles, exclusive recruitment focuses on securing top-tier talent with niche expertise, often in competitive or specialized industries.",
       image: herohr2,
-      link: "#",
+      link: "/blogs",
     },
     {
       icon: <FaCrown className="text-amber-400 text-2xl" />,
@@ -28,7 +28,7 @@ const HrServices = () => {
       description:
         "Our executive search service helps you find exceptional candidates for C-level and senior leadership roles. Let expert headhunters handle the complexity of recruiting top executives.",
       image: herohr3,
-      link: "#",
+      link: "/blogs",
     },
   ];
 

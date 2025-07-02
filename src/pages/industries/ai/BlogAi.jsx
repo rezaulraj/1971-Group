@@ -84,9 +84,12 @@ const BlogAi = () => {
                 {post.title}
               </h3>
               <p className="text-gray-300 mb-5">{post.excerpt}</p>
-              <button className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-teal-600 to-red-600 rounded-md hover:from-teal-500 hover:to-red-500 transition-all">
+              <a
+                href="/blogs"
+                className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-teal-600 to-red-600 rounded-md hover:from-teal-500 hover:to-red-500 transition-all"
+              >
                 Read Article
-              </button>
+              </a>
             </div>
           </div>
         ))}

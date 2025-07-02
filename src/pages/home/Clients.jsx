@@ -60,6 +60,17 @@ const Clients = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [direction, setDirection] = useState(1);
   const carouselRef = useRef(null);
+  const [cardHeight, setCardHeight] = useState("auto");
+
+  // Set fixed height based on the first card's height after render
+  useEffect(() => {
+    if (carouselRef.current) {
+      const firstCard = carouselRef.current.querySelector(".testimonial-card");
+      if (firstCard) {
+        setCardHeight(`${firstCard.offsetHeight}px`);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     let interval;
@@ -153,38 +164,41 @@ const Clients = () => {
             </button>
           </div>
 
-          <AnimatePresence custom={direction} mode="popLayout">
-            <motion.div
-              key={current}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              className="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-2xl shadow-2xl relative overflow-hidden"
-            >
-              {/* Glow effect */}
-              <div className="absolute -top-20 -left-20 w-40 h-40 bg-blue-400 rounded-full filter blur-[80px] opacity-20"></div>
+          {/* Container with fixed height */}
+          <div style={{ height: cardHeight }} className="relative">
+            <AnimatePresence custom={direction} mode="popLayout">
+              <motion.div
+                key={current}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                className="testimonial-card bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-2xl shadow-2xl relative overflow-hidden w-full absolute top-0 left-0"
+              >
+                {/* Glow effect */}
+                <div className="absolute -top-20 -left-20 w-40 h-40 bg-blue-400 rounded-full filter blur-[80px] opacity-20"></div>
 
-              <div className="relative z-10">
-                <div className="pl-8">
-                  <div className="flex mb-6">
-                    {[...Array(5)].map((_, i) => (
-                      <FaStar
-                        key={i}
-                        className={`${
-                          i < testimonials[current].rating
-                            ? "text-yellow-400"
-                            : "text-gray-500/30"
-                        } text-xl`}
-                      />
-                    ))}
+                <div className="relative z-10 h-full flex flex-col">
+                  <div className="pl-8 flex-grow">
+                    <div className="flex mb-6">
+                      {[...Array(5)].map((_, i) => (
+                        <FaStar
+                          key={i}
+                          className={`${
+                            i < testimonials[current].rating
+                              ? "text-yellow-400"
+                              : "text-gray-500/30"
+                          } text-xl`}
+                        />
+                      ))}
+                    </div>
+
+                    <p className="text-2xl text-white/90 font-light italic mb-8 leading-relaxed relative">
+                      <FaQuoteLeft className="text-blue-300/50 text-2xl absolute -left-8 -top-2" />
+                      {testimonials[current].quote}
+                    </p>
                   </div>
-
-                  <p className="text-2xl text-white/90 font-light italic mb-8 leading-relaxed relative">
-                    <FaQuoteLeft className="text-blue-300/50 text-2xl absolute -left-8 -top-2" />
-                    {testimonials[current].quote}
-                  </p>
 
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
@@ -218,9 +232,9 @@ const Clients = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           <div className="flex justify-center mt-10 space-x-3">
             {testimonials.map((_, index) => (

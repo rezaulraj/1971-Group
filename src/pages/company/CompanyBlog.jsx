@@ -120,13 +120,14 @@ const CompanyBlog = () => {
                 <p className="text-gray-600 text-lg leading-relaxed">
                   {post.description}
                 </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="mt-6 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-full shadow-md"
-                >
-                  Read More
-                </motion.button>
+                <div className="mt-6">
+                  <a
+                    href="/blogs"
+                    className=" px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-full shadow-md"
+                  >
+                    Read More
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}

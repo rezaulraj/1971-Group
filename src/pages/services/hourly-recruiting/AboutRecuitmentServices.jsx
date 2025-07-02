@@ -129,12 +129,13 @@ const AboutRecruitmentServices = () => {
                     {service.description}
                   </p>
 
-                  <button
+                  <a
+                    href="/blogs"
                     className={`flex items-center gap-2 text-sm font-medium self-start ${service.buttonColor} transition-colors`}
                   >
                     Learn more
                     <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             </motion.div>

@@ -129,10 +129,13 @@ const Web3Blog = () => {
                 </p>
                 <p className="text-gray-300 mb-6">{insight.content}</p>
 
-                <div className="flex items-center text-blue-400 group-hover:text-white transition-colors duration-300">
+                <a
+                  href="/blogs"
+                  className="flex items-center text-blue-400 group-hover:text-white transition-colors duration-300"
+                >
                   <span className="mr-2 font-medium">{insight.cta}</span>
                   <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-2" />
-                </div>
+                </a>
               </div>
 
               {/* Hover light effect */}

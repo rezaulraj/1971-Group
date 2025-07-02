@@ -151,7 +151,7 @@ const CaseStudies = () => {
         </motion.div>
         <div className="flex items-center justify-center mt-10">
           <a
-            href="/blogs"
+            href="/case-study"
             className="bg-gradient-to-br from-blue-100/80 to-amber-100/80 text-2xl font-bold rounded-2xl px-4 p-3 shadow-2xl hover:scale-95 transition-transform duration-300"
           >
             Read More

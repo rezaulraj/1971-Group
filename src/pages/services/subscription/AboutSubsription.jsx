@@ -117,9 +117,12 @@ const SubscriptionCard = ({ card }) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
             >
-              <button className="flex items-center text-gray-600 font-medium hover:text-gray-800 transition-colors">
+              <a
+                href="/blogs"
+                className="flex items-center text-gray-600 font-medium hover:text-gray-800 transition-colors"
+              >
                 {card.cta} <FaArrowRight className="ml-2 text-gray-500" />
-              </button>
+              </a>
             </motion.div>
           </div>
           <motion.img
@@ -177,9 +180,12 @@ const SubscriptionCard = ({ card }) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
             >
-              <button className="flex items-center text-gray-600 font-medium hover:text-gray-800 transition-colors">
+              <a
+                href="/blogs"
+                className="flex items-center text-gray-600 font-medium hover:text-gray-800 transition-colors"
+              >
                 {card.cta} <FaArrowRight className="ml-2 text-gray-500" />
-              </button>
+              </a>
             </motion.div>
           </div>
         </>

@@ -105,10 +105,13 @@ const FintechBlog = () => {
 
               {/* Hover button */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
-                <button className="flex items-center space-x-2 px-6 py-3 bg-teal-500 rounded-lg font-medium hover:bg-teal-600 transition-colors">
+                <a
+                  href="/case-study"
+                  className="flex items-center space-x-2 px-6 py-3 bg-teal-500 rounded-lg font-medium hover:bg-teal-600 transition-colors"
+                >
                   <span>Read case study</span>
                   <FiArrowRight />
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -143,10 +146,13 @@ const FintechBlog = () => {
                 <h3 className="text-lg font-bold text-white mb-4">
                   {article.title}
                 </h3>
-                <button className="flex items-center space-x-2 text-sm text-teal-300 group-hover:text-white transition-colors">
+                <a
+                  href="/blogs"
+                  className="flex items-center space-x-2 text-sm text-teal-300 group-hover:text-white transition-colors"
+                >
                   <span>Read article</span>
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
               </div>
             </div>
           ))}

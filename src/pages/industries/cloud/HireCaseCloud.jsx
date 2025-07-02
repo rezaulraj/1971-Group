@@ -59,7 +59,7 @@ const HireCaseCloud = () => {
                   {caseStudy.title}
                 </h3>
                 <a
-                  href="#"
+                  href="case-study"
                   className="inline-flex items-center text-cyan-300 font-medium group-hover:text-white transition-colors"
                 >
                   <span>{caseStudy.link}</span>

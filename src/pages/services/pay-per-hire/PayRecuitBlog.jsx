@@ -123,12 +123,13 @@ const PayRecuitBlog = () => {
                   {post.title}
                 </h3>
                 <p className="text-gray-600 mb-6">{post.description}</p>
-                <button
+                <a
+                  href="/blogs"
                   className={`flex items-center gap-2 text-sm font-medium ${post.color} hover:underline`}
                 >
                   Read more
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
