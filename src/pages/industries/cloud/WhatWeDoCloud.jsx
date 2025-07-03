@@ -15,24 +15,28 @@ const WhatWeDoCloud = () => {
       title: "Pay-per-hire recruiting",
       description: "Pay a percentage of the candidate's annual salary",
       link: "Learn more",
+      path: "/pay-par-hire-services",
     },
     {
       icon: <FiCalendar className="text-2xl text-cyan-500" />,
       title: "Subscription recruitment",
       description: "Monthly payment for ongoing recruiting services",
       link: "Learn more",
+      path: "/subscription-services",
     },
     {
       icon: <FiClock className="text-2xl text-blue-500" />,
       title: "Hourly recruitment",
       description: "Pay for actual hours spent finding candidates",
       link: "Learn more",
+      path: "/hourly-recruiting-services",
     },
     {
       icon: <FiUsers className="text-2xl text-cyan-600" />,
       title: "Staffing",
       description: "Hire specialists for projects or specific tasks",
       link: "Learn more",
+      path: "/staffing-services",
     },
   ];
 
@@ -78,7 +82,7 @@ const WhatWeDoCloud = () => {
                       {service.description}
                     </p>
                     <a
-                      href="#"
+                      href={service.path}
                       className="inline-flex items-center text-sm text-blue-600 font-medium group"
                     >
                       <span>{service.link}</span>

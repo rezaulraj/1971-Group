@@ -83,7 +83,7 @@ const CaseStudyBlog = () => {
                 </p>
 
                 <a
-                  href="#"
+                  href="/blogs"
                   className="inline-flex items-center text-teal-600 font-medium group-hover:text-teal-800 transition-colors"
                 >
                   <span>Read full case study</span>

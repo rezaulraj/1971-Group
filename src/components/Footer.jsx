@@ -5,6 +5,9 @@ import {
   FaRegEnvelope,
   FaGlobe,
   FaMapMarkerAlt,
+  FaFacebook,
+  FaYoutube,
+  FaTiktok,
 } from "react-icons/fa";
 import { SiVisa, SiMastercard, SiBitcoin } from "react-icons/si";
 const Footer = () => {
@@ -37,6 +40,24 @@ const Footer = () => {
               >
                 <FaTwitter className="h-6 w-6" />
               </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <FaFacebook className="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <FaTiktok className="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <FaYoutube className="h-6 w-6" />
+              </a>
             </div>
           </div>
 
@@ -48,7 +69,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="/recruitment-services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Recruitment
@@ -56,7 +77,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/subscription-services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Subscription
@@ -64,15 +85,23 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/staffing-services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  RPO
+                  Staffing
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/hr-services"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  HR
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/pay-par-hire-services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Pay-Per-Hire
@@ -89,7 +118,7 @@ const Footer = () => {
             <ul className="space-y-2 mb-6">
               <li>
                 <a
-                  href="#"
+                  href="/web3"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Web3
@@ -97,7 +126,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/fintech"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   FinTech
@@ -105,7 +134,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/ai"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   AI
@@ -113,7 +142,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/cloud-computing"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   And more...
@@ -127,7 +156,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="/company"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   About
@@ -135,7 +164,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/blogs"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Blog
@@ -143,18 +172,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/case-study"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Case Studies
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Contact
                 </a>
               </li>
             </ul>
