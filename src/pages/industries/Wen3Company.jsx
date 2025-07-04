@@ -125,7 +125,13 @@ const Web3Company = () => {
 
         {/* CTA Section */}
         <div className="mt-20 text-center">
-          <button className="relative overflow-hidden group bg-gradient-to-r from-blue-600 to-emerald-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/30">
+          <button
+            onClick={() => {
+              const section = document.querySelector("#contact");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="relative overflow-hidden group bg-gradient-to-r from-blue-600 to-emerald-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/30"
+          >
             <span className="relative z-10">Start Building Your Team</span>
             <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </button>

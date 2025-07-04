@@ -106,7 +106,10 @@ const ContactWeb3 = () => {
   };
 
   return (
-    <div className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-blue-900/60 overflow-hidden">
+    <div
+      id="contact"
+      className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-blue-900/60 overflow-hidden"
+    >
       {/* Left background bubbles (big) */}
       {bubbles.map((bubble) => (
         <div

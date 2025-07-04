@@ -113,6 +113,7 @@ const ContactAi = () => {
                   <input
                     type="text"
                     placeholder="Name"
+                    required
                     className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
@@ -124,6 +125,7 @@ const ContactAi = () => {
                   </div>
                   <input
                     type="email"
+                    required
                     placeholder="Email"
                     className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -137,6 +139,7 @@ const ContactAi = () => {
                 </div>
                 <input
                   type="tel"
+                  required
                   placeholder="Phone"
                   className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
@@ -149,6 +152,7 @@ const ContactAi = () => {
                 </div>
                 <input
                   type="text"
+                  required
                   placeholder="Company name"
                   className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
@@ -162,6 +166,7 @@ const ContactAi = () => {
                 <textarea
                   placeholder="Your message"
                   rows="4"
+                  required
                   className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 ></textarea>
               </div>
