@@ -62,25 +62,25 @@ const CountUp = ({ end, duration = 2, decimals = 0 }) => {
 const WhyUs = () => {
   const stats = [
     {
-      value: <CountUp end={97.8} duration={2} decimals={1} />,
+      value: <CountUp end={94} duration={2} decimals={1} />,
       suffix: "%",
-      description: "of specialists pass probation",
+      description: "of our placed talent pass probation successfully",
       icon: <FaUserCheck className="text-xl" />,
       gradient: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
       borderColor: "rgba(16,185,129,0.4)",
     },
     {
-      value: <CountUp end={5} duration={1.5} />,
+      value: <CountUp end={7} duration={1.5} />,
       suffix: " days",
-      description: "to first candidate CVs",
+      description: "to receive the first shortlist of CVs",
       icon: <FaClock className="text-xl" />,
       gradient: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
       borderColor: "rgba(59,130,246,0.4)",
     },
     {
-      value: <CountUp end={130} duration={2.5} />,
-      suffix: "K+",
-      description: "talents in our database",
+      value: <CountUp end={8000} duration={2.5} />,
+      suffix: "+",
+      description: "pre-vetted candidates in our global database",
       icon: <FaDatabase className="text-xl" />,
       gradient: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
       borderColor: "rgba(139,92,246,0.4)",
@@ -96,22 +96,22 @@ const WhyUs = () => {
   ];
 
   const countries = [
-    { code: "US", name: "United States" },
-    { code: "GB", name: "United Kingdom" },
-    { code: "DE", name: "Germany" },
+    { code: "SA", name: "Saudi Arabia" },
+    { code: "AE", name: "United Arab Emirates" },
+    { code: "QA", name: "Qatar" },
+    { code: "MY", name: "Malaysia" },
+    { code: "HR", name: "Croatia" },
+    { code: "RS", name: "Serbia" },
+    { code: "MT", name: "Malta" },
+    { code: "ES", name: "Spain" },
+    { code: "GR", name: "Greece" },
+    { code: "IT", name: "Italy" },
+    { code: "HU", name: "Hungary" },
     { code: "FR", name: "France" },
-    { code: "CA", name: "Canada" },
-    { code: "AU", name: "Australia" },
     { code: "JP", name: "Japan" },
     { code: "SG", name: "Singapore" },
     { code: "IN", name: "India" },
     { code: "BR", name: "Brazil" },
-    { code: "AE", name: "UAE" },
-    { code: "SE", name: "Sweden" },
-    { code: "NL", name: "Netherlands" },
-    { code: "CH", name: "Switzerland" },
-    { code: "ES", name: "Spain" },
-    { code: "IT", name: "Italy" },
     { code: "KR", name: "South Korea" },
     { code: "MX", name: "Mexico" },
     { code: "ZA", name: "South Africa" },
@@ -137,11 +137,11 @@ const WhyUs = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Global Reach
+            Why Choose 1971 Group
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Whether you're building a team from scratch or need help with
-            hard-to-fill positions, we've got you covered.
+            Whether you’re building a team from the ground up or struggling with
+            hard-to-fill positions, we’ve done it before and we deliver.
           </p>
         </motion.div>
 
@@ -219,11 +219,11 @@ const WhyUs = () => {
           </motion.div>
 
           <div className="relative z-10">
-            <h2 className="text-3xl font-bold mb-6">Global Presence</h2>
+            <h2 className="text-3xl font-bold mb-6">Our Global Reach</h2>
             <p className="text-lg mb-8 max-w-2xl opacity-90">
-              We operate in <span className="font-bold">80+ countries</span>{" "}
-              worldwide, connecting you with top talent across every major
-              market.
+              We recruit across a global network, connecting employers in Europe
+              with top talent from diverse international markets all from our
+              base in the Gulf.
             </p>
 
             {/* Animated Country Flags Carousel */}
@@ -258,7 +258,7 @@ const WhyUs = () => {
                       />
                     </div>
                     <span className="text-xs text-white/80">
-                      {country.code}
+                      {country.name}
                     </span>
                   </motion.div>
                 ))}

@@ -8,7 +8,7 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 const testimonials = [
   {
     quote:
-      "The most impressive aspect of the 1971 Group was their round-the-clock communication.",
+      "“The most impressive aspect of the 1971 Group was their round-the-clock communication.”",
     author: "Founder & CEO, Generect Inc",
     position: "Technology Industry",
     verified: true,
@@ -16,14 +16,14 @@ const testimonials = [
   },
   {
     quote:
-      "They stand out for their specialized approach, creative thinking, and data-driven strategies.",
+      "“They stand out for their specialized approach, creative thinking, and data-driven strategies.”",
     author: "CEO, OrbitEdge Labs",
     position: "AI Research Sector",
     verified: true,
     rating: 5,
   },
   {
-    quote: "Our experience with the 1971 Group was overwhelmingly positive.",
+    quote: "“Our experience with the 1971 Group was overwhelmingly positive.”",
     author: "CEO, Recursion",
     position: "Healthcare Technology",
     verified: true,
@@ -31,7 +31,7 @@ const testimonials = [
   },
   {
     quote:
-      "They consistently provided progress updates, candidate feedback, and support throughout the process.",
+      "“They consistently provided progress updates, candidate feedback, and support throughout the process.”",
     author: "Founder, Vertex Consulting",
     position: "Management Consulting",
     verified: true,
@@ -39,7 +39,7 @@ const testimonials = [
   },
   {
     quote:
-      "They sourced candidates who perfectly aligned with our team culture and values.",
+      "“They sourced candidates who perfectly aligned with our team culture and values.”",
     author: "CTO, QuantumStack",
     position: "Quantum Computing",
     verified: true,
@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     quote:
-      "Their exceptional team made a significant impact on the success of our projects.",
+      "“Their exceptional team made a significant impact on the success of our projects.”",
     author: "Co-Founder, CloudBridge Ventures",
     position: "Cloud Infrastructure",
     verified: true,

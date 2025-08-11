@@ -200,8 +200,8 @@ const Contact = () => {
                   Let's Have a Call
                 </h3>
                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                  We're always ready to provide personal consultations and craft
-                  recruitment strategies tailored to your company's growth.
+                  We’re always ready to provide personal consultations and craft
+                  recruitment strategies tailored to your company’s growth.
                 </p>
 
                 <div className="space-y-6">

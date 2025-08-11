@@ -48,11 +48,11 @@ const Awards = () => {
             Our Awards
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
-            Recognized for Excellence in Global Recruitment
+            Recognized for Excellence
           </p>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-500">
-            We're a top choice for companies seeking recruitment partners that
-            understand international standards and deliver exceptional results.
+            We’re a top choice for companies seeking recruitment partners that
+            understand international standards and deliver results.
           </p>
         </motion.div>
 

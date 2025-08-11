@@ -6,12 +6,12 @@ import guide from "../../../assets/allservice/gride.jpg?url";
 const Guide = () => {
   return (
     <div className="relative overflow-hidden">
-      {/* Gradient Background */}
+     
       <div className="absolute inset-0 bg-gradient-to-br from-[#001153] via-[#1a2a6b] to-[#334380] opacity-95"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Image */}
+        
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -50 }}
@@ -29,7 +29,7 @@ const Guide = () => {
             </div>
           </motion.div>
 
-          {/* Right Side - Text Content */}
+         
           <motion.div
             className="text-white"
             initial={{ opacity: 0, y: 50 }}

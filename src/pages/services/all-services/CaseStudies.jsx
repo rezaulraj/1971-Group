@@ -7,42 +7,44 @@ import {
   FaUsers,
   FaBriefcase,
   FaRocket,
+  FaBuilding,
+  FaIndustry,
+  FaLaptopCode,
 } from "react-icons/fa";
 
 const CaseStudies = () => {
   const studies = [
     {
-      company: "Bitmedia Labs",
-      icon: <FaUserTie className="text-3xl text-blue-300" />,
+      title: "Hired over 7 experts in less than 3 months",
+      icon: <FaLaptopCode className="text-3xl text-blue-300" />,
       highlight:
-        "Hired 7 experts across technical and non-technical roles in under 3 months.",
+        "Hired over 7 experts in less than 3 months, achieving a 100% success rate from job posting to onboarding.",
       description:
-        "We achieved a 100% success rate while improving Bitmedia Labs' overall hiring process—from job ad creation to final onboarding.",
-      stats: "100% success rate",
+        "Achieved a perfect 100% success rate in talent acquisition, from initial job posting to final onboarding.",
+      stats: "100% success rate | 3 month timeline",
     },
     {
-      company: "Aprioreo",
+      title: "Full team staffing completed in 2 months",
       icon: <FaChartLine className="text-3xl text-purple-300" />,
       highlight:
-        "Filled all open positions in 2 months, including a C-level role.",
+        "Full team staffing completed in 2 months, including senior and C-level roles, resulting in a 350% productivity boost and optimized internal systems.",
       description:
-        "Our support led to a 350% productivity boost and helped Aprioreo structure efficient internal business systems.",
-      stats: "350% productivity boost",
+        "Delivered complete team staffing with senior leadership, driving 350% productivity gains and system optimization.",
+      stats: "350% productivity boost | 2 month completion",
     },
     {
-      company: "Hacken",
-      icon: <FaShieldAlt className="text-3xl text-cyan-300" />,
+      title: "Scaled specialized teams by 45%",
+      icon: <FaIndustry className="text-3xl text-cyan-300" />,
       highlight:
-        "Scaled their smart contract auditing team by 45% in just 3 months.",
+        "Helped scale specialized teams by 45% within 3 months, delivering top-tier talent to support global expansion.",
       description:
-        "We successfully hired 15 Web3 professionals, supporting Hacken's expansion in the cybersecurity and blockchain sector.",
-      stats: "45% team growth",
+        "Accelerated global growth with 45% team expansion of specialized talent in just one quarter.",
+      stats: "45% team growth | 3 month timeframe",
     },
   ];
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b] relative overflow-hidden">
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <motion.div
           className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-overlay filter blur-3xl"
@@ -71,7 +73,6 @@ const CaseStudies = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,9 +80,12 @@ const CaseStudies = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Case Studies</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Executive Recruitment Excellence
+          </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Real-world success stories from our recruitment partnerships
+            Our proven methodology delivers exceptional leadership talent across
+            industries, with measurable impact on organizational performance.
           </p>
         </motion.div>
 
@@ -100,9 +104,8 @@ const CaseStudies = () => {
                 <div className="bg-white/10 p-3 rounded-lg">{study.icon}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white">
-                    {study.company}
+                    {study.title}
                   </h3>
-                  <p className="text-blue-200 font-medium">Recruiting</p>
                 </div>
               </div>
 
@@ -136,25 +139,25 @@ const CaseStudies = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-white mb-2">100%</h3>
-              <p className="text-blue-200">Client Satisfaction</p>
+              <h3 className="text-4xl font-bold text-white mb-2">250+</h3>
+              <p className="text-blue-200">C-Level Placements</p>
             </div>
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-white mb-2">3x</h3>
-              <p className="text-blue-200">Faster Hiring</p>
+              <h3 className="text-4xl font-bold text-white mb-2">95%</h3>
+              <p className="text-blue-200">Retention After 2 Years</p>
             </div>
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-white mb-2">200+</h3>
-              <p className="text-blue-200">Roles Filled</p>
+              <h3 className="text-4xl font-bold text-white mb-2">15</h3>
+              <p className="text-blue-200">Industry Specializations</p>
             </div>
           </div>
         </motion.div>
         <div className="flex items-center justify-center mt-10">
           <a
             href="/case-study"
-            className="bg-gradient-to-br from-blue-100/80 to-amber-100/80 text-2xl font-bold rounded-2xl px-4 p-3 shadow-2xl hover:scale-95 transition-transform duration-300"
+            className="bg-gradient-to-br from-blue-100/80 to-amber-100/80 text-xl font-medium rounded-2xl px-4 p-3 shadow-2xl hover:scale-95 transition-transform duration-300"
           >
-            Read More
+            View Our Methodology
           </a>
         </div>
       </div>

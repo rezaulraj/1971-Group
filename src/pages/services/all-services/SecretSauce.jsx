@@ -20,14 +20,14 @@ const SecretSauce = () => {
               Our Secret Sauce
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Access a global talent pool of over 830 million professionals in
-              200 countries—with the data, network, and experience to match.
+              We’ve helped place top-tier specialists across 10+ countries, with
+              90.8% successfully passing probation
             </p>
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-3xl font-bold text-indigo-600">50k+</h3>
+                <h3 className="text-3xl font-bold text-indigo-600">10k+</h3>
                 <p className="text-gray-500">Professionals</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">

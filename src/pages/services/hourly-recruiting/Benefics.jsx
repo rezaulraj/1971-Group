@@ -14,23 +14,23 @@ const Benefits = () => {
       icon: <FiDollarSign className="text-3xl" />,
       title: "Transparent Hourly Rates",
       description:
-        "Flexible hourly recruiting starting at just $25/hour—no hidden fees, no long-term commitments.",
+        "Flexible recruiting with no hidden fees and no long-term contracts.",
       color: "text-blue-600",
       bg: "bg-blue-100",
     },
     {
       icon: <FiZap className="text-3xl" />,
-      title: "Fast Hiring Turnaround",
+      title: "Quick Hiring Turnaround",
       description:
-        "Begin immediately after signing. On average, we help you fill roles within 2 weeks.",
+        "Get started right after signing, with most roles filled within just two weeks on average.",
       color: "text-purple-600",
       bg: "bg-purple-100",
     },
     {
       icon: <FiMessageSquare className="text-3xl" />,
-      title: "Clear & Ongoing Communication",
+      title: "Clear, Ongoing Communication",
       description:
-        "Enjoy full visibility into the recruitment process with regular updates, shared workflows, and collaborative decision-making.",
+        "Stay informed every step of the way with regular updates, shared workflows, and collaborative input.",
       color: "text-green-600",
       bg: "bg-green-100",
     },
@@ -38,15 +38,15 @@ const Benefits = () => {
       icon: <FiCheckCircle className="text-3xl" />,
       title: "Trusted & Reliable",
       description:
-        "Backed by a strong reputation, trusted by top-tier clients, with 80+ positive reviews and zero legal complications.",
+        "We’re backed by 40+ positive reviews, a strong reputation, and a flawless track record with no legal issues, just results.",
       color: "text-amber-600",
       bg: "bg-amber-100",
     },
     {
       icon: <FiAward className="text-3xl" />,
-      title: "Proven Expertise",
+      title: "Proven Industry Expertise",
       description:
-        "Our team brings deep industry knowledge, advanced sourcing skills, and the most effective tools to deliver top talent quickly and accurately.",
+        "Our team combines deep industry insight, top-tier sourcing skills, and the latest tools to deliver the right talent fast.",
       color: "text-red-600",
       bg: "bg-red-100",
     },
@@ -77,12 +77,10 @@ const Benefits = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-      {/* Multicolor Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-red-500/20 transform -skew-y-6 scale-125 opacity-50"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-green-500/10 via-amber-500/10 to-pink-500/10 opacity-30"></div>
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -91,12 +89,11 @@ const Benefits = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Us
+            Why Partner With Us
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
         </motion.div>
 
-        {/* Benefits Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={container}

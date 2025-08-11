@@ -8,6 +8,7 @@ import {
   FaUserTie,
   FaShieldAlt,
   FaHandshake,
+  FaCar,
 } from "react-icons/fa";
 import benefitc1 from "../../../assets/allservice/be1.webp";
 import benefitc2 from "../../../assets/allservice/be2.webp";
@@ -20,54 +21,67 @@ import benefitc7 from "../../../assets/allservice/be7.webp";
 const Benefits = () => {
   const benefits = [
     {
-      title: "Faster Scaling",
-      description: "Accelerate your growth with quick access to top talent",
+      title: "Key Benefits",
+      description:
+        "We help businesses scale efficiently, optimize recruitment operations, and improve ROI by consistently delivering the right talent at the right time.",
       icon: <FaRocket className="text-2xl" />,
       iconColor: "text-orange-400",
       borderColor: "border-orange-400",
     },
     {
-      title: "Time Savings",
+      title: "Faster Growth",
       description:
-        "Reduce time-to-hire by up to 70% with our streamlined process",
+        "Expand your team quickly with access to high-quality talent when you need it.",
       icon: <FaClock className="text-2xl" />,
       iconColor: "text-blue-400",
       borderColor: "border-blue-400",
     },
     {
-      title: "Cost Efficiency",
+      title: "Time Efficiency",
       description:
-        "Lower your cost-per-hire with our optimized recruitment models",
+        "Cut your time-to-hire by up to 70% through a refined, end-to-end hiring process.",
       icon: <FaWallet className="text-2xl" />,
       iconColor: "text-green-400",
       borderColor: "border-green-400",
     },
     {
-      title: "Quality Talent",
-      description: "Access pre-vetted candidates with proven track records",
+      title: "Cost Optimization",
+      description:
+        "Reduce your overall hiring costs with our scalable, fixed-fee recruitment model.",
       icon: <FaUserTie className="text-2xl" />,
       iconColor: "text-purple-400",
       borderColor: "border-purple-400",
     },
     {
-      title: "Reduced Risk",
-      description: "Our replacement guarantees protect your investment",
+      title: "High-Caliber Talent",
+      description:
+        "Get matched with thoroughly screened professionals with verified experience and results.",
       icon: <FaShieldAlt className="text-2xl" />,
       iconColor: "text-red-400",
       borderColor: "border-red-400",
     },
     {
-      title: "Strategic Partnership",
-      description: "Long-term collaboration focused on your business goals",
+      title: "Lower Hiring Risk",
+      description:
+        "Our built-in replacement guarantees ensure peace of mind and long-term value.",
       icon: <FaHandshake className="text-2xl" />,
       iconColor: "text-indigo-400",
       borderColor: "border-indigo-400",
     },
     {
-      title: "Performance Metrics",
-      description: "Data-driven approach with transparent reporting",
+      title: "Strategic Collaboration",
+      description:
+        "We become an extension of your business aligned with your hiring goals and growth plans.",
       icon: <FaChartLine className="text-2xl" />,
       iconColor: "text-amber-400",
+      borderColor: "border-amber-400",
+    },
+    {
+      title: "Transparent Reporting",
+      description:
+        "We’ve helped place top-tier specialists across 10+ countries, with 90.8% successfully passing probation.",
+      icon: <FaCar className="text-2xl" />,
+      iconColor: "text-blue-400",
       borderColor: "border-amber-400",
     },
   ];
@@ -82,7 +96,6 @@ const Benefits = () => {
     benefitc7,
   ];
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -105,7 +118,6 @@ const Benefits = () => {
     },
   };
 
-  // Infinite carousel animation
   const carouselVariants = {
     animate: {
       x: ["0%", "-100%"],
@@ -122,7 +134,6 @@ const Benefits = () => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 relative overflow-hidden">
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <motion.div
           className="absolute top-0 left-0 w-64 h-64 bg-orange-500 rounded-full mix-blend-overlay filter blur-3xl"
@@ -163,7 +174,6 @@ const Benefits = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -173,13 +183,12 @@ const Benefits = () => {
         >
           <h2 className="text-4xl font-bold text-white mb-4">Key Benefits</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            We help businesses scale faster, streamline operations, and boost
-            profitability by connecting them to the right people—efficiently and
-            reliably.
+            We help businesses scale efficiently, optimize recruitment
+            operations, and improve ROI by consistently delivering the right
+            talent at the right time.
           </p>
         </motion.div>
 
-        {/* Benefits Grid */}
         <motion.div
           initial="hidden"
           whileInView="visible"

@@ -18,10 +18,8 @@ const HeroServices = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Multicolor gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 opacity-10"></div>
 
-      {/* Animated floating gradient circles */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-20 left-20 w-64 h-64 bg-blue-400 rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-float1"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-float2"></div>
@@ -29,9 +27,7 @@ const HeroServices = () => {
       </div>
 
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Hero Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -57,7 +53,6 @@ const HeroServices = () => {
             </div>
           </motion.div>
 
-          {/* Right Side - Image */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -76,7 +71,6 @@ const HeroServices = () => {
           </motion.div>
         </div>
 
-        {/* Our Clients Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +78,9 @@ const HeroServices = () => {
           viewport={{ once: true }}
           className="mt-24 text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-semibold text-gray-800 mb-8">Our Clients</h1>
+          <h1 className="text-4xl md:text-6xl font-semibold text-gray-800 mb-8">
+            Our Clients
+          </h1>
           <h3 className="text-2xl font-semibold text-gray-800 mb-8">
             We're trusted by fast-scaling companies across industries from
             startups to enterprise-level brands who rely on us to power their
@@ -110,8 +106,7 @@ const HeroServices = () => {
         </motion.div>
       </div>
 
-      {/* Animation styles */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float1 {
           0%,
           100% {

@@ -1,13 +1,13 @@
 import React from "react";
 import { FaUserTie, FaSearch, FaHandshake } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import DOMPurify from "dompurify";
 
 const WhatWeDo = () => {
   const services = [
     {
       title: "Recruitment",
-      description:
-        "We provide full-cycle recruiting & HR services that are tailored to the business needs.",
+      description: `We provide <span class="text-blue-200 font-bold">End-To-End Recruitment Solutions</span> tailored to your business goals whether you need one expert or an entire team.`,
       icon: <FaSearch className="text-xl" />,
       link: "/recruitment-services",
       gradient:
@@ -19,8 +19,7 @@ const WhatWeDo = () => {
     },
     {
       title: "HR Consulting",
-      description:
-        "We help companies create a well-known brand that will stand out on the market and boost hiring metrics.",
+      description: `We help companies build <span class="text-purple-200 font-bold">Strong Employer Brands</span> that attract and retain the right talent.`,
       icon: <FaUserTie className="text-xl" />,
       link: "/hr-services",
       gradient:
@@ -32,8 +31,7 @@ const WhatWeDo = () => {
     },
     {
       title: "Outstaffing",
-      description:
-        "We provide staffing services for fast-growing companies and help to grow your team and increase the productivity.",
+      description: `Scale your operations with <span class="text-blue-200 font-bold">Flexible Staffing Solutions</span> for peak performance and productivity.`,
       icon: <FaHandshake className="text-xl" />,
       link: "/staffing-services",
       gradient:
@@ -84,9 +82,10 @@ const WhatWeDo = () => {
               <p
                 className="mb-6 opacity-90"
                 style={{ color: service.textColor }}
-              >
-                {service.description}
-              </p>
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(service.description),
+                }}
+              />
               <a
                 href={service.link}
                 className="inline-flex items-center font-semibold group"

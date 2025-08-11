@@ -29,25 +29,25 @@ const HeroHourLyRecruiting = () => {
   const features = [
     {
       icon: <FiDollarSign className="text-2xl" />,
-      title: "Smart Cost Reduction",
+      title: "Cost Reduction Without Compromise",
       description:
-        "The ideal, budget-friendly solution for hiring 1–2 positions. Pay only for the actual hours worked—no wasted time, no unnecessary costs.",
+        "Need to hire just 1–2 professionals? Our hourly recruiting model is the most cost-efficient solutionpay only for the hours worked, with no upfront or hidden fees. It’s designed to save you time and budget while ensuring maximum value. Whether you’re looking for a designer, software engineer, admin support, or an executive, we deliver results with zero waste.",
       bgColor: "bg-green-100",
       textColor: "text-green-600",
     },
     {
       icon: <FiZap className="text-2xl" />,
-      title: "Agile On-Demand Recruiting",
+      title: "On-Demand Global Hiring",
       description:
-        "Hire globally with speed and precision—from tech talent to non-tech specialists and top-level executives—exactly when you need them.",
+        "We offer on-demand recruitment services for a wide range of roles, from skilled specialists to leadership positions. Hire globally without long-term commitments and start building your team as soon as tomorrow.",
       bgColor: "bg-blue-100",
       textColor: "text-blue-600",
     },
     {
       icon: <FiSearch className="text-2xl" />,
-      title: "Targeted CV Sourcing",
+      title: "CV Sourcing Services",
       description:
-        "Get access to pre-screened resumes tailored to your hiring needs. Fast, reliable candidate sourcing available upon request.",
+        "Already have an HR team but need a talent pipeline? We offer on-demand resume sourcing, including candidate shortlisting, CV searches by role and region, and customized talent lists tailored to your team’s needs. Only need CVs? We’ve got you covered.",
       bgColor: "bg-purple-200",
       textColor: "text-purple-600",
     },
@@ -140,8 +140,8 @@ const HeroHourLyRecruiting = () => {
             </motion.h1>
 
             <motion.p className="text-lg text-gray-600" variants={itemVariants}>
-              Flexible, on-demand recruitment services billed by the
-              hour—efficient, cost-effective, and tailored to your hiring needs.
+              Flexible hiring solutions pay only for the hours we work on your
+              vacancies.
             </motion.p>
 
             <motion.div variants={itemVariants}>
@@ -237,7 +237,7 @@ const HeroHourLyRecruiting = () => {
               animate="animate"
             >
               <span className="text-lg font-medium text-gray-500 whitespace-nowrap">
-                Trusted by:
+                Trusted by Global Clients
               </span>
               {ourClient.map((client, index) => (
                 <img

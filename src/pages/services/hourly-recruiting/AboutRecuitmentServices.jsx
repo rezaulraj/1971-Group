@@ -17,7 +17,7 @@ const AboutRecruitmentServices = () => {
       icon: <FiClock className="text-3xl" />,
       title: "What Is Hourly Recruiting?",
       description:
-        "An overview of recruitment services billed by the hour—how it works, key features, and the pros and cons of hourly contract agreements between employers and recruiters.",
+        "Gain a clear understanding of recruitment services billed by the hour, how they operate, their key features, and the pros and cons of hourly contracts between employers and recruiters.",
       bgColor: "bg-blue-600",
       textColor: "text-blue-100",
       borderColor: "border-blue-400",
@@ -28,7 +28,7 @@ const AboutRecruitmentServices = () => {
       icon: <FiDollarSign className="text-3xl" />,
       title: "Understanding Recruitment Fees and Models",
       description:
-        "Explore the most common recruitment agency pricing models: hourly billing, retained search, percentage of salary, and fixed-fee recruitment—how each works and when to use them.",
+        "Explore popular recruitment pricing models including hourly billing, retained search, percentage-based fees, and fixed-fee recruitment. Understand how each works and when it’s best to use them.",
       bgColor: "bg-purple-600",
       textColor: "text-purple-100",
       borderColor: "border-purple-400",
@@ -158,8 +158,8 @@ const AboutRecruitmentServices = () => {
               <div>
                 <h4 className="text-xl font-bold mb-2">Flexible Engagement</h4>
                 <p className="text-gray-400">
-                  Scale your recruitment efforts up or down based on your
-                  current hiring needs without long-term commitments.
+                  Easily scale your recruitment efforts up or down based on your
+                  hiring needs, no long-term commitments required.
                 </p>
               </div>
             </div>
@@ -173,8 +173,8 @@ const AboutRecruitmentServices = () => {
               <div>
                 <h4 className="text-xl font-bold mb-2">Transparent Pricing</h4>
                 <p className="text-gray-400">
-                  Clear, upfront cost structure with no hidden fees—you only pay
-                  for the actual time spent on your recruitment.
+                  Enjoy a straightforward pricing structure with no hidden fees.
+                  You only pay for the actual time spent on your recruitment.
                 </p>
               </div>
             </div>
