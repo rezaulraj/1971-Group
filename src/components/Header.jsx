@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import logo from "/logo.png?url";
 import { FiChevronDown, FiChevronRight, FiX, FiMenu } from "react-icons/fi";
+import Calendly from "./Calendly";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeChildDropdown, setActiveChildDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [showCalendly, setShowCalendly] = useState(false);
   const navItems = [
     {
       level: "Services",
@@ -181,7 +182,10 @@ const Header = () => {
 
         {/* Hire Talent */}
         <div className="hidden md:block">
-          <button className="bg-[#5cc082] text-white px-6 py-2 rounded-md hover:bg-[#4daa72] transition-colors font-semibold shadow-md hover:shadow-lg">
+          <button
+            onClick={() => setShowCalendly(true)}
+            className="bg-[#5cc082] text-white px-6 py-2 rounded-md hover:bg-[#4daa72] transition-colors font-semibold shadow-md hover:shadow-lg"
+          >
             Hire Talent
           </button>
         </div>
@@ -280,12 +284,16 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <button className="mt-4 w-full bg-[#5cc082] text-white py-3 rounded-md font-semibold hover:bg-[#4daa72] transition-colors shadow-md">
+            <button
+              onClick={() => setShowContactForm(true)}
+              className="mt-4 w-full bg-[#5cc082] text-white py-3 rounded-md font-semibold hover:bg-[#4daa72] transition-colors shadow-md"
+            >
               Hire Talent
             </button>
           </div>
         </div>
       )}
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </header>
   );
 };

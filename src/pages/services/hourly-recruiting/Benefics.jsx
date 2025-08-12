@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiDollarSign,
@@ -10,8 +10,10 @@ import {
   FiClock,
   FiBarChart2,
 } from "react-icons/fi";
+import Calendly from "../../../components/Calendly";
 
 const Benefits = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const benefits = [
     {
       icon: <FiDollarSign className="text-3xl" />,
@@ -160,7 +162,10 @@ const Benefits = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <button className="relative inline-flex cursor-pointer items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 group overflow-hidden">
+          <button
+            onClick={() => setShowCalendly(true)}
+            className="relative inline-flex cursor-pointer items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 group overflow-hidden"
+          >
             <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             <span className="relative z-10 flex items-center">
               <span>Become a Partner</span>
@@ -185,6 +190,7 @@ const Benefits = () => {
           </p>
         </motion.div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };

@@ -8,7 +8,6 @@ const SecretSauce = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left Side - Text Content */}
           <motion.div
             className="lg:w-1/2"
             initial={{ opacity: 0, x: -20 }}
@@ -20,7 +19,7 @@ const SecretSauce = () => {
               Our Secret Sauce
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              We’ve helped place top-tier specialists across 10+ countries, with
+              We’ve helped place top-tier specialists across 80+ countries, with
               90.8% successfully passing probation
             </p>
 
@@ -36,7 +35,7 @@ const SecretSauce = () => {
               </div>
             </div>
 
-            <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300 flex items-center gap-2">
+            {/* <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300 flex items-center gap-2">
               Explore Our Network
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,10 +49,9 @@ const SecretSauce = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </button>
+            </button> */}
           </motion.div>
 
-          {/* Right Side - Logos */}
           <motion.div
             className="lg:w-1/2 relative"
             initial={{ opacity: 0, x: 20 }}
@@ -62,7 +60,6 @@ const SecretSauce = () => {
             viewport={{ once: true }}
           >
             <div className="relative bg-white p-8 rounded-2xl text-center shadow-lg border border-gray-100">
-              {/* Main Logo */}
               <div className="flex justify-center mb-8">
                 <img
                   src={logo}
@@ -71,7 +68,7 @@ const SecretSauce = () => {
                 />
               </div>
               <div className="text-6xl text-[#0077B5]">+</div>
-              {/* LinkedIn Integration */}
+
               <div className="bg-blue-50 rounded-xl p-6 text-center border border-blue-100">
                 <div className="flex justify-center mb-4">
                   <FaLinkedin className="text-4xl text-[#0077B5]" />
@@ -85,7 +82,6 @@ const SecretSauce = () => {
               </div>
             </div>
 
-            {/* Decorative Elements */}
             <div className="absolute -z-10 top-8 -right-8 w-32 h-32 bg-indigo-100 rounded-full blur-xl opacity-40"></div>
             <div className="absolute -z-10 bottom-8 -left-8 w-24 h-24 bg-blue-100 rounded-full blur-xl opacity-40"></div>
           </motion.div>

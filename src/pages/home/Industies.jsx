@@ -16,6 +16,7 @@ import {
   FaPaintRoller,
 } from "react-icons/fa";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Industries = () => {
   const industries = [
@@ -127,13 +128,13 @@ const Industries = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="#"
+          <Link
+            to="/industries"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 to-indigo-600"
           >
-            Find skilled workers
+            More Details Info
             <HiOutlineArrowNarrowRight className="ml-2 w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

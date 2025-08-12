@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiAward,
@@ -9,8 +9,10 @@ import {
   FiDollarSign,
   FiHeart,
 } from "react-icons/fi";
+import Calendly from "../../components/Calendly";
 
 const HireWorkers = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const benefits = [
     {
       icon: <FiAward className="text-3xl" />,
@@ -62,7 +64,6 @@ const HireWorkers = () => {
     },
   ];
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -87,12 +88,10 @@ const HireWorkers = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      {/* Decorative background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 transform -skew-y-3 scale-105 opacity-50"></div>
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/subtle-dots.png')] opacity-10"></div>
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Header section */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -115,7 +114,6 @@ const HireWorkers = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mt-6"></div>
         </motion.div>
 
-        {/* Benefits grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={container}
@@ -148,7 +146,6 @@ const HireWorkers = () => {
           ))}
         </motion.div>
 
-        {/* CTA section */}
         <motion.div
           className="text-center mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-10 shadow-xl"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -164,15 +161,22 @@ const HireWorkers = () => {
             critical hiring needs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg">
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+            >
               Request Candidate Profiles
             </button>
-            <button className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all hover:scale-105">
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all hover:scale-105"
+            >
               Speak With Our Team
             </button>
           </div>
         </motion.div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };

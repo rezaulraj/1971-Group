@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaHandHoldingUsd,
@@ -7,8 +7,10 @@ import {
   FaInfoCircle,
 } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import Calendly from "../../../components/Calendly";
 
 const WhatWeDoServices = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const services = [
     {
       title: "Pay-Per-Hire Recruiting",
@@ -182,19 +184,20 @@ const WhatWeDoServices = () => {
               <p className="text-gray-300 mb-6">{service.details}</p>
 
               <div className="mt-auto">
-                <motion.a
-                  href={service.link}
-                  className="inline-flex items-center font-semibold text-white group"
+                <motion.button
+                  onClick={() => setShowCalendly(true)}
+                  className="inline-flex items-center font-semibold text-white group cursor-pointer"
                   whileHover={{ x: 5 }}
                 >
                   {service.buttonText}
                   <HiArrowNarrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                </motion.a>
+                </motion.button>
               </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </section>
   );
 };

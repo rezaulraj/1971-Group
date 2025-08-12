@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import heroImage from "../../../assets/allservice/hero.jpg?url";
 import clogo1 from "../../../assets/clined/cl1.png?url";
@@ -9,8 +9,10 @@ import clogo5 from "../../../assets/clined/cl5.png?url";
 import clogo6 from "../../../assets/clined/cl6.png?url";
 import clogo7 from "../../../assets/clined/cl7.png?url";
 import clogo8 from "../../../assets/clined/cl8.png?url";
+import Calendly from "../../../components/Calendly";
 
 const HeroServices = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const ourClient = [
     { clogo: clogo1 },
     { clogo: clogo2 },
@@ -53,7 +55,10 @@ const HeroServices = () => {
                 designed to save you time, reduce hiring costs, and connect you
                 with top-tier talent across continents.
               </p>
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+              <button
+                onClick={() => setShowCalendly(true)}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
                 Book a Call
               </button>
             </div>
@@ -111,7 +116,7 @@ const HeroServices = () => {
           </div>
         </motion.div>
       </div>
-
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
       <style jsx="true" global="true">{`
         @keyframes float1 {
           0%,

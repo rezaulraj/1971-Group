@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaUserTie,
@@ -11,8 +11,10 @@ import {
   FaIndustry,
   FaLaptopCode,
 } from "react-icons/fa";
+import Calendly from "../../../components/Calendly";
 
 const CaseStudies = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const studies = [
     {
       title: "Hired over 7 experts in less than 3 months",
@@ -153,14 +155,15 @@ const CaseStudies = () => {
           </div>
         </motion.div>
         <div className="flex items-center justify-center mt-10">
-          <a
-            href="/case-study"
+          <button
+            onClick={() => setShowCalendly(true)}
             className="bg-gradient-to-br from-blue-100/80 to-amber-100/80 text-xl font-medium rounded-2xl px-4 p-3 shadow-2xl hover:scale-95 transition-transform duration-300"
           >
-            View Our Methodology
-          </a>
+            More Info
+          </button>
         </div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </section>
   );
 };

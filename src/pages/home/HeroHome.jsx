@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRight, FaClock, FaStar, FaUserTie } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -10,8 +10,10 @@ import clogo5 from "../../assets/clined/cl5.png?url";
 import clogo6 from "../../assets/clined/cl6.png?url";
 import clogo7 from "../../assets/clined/cl7.png?url";
 import clogo8 from "../../assets/clined/cl8.png?url";
+import Calendly from "../../components/Calendly";
 const HeroHome = () => {
   const controls = useAnimation();
+  const [showCalendly, setShowCalendly] = useState(false);
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: false,
@@ -119,6 +121,7 @@ const HeroHome = () => {
                 multinational.
               </p>
               <motion.button
+                onClick={() => setShowCalendly(true)}
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 8px 25px rgba(99, 102, 241, 0.6)",
@@ -251,6 +254,7 @@ const HeroHome = () => {
           </div>
         </div>
       </section>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };
