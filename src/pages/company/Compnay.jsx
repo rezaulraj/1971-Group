@@ -4,6 +4,7 @@ import MissionVision from "./MissionVission";
 import OurValue from "./OurValue";
 import CompanyBlog from "./CompanyBlog";
 import Contact from "../home/Contact";
+import Benefits from "../services/hourly-recruiting/Benefics";
 
 const Compnay = () => {
   return (
@@ -11,8 +12,9 @@ const Compnay = () => {
       <HeroCompnay />
       <MissionVision />
       <OurValue />
-      <CompanyBlog/>
-      <Contact/>
+      <Benefits />
+      <CompanyBlog />
+      <Contact />
     </div>
   );
 };

@@ -21,6 +21,7 @@ import SubLayout from "./components/SubLayout";
 import FintechPage from "./pages/industries/fintech/FintechPage";
 import CloudPage from "./pages/industries/cloud/CloudPage";
 import CaseStudy from "./pages/casestudy/CaseStudy";
+import Vacancies from "./pages/vacancies/Vacancies";
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -54,6 +55,7 @@ function App() {
           <Route path="guides" element={<GuidePage />} />
           <Route path="/guides/:slug" element={<GuideDetails />} />
           <Route path="case-study" element={<CaseStudy />} />
+          <Route path="vacancies" element={<Vacancies />} />
           {/* <Route path="web3" element={<Web3Page />} />
           <Route path="ai" element={<AiPage />} /> */}
           <Route path="*" element={<NotFound />} />
