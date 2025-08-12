@@ -14,11 +14,14 @@ import heroi1 from "../../assets/company/c1.webp";
 import heroi3 from "../../assets/company/c3.jpg";
 import heroi5 from "../../assets/company/c5.jpeg";
 import heroi6 from "../../assets/company/c7.jpeg";
-import clogo1 from "../../assets/home/l1.webp";
-import clogo2 from "../../assets/home/l2.webp";
-import clogo3 from "../../assets/home/l3.webp";
-import clogo4 from "../../assets/home/l4.webp";
-import clogo5 from "../../assets/home/l5.webp";
+import clogo1 from "../../assets/clined/cl1.png?url";
+import clogo2 from "../../assets/clined/cl2.png?url";
+import clogo3 from "../../assets/clined/cl3.png?url";
+import clogo4 from "../../assets/clined/cl4.png?url";
+import clogo5 from "../../assets/clined/cl5.png?url";
+import clogo6 from "../../assets/clined/cl6.png?url";
+import clogo7 from "../../assets/clined/cl7.png?url";
+import clogo8 from "../../assets/clined/cl8.png?url";
 
 const HeroCompany = () => {
   const [counters, setCounters] = useState({
@@ -50,14 +53,16 @@ const HeroCompany = () => {
     { src: heroi6, alt: "Team collaboration" },
   ];
 
-  const clientLogos = [
-    { src: clogo1, alt: "Client logo 1" },
-    { src: clogo2, alt: "Client logo 2" },
-    { src: clogo3, alt: "Client logo 3" },
-    { src: clogo4, alt: "Client logo 4" },
-    { src: clogo5, alt: "Client logo 5" },
+  const ourClient = [
+    { clogo: clogo1 },
+    { clogo: clogo2 },
+    { clogo: clogo3 },
+    { clogo: clogo4 },
+    { clogo: clogo5 },
+    { clogo: clogo6 },
+    { clogo: clogo7 },
+    { clogo: clogo8 },
   ];
-
   const achievements = [
     {
       icon: <FaBuilding className="text-blue-400" size={24} />,
@@ -248,11 +253,11 @@ const HeroCompany = () => {
           transition={{ delay: 0.8 }}
           className="mt-16 pt-8 border-t border-gray-300/50"
         >
-          <p className="text-center text-gray-600 mb-6 font-medium">
+          <p className="text-center text-2xl text-gray-600 mb-6 font-medium">
             Trusted by innovative companies worldwide
           </p>
           <div className="flex flex-wrap justify-center gap-8">
-            {clientLogos.map((logo, index) => (
+            {ourClient.map((logo, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.1 }}
@@ -260,7 +265,7 @@ const HeroCompany = () => {
               >
                 <img
                   src={logo.src}
-                  alt={logo.alt}
+                  alt="Cliend Logo"
                   className="h-full object-contain opacity-80 hover:opacity-100"
                 />
               </motion.div>

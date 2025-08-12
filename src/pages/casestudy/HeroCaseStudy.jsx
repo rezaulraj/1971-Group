@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import clogo1 from "../../assets/home/l1.webp";
-import clogo2 from "../../assets/home/l2.webp";
-import clogo3 from "../../assets/home/l3.webp";
-import clogo4 from "../../assets/home/l4.webp";
-import clogo5 from "../../assets/home/l5.webp";
+import clogo1 from "../../assets/clined/cl1.png?url";
+import clogo2 from "../../assets/clined/cl2.png?url";
+import clogo3 from "../../assets/clined/cl3.png?url";
+import clogo4 from "../../assets/clined/cl4.png?url";
+import clogo5 from "../../assets/clined/cl5.png?url";
+import clogo6 from "../../assets/clined/cl6.png?url";
+import clogo7 from "../../assets/clined/cl7.png?url";
+import clogo8 from "../../assets/clined/cl8.png?url";
 
 const AnimatedNumber = ({ value, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -63,18 +66,24 @@ const AnimatedNumber = ({ value, duration = 2000 }) => {
 };
 
 const HeroCaseStudy = () => {
-  const logos = [clogo1, clogo2, clogo3, clogo4, clogo5];
-  const duplicatedLogos = [...logos, ...logos];
+  const ourClient = [
+    { clogo: clogo1 },
+    { clogo: clogo2 },
+    { clogo: clogo3 },
+    { clogo: clogo4 },
+    { clogo: clogo5 },
+    { clogo: clogo6 },
+    { clogo: clogo7 },
+    { clogo: clogo8 },
+  ];
+  const duplicatedLogos = [...ourClient, ...ourClient];
 
   return (
     <div className="flex flex-col">
       <section className="min-h-screen flex flex-col md:flex-row bg-gradient-to-br from-gray-50 to-gray-100">
-        {/* Left Side - Teal Gradient Content */}
         <div className="w-full md:w-1/2 p-12 flex items-center relative overflow-hidden">
-          {/* Teal background elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-600 opacity-90 z-0"></div>
 
-          {/* Decorative elements */}
           <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-teal-400/20 blur-2xl"></div>
           <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[200px] border-l-transparent border-t-[200px] border-t-teal-700/30"></div>
 
@@ -100,18 +109,14 @@ const HeroCaseStudy = () => {
           </div>
         </div>
 
-        {/* Right Side - Blue/Gray Pyramid Layout */}
         <div className="w-full md:w-1/2 p-12 flex items-center relative bg-gradient-to-br from-gray-100 to-blue-50">
-          {/* Pyramid Background Elements */}
           <div className="absolute inset-0 overflow-hidden z-0">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-600/10 clip-path-triangle rotate-180 backdrop-blur-sm"></div>
             <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-blue-600/10 clip-path-triangle rotate-60 backdrop-blur-sm"></div>
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-600/10 clip-path-triangle rotate-120 backdrop-blur-sm"></div>
           </div>
 
-          {/* Pyramid Cards */}
           <div className="w-full max-w-md mx-auto relative z-10">
-            {/* Top Single Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 mb-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 mx-auto w-3/4">
               <div className="text-3xl font-bold text-teal-600 text-center mb-2">
                 <AnimatedNumber value="97.8%" duration={1500} />
@@ -121,7 +126,6 @@ const HeroCaseStudy = () => {
               </p>
             </div>
 
-            {/* Bottom Two Cards */}
             <div className="flex justify-center gap-6 w-full">
               <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 w-1/2">
                 <div className="text-2xl font-bold text-blue-600 mb-2">
@@ -143,8 +147,7 @@ const HeroCaseStudy = () => {
             </div>
           </div>
 
-          {/* Global Styles for Triangle Clip-path */}
-          <style jsx>{`
+          <style jsx="true">{`
             .clip-path-triangle {
               clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
             }
@@ -152,22 +155,21 @@ const HeroCaseStudy = () => {
         </div>
       </section>
 
-      {/* Client Logo Marquee */}
-      <div className="bg-gradient-to-r from-blue-800 to-blue-900 py-8 overflow-hidden">
+      <div className="bg-gradient-to-r from-teal-500 to-teal-600 py-4 overflow-hidden">
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-blue-800 to-transparent z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-blue-800 to-transparent z-10"></div>
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-teal-800 to-transparent z-10"></div>
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-teal-800 to-transparent z-10"></div>
 
           <div className="flex items-center animate-marquee whitespace-nowrap">
             {duplicatedLogos.map((logo, index) => (
               <div
-                key={index}
-                className="inline-block mx-8 h-12 opacity-80 hover:opacity-100 transition-opacity"
+                key={`${logo.id}-${index}`}
+                className="inline-flex items-center justify-center mx-12 h-16"
               >
                 <img
-                  src={logo}
-                  alt="Client logo"
-                  className="h-full w-auto object-contain filter brightness-0 invert"
+                  src={logo.clogo}
+                  alt={`Client logo ${logo.id}`}
+                  className="h-full w-auto max-h-16 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -175,8 +177,7 @@ const HeroCaseStudy = () => {
         </div>
       </div>
 
-      {/* Marquee Animation */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes marquee {
           0% {
             transform: translateX(0);
@@ -187,6 +188,8 @@ const HeroCaseStudy = () => {
         }
         .animate-marquee {
           animation: marquee 30s linear infinite;
+          display: inline-block; /* Changed from flex to inline-block for better animation */
+          white-space: nowrap;
         }
       `}</style>
     </div>

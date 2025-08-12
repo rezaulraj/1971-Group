@@ -2,11 +2,14 @@ import React, { useEffect } from "react";
 import { FaArrowRight, FaClock, FaStar, FaUserTie } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import clogo1 from "../../assets/home/l1.webp?url";
-import clogo2 from "../../assets/home/l2.webp?url";
-import clogo3 from "../../assets/home/l3.webp?url";
-import clogo4 from "../../assets/home/l4.webp?url";
-import clogo5 from "../../assets/home/l5.webp?url";
+import clogo1 from "../../assets/clined/cl1.png?url";
+import clogo2 from "../../assets/clined/cl2.png?url";
+import clogo3 from "../../assets/clined/cl3.png?url";
+import clogo4 from "../../assets/clined/cl4.png?url";
+import clogo5 from "../../assets/clined/cl5.png?url";
+import clogo6 from "../../assets/clined/cl6.png?url";
+import clogo7 from "../../assets/clined/cl7.png?url";
+import clogo8 from "../../assets/clined/cl8.png?url";
 const HeroHome = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -60,6 +63,9 @@ const HeroHome = () => {
     { clogo: clogo3 },
     { clogo: clogo4 },
     { clogo: clogo5 },
+    { clogo: clogo6 },
+    { clogo: clogo7 },
+    { clogo: clogo8 },
   ];
 
   return (

@@ -1,11 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroImage from "../../../assets/allservice/hero.jpg?url";
-import clogo1 from "../../../assets/home/l1.webp?url";
-import clogo2 from "../../../assets/home/l2.webp?url";
-import clogo3 from "../../../assets/home/l3.webp?url";
-import clogo4 from "../../../assets/home/l4.webp?url";
-import clogo5 from "../../../assets/home/l5.webp?url";
+import clogo1 from "../../../assets/clined/cl1.png?url";
+import clogo2 from "../../../assets/clined/cl2.png?url";
+import clogo3 from "../../../assets/clined/cl3.png?url";
+import clogo4 from "../../../assets/clined/cl4.png?url";
+import clogo5 from "../../../assets/clined/cl5.png?url";
+import clogo6 from "../../../assets/clined/cl6.png?url";
+import clogo7 from "../../../assets/clined/cl7.png?url";
+import clogo8 from "../../../assets/clined/cl8.png?url";
 
 const HeroServices = () => {
   const ourClient = [
@@ -14,6 +17,9 @@ const HeroServices = () => {
     { clogo: clogo3 },
     { clogo: clogo4 },
     { clogo: clogo5 },
+    { clogo: clogo6 },
+    { clogo: clogo7 },
+    { clogo: clogo8 },
   ];
 
   return (

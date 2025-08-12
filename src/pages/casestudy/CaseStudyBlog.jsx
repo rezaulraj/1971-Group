@@ -1,42 +1,49 @@
 import React from "react";
-import { FiUsers, FiTrendingUp, FiCode, FiArrowRight } from "react-icons/fi";
-import image1 from "../../assets/web/hacon.webp";
-import image2 from "../../assets/web/bitlab.webp";
-import image3 from "../../assets/web/apri.png";
+import {
+  FiUsers,
+  FiTrendingUp,
+  FiBriefcase,
+  FiArrowRight,
+} from "react-icons/fi";
+import image1 from "../../assets/case/hospitality.jpg?url";
+import image2 from "../../assets/case/constraction.webp?url";
+import image3 from "../../assets/case/agreculture.webp?url";
+import { Link } from "react-router-dom";
 
 const CaseStudyBlog = () => {
   const caseStudies = [
     {
+      id: "transforming-hospitality-staffing",
       icon: <FiUsers className="text-2xl" />,
-      image: image2,
-      title:
-        "How we hired 7 talents and improved the Bitmedia Labs' business processes",
-      summary:
-        "We closed 7 positions in 3 months, including not only developers but also other IT specialists, and reach the 100% success rate.",
-      description:
-        "We organized all the recruitment process stages at the highest level from writing the job ads and screening the candidates to interviewing the potential employees and sending our offers to Bitmedia Labs.",
-      category: "Recruiting",
-    },
-    {
-      icon: <FiTrendingUp className="text-2xl" />,
-      image: image3,
-      title: "How we managed to increase Aprioreo's productivity by 350%",
-      summary:
-        "As a result of Aprioreo's cooperation with our recruitment agency OnHires: all the open positions have been filled in 2 months.",
-      description:
-        "6 specialists have been hired, including a C-level specialist, the productivity of Aprioreo has increased by 350%, and Aprioreo has received efficient help in building and organizing business processes.",
-      category: "Recruiting",
-    },
-    {
-      icon: <FiCode className="text-2xl" />,
       image: image1,
-      title:
-        "How we helped Hacken scale their Smart contracts auditor team by 45% over 3 months",
+      title: "Transforming Hospitality Staffing for a Luxury Hotel Chain",
       summary:
-        "Our experience of cooperation with a cybersecurity & blockchain company.",
+        "We filled 85+ positions across 5 properties in 6 months, reducing time-to-hire by 40% while improving candidate quality.",
       description:
-        "Key Objective: hire 15 top-notch smart contract talents in Web3 industry, scale Hacken's team and increase department staff.",
-      category: "Recruiting",
+        "Our tailored recruitment strategy addressed high turnover in the hospitality sector by focusing on cultural fit and career development opportunities, resulting in 30% lower turnover compared to industry averages.",
+      category: "Hospitality",
+    },
+    {
+      id: "workforce-solutions-construction",
+      icon: <FiTrendingUp className="text-2xl" />,
+      image: image2,
+      title: "Workforce Solutions for Major Construction Project",
+      summary:
+        "Delivered 200+ skilled tradespeople within tight deadlines for a $500M infrastructure project.",
+      description:
+        "We implemented specialized sourcing strategies to overcome regional labor shortages, ensuring the project stayed on schedule while maintaining strict safety and certification requirements.",
+      category: "Construction",
+    },
+    {
+      id: "seasonal-agricultural-workforce",
+      icon: <FiBriefcase className="text-2xl" />,
+      image: image3,
+      title: "Seasonal Workforce Solutions for Large-Scale Farming Operation",
+      summary:
+        "Provided 300+ skilled agricultural workers for peak harvest seasons across multiple locations.",
+      description:
+        "We developed a specialized recruitment pipeline for seasonal agricultural workers, implementing training programs that increased productivity by 25% while reducing onboarding time by 40%.",
+      category: "Agriculture",
     },
   ];
 
@@ -45,12 +52,16 @@ const CaseStudyBlog = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Success Stories
+            Recruitment Success Across Industries
           </h2>
-          <div className="w-24 h-1 bg-teal-500 mx-auto"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Proven results in diverse sectors through strategic talent
+            acquisition
+          </p>
+          <div className="w-24 h-1 bg-teal-500 mx-auto mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((caseStudy, index) => (
             <div
               key={index}
@@ -82,16 +93,26 @@ const CaseStudyBlog = () => {
                   {caseStudy.description}
                 </p>
 
-                <a
-                  href="/"
+                <Link
+                  to={`/case-study/${caseStudy.id}`}
                   className="inline-flex items-center text-teal-600 font-medium group-hover:text-teal-800 transition-colors"
                 >
                   <span>Read full case study</span>
                   <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex items-center justify-center mt-12">
+          <Link
+            to={"/blogs"}
+            className="px-8 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors flex items-center mx-auto"
+          >
+            <span>View All Case Studies</span>
+            <FiArrowRight className="ml-2" />
+          </Link>
         </div>
       </div>
     </section>

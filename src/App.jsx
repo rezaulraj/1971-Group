@@ -24,6 +24,7 @@ import CaseStudy from "./pages/casestudy/CaseStudy";
 import Vacancies from "./pages/vacancies/Vacancies";
 import Industry from "./pages/industy/Industry";
 import ContactForm from "./pages/contact/ContactForm";
+import CaseStudyBlogDetails from "./pages/casestudy/CaseStudyBlogDetails";
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -57,6 +58,7 @@ function App() {
           <Route path="guides" element={<GuidePage />} />
           <Route path="/guides/:slug" element={<GuideDetails />} />
           <Route path="case-study" element={<CaseStudy />} />
+          <Route path="/case-study/:id" element={<CaseStudyBlogDetails />} />
           <Route path="vacancies" element={<Vacancies />} />
           <Route path="industries" element={<Industry />} />
           <Route path="contact" element={<ContactForm />} />

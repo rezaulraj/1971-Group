@@ -1,11 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import subscriptionImage from "../../../assets/subscription/herosub.jpeg?url";
-import clogo1 from "../../../assets/home/l1.webp?url";
-import clogo2 from "../../../assets/home/l2.webp?url";
-import clogo3 from "../../../assets/home/l3.webp?url";
-import clogo4 from "../../../assets/home/l4.webp?url";
-import clogo5 from "../../../assets/home/l5.webp?url";
+import clogo1 from "../../../assets/clined/cl1.png?url";
+import clogo2 from "../../../assets/clined/cl2.png?url";
+import clogo3 from "../../../assets/clined/cl3.png?url";
+import clogo4 from "../../../assets/clined/cl4.png?url";
+import clogo5 from "../../../assets/clined/cl5.png?url";
+import clogo6 from "../../../assets/clined/cl6.png?url";
+import clogo7 from "../../../assets/clined/cl7.png?url";
+import clogo8 from "../../../assets/clined/cl8.png?url";
 import {
   FaArrowRight,
   FaMoneyBillWave,
@@ -18,7 +21,7 @@ const ClientLogo = ({ src, alt }) => (
     <img
       src={src}
       alt={alt}
-      className="h-8 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+      className="h-12 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
       loading="lazy"
     />
   </div>
@@ -40,12 +43,15 @@ const BenefitCard = ({ icon: Icon, title, description }) => (
 );
 
 const HeroSubscription = () => {
-  const clients = [
-    { src: clogo1, alt: "Client 1" },
-    { src: clogo2, alt: "Client 2" },
-    { src: clogo3, alt: "Client 3" },
-    { src: clogo4, alt: "Client 4" },
-    { src: clogo5, alt: "Client 5" },
+  const ourClient = [
+    { clogo: clogo1 },
+    { clogo: clogo2 },
+    { clogo: clogo3 },
+    { clogo: clogo4 },
+    { clogo: clogo5 },
+    { clogo: clogo6 },
+    { clogo: clogo7 },
+    { clogo: clogo8 },
   ];
 
   const benefits = [
@@ -133,8 +139,8 @@ const HeroSubscription = () => {
               className="flex items-center justify-center animate-marquee whitespace-nowrap"
               aria-hidden="true"
             >
-              {[...clients, ...clients].map((client, idx) => (
-                <ClientLogo key={idx} src={client.src} alt={client.alt} />
+              {[...ourClient, ...ourClient].map((client, idx) => (
+                <ClientLogo key={idx} src={client.clogo} alt="cliend logo" />
               ))}
             </div>
           </div>
