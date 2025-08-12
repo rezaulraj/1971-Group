@@ -45,7 +45,7 @@ const CompanyBlog = () => {
       icon: <FaChartLine className="text-3xl text-blue-600" />,
       title: "Subscription Recruitment – Explained",
       description:
-        "An exclusive interview with the CEO of OnHires on how subscription-based recruiting is reshaping the industry.",
+        "An exclusive interview with the CEO of 1971 Group on how subscription-based recruiting is reshaping the industry.",
     },
     {
       image: defferents,

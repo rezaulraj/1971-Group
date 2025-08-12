@@ -1,8 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBrain, FaBullhorn, FaCheckCircle } from "react-icons/fa";
+import {
+  FaSearch,
+  FaUserClock,
+  FaUsers,
+  FaLightbulb,
+  FaChartLine,
+  FaHandshakeAltSlash,
+} from "react-icons/fa";
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -31,167 +37,151 @@ const cardVariants = {
   },
 };
 
-const iconVariants = {
-  hover: {
-    rotate: [0, -10, 10, 0],
-    transition: { duration: 0.7 },
-  },
-};
-
-const roleVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { type: "spring", stiffness: 300 },
-  },
-};
-
-const SpecializationCard = ({ icon: Icon, title, description, roles }) => (
+const SpecializationCard = ({ icon: Icon, title, description, benefits }) => (
   <motion.div
-    className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100"
+    className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-blue-200"
     variants={cardVariants}
-    initial="hidden"
-    animate="visible"
     whileHover="hover"
   >
     <div className="p-6">
       <div className="flex items-start mb-4">
-        <motion.div
-          className="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0"
-          variants={iconVariants}
-          whileHover="hover"
-        >
+        <div className="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
           <Icon className="text-blue-600 text-2xl" />
-        </motion.div>
+        </div>
         <div>
-          <motion.h3
-            className="text-xl font-bold text-gray-800"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            {title}
-          </motion.h3>
-          <motion.p
-            className="text-gray-600 mt-1"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            {description}
-          </motion.p>
+          <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+          <p className="text-gray-600 mt-2">{description}</p>
         </div>
       </div>
 
       <div className="mt-4 pt-4 border-t border-gray-100">
-        <motion.h4
-          className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2"
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-        >
-          Key Roles
-        </motion.h4>
-        <div className="flex flex-wrap gap-2">
-          {roles.map((role, index) => (
-            <motion.span
-              key={index}
-              className="bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 rounded-full"
-              variants={roleVariants}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.7 + index * 0.05 }}
-            >
-              {role}
-            </motion.span>
+        <h4 className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3">
+          Key Benefits
+        </h4>
+        <ul className="space-y-2">
+          {benefits.map((benefit, index) => (
+            <li key={index} className="flex items-start">
+              <span className="text-blue-500 mr-2">✓</span>
+              <span className="text-gray-700">{benefit}</span>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   </motion.div>
 );
 
-const TechnologyStack = () => {
-  const specializations = [
+const TalentSpecializations = () => {
+  const services = [
     {
-      icon: FaBrain,
-      title: "Management & Business Analysis",
+      icon: FaSearch,
+      title: "Precision Talent Matching",
       description:
-        "Lead and manage your tech projects with professionals who bring structure and strategy.",
-      roles: [
-        "CTO",
-        "IT Project Manager",
-        "Product Manager",
-        "Business Analyst",
-        "Team Lead",
+        "We don't just fill positions—we find candidates who excel in your unique environment.",
+      benefits: [
+        "90% first-year retention rate",
+        "Cultural fit assessments",
+        "Skills-to-role alignment",
       ],
     },
     {
-      icon: FaBullhorn,
-      title: "Marketing & HR",
+      icon: FaUserClock,
+      title: "Flexible Staffing Solutions",
       description:
-        "Build your brand and scale your team with skilled marketers and HR professionals.",
-      roles: [
-        "CMO",
-        "Content Creator",
-        "PPC Specialist",
-        "Email Marketer",
-        "Traffic Manager",
-        "HR Business Partner",
-        "Recruiter",
-        "HR Director",
-        "Copywriter",
+        "Scale your workforce up or down without the overhead of traditional hiring.",
+      benefits: [
+        "Contract-to-hire options",
+        "Short-term project staffing",
+        "Seamless onboarding",
       ],
     },
     {
-      icon: FaCheckCircle,
-      title: "QA, Infrastructure & Support",
+      icon: FaUsers,
+      title: "High-Volume Hiring",
       description:
-        "Ensure product reliability and seamless operations with experienced QA and support teams.",
-      roles: [
-        "QA Engineers",
-        "DevOps",
-        "System Administrators",
-        "IT Support Specialists",
+        "Rapidly deploy quality talent for seasonal peaks or expansion initiatives.",
+      benefits: [
+        "30% faster time-to-fill",
+        "Bulk candidate screening",
+        "Turnkey onboarding programs",
+      ],
+    },
+    {
+      icon: FaChartLine,
+      title: "Strategic Workforce Planning",
+      description:
+        "Proactively build talent pipelines for critical roles before you need them.",
+      benefits: [
+        "Future-ready skills mapping",
+        "Succession planning",
+        "Market salary benchmarking",
+      ],
+    },
+    {
+      icon: FaLightbulb,
+      title: "Specialized Recruitment",
+      description:
+        "Access niche talent pools for hard-to-fill roles across industries.",
+      benefits: [
+        "Industry-specific networks",
+        "Passive candidate outreach",
+        "Competitive offer strategies",
+      ],
+    },
+    {
+      icon: FaHandshakeAltSlash,
+      title: "Managed Staffing Programs",
+      description:
+        "Outsource your entire recruitment function with guaranteed results.",
+      benefits: [
+        "Dedicated account management",
+        "Performance-based pricing",
+        "90-day replacement guarantee",
       ],
     },
   ];
 
   return (
     <motion.section
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Technology Stack & Areas of Specialization
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We provide expert talent across a wide range of technologies and
-            roles—tailored to your business needs.
-          </p>
-        </motion.div>
+        <div className="text-center mb-12">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            Staffing Solutions That Deliver Results
+          </motion.h2>
+          <motion.p
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            Whether you need one perfect candidate or an entire team, we provide{" "}
+            <span className="font-semibold text-blue-600">
+              flexible, scalable staffing
+            </span>{" "}
+            with measurable impact.
+          </motion.p>
+        </div>
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
         >
-          {specializations.map((specialization, index) => (
+          {services.map((service, index) => (
             <SpecializationCard
               key={index}
-              icon={specialization.icon}
-              title={specialization.title}
-              description={specialization.description}
-              roles={specialization.roles}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+              benefits={service.benefits}
             />
           ))}
         </motion.div>
@@ -200,4 +190,4 @@ const TechnologyStack = () => {
   );
 };
 
-export default TechnologyStack;
+export default TalentSpecializations;

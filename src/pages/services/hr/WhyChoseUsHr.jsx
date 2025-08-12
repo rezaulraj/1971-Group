@@ -12,39 +12,39 @@ const WhyChoseUsHr = () => {
   const features = [
     {
       icon: <FaSearch className="text-blue-300 text-2xl" />,
-      title: "Comprehensive HR Audit",
+      title: "HR Audit",
       description:
-        "We thoroughly assess your HR systems to identify gaps and recommend targeted improvements for better performance.",
+        "Analyze current HR practices and identify areas for improvement across the employee lifecycle.",
     },
     {
       icon: <FaChartLine className="text-purple-300 text-2xl" />,
-      title: "Actionable Insights",
+      title: "Strategic Insights",
       description:
-        "Get a clear picture of your HR department's strengths and weaknesses, along with up-to-date industry trends and best practices.",
+        "Understand what’s working and what isn’t. We provide data-driven insights and highlight opportunities for growth.",
     },
     {
       icon: <FaPuzzlePiece className="text-green-300 text-2xl" />,
-      title: "Tailored HR Solutions",
+      title: "Actionable Solutions",
       description:
-        "We design effective HR strategies quickly and efficiently—aligned with your goals and ready to deliver real results.",
+        "Develop and implement a winning HR strategy in record time, tailored to your business needs.",
     },
     {
       icon: <FaGlobe className="text-yellow-300 text-2xl" />,
-      title: "Employer Branding Expertise",
+      title: "Employer Brand Expertise",
       description:
-        "Our team builds impactful employer brand strategies that help you attract top talent and retain key employees.",
+        "Craft a strong employer brand that aligns with your values and speaks directly to the talent you need.",
     },
     {
       icon: <FaCreditCard className="text-red-300 text-2xl" />,
-      title: "Flexible Payment Options",
+      title: "Flexible Payments",
       description:
-        "Choose from multiple pricing plans and pay the way you prefer—whether via traditional banking or cryptocurrency.",
+        "We offer multiple pricing plans and payment methods including wire transfers and crypto.",
     },
     {
       icon: <FaUsers className="text-cyan-300 text-2xl" />,
-      title: "Optimized Recruitment Support",
+      title: "Effective Recruitment Support",
       description:
-        "We improve your hiring process by refining recruitment strategies and offering hands-on support in talent acquisition.",
+        "We refine your recruitment strategy and assist in finding top-tier candidates across industries.",
     },
   ];
 

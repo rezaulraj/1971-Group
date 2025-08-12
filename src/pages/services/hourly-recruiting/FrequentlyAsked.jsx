@@ -19,45 +19,39 @@ const FrequentlyAsked = () => {
 
   const faqs = [
     {
-      question: "What Is Hourly Recruiting?",
+      question: "What Is Hourly Recruiting, exactly?",
       answer:
-        "Hourly recruiting is a flexible recruitment outsourcing model where the client pays only for the time a recruiter spends working on a hiring project. This could involve a freelance recruiter, a specialist from a recruitment agency, or a dedicated hiring team working under an hourly contract. Unlike traditional models, the final cost is not fixed upfront—only the hourly rate is specified in the agreement.",
+        "It’s a model where the client pays only for the hours worked by the recruiter, not per hire. This can be through a freelancer, an in-house recruiter, or a specialized agency like ours.",
       icon: <FiFileText className="text-blue-400" />,
     },
     {
-      question: "What Does an Hourly Recruiting Contract Include?",
+      question: "How does an hourly recruitment agreement work?",
       answer:
-        "An hourly recruiting agreement outlines a time-based collaboration between the client and the recruitment provider. The contract defines the hourly rate and the scope of services, which may include:\n\n• Full-cycle candidate recruitment\n• Sourcing and submitting qualified resumes\n• Conducting candidate interviews\n• Creating job descriptions\n• Developing interview questions\n\nThe list of services can be tailored to the specific needs of each project.",
+        "You sign a simple hourly-based contract. We define your goals, assign expert recruiters, and start the process. You’re billed based on time spent  nothing more.",
       icon: <FiSettings className="text-purple-400" />,
     },
     {
-      question: "How Does the Hourly Recruiting Process Work?",
+      question: "Who benefits most from hourly recruiting?",
       answer:
-        "The process typically includes these key steps:\n\n1. Signing an agreement between the client and the recruitment provider\n2. Defining the hourly rate for recruitment services\n3. The recruiter or team performs the agreed scope of work\n4. The total number of hours worked is calculated\n5. The client is invoiced based on hours spent",
+        "Startups, SMEs, and companies hiring just 1–2 roles or needing short-term recruitment help. It’s also ideal for companies needing only sourcing (CV delivery).",
       icon: <FiUsers className="text-green-400" />,
     },
     {
-      question: "Who Benefits from the Hourly Recruitment Model?",
+      question: "How long does it take to hire one person?",
       answer:
-        "This model is ideal for:\n\n• Companies looking to hire 1–2 specialists quickly\n• Organizations needing only partial recruiting support (e.g., shortlisting resumes)\n• Businesses with limited hiring needs who want cost transparency and flexibility\n\nHourly recruiting offers a lean and efficient solution for small-scale hiring projects.",
+        "It usually takes 7 to 14 days, depending on the role complexity.",
       icon: <FiClock className="text-amber-400" />,
     },
     {
-      question: "How Many Hours Does It Take to Hire One Candidate?",
+      question: "What’s the average hourly rate?",
       answer:
-        "The time required to fill a position can vary based on role complexity. On average, it may take anywhere from a few days to a few weeks to complete a hire, depending on the job requirements.",
+        "Rates are flexible and depend on the role's level and complexity, with most standard positions falling within a competitive hourly range.",
       icon: <FiDollarSign className="text-red-400" />,
     },
     {
-      question: "What Is the Average Hourly Rate?",
+      question: "Which positions are most expensive to fill?",
       answer:
-        "Hourly rates vary depending on the position and recruiter expertise. The industry average is around $45/hour, but rates can increase for highly specialized roles or when additional service guarantees are included.\n\nOnHires offers competitive hourly rates starting from $25/hour.",
-      icon: <FiAward className="text-indigo-400" />,
-    },
-    {
-      question: "Which Roles Are the Most Expensive to Fill?",
-      answer:
-        "C-level executive positions are the most costly and time-consuming to recruit. These roles demand extensive vetting, longer timelines, and deeper expertise—making the overall process more expensive.",
+        "C-level roles (CEO, CFO, CTO) are typically the most expensive due to complexity, seniority, and guarantee requirements.",
       icon: <FiAward className="text-indigo-400" />,
     },
   ];

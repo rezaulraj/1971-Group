@@ -220,7 +220,7 @@ const HeroHourLyRecruiting = () => {
                     Expert Recruiters
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Our team has 10+ years of industry experience
+                    Our team has 15+ years of industry experience
                   </p>
                 </div>
               </div>

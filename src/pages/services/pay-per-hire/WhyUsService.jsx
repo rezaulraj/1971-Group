@@ -7,19 +7,19 @@ const WhyUsService = () => {
       icon: <FiDollarSign className="w-6 h-6 text-blue-500" />,
       title: "Smarter Hiring, Lower Costs",
       description:
-        "Pay only a percentage of the candidate's annual salary—this model is 40–45% more cost-effective than managing in-house recruitment.",
+        "Pay only a percentage of the candidate’s annual salary offering a solution that’s 40–45% more cost-effective than managing recruitment in-house.",
     },
     {
       icon: <FiClock className="w-6 h-6 text-purple-500" />,
       title: "Recruitment When You Need It",
       description:
-        "Hire on demand—whether you need one specialist or a full team. We cover everything from junior roles to senior developers, non-technical experts, and executive leaders.",
+        "Hire on demand, whether you’re looking for a single specialist or an entire team. From junior roles to senior developers, non-technical experts to executive leaders we’ve got you covered.",
     },
     {
       icon: <FiUsers className="w-6 h-6 text-green-500" />,
       title: "Your Dedicated Recruitment Partner",
       description:
-        "An experienced remote recruiter will work closely on your vacancy, using the latest tools and proven strategies to deliver top talent efficiently.",
+        "Work with an experienced remote recruiter who leverages the latest tools and proven strategies to source and deliver top talent quickly and effectively.",
     },
   ];
 
@@ -27,12 +27,13 @@ const WhyUsService = () => {
     <div className="bg-gray-900 py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Why Choose Our Pay-Per-Hire Service?
+          <h2 className="text-3xl font-bold text-white sm:text-4xl max-w-xl mx-auto">
+            Hire Smarter, Not Harder: Pay Only When We Find Your Perfect Fit
           </h2>
           <p className="mt-4 max-w-2xl text-xl text-gray-300 mx-auto">
-            Innovative recruitment solutions that deliver results without the
-            overhead
+            Why waste time and money on endless recruiting? Our **pay-per-hire
+            model** saves you resources while connecting you with **highly
+            qualified, culture-aligned talent**—guaranteed.
           </p>
         </div>
 
@@ -58,7 +59,7 @@ const WhyUsService = () => {
           <div className="flex items-center">
             <FiAward className="w-8 h-8 text-yellow-400 mr-2" />
             <span className="text-white font-medium text-lg">
-              Trusted by 80+ growing companies
+              Trusted by 150+ growing companies
             </span>
           </div>
           <div className="mt-4 h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>

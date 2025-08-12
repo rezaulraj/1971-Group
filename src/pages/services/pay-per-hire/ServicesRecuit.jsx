@@ -9,23 +9,23 @@ const ServicesRecuit = () => {
       icon: <FiLayers className="w-6 h-6 text-blue-600" />,
       title: "Limitless IT Recruitment with 1971 group",
       description:
-        "At 1971 group, we believe nothing is impossible—our expert team is equipped to handle even the most complex IT hiring challenges.",
+        "At 1971 Group, we thrive on challenges. Our expert team is ready to tackle even the most complex IT hiring needs with precision and confidence.",
       image: itservices,
       bg: "bg-blue-50",
     },
     {
       icon: <FiMic className="w-6 h-6 text-blue-600" />,
-      title: "CEO Insights: A Service That Covers All Hiring Needs",
+      title: "CEO Insights: Meeting Every Hiring Demand",
       description:
-        "In this exclusive interview, OnHires' CEO shares how our recruitment model adapts to meet the full spectrum of talent acquisition demands.",
+        "In this exclusive interview, the CEO of 1971 Group  reveals how our flexible recruitment model is designed to meet a wide range of talent acquisition needs, from junior roles to executive hires.",
       bg: "bg-gray-50",
       image: ceo,
     },
     {
       icon: <FiDollarSign className="w-6 h-6 text-blue-600" />,
-      title: "Pay-Per-Hire Recruitment: A Smart Start",
+      title: "Pay-Per-Hire Recruitment: A Smart, Risk-Free Start",
       description:
-        "Our end-to-end, pay-per-hire solution is ideal for companies looking to begin a collaboration with a reliable recruitment partner—pay only when the right hire is made.",
+        "Our comprehensive pay-per-hire solution is perfect for companies seeking a dependable recruitment partner pay only when the right candidate is successfully placed.",
       image: paypers,
       bg: "bg-blue-50",
     },

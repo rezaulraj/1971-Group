@@ -7,7 +7,7 @@ import award4 from "../../assets/home/ar4.webp?url";
 import award5 from "../../assets/home/ar5.webp?url";
 import award6 from "../../assets/home/ar6.webp?url";
 
-// Animation variants
+
 const container = {
   hidden: { opacity: 0 },
   visible: {

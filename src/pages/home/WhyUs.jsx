@@ -120,7 +120,6 @@ const WhyUs = () => {
 
   return (
     <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-emerald-200 opacity-20 blur-3xl animate-float"></div>
         <div className="absolute bottom-10 right-10 w-72 h-72 rounded-full bg-purple-200 opacity-20 blur-3xl animate-float-delay"></div>
@@ -128,7 +127,6 @@ const WhyUs = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +143,6 @@ const WhyUs = () => {
           </p>
         </motion.div>
 
-        {/* Full-width Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {stats.map((stat, index) => (
             <motion.div
@@ -194,7 +191,6 @@ const WhyUs = () => {
           ))}
         </div>
 
-        {/* Animated Global Presence Section */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -202,7 +198,6 @@ const WhyUs = () => {
           viewport={{ once: true }}
           className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-blue-600 to-indigo-700 p-8 md:p-12 text-white"
         >
-          {/* Animated floating globe */}
           <motion.div
             animate={{
               y: [0, -15, 0],
@@ -226,7 +221,6 @@ const WhyUs = () => {
               base in the Gulf.
             </p>
 
-            {/* Animated Country Flags Carousel */}
             <div className="relative overflow-hidden py-4">
               <motion.div
                 animate={{
@@ -277,8 +271,7 @@ const WhyUs = () => {
         </motion.div>
       </div>
 
-      {/* Animation styles */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0%,
           100% {

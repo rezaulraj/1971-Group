@@ -53,27 +53,25 @@ const HeroSubscription = () => {
       icon: FaMoneyBillWave,
       title: "💰 Significant Cost Savings",
       description:
-        "Up to 45% more affordable than pay-per-hire models and as much as 90% less expensive than managing in-house recruitment.",
+        "Reduce hiring expenses by up to 45% compared to pay-per-hire models, and cut costs by as much as 90% versus maintaining an in-house recruitment team.",
     },
     {
       icon: FaBullseye,
       title: "🎯 Customized & Scalable Hiring",
       description:
-        "We offer on-demand recruitment tailored to your needs—filling positions in any volume with flexible, scalable solutions.",
+        "Get recruitment solutions built around your needs whether it’s one role or a hundred. Our flexible, on-demand approach scales effortlessly with your business.",
     },
     {
       icon: FaUsers,
-      title: "👥 Fully Dedicated Hiring Team",
+      title: "👥 Dedicated Recruitment Experts",
       description:
-        "A sourcer and recruiter are assigned to work exclusively on your project, providing 24/7 support and continuous candidate delivery.",
+        "Enjoy the full attention of a dedicated sourcer and recruiter assigned exclusively to your project, ensuring 24/7 support and a steady stream of qualified candidates.",
     },
   ];
 
   return (
     <div className="bg-gray-900 text-white">
-      {/* Hero Section - New Gradient */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#3b82f6]">
-        {/* SVG Grid Background */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#b84353] to-[#f63b92]">
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
           style={{
@@ -84,7 +82,6 @@ const HeroSubscription = () => {
         />
 
         <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
-          {/* Left Side - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -92,12 +89,14 @@ const HeroSubscription = () => {
             className="text-white"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Subscription-Based Recruitment
+              Subscription Recruitment Services
             </h1>
-            <p className="text-xl mb-8 opacity-90">
-              We offer ongoing recruitment support through a monthly
-              subscription model, delivering qualified candidates as needed to
-              fill your open roles.
+            <p className="text-2xl mb-8 opacity-90">
+              Hire Smarter. Scale Faster.
+            </p>
+            <p className="text-lg mb-8 opacity-90">
+              We offer monthly, embedded recruitment support to help you fill
+              open roles quickly, consistently, and cost-effectively.
             </p>
 
             <motion.button
@@ -106,12 +105,11 @@ const HeroSubscription = () => {
               className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-all duration-300 flex items-center group"
               aria-label="Book a call about subscription services"
             >
-              Schedule a Call
+              Book a Call
               <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
             </motion.button>
           </motion.div>
 
-          {/* Right Side - Main Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -127,9 +125,8 @@ const HeroSubscription = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a8a]/50 via-transparent to-transparent"></div>
           </motion.div>
 
-          {/* Client Logo Carousel */}
           <div className="md:col-span-2 relative py-8 overflow-hidden bg-white/10 backdrop-blur-sm border-t border-b border-white/20">
-            <div className="text-center text-sm font-medium text-white mb-4">
+            <div className="text-center text-2xl font-medium text-white mb-4">
               Trusted by Leading Brands
             </div>
             <div
@@ -144,7 +141,6 @@ const HeroSubscription = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
       <section className="bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -160,8 +156,7 @@ const HeroSubscription = () => {
         </div>
       </section>
 
-      {/* Animation Styles */}
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes marquee {
           0% {
             transform: translateX(0);

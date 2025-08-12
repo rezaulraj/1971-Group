@@ -62,7 +62,6 @@ const Guide = () => {
           variants={containerVariants}
           viewport={{ once: true }}
         >
-          {/* Left side - Image */}
           <motion.div className="relative" variants={itemVariants}>
             <div className="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition duration-500">
               <img
@@ -74,7 +73,6 @@ const Guide = () => {
             </div>
           </motion.div>
 
-          {/* Right side - Text content */}
           <motion.div className="space-y-6" variants={itemVariants}>
             <motion.h2
               className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900"
@@ -107,8 +105,7 @@ const Guide = () => {
 
             <motion.div variants={itemVariants}>
               <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
-                <FiDownload className="mr-2" size={18} />
-                Download your free copy today!
+                Book Free Consultation
               </button>
             </motion.div>
           </motion.div>

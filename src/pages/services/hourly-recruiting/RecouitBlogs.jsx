@@ -12,7 +12,7 @@ const RecruitBlogs = () => {
       icon: <FiMic className="text-2xl" />,
       title: "Inside Embedded Recruitment: CEO Interview",
       description:
-        "A conversation with OnHires' CEO on how embedded recruitment adds value, improves hiring speed, and reduces costs.",
+        "A conversation with 1971 Group' CEO on how embedded recruitment adds value, improves hiring speed, and reduces costs.",
       color: "text-blue-600",
       bg: "bg-blue-100",
       border: "border-blue-200",
@@ -20,9 +20,9 @@ const RecruitBlogs = () => {
     {
       image: airecruitment,
       icon: <FiCpu className="text-2xl" />,
-      title: "The Role of AI in Modern Recruitment",
+      title: "The Future of Recruitment? Still Human.",
       description:
-        "Explore how artificial intelligence is transforming recruitment—from sourcing candidates to streamlining interviews.",
+        "While tools can assist, relationships, intuition, and culture fit will always drive the best hires. Companies that prioritize candidate experience, employer branding, and strategic networking will win the war for talent.",
       color: "text-purple-600",
       bg: "bg-purple-100",
       border: "border-purple-200",
@@ -122,7 +122,9 @@ const RecruitBlogs = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-6">{post.description}</p>
+                <p className="text-gray-600 mb-6 line-clamp-3">
+                  {post.description}
+                </p>
                 <a
                   href="/blogs"
                   className={`flex items-center gap-2 text-sm font-medium ${post.color} hover:underline`}

@@ -43,7 +43,6 @@ const Contact = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-      {/* Multicolor Animated Background */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 opacity-70"></div>
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float1"></div>
@@ -53,7 +52,6 @@ const Contact = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +68,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Side - Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -185,7 +182,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Right Side - Contact Info and Map */}
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -277,7 +273,6 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Success Popup */}
       <AnimatePresence>
         {showSuccess && (
           <motion.div
@@ -298,7 +293,7 @@ const Contact = () => {
         )}
       </AnimatePresence>
 
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float1 {
           0%,
           100% {

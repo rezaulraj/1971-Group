@@ -14,37 +14,37 @@ const KeyBenafic = () => {
       icon: <FaLock className="text-blue-500" size={24} />,
       title: "Fixed Monthly Fee",
       description:
-        "Enjoy the transparency of a fixed-fee recruitment model with clearly defined monthly payments outlined in the contract.",
+        "Clear, predictable costs with a fixed-fee model, no hidden charges, just transparent monthly payments as outlined in your contract.",
     },
     {
       icon: <FaUsers className="text-green-500" size={24} />,
       title: "Dedicated Recruitment Team",
       description:
-        "We assign a customized team of experienced sourcers and recruiters based on your specific hiring needs.",
+        "A tailored team of skilled sourcers and recruiters assigned specifically to meet your unique hiring goals.",
     },
     {
       icon: <FaBolt className="text-yellow-500" size={24} />,
       title: "Fast & Reliable Hiring",
       description:
-        "Recruitment begins immediately after the contract is signed. On average, we fill each vacancy within 3 weeks.",
+        "We start recruiting as soon as your contract is signed, with an average time-to-fill of just 3 weeks per vacancy.",
     },
     {
       icon: <FaSyncAlt className="text-purple-500" size={24} />,
       title: "Replacement Guarantee",
       description:
-        "We offer a 3-month candidate replacement guarantee. You'll also have real-time access to our CRM to track progress throughout the hiring process.",
+        "Enjoy peace of mind with our 3-month candidate replacement guarantee, plus real-time CRM access to monitor progress every step of the way.",
     },
     {
       icon: <FaDollarSign className="text-red-500" size={24} />,
       title: "Reduced Hiring Costs",
       description:
-        "Gain access to a talent pool of over 130,000 candidates—covering technical, non-technical, and executive-level roles—without excessive hiring expenses.",
+        "Tap into a broad talent pool covering technical, non-technical, and executive roles, while reducing unnecessary hiring costs.",
     },
     {
       icon: <FaHandshake className="text-indigo-500" size={24} />,
       title: "Long-Term Partnership",
       description:
-        "We believe in close, transparent collaboration focused on improving your recruitment, talent attraction, and employee retention strategies.",
+        "We focus on building lasting relationships, enhancing your recruitment, talent attraction, and employee retention strategies.",
     },
   ];
 

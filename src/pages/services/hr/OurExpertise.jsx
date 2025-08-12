@@ -39,17 +39,17 @@ const OurExpertise = () => {
   const expertiseItems = [
     {
       icon: <FaStar className="text-yellow-400 text-2xl" />,
-      title: "Building Your Employer Brand",
+      title: "Employer Branding",
       description:
-        "We shape a standout identity for your company that appeals to job seekers and engages your current team.",
+        "We create a compelling and authentic image of your company as an employer. This attracts high-quality applicants and helps retain key employees.",
       benefit: "Gain a competitive edge in attracting and keeping top talent.",
       cta: ["Check Prices", "Learn More"],
     },
     {
       icon: <FaBriefcase className="text-blue-400 text-2xl" />,
-      title: "Enhancing the Employee Journey",
+      title: "Employee Experience",
       description:
-        "We create meaningful employee experiences that boost satisfaction and turn your workforce into powerful brand advocates.",
+        "We structure and enhance the employee journey to boost engagement and turn your staff into brand advocates.",
       benefit: "Happy employees attract great talent.",
       cta: ["Check Prices", "Learn More"],
     },
@@ -65,7 +65,7 @@ const OurExpertise = () => {
           viewport={{ once: true }}
           className="text-3xl font-bold text-center mb-12 text-gray-800"
         >
-          Our Expertise
+          What We Do
         </motion.h2>
 
         <motion.div
@@ -121,7 +121,7 @@ const OurExpertise = () => {
                   {item.benefit}
                 </motion.p>
 
-                <motion.div
+                {/* <motion.div
                   className="flex flex-wrap gap-4"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -150,7 +150,7 @@ const OurExpertise = () => {
                       )}
                     </motion.button>
                   ))}
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
           ))}

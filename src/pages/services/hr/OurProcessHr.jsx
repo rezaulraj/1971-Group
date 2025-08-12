@@ -7,37 +7,37 @@ const OurProcessHr = () => {
     {
       number: "1",
       icon: <FaHandshake className="text-blue-600 text-xl" />,
-      title: "Discover & Align",
+      title: "Tell Us About Your Company",
       description:
         "We start by getting to know your company and its unique needs.",
       checklist: [
-        "Company introduction",
-        "Employer brand and experience audit",
-        "Unique value proposition (UVP) for employees",
+        "Overview of your organization",
+        "Audit of your current employer brand and employee experience",
+        "Identify your unique value proposition for employees",
       ],
     },
     {
       number: "2",
       icon: <FaChess className="text-purple-600 text-xl" />,
-      title: "Strategize & Transform",
+      title: "We Drive the Change",
       description:
         "We map out the key areas for improvement and implement impactful changes.",
       checklist: [
-        "Identify staff touchpoints",
-        "Design the employee lifecycle",
-        "Streamline HR processes",
+        "Map out employee touchpoints",
+        "Define lifecycle stages",
+        "Design efficient HR processes",
       ],
     },
     {
       number: "3",
       icon: <FaRocket className="text-teal-600 text-xl" />,
-      title: "Deliver & Elevate",
+      title: "Final Delivery",
       description:
         "We equip your team with tools and training for long-term success.",
       checklist: [
-        "Invest in the right HR technologies",
-        "Conduct leadership development sessions",
-        "Present final results and recommendations",
+        "Recommend the right technology solutions",
+        "Provide training for leadership",
+        "Present a strategic roadmap and final deliverables",
       ],
     },
   ];
@@ -54,14 +54,16 @@ const OurProcessHr = () => {
         >
           Our HR Process
         </motion.h2>
-        <h4 className="text-xl font-medium text-center mb-3 text-gray-600 italic">'Faster Hiring. Smarter Strategy.'</h4>
-        <p className="text-lg text-center text-gray-800 mb-10">Receive your first batch of qualified CVs within just 3–5 days.</p>
+        <h4 className="text-xl font-medium text-center mb-3 text-gray-600 italic">
+          'Faster Hiring. Smarter Strategy.'
+        </h4>
+        <p className="text-lg text-center text-gray-800 mb-10">
+          Receive your first batch of qualified CVs within just 3–5 days.
+        </p>
 
         <div className="relative">
-          {/* Timeline for mobile */}
           <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200 transform translate-x-0.5 md:hidden"></div>
 
-          {/* Timeline for desktop */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
 
           <div className="space-y-8 md:space-y-12">
@@ -74,7 +76,6 @@ const OurProcessHr = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 className="relative"
               >
-                {/* Step indicator */}
                 <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-blue-100 shadow-sm z-10">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
@@ -87,7 +88,6 @@ const OurProcessHr = () => {
                   </motion.div>
                 </div>
 
-                {/* Mobile step indicator */}
                 <div className="md:hidden absolute left-0 -translate-x-1/2 top-6 flex items-center justify-center w-8 h-8 rounded-full bg-white border-2 border-blue-100 shadow-sm z-10">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
@@ -100,7 +100,6 @@ const OurProcessHr = () => {
                   </motion.div>
                 </div>
 
-                {/* Card */}
                 <motion.div
                   whileHover={{ y: -3 }}
                   className={`bg-white p-6 rounded-lg shadow-md border border-gray-100 md:w-[calc(50%-28px)] ${
@@ -114,7 +113,10 @@ const OurProcessHr = () => {
                       {step.icon}
                     </div>
                     <h3 className="text-lg font-bold flex items-center gap-4 flex-wrap text-gray-800">
-                     <span className="hidden md:inline-block">{step.icon}</span> {step.title}
+                      <span className="hidden md:inline-block">
+                        {step.icon}
+                      </span>{" "}
+                      {step.title}
                     </h3>
                   </div>
                   <p className="text-sm text-gray-600 mb-4">

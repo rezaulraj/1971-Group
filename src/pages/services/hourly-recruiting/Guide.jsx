@@ -6,12 +6,10 @@ import guide from "../../../assets/allservice/gride.jpg?url";
 const Guide = () => {
   return (
     <div className="relative overflow-hidden">
-     
       <div className="absolute inset-0 bg-gradient-to-br from-[#001153] via-[#1a2a6b] to-[#334380] opacity-95"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -50 }}
@@ -29,7 +27,6 @@ const Guide = () => {
             </div>
           </motion.div>
 
-         
           <motion.div
             className="text-white"
             initial={{ opacity: 0, y: 50 }}
@@ -47,8 +44,7 @@ const Guide = () => {
             </p>
 
             <button className="flex items-center gap-3 px-6 py-3 bg-white text-[#001153] font-medium rounded-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl group">
-              <FiDownload className="text-xl" />
-              <span>Download Now – Free Resource</span>
+              <span>Book 30 Minute Schedule</span>
               <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
 

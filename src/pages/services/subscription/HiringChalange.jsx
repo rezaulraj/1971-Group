@@ -29,39 +29,36 @@ const HiringChallenge = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // First grid - Main statistics
   const mainStats = [
     {
       icon: <FaHardHat className="text-blue-600" size={24} />,
-      value: 65,
+      value: 60,
       suffix: "%",
       text: "of companies face hiring difficulties",
     },
     {
       icon: <FaMoneyBillWave className="text-blue-600" size={24} />,
-      value: 14900,
+      value: 10700,
       prefix: "$",
       text: "average cost of a bad hire",
     },
   ];
 
-  // Second grid - Supporting statistics
   const supportingStats = [
     {
       icon: <FaClock className="text-blue-600" size={24} />,
-      value: 35,
+      value: 33,
       suffix: "%",
       text: "unfilled positions for 12+ weeks",
     },
     {
       icon: <FaSearch className="text-blue-600" size={24} />,
-      value: 74,
+      value: 72,
       suffix: "%",
       text: "employers can't fill roles",
     },
   ];
 
-  // Additional benefits grid
   const benefits = [
     {
       icon: <FaUserTie className="text-blue-600" size={20} />,
@@ -86,7 +83,7 @@ const HiringChallenge = () => {
 
     useEffect(() => {
       if (isVisible) {
-        const duration = 2000; // 2 seconds
+        const duration = 2000;
         const start = 0;
         const end = value;
         const startTime = performance.now();
@@ -137,7 +134,6 @@ const HiringChallenge = () => {
       id="hiring-challenge"
       className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-gray-50"
     >
-      {/* Decorative elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl"></div>
         <div className="absolute bottom-0 right-0 w-32 h-32 bg-gray-200 rounded-full mix-blend-multiply filter blur-xl"></div>
@@ -145,13 +141,11 @@ const HiringChallenge = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content with multiple grids */}
           <div className="space-y-8">
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
               Solving Your Biggest Hiring Challenges
             </h2>
 
-            {/* First grid - Main statistics */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {mainStats.map((stat, index) => (
                 <motion.div
@@ -179,7 +173,6 @@ const HiringChallenge = () => {
               ))}
             </div>
 
-            {/* Second grid - Supporting statistics */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {supportingStats.map((stat, index) => (
                 <motion.div
@@ -207,7 +200,6 @@ const HiringChallenge = () => {
               ))}
             </div>
 
-            {/* Benefits grid */}
             <div className="bg-blue-600 rounded-lg p-6">
               <h3 className="text-white font-medium mb-4">
                 Our Solutions Include:
@@ -223,7 +215,6 @@ const HiringChallenge = () => {
             </div>
           </div>
 
-          {/* Right side - Image */}
           <div className="relative">
             <div className="relative rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition duration-500">
               <img

@@ -66,7 +66,6 @@ const HeroHr = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-purple-900/80 via-blue-800/70 to-pink-700/80">
-      {/* SVG Grid Background */}
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
@@ -77,17 +76,20 @@ const HeroHr = () => {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
-        {/* Left Side - Text Content */}
         <div className="text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Strategic HR Branding
+            HR Consulting Services
           </h1>
           <p className="text-xl mb-8 opacity-90">
-            We help businesses build a distinctive employer brand that attracts
-            top talent and enhances hiring performance.
+            Build a stronger employer brand. Attract, hire, and retain top
+            talent.
+          </p>
+          <p className="text-lg mb-8 opacity-90">
+            We help companies stand out in competitive markets by crafting
+            powerful HR strategies and employer branding initiatives that
+            improve recruitment metrics and employee satisfaction.
           </p>
 
-          {/* Benefits Grid */}
           <div className="grid grid-cols-2 gap-4 mb-8">
             {benefits.map((benefit, index) => (
               <BenefitItem
@@ -107,34 +109,28 @@ const HeroHr = () => {
           </button>
         </div>
 
-        {/* Right Side - Image Grid */}
         <div className="relative h-96">
           <div className="absolute inset-0 grid grid-cols-2 gap-4">
-            {/* Large center image */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
               <img
                 src={herohr1}
                 alt="HR professionals discussing strategy"
                 className="w-full h-full object-cover"
-                loading="eager" // Important image loads first
+                loading="eager"
               />
             </div>
 
-            {/* Top left */}
             <HeroImage
               src={herohr2}
               alt="Team meeting in progress"
               className="w-32 h-32 mt-2"
             />
-
-            {/* Bottom left */}
             <HeroImage
               src={herohr3}
               alt="Office culture and workspace"
               className="w-32 h-32 ml-10"
             />
 
-            {/* Right side */}
             <HeroImage
               src={herohr4}
               alt="Happy employees collaborating"
@@ -143,7 +139,6 @@ const HeroHr = () => {
           </div>
         </div>
 
-        {/* Client Logo Carousel */}
         <div className="md:col-span-2 relative py-8 overflow-hidden bg-white/10 backdrop-blur-sm border-t border-b border-white/20">
           <div
             className="flex items-center justify-center animate-marquee whitespace-nowrap"
@@ -156,8 +151,7 @@ const HeroHr = () => {
         </div>
       </div>
 
-      {/* Animation Styles */}
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes marquee {
           0% {
             transform: translateX(0);

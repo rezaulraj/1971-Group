@@ -8,6 +8,7 @@ import {
   FiCheckCircle,
   FiGlobe,
   FiLink2,
+  FiCloud,
 } from "react-icons/fi";
 
 const PayFrequentlyAsked = () => {
@@ -21,44 +22,52 @@ const PayFrequentlyAsked = () => {
     {
       question: "What Is Pay-Per-Hire Recruitment?",
       answer:
-        "Pay-per-hire is a contingency-based recruitment model where a company pays the recruitment agency a pre-agreed percentage of the hired candidate’s annual salary. This percentage is determined at the start of the partnership and can vary depending on the position’s level and complexity. The fee is only charged once a successful hire is made.",
+        "It’s a commission-based recruitment model where the client pays a pre-agreed percentage of the hired candidate’s annual salary. This fee is only due upon successful placement.",
       icon: <FiDollarSign className="text-green-400" />,
     },
     {
-      question: "What Other Recruitment Payment Models Exist?",
+      question: "Are there other recruitment pricing models?",
       answer:
-        "Yes, in addition to pay-per-hire, there are four primary recruitment payment models, each with its own structure:\n\n• Salary Percentage (Contingency Recruiting)\n• Flat Fee Recruiting\n• Hourly Billed Recruiting\n• Retained (Executive) Search",
+        "Yes, the four main models include:\n\n• Salary Percentage (Contingency Recruiting)\n• Flat Fee Recruiting\n• Hourly Billed Recruiting\n• Retained (Executive) Search",
       icon: <FiFileText className="text-blue-400" />,
     },
     {
-      question: "What Are the Key Recruitment Fee Models?",
+      question: "What is retained search?",
       answer:
-        "1. Retained Search: Used for executive roles, this model involves a partnership with full-cycle hiring services and premium confidentiality.\n\n2. Contingency (Pay-Per-Hire): Agencies are paid only when a hire is made, often with a replacement guarantee.\n\n3. Flat Fee: Clients pay a fixed rate for defined services such as job ads or resume sourcing.\n\n4. Hourly Billed: The client pays based on hours worked by the recruiter, ideal for partial or short-term hiring needs.",
+        "Retained search is often used for executive or highly confidential roles. It involves a partnership-based agreement with upfront fees and full-cycle recruitment support, from sourcing to job offer.",
       icon: <FiUsers className="text-indigo-400" />,
     },
     {
-      question: "Which Model Does OnHires Use?",
+      question:
+        "What’s the difference between pay-per-hire and flat fee recruitment?",
       answer:
-        "OnHires primarily uses the pay-per-hire model. We find it both effective and aligned with our client-first philosophy. It offers flexibility, clear expectations, and payment only upon results.",
+        "Pay-per-hire involves a variable fee based on salary. Flat fee recruitment is a fixed-price service, often focused on advertising and applicant delivery rather than full-cycle hiring.",
       icon: <FiCheckCircle className="text-purple-400" />,
     },
     {
-      question: "What Are the Advantages of Pay-Per-Hire?",
+      question: "Does 1971 Group use the pay-per-hire model exclusively?",
       answer:
-        "• Tailored Agreements: Each contract is adapted to your goals and needs.\n• Replacement Guarantee: We offer a set period for free replacement if needed.\n• Flexible Requirements: Clients can refine role criteria throughout the hiring process.",
+        "Yes. We specialize in the pay-per-hire model because it aligns with our commitment to performance, transparency, and client success.",
       icon: <FiGlobe className="text-yellow-400" />,
     },
     {
-      question: "Should You Choose a Firm Based on Its Pricing Model?",
+      question: "What are the advantages of this model?",
       answer:
-        "Not necessarily. While pricing is important, you should prioritize:\n\n• The agency’s reputation\n• Verified client reviews\n• Industry expertise\n• Transparency in consultation\n\nChoose a firm based on trust, experience, and alignment with your hiring goals.",
+        "• You only pay if we deliver results\n\n• Custom contracts and guarantee periods\n• Flexibility to update job criteria mid-search\n• No financial risk upfront\n• Transparency in consultation\n\nChoose a firm based on trust, experience, and alignment with your hiring goals.",
       icon: <FiLink2 className="text-red-400" />,
     },
     {
-      question: "How Can I Learn More About OnHires?",
+      question:
+        "Should payment model be a deciding factor when choosing a recruitment agency?",
       answer:
-        "Visit our official website to explore services and client stories. You can also check our LinkedIn page for updates. Need help? Fill out the contact form on our website to speak directly with our team.",
+        "Not entirely. More important is the agency’s reputation, client feedback, placement success, and service transparency. A discovery call is a great way to assess the fit.",
       icon: <FiGlobe className="text-teal-400" />,
+    },
+    {
+      question: "How can I learn more about your agency?",
+      answer:
+        "Visit our official website or LinkedIn page for insights, client testimonials, and company updates. You can also contact us through the form on our site.",
+      icon: <FiCloud className="text-blue-400" />,
     },
   ];
 

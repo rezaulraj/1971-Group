@@ -47,9 +47,9 @@ const HeroPayPerHire = () => {
             </h1>
 
             <p className="text-lg text-gray-600">
-              We offer commission-based recruitment services where you only pay
-              a fee when a successful hire is made—a results-driven approach to
-              talent acquisition.
+              We provide commission-based recruitment services under the
+              pay-per-hire model, where you’re charged a fixed percentage of the
+              candidate’s salary only after successful placement.
             </p>
 
             <button className="flex items-center gap-3 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group">

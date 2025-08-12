@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { FaHandshake, FaBullseye, FaChartLine, FaStar } from "react-icons/fa";
 
 const OurValue = () => {
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -32,21 +31,21 @@ const OurValue = () => {
   const values = [
     {
       icon: <FaHandshake className="text-3xl text-yellow-400" />,
-      title: "Win-Win Partnerships",
+      title: "Mutually Beneficial Partnerships",
       description:
-        "We believe in creating relationships where success is shared — when you grow, we grow.",
+        "We build relationships where success is shared and your growth drives our growth.",
     },
     {
       icon: <FaBullseye className="text-3xl text-blue-300" />,
-      title: "Honesty & Transparency",
+      title: "Integrity and Transparency",
       description:
-        "Clear communication and integrity are the foundations of every interaction we have.",
+        "Open communication and honesty form the foundation of all our interactions.",
     },
     {
       icon: <FaChartLine className="text-3xl text-green-400" />,
-      title: "Under Promise, Over Deliver",
+      title: "Exceeding Expectations",
       description:
-        "We set realistic expectations — and consistently go above and beyond to exceed them.",
+        "We commit to realistic promises and consistently strive to go above and beyond.",
     },
   ];
 
@@ -59,7 +58,6 @@ const OurValue = () => {
       className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#001153] via-[#1a2a6b] to-[#334380] opacity-95"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div variants={item} className="text-center mb-16">
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -73,7 +71,6 @@ const OurValue = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        {/* Values Grid */}
         <motion.div
           variants={container}
           className="grid grid-cols-1 md:grid-cols-3 gap-10"
@@ -86,7 +83,7 @@ const OurValue = () => {
                 y: -10,
                 transition: { duration: 0.3 },
               }}
-              className="bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-lg border-t-4 border-l-4 border-[#001153]"
+              className="bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-lg border-t-4 border-l-4 border-white/10"
             >
               <motion.div
                 animate={{
@@ -112,7 +109,6 @@ const OurValue = () => {
           ))}
         </motion.div>
 
-        {/* Decorative Elements */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.3 }}

@@ -16,7 +16,6 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 
-// Extracted components for better organization
 const BenefitItem = ({ icon: Icon, text }) => (
   <div className="flex items-center">
     <Icon className="text-yellow-300 mr-2 text-xl" />
@@ -58,19 +57,19 @@ const HeroStaffing = () => {
       icon: FaShieldAlt,
       title: "Start Hiring with Zero Risk",
       description:
-        "No upfront payments required. Our hiring process is quick, affordable, and stress-free. We're ready to get started right away—and we take care of payroll, taxes, and compliance.",
+        "No upfront payments required, our process is fast, affordable, and hassle-free. We’re ready to get started immediately, handling payroll, taxes, and compliance for you.",
     },
     {
       icon: FaExchangeAlt,
-      title: "Adaptable Staffing for Every Need",
+      title: "Flexible Staffing for Every Need",
       description:
-        "From temporary support to long-term hires, we tailor staffing solutions to fit your project scope. Easily scale your team up or down based on demand.",
+        "Whether you need temporary support or long-term hires, our adaptable staffing solutions are tailored to fit your project scope. Effortlessly scale your team up or down as needed.",
     },
     {
       icon: FaHandshake,
-      title: "Retention That Drives Results",
+      title: "Retention That Delivers Results",
       description:
-        "We go beyond recruitment by ensuring cultural alignment and long-term compatibility. Our focus is on placing remote talent that stays and thrives.",
+        "We prioritize more than just hiring; we focus on cultural fit and long-term success. Our goal is to place remote talent that not only performs but thrives with your team.",
     },
   ];
 
@@ -84,9 +83,7 @@ const HeroStaffing = () => {
 
   return (
     <div className="bg-gray-900 text-white">
-      {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-900/80 via-indigo-800/70 to-cyan-700/80">
-        {/* SVG Grid Background */}
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
           style={{
@@ -97,18 +94,19 @@ const HeroStaffing = () => {
         />
 
         <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
-          {/* Left Side - Text Content */}
           <div className="text-white">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Staffing Services
+              Staffing & Outstaffing Services
             </h1>
+            <p className="text-2xl mb-8 opacity-90">
+              Scale Smarter. Hire Faster.
+            </p>
             <p className="text-xl mb-8 opacity-90">
-              Scale your team efficiently with our expert outstaffing solutions.
-              We help fast-growing companies expand their workforce and boost
-              overall productivity.
+              Scale your team seamlessly with our expert outstaffing solutions
+              designed to help fast-growing companies expand their workforce,
+              enhance flexibility, and drive productivity.
             </p>
 
-            {/* Benefits Grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               {benefits.map((benefit, index) => (
                 <BenefitItem
@@ -123,12 +121,11 @@ const HeroStaffing = () => {
               className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-all duration-300 flex items-center group"
               aria-label="Book a call about staffing services"
             >
-              Schedule a Call
+              Book a Call
               <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </div>
 
-          {/* Right Side - Main Image */}
           <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
             <img
               src={heroStaffing}
@@ -139,7 +136,6 @@ const HeroStaffing = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent"></div>
           </div>
 
-          {/* Client Logo Carousel */}
           <div className="md:col-span-2 relative py-8 overflow-hidden bg-white/10 backdrop-blur-sm border-t border-b border-white/20">
             <div
               className="flex items-center justify-center animate-marquee whitespace-nowrap"
@@ -153,7 +149,6 @@ const HeroStaffing = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -179,8 +174,7 @@ const HeroStaffing = () => {
         </div>
       </section>
 
-      {/* Animation Styles */}
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes marquee {
           0% {
             transform: translateX(0);

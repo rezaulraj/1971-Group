@@ -1,53 +1,50 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaUserTie, FaUsers, FaChartLine, FaCheck } from "react-icons/fa";
+import { FaClipboardList, FaRocket, FaCheckCircle } from "react-icons/fa";
 
-const OurProcessStaffing = () => {
+const OurHiringProcess = () => {
   const steps = [
     {
-      title: "1. Selecting the Right Talent",
-      description:
-        "We begin by understanding your business and defining the ideal candidates.",
-      icon: <FaUserTie className="text-xl" />,
+      title: "Step 1: Tell Us About You",
+      description: "We start by understanding your unique needs and goals",
+      icon: <FaClipboardList className="text-xl" />,
       items: [
-        "Company introduction",
-        "Identifying required skills and roles",
-        "Interviewing and shortlisting top talent",
+        "Your company goals",
+        "Brand & experience audit",
+        "Unique value proposition",
       ],
       cardColor: "bg-gradient-to-br from-blue-100 to-blue-50",
       borderColor: "border-blue-200",
       iconColor: "text-blue-600",
     },
     {
-      title: "2. Seamless Team Integration",
-      description:
-        "We ensure smooth onboarding and set up all essential workflows.",
-      icon: <FaUsers className="text-xl" />,
+      title: "Step 2: We Drive Change",
+      description: "We create a customized hiring strategy for your business",
+      icon: <FaRocket className="text-xl" />,
       items: [
-        "Integrating talent into your existing team or project",
-        "Establishing clear communication and operational processes",
+        "Define employee lifecycle",
+        "Structure team touchpoints",
+        "Align HR to business needs",
       ],
       cardColor: "bg-gradient-to-br from-purple-100 to-purple-50",
       borderColor: "border-purple-200",
       iconColor: "text-purple-600",
     },
     {
-      title: "3. Scalable Team Growth",
-      description:
-        "We help you grow confidently with a flexible and strategic approach.",
-      icon: <FaChartLine className="text-xl" />,
+      title: "Step 3: Finalize & Deploy",
+      description: "We implement the solution and get you ready to grow",
+      icon: <FaCheckCircle className="text-xl" />,
       items: [
-        "Creating a tailored scaling plan",
-        "Expanding your team on demand",
-        "Delivering measurable results",
+        "Implement tools & training",
+        "Present results",
+        "Begin onboarding",
       ],
-      cardColor: "bg-gradient-to-br from-cyan-100 to-cyan-50",
-      borderColor: "border-cyan-200",
-      iconColor: "text-cyan-600",
+      cardColor: "bg-gradient-to-br from-green-100 to-green-50",
+      borderColor: "border-green-200",
+      iconColor: "text-green-600",
     },
   ];
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -73,7 +70,6 @@ const OurProcessStaffing = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,15 +78,13 @@ const OurProcessStaffing = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Hiring Process
+            Our Process: From Inquiry to Hire in 3-5 Days
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Fast, reliable, and tailored to your goals — receive your first
-            candidates' CVs in just 3–5 days.
+            A streamlined approach to quickly connect you with the right talent
           </p>
         </motion.div>
 
-        {/* Process Steps */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -124,7 +118,7 @@ const OurProcessStaffing = () => {
                 {step.items.map((item, i) => (
                   <li key={i} className="flex items-start">
                     <span className="flex-shrink-0 mt-1 mr-3 text-green-500">
-                      <FaCheck />
+                      <FaCheckCircle />
                     </span>
                     <span className="text-gray-700">{item}</span>
                   </li>
@@ -138,4 +132,4 @@ const OurProcessStaffing = () => {
   );
 };
 
-export default OurProcessStaffing;
+export default OurHiringProcess;

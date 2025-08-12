@@ -6,6 +6,8 @@ import Industries from "./Industies";
 import Awards from "./Awards";
 import Clients from "./Clients";
 import Contact from "./Contact";
+import Benefits from "../services/hourly-recruiting/Benefics";
+import HireWorkers from "./HireWorkers";
 
 const HomePage = () => {
   return (
@@ -14,8 +16,10 @@ const HomePage = () => {
       <WhatWeDo />
       <WhyUs />
       <Industries />
-      <Awards />
+      <Benefits />
+      <HireWorkers />
       <Clients />
+      <Awards />
       <Contact />
     </div>
   );

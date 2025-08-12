@@ -62,7 +62,6 @@ const Clients = () => {
   const carouselRef = useRef(null);
   const [cardHeight, setCardHeight] = useState("auto");
 
-  // Set fixed height based on the first card's height after render
   useEffect(() => {
     if (carouselRef.current) {
       const firstCard = carouselRef.current.querySelector(".testimonial-card");
@@ -126,7 +125,6 @@ const Clients = () => {
 
   return (
     <div className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b] relative overflow-hidden">
-      {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-overlay filter blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-400 rounded-full mix-blend-overlay filter blur-3xl"></div>
@@ -164,7 +162,6 @@ const Clients = () => {
             </button>
           </div>
 
-          {/* Container with fixed height */}
           <div style={{ height: cardHeight }} className="relative">
             <AnimatePresence custom={direction} mode="popLayout">
               <motion.div
@@ -176,7 +173,6 @@ const Clients = () => {
                 exit="exit"
                 className="testimonial-card bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-2xl shadow-2xl relative overflow-hidden w-full absolute top-0 left-0"
               >
-                {/* Glow effect */}
                 <div className="absolute -top-20 -left-20 w-40 h-40 bg-blue-400 rounded-full filter blur-[80px] opacity-20"></div>
 
                 <div className="relative z-10 h-full flex flex-col">

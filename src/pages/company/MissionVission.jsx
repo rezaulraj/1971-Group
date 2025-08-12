@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa";
 
 const MissionVision = () => {
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -49,7 +48,6 @@ const MissionVision = () => {
       className="min-h-screen flex items-center justify-center p-4"
     >
       <div className="max-w-6xl w-full rounded-2xl overflow-hidden shadow-2xl">
-        {/* Gradient Header */}
         <motion.div
           variants={header}
           className="bg-gradient-to-r from-purple-600 via-blue-500 to-teal-400 p-6 text-white text-center"
@@ -66,7 +64,6 @@ const MissionVision = () => {
         </motion.div>
 
         <div className="flex flex-col md:flex-row bg-white">
-          {/* Left Side - Our Approach */}
           <motion.div
             variants={item}
             className="w-full md:w-1/2 p-8 md:p-12 bg-gradient-to-br from-gray-50 to-blue-50"
@@ -127,12 +124,10 @@ const MissionVision = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Mission and Vision */}
           <motion.div
             variants={item}
             className="w-full md:w-1/2 p-8 md:p-12 bg-gradient-to-br from-gray-50 to-purple-50"
           >
-            {/* Mission */}
             <motion.div variants={container} className="mb-12">
               <motion.div
                 whileHover={{ scale: 1.02 }}
@@ -150,12 +145,10 @@ const MissionVision = () => {
                 </h2>
               </motion.div>
               <motion.p variants={item} className="text-lg text-gray-700 pl-16">
-                At 1971 Group, we connect ambitious companies with exceptional
-                talent — building teams that drive lasting success.
+                To connect ambitious organizations with exceptional talent, building teams that create lasting impact.
               </motion.p>
             </motion.div>
 
-            {/* Vision */}
             <motion.div variants={container}>
               <motion.div
                 whileHover={{ scale: 1.02 }}
@@ -173,8 +166,7 @@ const MissionVision = () => {
                 </h2>
               </motion.div>
               <motion.p variants={item} className="text-lg text-gray-700 pl-16">
-                To become the trusted recruitment partner that both clients and
-                candidates choose first, every time.
+                To be the trusted recruitment partner of choice for both clients and candidates, every time.
               </motion.p>
             </motion.div>
           </motion.div>

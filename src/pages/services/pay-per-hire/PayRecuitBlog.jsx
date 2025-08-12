@@ -20,9 +20,9 @@ const PayRecuitBlog = () => {
     {
       image: airecruitment,
       icon: <FiCpu className="text-2xl" />,
-      title: "The Impact of AI on Recruitment",
+      title: "The Future of Recruitment? Still Human.",
       description:
-        "Explore how artificial intelligence is reshaping the hiring process—from resume screening and candidate matching to predictive analytics and automated interviews.",
+        "While tools can assist, relationships, intuition, and culture fit will always drive the best hires. Companies that prioritize candidate experience, employer branding, and strategic networking will win the war for talent.",
       color: "text-purple-600",
       bg: "bg-purple-100",
       border: "border-purple-200",
@@ -122,7 +122,7 @@ const PayRecuitBlog = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-6">{post.description}</p>
+                <p className="text-gray-600 mb-6 line-clamp-3">{post.description}</p>
                 <a
                   href="/blogs"
                   className={`flex items-center gap-2 text-sm font-medium ${post.color} hover:underline`}

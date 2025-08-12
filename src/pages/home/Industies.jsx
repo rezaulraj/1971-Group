@@ -21,7 +21,7 @@ const Industries = () => {
   const industries = [
     {
       name: "Construction",
-      icon: <FaHammer  className="text-2xl"/>,
+      icon: <FaHammer className="text-2xl" />,
       gradient: "bg-gradient-to-br from-amber-600 to-orange-600",
     },
     {
@@ -99,7 +99,6 @@ const Industries = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#001153] via-[#1a2a6b] to-[#334380] opacity-95">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-50 mb-4">
             Industries We Serve
@@ -109,7 +108,6 @@ const Industries = () => {
           </p>
         </div>
 
-        {/* Industries Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {industries.map((industry, index) => (
             <div
@@ -128,7 +126,6 @@ const Industries = () => {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <a
             href="#"

@@ -64,7 +64,6 @@ const HeroHome = () => {
 
   return (
     <div className="relative overflow-hidden" ref={ref}>
-      {/* Animated Gradient Background */}
       <motion.div
         className="absolute inset-0 z-0 h-full w-full"
         initial={{ opacity: 0 }}
@@ -88,7 +87,6 @@ const HeroHome = () => {
         />
       </motion.div>
 
-      {/* Main Hero Section */}
       <section className="relative pt-16 pb-0 md:pt-20 lg:pt-24">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -97,7 +95,6 @@ const HeroHome = () => {
             initial="hidden"
             animate={controls}
           >
-            {/* Left Side - Text Content */}
             <motion.div
               className="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8"
               variants={itemVariants}
@@ -140,7 +137,6 @@ const HeroHome = () => {
               </motion.button>
             </motion.div>
 
-            {/* Right Side - Stats Cards Only */}
             <motion.div
               className="lg:w-1/2 relative mt-10 lg:mt-0"
               variants={itemVariants}
@@ -173,7 +169,6 @@ const HeroHome = () => {
                       </div>
                     </motion.div>
 
-                    {/* Stat 2 - Full width with top-left and bottom-right rounding */}
                     <motion.div
                       variants={cardVariants}
                       whileHover="hover"
@@ -194,7 +189,6 @@ const HeroHome = () => {
                       </div>
                     </motion.div>
 
-                    {/* Stat 3 - Full width with top-left and bottom-right rounding */}
                     <motion.div
                       variants={cardVariants}
                       whileHover="hover"
@@ -222,10 +216,8 @@ const HeroHome = () => {
         </div>
       </section>
 
-      {/* Spacer */}
       <div className="pt-16 md:pt-14 lg:pt-12"></div>
 
-      {/* Clients Section */}
       <section className="relative py-12 bg-gradient-to-b from-white to-gray-50">
         <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-blue-900/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">

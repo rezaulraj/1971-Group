@@ -31,15 +31,15 @@ const HeroCompany = () => {
   const features = [
     {
       icon: <FaGlobe className="text-teal-400" size={20} />,
-      text: "Global talent network",
+      text: "Access to a broad global talent network",
     },
     {
       icon: <FaRocket className="text-purple-400" size={20} />,
-      text: "Fast hiring cycles",
+      text: "Accelerated hiring processes",
     },
     {
       icon: <FaUserTie className="text-blue-400" size={20} />,
-      text: "Specialized recruiters",
+      text: "Experienced and specialized recruitment teams",
     },
   ];
 
@@ -65,7 +65,7 @@ const HeroCompany = () => {
       suffix: "+",
       title: "Companies Transformed",
       description:
-        "We've helped over 70 businesses optimize their hiring processes and boost profitability.",
+        "We've helped over 70+ businesses optimize their hiring processes and boost profitability.",
     },
     {
       icon: <FaPiggyBank className="text-green-400" size={24} />,
@@ -77,7 +77,7 @@ const HeroCompany = () => {
     },
     {
       icon: <FaBriefcase className="text-purple-400" size={24} />,
-      value: 100,
+      value: 150,
       suffix: "+",
       title: "Hires at Top Global Companies",
       description:
@@ -95,7 +95,7 @@ const HeroCompany = () => {
 
   useEffect(() => {
     const animateCounters = () => {
-      const duration = 2000; // 2 seconds
+      const duration = 2000;
       const startTime = performance.now();
 
       const animate = (currentTime) => {
@@ -117,13 +117,11 @@ const HeroCompany = () => {
       requestAnimationFrame(animate);
     };
 
-    // Trigger animation when component mounts
     animateCounters();
   }, []);
 
   return (
     <div className="relative overflow-hidden">
-      {/* Custom SVG Gradient Background */}
       <svg
         className="absolute inset-0 w-full h-full -z-10"
         preserveAspectRatio="none"
@@ -175,7 +173,6 @@ const HeroCompany = () => {
 
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -183,12 +180,12 @@ const HeroCompany = () => {
             className="space-y-6"
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500">
-              Global Tech Recruitment & Staffing for High-Growth Companies
+              Worldwide Recruitment & Staffing Solutions for Growing Businesses
             </h1>
 
             <p className="text-xl text-gray-700">
-              We deliver exclusive recruitment solutions that help businesses
-              scale faster, smarter, and stronger.
+              We provide tailored recruitment services that enable companies to
+              scale efficiently, strategically, and sustainably.
             </p>
 
             <div className="space-y-4">
@@ -220,7 +217,6 @@ const HeroCompany = () => {
             </motion.button>
           </motion.div>
 
-          {/* Right side - Image grid */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -246,7 +242,6 @@ const HeroCompany = () => {
           </motion.div>
         </div>
 
-        {/* Client logos */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -274,7 +269,6 @@ const HeroCompany = () => {
         </motion.div>
       </div>
 
-      {/* Achievements Section with bg-gray-900 */}
       <div className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.section

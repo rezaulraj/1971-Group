@@ -2,11 +2,9 @@ import React from "react";
 import { FaMicrophone, FaSyncAlt, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// Import your images
 import ceoImage from "../../../assets/subscription/ceo.jpg?url";
 import subscriptionImage from "../../../assets/subscription/sebc.avif?url";
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -42,18 +40,17 @@ const fadeIn = {
   },
 };
 
-// Subscription data in JSON format
 const subscriptionData = {
   title: "Learn More About Subscription Recruitment",
   cards: [
     {
       id: 1,
       icon: <FaMicrophone className="text-purple-500 text-2xl mr-3" />,
-      title: "Interview with 1971 Group' CEO",
+      title: "Interview Insight CEO: Inside Subscription-Based Hiring",
       subtitle:
-        '"Inside Subscription-Based Hiring" — An exclusive conversation with Vasco Grieg on how subscription recruitment differs from traditional models:',
+        "An in-depth look at how subscription recruitment sets itself apart from traditional hiring models:",
       content:
-        "“...There are several key differences—namely, the cost-saving payment structure, and the dedicated sourcer and recruiter who work full-time exclusively on the client's roles...”",
+        "“...The main distinctions lie in the cost-efficient payment structure and the benefit of having a dedicated sourcer and recruiter working full-time exclusively on the client’s roles...”",
       image: ceoImage,
       cta: "More",
     },
@@ -63,7 +60,7 @@ const subscriptionData = {
       title: "What Is Subscription-Based (Embedded) Recruitment?",
       subtitle: "",
       content:
-        "Also known as Recruitment Subscription Service (RSS) or embedded recruitment, this model is ideal for companies that regularly hire. It involves a fixed monthly fee covering all recruitment activities during the subscription period—making it one of the most cost-effective hiring solutions available.",
+        "Also known as a Recruitment Subscription Service (RSS) or embedded recruitment, this model is designed for businesses with ongoing hiring needs. Instead of paying per hire, you pay a fixed monthly fee that covers all recruitment activities for the duration of your subscription. The result? A streamlined, predictable, and highly cost-effective way to build your team.",
       image: subscriptionImage,
       cta: "More",
     },

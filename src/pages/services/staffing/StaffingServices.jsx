@@ -9,25 +9,25 @@ const StaffingServices = () => {
   const insights = [
     {
       icon: <FaFileAlt className="text-2xl" />,
-      title: "Crafting Job Descriptions Aligned with Business Goals",
+      title: "Writing Job Ads That Get Noticed",
       description:
-        "Learn how to write impactful job descriptions that clearly reflect your company's vision and hiring needs—boosting the effectiveness of your recruitment process.",
+        "Your job posting is your first chance to impress. Try these tips:\n\n Start with why – 'Help us revolutionize customer service' works better than 'Customer service rep needed'\n Be specific about day-to-day work – Candidates want to picture themselves in the role\n Include salary ranges – Posts with salary info get 30% more applications",
       image: service1,
       link: "/blogs",
     },
     {
       icon: <FaBullseye className="text-2xl" />,
-      title: "Exclusive Recruitment & Headhunting Explained",
+      title: "The Power of Employee Referrals",
       description:
-        "Discover how exclusive recruitment helps secure top-tier talent for high-level positions—ideal for industries with intense competition or niche requirements.",
+        "Your best hires often come through people who already work for you:\n\n Offer meaningful rewards – Cash bonuses work, but extra PTO days can be more motivating\n Make it easy – Create a simple portal where employees can submit contacts\n Make it easy – Create a simple portal where employees can submit contacts",
       image: service2,
       link: "/blogs",
     },
     {
       icon: <FaLock className="text-2xl" />,
-      title: "Top Cybersecurity Roles & Global Salary Trends",
+      title: "Interviewing for Soft Skills",
       description:
-        "Explore the most in-demand cybersecurity specialists worldwide, the essential skills they bring, and current salary benchmarks based on the latest global hiring data.",
+        "Technical skills can be taught – attitude can't. Look for:\n\n ✔️ Problem-solving – 'Tell me about a work challenge you overcame'\n✔️ Teamwork – 'Describe a time you helped a struggling coworker'\n ✔️ Adaptability – 'How do you handle sudden changes at work?'",
       image: service3,
       link: "/blogs",
     },
@@ -130,7 +130,7 @@ const StaffingServices = () => {
                     </h3>
                   </div>
 
-                  <p className="text-gray-300 mb-6 flex-1">
+                  <p className="text-gray-300 mb-6 flex-1 line-clamp-3">
                     {insight.description}
                   </p>
 
