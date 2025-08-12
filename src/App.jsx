@@ -22,6 +22,8 @@ import FintechPage from "./pages/industries/fintech/FintechPage";
 import CloudPage from "./pages/industries/cloud/CloudPage";
 import CaseStudy from "./pages/casestudy/CaseStudy";
 import Vacancies from "./pages/vacancies/Vacancies";
+import Industry from "./pages/industy/Industry";
+import ContactForm from "./pages/contact/ContactForm";
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -56,6 +58,8 @@ function App() {
           <Route path="/guides/:slug" element={<GuideDetails />} />
           <Route path="case-study" element={<CaseStudy />} />
           <Route path="vacancies" element={<Vacancies />} />
+          <Route path="industries" element={<Industry />} />
+          <Route path="contact" element={<ContactForm />} />
           {/* <Route path="web3" element={<Web3Page />} />
           <Route path="ai" element={<AiPage />} /> */}
           <Route path="*" element={<NotFound />} />

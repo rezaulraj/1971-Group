@@ -97,25 +97,47 @@ const WhyUs = () => {
 
   const countries = [
     { code: "SA", name: "Saudi Arabia" },
-    { code: "AE", name: "United Arab Emirates" },
+    { code: "AE", name: "UAE" },
     { code: "QA", name: "Qatar" },
-    { code: "MY", name: "Malaysia" },
-    { code: "HR", name: "Croatia" },
-    { code: "RS", name: "Serbia" },
-    { code: "MT", name: "Malta" },
-    { code: "ES", name: "Spain" },
-    { code: "GR", name: "Greece" },
-    { code: "IT", name: "Italy" },
-    { code: "HU", name: "Hungary" },
+    { code: "KW", name: "Kuwait" },
+    { code: "BH", name: "Bahrain" },
+    { code: "OM", name: "Oman" },
+
+    { code: "GB", name: "UK" },
+    { code: "DE", name: "Germany" },
     { code: "FR", name: "France" },
-    { code: "JP", name: "Japan" },
-    { code: "SG", name: "Singapore" },
-    { code: "IN", name: "India" },
-    { code: "BR", name: "Brazil" },
-    { code: "KR", name: "South Korea" },
-    { code: "MX", name: "Mexico" },
-    { code: "ZA", name: "South Africa" },
+    { code: "IT", name: "Italy" },
+    { code: "ES", name: "Spain" },
+    { code: "NL", name: "Netherlands" },
+    { code: "BE", name: "Belgium" },
+    { code: "CH", name: "Switzerland" },
+    { code: "SE", name: "Sweden" },
+    { code: "NO", name: "Norway" },
+    { code: "FI", name: "Finland" },
+    { code: "DK", name: "Denmark" },
+    { code: "AT", name: "Austria" },
+    { code: "IE", name: "Ireland" },
+    { code: "PT", name: "Portugal" },
+    { code: "GR", name: "Greece" },
     { code: "PL", name: "Poland" },
+    { code: "CZ", name: "Czechia" },
+    { code: "HU", name: "Hungary" },
+    { code: "RO", name: "Romania" },
+
+    { code: "US", name: "USA" },
+    { code: "CA", name: "Canada" },
+
+    { code: "AU", name: "Australia" },
+    { code: "NZ", name: "New Zealand" },
+
+    { code: "SG", name: "Singapore" },
+    { code: "MY", name: "Malaysia" },
+    { code: "JP", name: "Japan" },
+    { code: "KR", name: "South Korea" },
+    { code: "IN", name: "India" },
+    { code: "ZA", name: "South Africa" },
+    { code: "BR", name: "Brazil" },
+    { code: "MX", name: "Mexico" },
   ];
 
   return (
@@ -138,8 +160,8 @@ const WhyUs = () => {
             Why Choose 1971 Group
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Whether you’re building a team from the ground up or struggling with
-            hard-to-fill positions, we’ve done it before and we deliver.
+            Whether you're building a team from the ground up or struggling with
+            hard-to-fill positions, we've done it before and we deliver.
           </p>
         </motion.div>
 
@@ -200,7 +222,7 @@ const WhyUs = () => {
         >
           <motion.div
             animate={{
-              y: [0, -15, 0],
+              y: [0, -30, 0],
               rotate: [0, 5, 0],
             }}
             transition={{
@@ -216,9 +238,10 @@ const WhyUs = () => {
           <div className="relative z-10">
             <h2 className="text-3xl font-bold mb-6">Our Global Reach</h2>
             <p className="text-lg mb-8 max-w-2xl opacity-90">
-              We recruit across a global network, connecting employers in Europe
-              with top talent from diverse international markets all from our
-              base in the Gulf.
+              An agency based in Gulf country targeting employers in Europe,
+              USA, Canada, Australia, New Zealand to promote our recruitment
+              service. To promote quality of workers we outsource from different
+              parts of the world.
             </p>
 
             <div className="relative overflow-hidden py-4">

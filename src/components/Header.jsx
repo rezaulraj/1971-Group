@@ -26,12 +26,13 @@ const Header = () => {
     },
     {
       level: "Industries",
-      subNavs: [
-        { level: "Web3", path: "/web3" },
-        { level: "AI", path: "/ai" },
-        { level: "FinTech", path: "/fintech" },
-        { level: "Cloud Computing", path: "/cloud-computing" },
-      ],
+      path: "/industries",
+      // subNavs: [
+      //   { level: "Web3", path: "/web3" },
+      //   { level: "AI", path: "/ai" },
+      //   { level: "FinTech", path: "/fintech" },
+      //   { level: "Cloud Computing", path: "/cloud-computing" },
+      // ],
     },
     {
       level: "Resources",
@@ -43,6 +44,7 @@ const Header = () => {
     },
     { level: "Company", path: "/company" },
     { level: "Vacancies", path: "/vacancies" },
+    { level: "Contact", path: "/contact" },
   ];
 
   const toggleDropdown = (index) => {
