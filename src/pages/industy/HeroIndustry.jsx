@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiArrowRight,
@@ -16,8 +16,10 @@ import clogo6 from "../../assets/clined/cl6.png?url";
 import clogo7 from "../../assets/clined/cl7.png?url";
 import clogo8 from "../../assets/clined/cl8.png?url";
 import heroIndusty from "../../assets/industry/recruitment_industry.jpg";
+import Calendly from "../../components/Calendly";
 
 const HeroIndustry = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const ourClient = [
     { clogo: clogo1 },
     { clogo: clogo2 },
@@ -125,11 +127,9 @@ const HeroIndustry = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Animated background elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 transform -skew-y-6 -rotate-6 scale-125"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-transparent opacity-70"></div>
 
-      {/* Animated floating elements */}
       <motion.div
         className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-200/30 blur-xl"
         animate={{
@@ -179,7 +179,10 @@ const HeroIndustry = () => {
             </motion.p>
 
             <motion.div variants={itemVariants}>
-              <button className="flex items-center gap-2 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group">
+              <button
+                onClick={() => setShowCalendly(true)}
+                className="flex items-center gap-2 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group cursor-pointer"
+              >
                 Book a Call
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
@@ -333,6 +336,7 @@ const HeroIndustry = () => {
           </div>
         </motion.div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };

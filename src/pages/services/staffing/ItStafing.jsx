@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import itstaff from "../../../assets/staffing/itstaf.webp?url";
 import {
@@ -7,8 +7,10 @@ import {
   FaMoneyBillWave,
   FaRocket,
 } from "react-icons/fa";
+import Calendly from "../../../components/Calendly";
 
 const ItStaffing = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const benefits = [
     {
       icon: <FaChartLine className="text-xl" />,
@@ -100,6 +102,7 @@ const ItStaffing = () => {
 
             {/* Download button */}
             <motion.button
+              onClick={() => setShowCalendly(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all flex items-center cursor-pointer"
@@ -109,6 +112,7 @@ const ItStaffing = () => {
           </motion.div>
         </motion.div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </section>
   );
 };

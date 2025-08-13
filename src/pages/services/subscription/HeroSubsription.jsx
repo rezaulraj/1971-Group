@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import subscriptionImage from "../../../assets/subscription/herosub.jpeg?url";
 import clogo1 from "../../../assets/clined/cl1.png?url";
@@ -15,6 +15,7 @@ import {
   FaBullseye,
   FaUsers,
 } from "react-icons/fa";
+import Calendly from "../../../components/Calendly";
 
 const ClientLogo = ({ src, alt }) => (
   <div className="mx-4 lg:mx-8 inline-flex items-center">
@@ -43,6 +44,7 @@ const BenefitCard = ({ icon: Icon, title, description }) => (
 );
 
 const HeroSubscription = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const ourClient = [
     { clogo: clogo1 },
     { clogo: clogo2 },
@@ -106,10 +108,11 @@ const HeroSubscription = () => {
             </p>
 
             <motion.button
+              onClick={() => setShowCalendly(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-all duration-300 flex items-center group"
-              aria-label="Book a call about subscription services"
+              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-all duration-300 flex items-center group cursor-pointer"
+              // aria-label="Book a call about subscription services"
             >
               Book a Call
               <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
@@ -161,7 +164,7 @@ const HeroSubscription = () => {
           </div>
         </div>
       </section>
-
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
       <style jsx="true">{`
         @keyframes marquee {
           0% {

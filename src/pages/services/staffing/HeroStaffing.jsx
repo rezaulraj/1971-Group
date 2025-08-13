@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import heroStaffing from "../../../assets/staffing/herostaf.jpg?url";
 import clogo1 from "../../../assets/clined/cl1.png?url";
 import clogo2 from "../../../assets/clined/cl2.png?url";
@@ -18,6 +18,7 @@ import {
   FaExchangeAlt,
   FaHandshake,
 } from "react-icons/fa";
+import Calendly from "../../../components/Calendly";
 
 const BenefitItem = ({ icon: Icon, text }) => (
   <div className="flex items-center">
@@ -48,6 +49,7 @@ const ClientLogo = ({ src, alt }) => (
 );
 
 const HeroStaffing = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const benefits = [
     { icon: FaUsers, text: "Scalable Teams" },
     { icon: FaChartBar, text: "Cost Efficiency" },
@@ -124,6 +126,7 @@ const HeroStaffing = () => {
             </div>
 
             <button
+              onClick={() => setShowCalendly(true)}
               className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-all duration-300 flex items-center group"
               aria-label="Book a call about staffing services"
             >
@@ -179,7 +182,7 @@ const HeroStaffing = () => {
           </div>
         </div>
       </section>
-
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
       <style jsx="true">{`
         @keyframes marquee {
           0% {

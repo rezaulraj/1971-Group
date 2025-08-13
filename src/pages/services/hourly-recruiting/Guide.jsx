@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiDownload, FiArrowRight } from "react-icons/fi";
 import guide from "../../../assets/allservice/gride.jpg?url";
+import Calendly from "../../../components/Calendly";
 
 const Guide = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#001153] via-[#1a2a6b] to-[#334380] opacity-95"></div>
@@ -43,7 +45,10 @@ const Guide = () => {
               right talent your company needs.
             </p>
 
-            <button className="flex items-center gap-3 px-6 py-3 bg-white text-[#001153] font-medium rounded-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl group">
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="flex items-center gap-3 px-6 py-3 bg-white text-[#001153] font-medium rounded-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl group cursor-pointer"
+            >
               <span>Book 30 Minute Schedule</span>
               <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
@@ -62,6 +67,7 @@ const Guide = () => {
           </motion.div>
         </div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };

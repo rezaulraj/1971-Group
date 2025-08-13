@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiTool,
@@ -28,7 +28,9 @@ import indus9 from "../../assets/industry/indus9.avif?url";
 import indus10 from "../../assets/industry/indus10.avif?url";
 import indus11 from "../../assets/industry/indus11.avif?url";
 import indus12 from "../../assets/industry/indus12.avif?url";
+import Calendly from "../../components/Calendly";
 const IndustryWeServe = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const industries = [
     {
       title: "Warehouse & Logistics",
@@ -491,7 +493,10 @@ const IndustryWeServe = () => {
                       Get qualified professionals within 48 hours
                     </p>
                   </div>
-                  <button className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl whitespace-nowrap group">
+                  <button
+                    onClick={() => setShowCalendly(true)}
+                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl whitespace-nowrap group cursor-pointer"
+                  >
                     Request Staff
                     <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -517,7 +522,10 @@ const IndustryWeServe = () => {
             needs across all industries.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg">
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors shadow-lg cursor-pointer"
+            >
               Schedule a Consultation
             </button>
             <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">
@@ -526,6 +534,7 @@ const IndustryWeServe = () => {
           </div>
         </motion.div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };

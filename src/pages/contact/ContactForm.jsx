@@ -8,8 +8,9 @@ import {
   FaCheck,
   FaArrowRight,
 } from "react-icons/fa";
-
+import Calendly from "../../components/Calendly"
 const ContactForm = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -242,7 +243,10 @@ const ContactForm = () => {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <button className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-br from-blue-500 bg-purple-700 transition-all duration-300 text-white cursor-pointer hover:shadow-lg hover:scale-105">
+                  <button
+                    onClick={() => setShowCalendly(true)}
+                    className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-br from-blue-500 bg-purple-700 transition-all duration-300 text-white cursor-pointer hover:shadow-lg hover:scale-105"
+                  >
                     Book a Call
                     <FaArrowRight className="ml-2 animate-pulse" />
                   </button>
@@ -306,7 +310,7 @@ const ContactForm = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
       <style jsx="true" global="true">{`
         @keyframes float1 {
           0%,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import herohr1 from "../../../assets/hr/herohr1.jpg";
 import herohr2 from "../../../assets/hr/hero2.avif";
 import herohr3 from "../../../assets/hr/hero3.jpg";
@@ -18,6 +18,7 @@ import {
   FaHandshake,
   FaChartLine,
 } from "react-icons/fa";
+import Calendly from "../../../components/Calendly";
 
 // Extracted components for better organization
 const BenefitItem = ({ icon: Icon, text }) => (
@@ -52,6 +53,7 @@ const HeroImage = ({ src, alt, className = "" }) => (
 );
 
 const HeroHr = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const benefits = [
     { icon: FaUserTie, text: "Top Talent" },
     { icon: FaSearch, text: "Better Visibility" },
@@ -107,7 +109,8 @@ const HeroHr = () => {
           </div>
 
           <button
-            className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition-all duration-300 flex items-center group"
+            onClick={() => setShowCalendly(true)}
+            className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition-all duration-300 flex items-center group cursor-pointer"
             aria-label="Schedule a consultation call"
           >
             Schedule a Call
@@ -156,7 +159,7 @@ const HeroHr = () => {
           </div>
         </div>
       </div>
-
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
       <style jsx="true">{`
         @keyframes marquee {
           0% {

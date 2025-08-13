@@ -62,7 +62,7 @@ const Calendly = ({ show, onClose }) => {
             >
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+                className="absolute top-4 right-4 z-10 bg-white p-2 rounded-full cursor-pointer shadow-md hover:bg-gray-100"
                 aria-label="Close"
               >
                 <FiX size={24} />

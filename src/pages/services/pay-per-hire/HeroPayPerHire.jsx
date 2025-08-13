@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiDollarSign,
@@ -16,8 +16,10 @@ import clogo5 from "../../../assets/clined/cl5.png?url";
 import clogo6 from "../../../assets/clined/cl6.png?url";
 import clogo7 from "../../../assets/clined/cl7.png?url";
 import clogo8 from "../../../assets/clined/cl8.png?url";
+import Calendly from "../../../components/Calendly";
 
 const HeroPayPerHire = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const ourClient = [
     { clogo: clogo1 },
     { clogo: clogo2 },
@@ -58,7 +60,10 @@ const HeroPayPerHire = () => {
               candidate’s salary only after successful placement.
             </p>
 
-            <button className="flex items-center gap-3 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group">
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="flex items-center gap-3 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group cursor-pointer"
+            >
               Book a Call
               <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
@@ -152,6 +157,7 @@ const HeroPayPerHire = () => {
           </div>
         </div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };

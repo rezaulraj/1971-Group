@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiDownload,
@@ -8,8 +8,10 @@ import {
   FiBarChart2,
 } from "react-icons/fi";
 import guide from "../../../assets/subscription/gide.webp";
+import Calendly from "../../../components/Calendly";
 
 const Guide = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -104,13 +106,17 @@ const Guide = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+              <button
+                onClick={() => setShowCalendly(true)}
+                className="inline-flex cursor-pointer items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+              >
                 Book Free Consultation
               </button>
             </motion.div>
           </motion.div>
         </motion.div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };

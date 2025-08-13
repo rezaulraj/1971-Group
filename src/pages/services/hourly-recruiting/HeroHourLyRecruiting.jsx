@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiClock,
@@ -19,8 +19,10 @@ import clogo5 from "../../../assets/clined/cl5.png?url";
 import clogo6 from "../../../assets/clined/cl6.png?url";
 import clogo7 from "../../../assets/clined/cl7.png?url";
 import clogo8 from "../../../assets/clined/cl8.png?url";
+import Calendly from "../../../components/Calendly";
 
 const HeroHourLyRecruiting = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const ourClient = [
     { clogo: clogo1 },
     { clogo: clogo2 },
@@ -151,7 +153,10 @@ const HeroHourLyRecruiting = () => {
             </motion.p>
 
             <motion.div variants={itemVariants}>
-              <button className="flex items-center gap-2 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group">
+              <button
+                onClick={() => setShowCalendly(true)}
+                className="flex items-center gap-2 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group cursor-pointer"
+              >
                 Schedule a Call
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
@@ -304,6 +309,7 @@ const HeroHourLyRecruiting = () => {
           ))}
         </motion.div>
       </div>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
     </div>
   );
 };
