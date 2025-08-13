@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   FaGlobeAmericas,
   FaUserCheck,
@@ -8,7 +8,7 @@ import {
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { motion, useInView, useAnimation } from "framer-motion";
 import ReactCountryFlag from "react-country-flag";
-
+import Calendly from "../../components/Calendly";
 const AnimatedNumber = ({ value }) => {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -60,6 +60,7 @@ const CountUp = ({ end, duration = 2, decimals = 0 }) => {
 };
 
 const WhyUs = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const stats = [
     {
       value: <CountUp end={94} duration={2} decimals={1} />,
@@ -283,17 +284,18 @@ const WhyUs = () => {
             </div>
 
             <motion.button
+              onClick={() => setShowCalendly(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="mt-8 flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
             >
-              <span>Explore Our Global Network</span>
+              <span>Contact Our Global Team</span>
               <HiOutlineArrowNarrowRight className="w-5 h-5" />
             </motion.button>
           </div>
         </motion.div>
       </div>
-
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
       <style jsx="true" global="true">{`
         @keyframes float {
           0%,

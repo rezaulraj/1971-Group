@@ -113,44 +113,6 @@ const Footer = () => {
           {/* Industries & Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">
-              Industries
-            </h3>
-            <ul className="space-y-2 mb-6">
-              <li>
-                <a
-                  href="/web3"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Web3
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/fintech"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  FinTech
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/ai"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  AI
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cloud-computing"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  And more...
-                </a>
-              </li>
-            </ul>
-
-            <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">
               Company
             </h3>
             <ul className="space-y-2">
@@ -159,7 +121,23 @@ const Footer = () => {
                   href="/company"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  About
+                  Conpany
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/industries"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Industries
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/vacancies"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Vacancies
                 </a>
               </li>
               <li>
@@ -205,18 +183,6 @@ const Footer = () => {
                 <span className="text-gray-300">Serving global employers</span>
               </li>
             </ul>
-
-            {/* Payment Methods */}
-            <div className="mt-6">
-              <h4 className="text-sm font-semibold mb-2 text-gray-400">
-                PAYMENT METHODS
-              </h4>
-              <div className="flex space-x-4">
-                <SiVisa className="h-8 w-8 text-gray-300 hover:text-white transition-colors" />
-                <SiMastercard className="h-8 w-8 text-gray-300 hover:text-white transition-colors" />
-                <SiBitcoin className="h-8 w-8 text-gray-300 hover:text-white transition-colors" />
-              </div>
-            </div>
           </div>
         </div>
 

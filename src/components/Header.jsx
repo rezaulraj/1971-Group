@@ -45,7 +45,7 @@ const Header = () => {
     },
     { level: "Company", path: "/company" },
     { level: "Vacancies", path: "/vacancies" },
-    { level: "Contact", path: "/contact" },
+    { level: "Join As Partner", path: "/contact" },
   ];
 
   const toggleDropdown = (index) => {

@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { FiUpload, FiUser, FiMail, FiPhone, FiBriefcase } from "react-icons/fi";
+import {
+  FiUpload,
+  FiUser,
+  FiMail,
+  FiPhone,
+  FiBriefcase,
+  FiTool,
+  FiDroplet,
+  FiZap,
+  FiHome,
+} from "react-icons/fi";
 
 const Vacancies = () => {
   const [formData, setFormData] = useState({
@@ -97,12 +107,113 @@ const Vacancies = () => {
               </span>
             </div>
           </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div className="flex items-center mb-4">
+              <div className="bg-indigo-100 p-3 rounded-full mr-4">
+                <FiHome className="text-indigo-600 text-xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Construction Worker
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Join our construction team for various building projects.
+              Experience preferred but training provided.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                Full-time
+              </span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                Competitive pay
+              </span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                Overtime available
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div className="flex items-center mb-4">
+              <div className="bg-indigo-100 p-3 rounded-full mr-4">
+                <FiTool className="text-indigo-600 text-xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Cleaner / Janitor
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Maintain cleanliness in our facilities. Day and night shifts
+              available.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                Part-time
+              </span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                Flexible shifts
+              </span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                No experience needed
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div className="flex items-center mb-4">
+              <div className="bg-indigo-100 p-3 rounded-full mr-4">
+                <FiDroplet className="text-indigo-600 text-xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">Plumber</h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Licensed plumbers needed for residential and commercial projects.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                Full-time
+              </span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                Competitive salary
+              </span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                Company vehicle
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div className="flex items-center mb-4">
+              <div className="bg-indigo-100 p-3 rounded-full mr-4">
+                <FiZap className="text-indigo-600 text-xl" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Electrician
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Licensed electricians needed for installation, maintenance, and
+              repair work.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                Full-time
+              </span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                Excellent benefits
+              </span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                Union position
+              </span>
+            </div>
+          </div>
         </div>
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="bg-indigo-700/80 p-6">
             <h2 className="text-2xl font-bold text-white">
-              Apply for C-Category Position
+              Apply for Position
             </h2>
             <p className="text-indigo-200">
               Fill out the form below to submit your application
@@ -203,6 +314,12 @@ const Vacancies = () => {
                     Warehouse Associate
                   </option>
                   <option value="Delivery Driver">Delivery Driver</option>
+                  <option value="Construction Worker">
+                    Construction Worker
+                  </option>
+                  <option value="Cleaner / Janitor">Cleaner / Janitor</option>
+                  <option value="Plumber">Plumber</option>
+                  <option value="Electrician">Electrician</option>
                   <option value="Production Worker">Production Worker</option>
                   <option value="Maintenance Technician">
                     Maintenance Technician
