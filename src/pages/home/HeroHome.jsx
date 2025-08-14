@@ -127,7 +127,7 @@ const HeroHome = () => {
                   boxShadow: "0 8px 25px rgba(99, 102, 241, 0.6)",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center px-8 py-4 rounded-full text-lg font-bold transition-all duration-300"
+                className="flex items-center px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 cursor-pointer"
                 style={{
                   background:
                     "linear-gradient(45deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%)",
@@ -227,7 +227,7 @@ const HeroHome = () => {
 
       <div className="pt-16 md:pt-14 lg:pt-12"></div>
 
-      <section className="relative py-12 bg-gradient-to-b from-white to-gray-50">
+      <section className="relative py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-blue-900/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-2xl font-bold text-center mb-8 text-slate-800">

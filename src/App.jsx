@@ -61,7 +61,7 @@ function App() {
           <Route path="/case-study/:id" element={<CaseStudyBlogDetails />} />
           <Route path="vacancies" element={<Vacancies />} />
           <Route path="industries" element={<Industry />} />
-          <Route path="contact" element={<ContactForm />} />
+          <Route path="join-as-partner" element={<ContactForm />} />
           {/* <Route path="web3" element={<Web3Page />} />
           <Route path="ai" element={<AiPage />} /> */}
           <Route path="*" element={<NotFound />} />

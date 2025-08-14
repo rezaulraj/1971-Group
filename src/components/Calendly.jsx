@@ -7,7 +7,7 @@ const Calendly = ({ show, onClose }) => {
 
   useEffect(() => {
     if (show) {
-      setLoading(true); // Start loading each time it opens
+      setLoading(true);
 
       const script = document.createElement("script");
       script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -21,7 +21,6 @@ const Calendly = ({ show, onClose }) => {
             utm: {},
           });
 
-          // Give Calendly a moment to render before hiding loader
           setTimeout(() => setLoading(false), 1000);
         }
       };
@@ -42,13 +41,11 @@ const Calendly = ({ show, onClose }) => {
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 overflow-hidden"
         >
-          {/* Background overlay */}
           <motion.div
             className="absolute inset-0 bg-black/50"
             onClick={onClose}
           />
 
-          {/* Main container */}
           <motion.div
             className="absolute inset-0 flex items-center justify-center p-4"
             layout
@@ -68,14 +65,12 @@ const Calendly = ({ show, onClose }) => {
                 <FiX size={24} />
               </button>
 
-              {/* Loader */}
               {loading && (
                 <div className="flex-1 flex items-center justify-center">
-                  <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-[#e60c30] border-opacity-75"></div>
+                  <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-[#e60c30] border-opacity-75"></div>
                 </div>
               )}
 
-              {/* Calendly Widget */}
               <div
                 className="calendly-inline-widget flex-1"
                 data-url="https://calendly.com/rezaul-coderpro/partner-meeting"

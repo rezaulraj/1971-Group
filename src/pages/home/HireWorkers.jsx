@@ -163,13 +163,13 @@ const HireWorkers = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={() => setShowCalendly(true)}
-              className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+              className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg cursor-pointer"
             >
               Request Candidate Profiles
             </button>
             <button
               onClick={() => setShowCalendly(true)}
-              className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all hover:scale-105"
+              className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all hover:scale-105 cursor-pointer"
             >
               Speak With Our Team
             </button>
