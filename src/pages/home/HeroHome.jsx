@@ -82,7 +82,7 @@ const HeroHome = () => {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%)",
+              "linear-gradient(135deg, #000b30 0%, #0a1a4d 50%, #1a2a6b 100%)",
           }}
         />
         <div
@@ -108,11 +108,11 @@ const HeroHome = () => {
               variants={itemVariants}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-blue-400">
-                  Global Tech Recruitment
-                </span>{" "}
+                <span className="text-[#D4AF37]">Global Tech Recruitment</span>{" "}
                 <br />
-                <span className="font-light">for Fast-Growing Companies</span>
+                <span className="font-light text-[#F9FAFB]">
+                  for Fast-Growing Companies
+                </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
                 1971 Group is your Gulf-based gateway to top-tier global talent.
@@ -127,13 +127,8 @@ const HeroHome = () => {
                   boxShadow: "0 8px 25px rgba(99, 102, 241, 0.6)",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 cursor-pointer"
-                style={{
-                  background:
-                    "linear-gradient(45deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%)",
-                  color: "white",
-                  boxShadow: "0 4px 15px rgba(99, 102, 241, 0.4)",
-                }}
+                className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-[#D4AF37] text-[#000b30]  transition-all duration-300 cursor-pointer"
+                
               >
                 Hire Talent
                 <motion.span

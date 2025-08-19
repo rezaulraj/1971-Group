@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaPhone,
@@ -20,6 +20,28 @@ const Contact = () => {
     message: "",
   });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [bgImage, setBgImage] = useState("");
+
+  // Fetch a professional background image from Unsplash
+  useEffect(() => {
+    const fetchBackgroundImage = async () => {
+      try {
+        const response = await fetch(
+          "https://api.unsplash.com/photos/random?query=business-office,professional&client_id=YOUR_UNSPLASH_ACCESS_KEY" // Replace with your Unsplash Access Key
+        );
+        const data = await response.json();
+        setBgImage(data.urls.regular);
+      } catch (error) {
+        console.error("Error fetching background image:", error);
+        // Fallback to a default Unsplash image if API fails
+        setBgImage(
+          "https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
+        );
+      }
+    };
+
+    fetchBackgroundImage();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,13 +66,21 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 opacity-70"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float1"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float2"></div>
-        <div className="absolute top-2/3 left-1/3 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float3"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float4"></div>
+    <div
+      id="contact-us"
+      className="relative min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-8"
+    >
+      {/* Background Image from Unsplash */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-[#000b30]/80 via-[#0a1a4d]/70 to-[#1a2a6b]/90"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -61,15 +91,16 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
+          <h2 className="text-4xl font-bold text-white sm:text-5xl mb-4">
             Contact Us
           </h2>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-2xl mx-auto">
             Let's Get Started on Your Recruitment Success
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -77,9 +108,9 @@ const Contact = () => {
             viewport={{ once: true }}
             className="relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-2xl"></div>
-            <div className="relative bg-white/80 rounded-2xl shadow-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-sm rounded-2xl"></div>
+            <div className="relative bg-white/95 rounded-2xl shadow-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-semibold text-[#000b30] mb-6">
                 Send Us a Message
               </h3>
               <p className="text-gray-600 mb-8">
@@ -96,7 +127,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white/70 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                     placeholder="Your name"
                     required
                   />
@@ -111,7 +142,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white/70 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                     placeholder="your.email@example.com"
                     required
                   />
@@ -126,7 +157,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white/70 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                     placeholder="+1 (___) ___-____"
                   />
                 </div>
@@ -140,7 +171,7 @@ const Contact = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white/70 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                     placeholder="Your company"
                   />
                 </div>
@@ -154,7 +185,7 @@ const Contact = () => {
                     rows="4"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white/70 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition-all"
                     placeholder="How can we help you?"
                     required
                   ></textarea>
@@ -165,7 +196,7 @@ const Contact = () => {
                     type="checkbox"
                     id="captcha"
                     name="captcha"
-                    className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    className="h-4 w-4 rounded border-gray-300 text-[#D4AF37] focus:ring-[#D4AF37]"
                     required
                   />
                   <label className="ml-2 block text-sm text-gray-600">
@@ -175,7 +206,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center group"
+                  className="w-full bg-gradient-to-r from-[#000b30] to-[#1a2a6b] hover:from-[#1a2a6b] hover:to-[#000b30] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center group"
                 >
                   <span className="mr-2">Send Message</span>
                   <FaPaperPlane className="transform group-hover:translate-x-1 transition-transform" />
@@ -184,6 +215,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
+          {/* Contact Information */}
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -192,19 +224,19 @@ const Contact = () => {
               viewport={{ once: true }}
               className="relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-2xl"></div>
-              <div className="relative bg-white/80 rounded-2xl shadow-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-sm rounded-2xl"></div>
+              <div className="relative bg-white/95 rounded-2xl shadow-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-semibold text-[#000b30] mb-6">
                   Let's Have a Call
                 </h3>
                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                  We’re always ready to provide personal consultations and craft
-                  recruitment strategies tailored to your company’s growth.
+                  We're always ready to provide personal consultations and craft
+                  recruitment strategies tailored to your company's growth.
                 </p>
 
                 <div className="space-y-6">
                   <div className="flex items-start group">
-                    <div className="flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-3 rounded-lg text-blue-600 group-hover:from-blue-200 group-hover:to-blue-300 transition-all">
+                    <div className="flex-shrink-0 bg-[#D4AF37]/10 p-3 rounded-lg text-[#D4AF37] group-hover:bg-[#D4AF37]/20 transition-all">
                       <FaPhone className="text-xl" />
                     </div>
                     <div className="ml-4">
@@ -216,7 +248,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start group">
-                    <div className="flex-shrink-0 bg-gradient-to-br from-purple-100 to-purple-200 p-3 rounded-lg text-purple-600 group-hover:from-purple-200 group-hover:to-purple-300 transition-all">
+                    <div className="flex-shrink-0 bg-[#D4AF37]/10 p-3 rounded-lg text-[#D4AF37] group-hover:bg-[#D4AF37]/20 transition-all">
                       <FaEnvelope className="text-xl" />
                     </div>
                     <div className="ml-4">
@@ -228,7 +260,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start group">
-                    <div className="flex-shrink-0 bg-gradient-to-br from-indigo-100 to-indigo-200 p-3 rounded-lg text-indigo-600 group-hover:from-indigo-200 group-hover:to-indigo-300 transition-all">
+                    <div className="flex-shrink-0 bg-[#D4AF37]/10 p-3 rounded-lg text-[#D4AF37] group-hover:bg-[#D4AF37]/20 transition-all">
                       <FaMapMarkerAlt className="text-xl" />
                     </div>
                     <div className="ml-4">
@@ -246,7 +278,7 @@ const Contact = () => {
                 <div className="mt-6">
                   <button
                     onClick={() => setShowCalendly(true)}
-                    className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-br from-blue-500 bg-purple-700 transition-all duration-300 text-white cursor-pointer hover:shadow-lg hover:scale-105"
+                    className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] text-[#000b30] transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-105"
                   >
                     Book a Call
                     <FaArrowRight className="ml-2 animate-pulse" />
@@ -256,14 +288,14 @@ const Contact = () => {
             </motion.div>
 
             {/* Map Integration */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="relative overflow-hidden rounded-2xl shadow-2xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 z-10 pointer-events-none rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#000b30]/20 to-[#0a1a4d]/20 z-10 pointer-events-none rounded-2xl"></div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179518!2d-73.9878449241641!3d40.7484409713896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
                 width="100%"
@@ -273,7 +305,7 @@ const Contact = () => {
                 loading="lazy"
                 className="grayscale-[30%] hover:grayscale-0 transition-all duration-500 rounded-2xl"
               ></iframe>
-            </motion.div> */}
+            </motion.div>
           </div>
         </div>
       </div>
@@ -285,7 +317,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-8 right-6/12 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-4 rounded-lg shadow-xl z-50 flex items-center"
+            className="fixed top-8 right-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-4 rounded-lg shadow-xl z-50 flex items-center"
           >
             <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3">
               <FaCheck className="text-white" />
@@ -298,56 +330,6 @@ const Contact = () => {
         )}
       </AnimatePresence>
       <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
-      <style jsx="true" global="true">{`
-        @keyframes float1 {
-          0%,
-          100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          50% {
-            transform: translate(20px, -20px) rotate(5deg);
-          }
-        }
-        @keyframes float2 {
-          0%,
-          100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          50% {
-            transform: translate(-15px, 15px) rotate(-5deg);
-          }
-        }
-        @keyframes float3 {
-          0%,
-          100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          50% {
-            transform: translate(15px, 20px) rotate(3deg);
-          }
-        }
-        @keyframes float4 {
-          0%,
-          100% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          50% {
-            transform: translate(-20px, -15px) rotate(-3deg);
-          }
-        }
-        .animate-float1 {
-          animation: float1 15s ease-in-out infinite;
-        }
-        .animate-float2 {
-          animation: float2 18s ease-in-out infinite;
-        }
-        .animate-float3 {
-          animation: float3 20s ease-in-out infinite;
-        }
-        .animate-float4 {
-          animation: float4 17s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 };

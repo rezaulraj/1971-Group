@@ -33,7 +33,7 @@ const item = {
 
 const Awards = () => {
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#F6F1EE] to-[#F6F1EE]/70">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,10 +44,10 @@ const Awards = () => {
           <div className="mb-4 text-sm font-semibold tracking-wider text-blue-600 uppercase">
             Recognitions
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
+          <h2 className="text-4xl font-bold text-[#000b30] sm:text-5xl">
             Our Awards
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-[#D4AF37]">
             Recognized for Excellence
           </p>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-500">

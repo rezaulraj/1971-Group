@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const SecretSauce = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F6F1EE] relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div
@@ -15,7 +15,7 @@ const SecretSauce = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0a1a4d] mb-6">
               Our Secret Sauce
             </h2>
             <p className="text-lg text-gray-600 mb-8">
@@ -26,12 +26,12 @@ const SecretSauce = () => {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-3xl font-bold text-indigo-600">10k+</h3>
-                <p className="text-gray-500">Professionals</p>
+                <h3 className="text-3xl font-bold text-[#D4AF37]">10k+</h3>
+                <p className="text-[#0a1a4d]">Professionals</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-3xl font-bold text-indigo-600">80+</h3>
-                <p className="text-gray-500">Countries</p>
+                <h3 className="text-3xl font-bold text-[#D4AF37]">80+</h3>
+                <p className="text-[#0a1a4d]">Countries</p>
               </div>
             </div>
 
@@ -67,13 +67,13 @@ const SecretSauce = () => {
                   className="h-16 object-contain"
                 />
               </div>
-              <div className="text-6xl text-[#0077B5]">+</div>
+              <div className="text-6xl text-[#D4AF37]">+</div>
 
               <div className="bg-blue-50 rounded-xl p-6 text-center border border-blue-100">
                 <div className="flex justify-center mb-4">
                   <FaLinkedin className="text-4xl text-[#0077B5]" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                <h3 className="text-lg font-semibold text-[#0a1a4d] mb-2">
                   LinkedIn Integration
                 </h3>
                 <p className="text-gray-600 text-sm">

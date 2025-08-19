@@ -5,6 +5,7 @@ import {
   FaCalendarCheck,
   FaHandshake,
   FaClipboardCheck,
+  FaArrowRight,
 } from "react-icons/fa";
 
 const OurProcess = () => {
@@ -18,10 +19,8 @@ const OurProcess = () => {
         "Vacancy documentation",
         "Contract initiation",
       ],
-      cardColor: "bg-gradient-to-br from-blue-100 to-blue-50",
-      borderColor: "border-blue-200",
-      iconColor: "text-blue-600",
-      timeBadge: "bg-blue-100 text-blue-800",
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
     {
       title: "Full-Cycle Recruitment",
@@ -32,10 +31,8 @@ const OurProcess = () => {
         "Screening, scheduling & interviews",
         "Weekly updates & client support",
       ],
-      cardColor: "bg-gradient-to-br from-purple-100 to-purple-50",
-      borderColor: "border-purple-200",
-      iconColor: "text-purple-600",
-      timeBadge: "bg-purple-100 text-purple-800",
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
     {
       title: "Selection & Offer",
@@ -46,10 +43,8 @@ const OurProcess = () => {
         "NDA signing",
         "Final handover of successful candidates",
       ],
-      cardColor: "bg-gradient-to-br from-cyan-100 to-cyan-50",
-      borderColor: "border-cyan-200",
-      iconColor: "text-cyan-600",
-      timeBadge: "bg-cyan-100 text-cyan-800",
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
   ];
 
@@ -77,8 +72,12 @@ const OurProcess = () => {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d] relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -87,8 +86,10 @@ const OurProcess = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-[#D4AF37] mb-4">
+            Our Process
+          </h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Fast, Transparent, and Effective Hiring
           </p>
         </motion.div>
@@ -109,37 +110,74 @@ const OurProcess = () => {
                 y: -5,
                 transition: { duration: 0.3 },
               }}
-              className={`relative rounded-xl p-6 shadow-sm border ${step.borderColor} ${step.cardColor} h-full flex flex-col`}
+              className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 h-full flex flex-col group"
             >
               {/* Time Badge */}
               <div
-                className={`absolute -top-3 right-4 px-3 py-1 rounded-full text-sm font-medium ${step.timeBadge} shadow`}
+                className={`absolute -top-3 right-4 px-3 py-1 rounded-full text-sm font-medium ${step.timeBadge} shadow-lg`}
               >
                 {step.time}
               </div>
 
               <div
-                className={`flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-white ${step.iconColor}`}
+                className={`flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-[#D4AF37]/10 ${step.iconColor} group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300`}
               >
                 {step.icon}
               </div>
 
-              <h3 className="text-xl font-bold text-gray-800 mb-4">
+              <h3 className="text-xl font-bold text-white mb-4">
                 {step.title}
               </h3>
 
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-6">
                 {step.items.map((item, i) => (
                   <li key={i} className="flex items-start">
-                    <span className="flex-shrink-0 mt-1 mr-3 text-green-500">
+                    <span className="flex-shrink-0 mt-1 mr-3 text-[#D4AF37]">
                       <FaClipboardCheck />
                     </span>
-                    <span className="text-gray-700">{item}</span>
+                    <span className="text-gray-300">{item}</span>
                   </li>
                 ))}
               </ul>
+
+              {/* Progress indicator */}
+              <div className="mt-auto">
+                <div className="w-full bg-white/10 rounded-full h-2 mb-2">
+                  <div
+                    className="bg-[#D4AF37] h-2 rounded-full transition-all duration-1000"
+                    style={{ width: `${(index + 1) * 33}%` }}
+                  ></div>
+                </div>
+                <div className="flex justify-between text-xs text-gray-400">
+                  <span>Start</span>
+                  <span>Complete</span>
+                </div>
+              </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Start Your Hiring Process?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Let's discuss your hiring needs and how we can streamline the
+              process for you.
+            </p>
+            <button className="bg-[#D4AF37] text-[#000b30] font-bold py-3 px-8 rounded-lg hover:bg-[#c6a22f] transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
+              Get Started
+              <FaArrowRight className="ml-2" />
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>

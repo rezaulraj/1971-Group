@@ -5,9 +5,11 @@ import {
   FiCheckCircle,
   FiCalendar,
   FiArrowRight,
+  FiUsers,
+  FiBriefcase,
+  FiAward,
 } from "react-icons/fi";
 import heroimagebig from "../../../assets/allservice/heropay.webp?url";
-import herosmall from "../../../assets/allservice/hero1.jpeg?url";
 import clogo1 from "../../../assets/clined/cl1.png?url";
 import clogo2 from "../../../assets/clined/cl2.png?url";
 import clogo3 from "../../../assets/clined/cl3.png?url";
@@ -17,6 +19,13 @@ import clogo6 from "../../../assets/clined/cl6.png?url";
 import clogo7 from "../../../assets/clined/cl7.png?url";
 import clogo8 from "../../../assets/clined/cl8.png?url";
 import Calendly from "../../../components/Calendly";
+import {
+  FaGlobe,
+  FaUserTie,
+  FaHandshake,
+  FaChartLine,
+  FaRocket,
+} from "react-icons/fa";
 
 const HeroPayPerHire = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -31,133 +40,266 @@ const HeroPayPerHire = () => {
     { clogo: clogo8 },
   ];
 
-  // Duplicate the array to create a seamless loop
-  const duplicatedClients = [...ourClient, ...ourClient];
+  const benefits = [
+    {
+      icon: <FiCheckCircle className="text-2xl" />,
+      title: "Risk-Free Hiring",
+      description: "Pay only when we successfully place a candidate",
+    },
+    {
+      icon: <FiDollarSign className="text-2xl" />,
+      title: "Cost Effective",
+      description: "Fixed percentage of the candidate's first-year salary",
+    },
+    {
+      icon: <FiCalendar className="text-2xl" />,
+      title: "Fast Results",
+      description: "Quick turnaround with our extensive talent network",
+    },
+    {
+      icon: <FiUsers className="text-2xl" />,
+      title: "Quality Guarantee",
+      description: "90-day replacement guarantee on all placements",
+    },
+  ];
+
+  const stats = [
+    {
+      value: "95%",
+      label: "Placement Success Rate",
+    },
+    {
+      value: "30%",
+      label: "Average Cost Savings",
+    },
+    {
+      value: "21",
+      label: "Days Average Time-to-Hire",
+    },
+    {
+      value: "100+",
+      label: "Successful Placements",
+    },
+  ];
 
   return (
-    <div className="relative overflow-hidden">
-      {/* Multicolor Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-green-500/20 transform -skew-y-6 scale-125 opacity-70"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/15 via-pink-500/15 to-amber-500/15 opacity-50"></div>
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Hero Image Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroimagebig})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
+      </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Text Content */}
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Pay-Per-Hire Recruitment
-            </h1>
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float3"></div>
+      </div>
 
-            <p className="text-lg text-gray-600">
-              We provide commission-based recruitment services under the
-              pay-per-hire model, where you’re charged a fixed percentage of the
-              candidate’s salary only after successful placement.
-            </p>
-
-            <button
-              onClick={() => setShowCalendly(true)}
-              className="flex items-center gap-3 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group cursor-pointer"
-            >
-              Book a Call
-              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            {/* Features */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-green-100 rounded-lg text-green-600">
-                  <FiCheckCircle className="text-xl" />
-                </div>
-                <span className="text-gray-700">Risk-free hiring</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-purple-100 rounded-lg text-purple-600">
-                  <FiDollarSign className="text-xl" />
-                </div>
-                <span className="text-gray-700">Pay only for success</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
-                  <FiCalendar className="text-xl" />
-                </div>
-                <span className="text-gray-700">Fast turnaround</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Side - Images */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {/* Big Image */}
-            <div className="relative rounded-xl overflow-hidden shadow-2xl z-10">
-              <img
-                src={heroimagebig}
-                alt="Pay-Per-Hire Recruitment"
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            </div>
-
-            {/* Small Image */}
-            <div className="absolute -bottom-8 -left-8 w-48 h-48 rounded-xl overflow-hidden border-4 border-white shadow-lg z-20">
-              <img
-                src={herosmall}
-                alt="Successful hire"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Client Logos Section */}
-        <div className="mt-24 overflow-hidden">
-          <h3 className="text-center text-xl font-medium text-gray-600 mb-8">
-            Trusted by leading companies
-          </h3>
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
-            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
-
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        {/* Main Content */}
+        <motion.div
+          className="grid grid-cols-1 gap-16"
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Text Content */}
+          <div className="space-y-8 relative z-10 text-center">
             <motion.div
-              className="flex"
-              animate={{
-                x: ["0%", "-50%"],
-              }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/20 max-w-4xl mx-auto"
             >
-              {duplicatedClients.map((client, index) => (
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                Pay-Per-Hire Recruitment
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#D4AF37] mb-6">
+                Success-Based Hiring with Zero Upfront Costs
+              </h2>
+              <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                We provide commission-based recruitment services where you pay
+                only after we successfully place the right candidate. Our
+                pay-per-hire model eliminates financial risk while delivering
+                top-tier talent tailored to your specific needs.
+              </p>
+              <button
+                onClick={() => setShowCalendly(true)}
+                className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+              >
+                Book a Free Consultation
+              </button>
+            </motion.div>
+
+            {/* Stats Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
+            >
+              {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 px-8 py-4 grayscale hover:grayscale-0 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center"
                 >
-                  <img
-                    src={client.clogo}
-                    alt="Client logo"
-                    className="h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
-                  />
+                  <div className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-200 text-sm md:text-base">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </motion.div>
           </div>
-        </div>
+
+          {/* Benefits Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="relative z-10"
+          >
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+                Why Choose Our Pay-Per-Hire Model?
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 group text-center"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-4 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300 mx-auto">
+                      {benefit.icon}
+                    </div>
+                    <h4 className="text-xl font-semibold text-white mb-2">
+                      {benefit.title}
+                    </h4>
+                    <p className="text-gray-200">{benefit.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Client Logos Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-24 text-center relative z-10"
+        >
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Trusted By Industry Leaders
+            </h3>
+            <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+              We're proud to partner with companies across industries who trust
+              our pay-per-hire model to deliver exceptional talent without
+              upfront costs.
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-12">
+              {ourClient.map((client, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+                >
+                  <img
+                    src={client.clogo}
+                    alt={`Client Logo ${index + 1}`}
+                    className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-24 text-center relative z-10"
+        >
+          <div className="bg-gradient-to-r from-[#D4AF37]/20 to-[#1a2a6b]/50 backdrop-blur-md p-12 rounded-2xl border border-[#D4AF37]/30">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Hire Without Risk?
+            </h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+              Experience the future of recruitment with our success-based model.
+              Get premium talent acquisition with zero upfront investment.
+            </p>
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+            >
+              Start Risk-Free Hiring
+            </button>
+          </div>
+        </motion.div>
       </div>
+
       <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
+
+      <style jsx="true" global="true">{`
+        @keyframes float1 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(20px, -20px) rotate(5deg);
+          }
+        }
+        @keyframes float2 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(-15px, 15px) rotate(-5deg);
+          }
+        }
+        @keyframes float3 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(15px, 20px) rotate(3deg);
+          }
+        }
+        .animate-float1 {
+          animation: float1 15s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float2 18s ease-in-out infinite;
+        }
+        .animate-float3 {
+          animation: float3 20s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 };

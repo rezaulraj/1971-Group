@@ -1,5 +1,10 @@
 import React from "react";
-import { FaUserTie, FaSearch, FaHandshake } from "react-icons/fa";
+import {
+  FaUserTie,
+  FaSearch,
+  FaHandshake,
+  FaCheckCircle,
+} from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import DOMPurify from "dompurify";
 
@@ -7,96 +12,136 @@ const WhatWeDo = () => {
   const services = [
     {
       title: "Recruitment",
-      description: `We provide <span class="text-blue-200 font-bold">End-To-End Recruitment Solutions</span> tailored to your business goals whether you need one expert or an entire team.`,
-      icon: <FaSearch className="text-xl" />,
+      description:
+        "End-to-End Recruitment Solutions tailored to your business needs.",
+      icon: <FaSearch className="text-2xl" />,
+      backTitle: "Talent Acquisition",
+      backDescription:
+        "We find the perfect candidates for your organization, from screening to placement.",
+      features: [
+        "Executive Search",
+        "Technical Recruitment",
+        "Cultural Fit Assessment",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-blue-500 to-blue-700",
+      backColor: "bg-blue-600",
       link: "/recruitment-services",
-      gradient:
-        "linear-gradient(135deg, rgba(0,112,243,0.95) 0%, rgba(0,60,150,0.95) 100%)",
-      borderColor: "#00b4d8",
-      iconBg: "rgba(0, 180, 216, 0.2)",
-      iconColor: "#00b4d8",
-      textColor: "#ffffff",
     },
     {
       title: "HR Consulting",
-      description: `We help companies build <span class="text-purple-200 font-bold">Strong Employer Brands</span> that attract and retain the right talent.`,
-      icon: <FaUserTie className="text-xl" />,
+      description:
+        "Building Strong Employer Brands that attract and retain top talent.",
+      icon: <FaUserTie className="text-2xl" />,
+      backTitle: "HR Excellence",
+      backDescription:
+        "We help you develop HR strategies that drive organizational success.",
+      features: [
+        "Policy Development",
+        "Performance Management",
+        "Employee Engagement",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-purple-500 to-purple-700",
+      backColor: "bg-purple-600",
       link: "/hr-services",
-      gradient:
-        "linear-gradient(135deg, rgba(131,58,180,0.95) 0%, rgba(81,29,124,0.95) 100%)",
-      borderColor: "#c77dff",
-      iconBg: "rgba(199, 125, 255, 0.2)",
-      iconColor: "#c77dff",
-      textColor: "#ffffff",
     },
     {
       title: "Outstaffing",
-      description: `Scale your operations with <span class="text-blue-200 font-bold">Flexible Staffing Solutions</span> for peak performance and productivity.`,
-      icon: <FaHandshake className="text-xl" />,
+      description:
+        "Flexible Staffing Solutions for peak performance and productivity.",
+      icon: <FaHandshake className="text-2xl" />,
+      backTitle: "Team Augmentation",
+      backDescription:
+        "Scale your workforce quickly with our vetted professionals.",
+      features: ["Dedicated Teams", "Project-Based Staffing", "Quick Ramp-Up"],
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-teal-500 to-teal-700",
+      backColor: "bg-teal-600",
       link: "/staffing-services",
-      gradient:
-        "linear-gradient(135deg, rgba(0,180,216,0.95) 0%, rgba(0,95,115,0.95) 100%)",
-      borderColor: "#48cae4",
-      iconBg: "rgba(72, 202, 228, 0.2)",
-      iconColor: "#48cae4",
-      textColor: "#ffffff",
     },
   ];
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b] relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-      </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className="text-3xl font-bold text-center mb-12 text-white">
+        <h2 className="text-5xl font-bold text-center mb-12 text-[#D4AF37]">
           What we do
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full border border-gray-700"
-              style={{
-                background: service.gradient,
-                borderTop: `4px solid ${service.borderColor}`,
-              }}
-            >
-              <div
-                className="flex items-center justify-center w-14 h-14 mb-6 rounded-full backdrop-blur-sm"
-                style={{ backgroundColor: service.iconBg }}
-              >
-                <span style={{ color: service.iconColor }}>{service.icon}</span>
+            <div key={index} className="group perspective">
+              <div className="relative preserve-3d w-full h-[440px] rounded-2xl shadow-2xl transition-transform duration-700 group-hover:rotate-y-180">
+                <div
+                  className="absolute inset-0 rounded-2xl overflow-hidden backface-hidden flex flex-col justify-end p-6 text-white"
+                  style={{
+                    backgroundImage: `url(${service.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="bg-black/50 p-6 rounded-xl">
+                    <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-white/20 backdrop-blur-sm">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold">{service.title}</h3>
+                    <p className="mt-2 text-sm opacity-90">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className={`absolute inset-0 rounded-2xl overflow-hidden backface-hidden rotate-y-180 flex flex-col justify-between p-6 text-white bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b]`}
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      {service.backTitle}
+                    </h3>
+                    <p className="mb-4 text-gray-200">
+                      {service.backDescription}
+                    </p>
+
+                    <ul className="space-y-2">
+                      {service.features.map((feature, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <FaCheckCircle className="text-yellow-300" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <a
+                    href={service.link}
+                    className="inline-flex items-center gap-2 text-[#c49b2f] px-4 py-2 rounded-lg font-semibold transition"
+                  >
+                    Learn more <HiArrowNarrowRight />
+                  </a>
+                </div>
               </div>
-              <h3
-                className="text-xl font-bold mb-4"
-                style={{ color: service.textColor }}
-              >
-                {service.title}
-              </h3>
-              <p
-                className="mb-6 opacity-90"
-                style={{ color: service.textColor }}
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(service.description),
-                }}
-              />
-              <a
-                href={service.link}
-                className="inline-flex items-center font-semibold group"
-                style={{ color: service.textColor }}
-              >
-                Learn more
-                <HiArrowNarrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Tailwind extra utilities */}
+      <style>{`
+        .perspective {
+          perspective: 1000px;
+        }
+        .preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+      `}</style>
     </section>
   );
 };

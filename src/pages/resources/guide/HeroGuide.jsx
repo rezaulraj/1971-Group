@@ -51,14 +51,14 @@ const HeroGuide = () => {
                 alt="1971 Group Logo"
                 className="h-10 mr-3 filter -brightness-50 invert"
               />
-              <span className="text-sm font-semibold bg-teal-600 px-3 py-1 rounded-full flex items-center">
+              <span className="text-sm font-semibold bg-[#D4AF37]/30 px-3 py-1 rounded-full flex items-center">
                 <MdOutlineFeaturedPlayList className="mr-1" /> Expert Guides
               </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Top Articles for Streamlining{" "}
-              <span className="text-amber-300">Recruitment & HR</span>
+              <span className="text-[#D4AF37]">Recruitment & HR</span>
             </h1>
 
             <p className="text-xl text-teal-100 mb-8 max-w-2xl">
@@ -68,15 +68,15 @@ const HeroGuide = () => {
 
             <div className="flex flex-wrap gap-4 mb-10">
               <div className="flex items-center bg-teal-800/50 px-4 py-2 rounded-full">
-                <FaUserTie className="mr-2 text-amber-300" />
+                <FaUserTie className="mr-2 text-[#D4AF37]" />
                 <span>Talent Acquisition</span>
               </div>
               <div className="flex items-center bg-teal-800/50 px-4 py-2 rounded-full">
-                <FaChartLine className="mr-2 text-amber-300" />
+                <FaChartLine className="mr-2 text-[#D4AF37]" />
                 <span>HR Analytics</span>
               </div>
               <div className="flex items-center bg-teal-800/50 px-4 py-2 rounded-full">
-                <FaBookOpen className="mr-2 text-amber-300" />
+                <FaBookOpen className="mr-2 text-[#D4AF37]" />
                 <span>Best Practices</span>
               </div>
             </div>
@@ -93,20 +93,20 @@ const HeroGuide = () => {
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden transition-all hover:border-amber-300/50 hover:shadow-lg hover:shadow-amber-300/10">
                   <div className="p-6">
                     {guide.featured && (
-                      <span className="inline-block mb-3 text-xs font-semibold px-2 py-1 bg-amber-400 text-teal-900 rounded-full">
+                      <span className="inline-block mb-3 text-xs font-semibold px-2 py-1 bg-[#D4AF37] text-teal-900 rounded-full">
                         Featured
                       </span>
                     )}
                     <h3 className="text-2xl font-bold mb-3">{guide.title}</h3>
                     <p className="text-teal-100 mb-4">{guide.excerpt}</p>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-teal-200">
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-[#D4AF37]">
                       <span className="flex items-center bg-teal-800/30 px-3 py-1 rounded-full">
                         {guide.category}
                       </span>
                       <span className="flex items-center">
                         <IoTime className="mr-1" /> {guide.readTime}
                       </span>
-                      <span className="ml-auto flex items-center font-medium text-amber-300">
+                      <span className="ml-auto flex items-center font-medium text-[#D4AF37]">
                         Read guide <FaArrowRight className="ml-1" />
                       </span>
                     </div>
@@ -125,7 +125,7 @@ const HeroGuide = () => {
           alt="HR professionals reviewing documents"
           className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/90 via-teal-800/70 to-teal-900/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90" />
       </div>
     </div>
   );

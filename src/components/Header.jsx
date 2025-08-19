@@ -96,7 +96,7 @@ const Header = () => {
               {item.path ? (
                 <a
                   href={item.path}
-                  className="text-gray-800 text-lg font-semibold hover:text-[#5cc082] transition-colors px-3 py-2"
+                  className="text-gray-800 text-lg font-semibold hover:text-[#D4AF37] transition-colors px-3 py-2"
                 >
                   {item.level}
                 </a>
@@ -106,8 +106,8 @@ const Header = () => {
                     onClick={() => toggleDropdown(index)}
                     className={`text-gray-800 font-semibold text-lg flex items-center gap-1 px-3 py-2 transition-colors ${
                       activeDropdown === index
-                        ? "text-[#5cc082]"
-                        : "hover:text-[#5cc082]"
+                        ? "text-[#D4AF37]"
+                        : "hover:text-[#D4AF37]"
                     }`}
                   >
                     {item.level}
@@ -132,7 +132,7 @@ const Header = () => {
                                 onClick={() => toggleChildDropdown(subIndex)}
                                 className={`w-full text-left px-4 py-3 font-medium flex justify-between items-center transition-colors ${
                                   activeChildDropdown === subIndex
-                                    ? "text-[#5cc082] bg-gray-50"
+                                    ? "text-[#D4AF37] bg-gray-50"
                                     : "text-gray-800 hover:bg-gray-50"
                                 }`}
                               >
@@ -153,7 +153,7 @@ const Header = () => {
                                       <a
                                         key={childIndex}
                                         href={child.path}
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#5cc082] hover:bg-gray-100 transition-colors"
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#D4AF37] hover:bg-gray-100 transition-colors"
                                       >
                                         {child.level}
                                       </a>
@@ -165,7 +165,7 @@ const Header = () => {
                           ) : (
                             <a
                               href={subItem.path}
-                              className="block px-4 py-3 text-gray-800 hover:text-[#5cc082] hover:bg-gray-50 transition-colors"
+                              className="block px-4 py-3 text-gray-800 hover:text-[#D4AF37] hover:bg-gray-50 transition-colors"
                             >
                               {subItem.level}
                             </a>
@@ -184,7 +184,7 @@ const Header = () => {
         <div className="hidden md:block">
           <button
             onClick={() => setShowCalendly(true)}
-            className="bg-[#5cc082] text-white px-6 py-2 rounded-md hover:bg-[#4daa72] transition-colors font-semibold shadow-md hover:shadow-lg"
+            className="bg-[#D4AF37] text-gray-950 text-lg px-6 py-2 rounded-md transition-colors font-bold shadow-md hover:shadow-lg cursor-pointer"
           >
             Hire Talent
           </button>

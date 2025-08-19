@@ -48,7 +48,7 @@ const HeroBlog = () => {
     <div className="relative bg-gradient-to-br from-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIxNSIgeT0iMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')]"></div>
+        {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIxNSIgeT0iMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')]"></div> */}
       </div>
 
       {/* Main content */}
@@ -62,14 +62,14 @@ const HeroBlog = () => {
                 alt="1971 Group Logo"
                 className="h-10 mr-3 filter -brightness-50 invert"
               />
-              <span className="text-sm font-semibold bg-indigo-600 px-3 py-1 rounded-full flex items-center">
+              <span className="text-sm font-semibold bg-[#D4AF37]/30 px-3 py-1 rounded-full flex items-center">
                 <MdOutlineFeaturedPlayList className="mr-1" /> Premium Content
               </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Premium Articles on{" "}
-              <span className="text-amber-400">Recruitment</span>
+              <span className="text-[#D4AF37]">Recruitment</span>
             </h1>
 
             <p className="text-xl text-blue-100 mb-8 max-w-2xl">
@@ -80,15 +80,15 @@ const HeroBlog = () => {
 
             <div className="flex flex-wrap gap-4 mb-10">
               <div className="flex items-center bg-blue-800/50 px-4 py-2 rounded-full">
-                <FaUserTie className="mr-2 text-amber-400" />
+                <FaUserTie className="mr-2 text-[#D4AF37]" />
                 <span>Executive Briefs</span>
               </div>
               <div className="flex items-center bg-blue-800/50 px-4 py-2 rounded-full">
-                <FaChartLine className="mr-2 text-amber-400" />
+                <FaChartLine className="mr-2 text-[#D4AF37]" />
                 <span>Market Analysis</span>
               </div>
               <div className="flex items-center bg-blue-800/50 px-4 py-2 rounded-full">
-                <FaBookOpen className="mr-2 text-amber-400" />
+                <FaBookOpen className="mr-2 text-[#D4AF37]" />
                 <span>Case Studies</span>
               </div>
             </div>
@@ -100,10 +100,10 @@ const HeroBlog = () => {
               const slug = generateSlug(article.title);
               return (
                 <Link to={`/blogs/${slug}`} key={article.id} className="block">
-                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden transition-all hover:border-amber-400/50 hover:shadow-lg hover:shadow-amber-400/10">
+                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden transition-all hover:border-[#D4AF37]/50 hover:shadow-lg hover:shadow-[#D4AF37]/10">
                     <div className="p-6">
                       {article.featured && (
-                        <span className="inline-block mb-3 text-xs font-semibold px-2 py-1 bg-amber-500 text-blue-900 rounded-full">
+                        <span className="inline-block mb-3 text-xs font-semibold px-2 py-1 bg-[#D4AF37] text-blue-900 rounded-full">
                           Featured
                         </span>
                       )}
@@ -118,7 +118,7 @@ const HeroBlog = () => {
                         <span className="flex items-center">
                           <IoTime className="mr-1" /> {article.readTime}
                         </span>
-                        <span className="ml-auto flex items-center font-medium text-amber-400">
+                        <span className="ml-auto flex items-center font-medium text-[#D4AF37]">
                           Read article <FaArrowRight className="ml-1" />
                         </span>
                       </div>
@@ -138,7 +138,7 @@ const HeroBlog = () => {
           alt="Recruitment professionals discussing"
           className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/90 via-blue-900/70 to-blue-900/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
       </div>
     </div>
   );

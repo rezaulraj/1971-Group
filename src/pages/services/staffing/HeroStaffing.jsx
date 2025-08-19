@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import heroStaffing from "../../../assets/staffing/herostaf.jpg?url";
 import clogo1 from "../../../assets/clined/cl1.png?url";
 import clogo2 from "../../../assets/clined/cl2.png?url";
@@ -17,35 +18,71 @@ import {
   FaShieldAlt,
   FaExchangeAlt,
   FaHandshake,
+  FaRocket,
+  FaGlobe,
+  FaAward,
+  FaClock,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
 
 const BenefitItem = ({ icon: Icon, text }) => (
-  <div className="flex items-center">
-    <Icon className="text-yellow-300 mr-2 text-xl" />
-    <span>{text}</span>
-  </div>
+  <motion.div
+    className="flex items-center bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+    whileHover={{ scale: 1.05 }}
+  >
+    <Icon className="text-[#D4AF37] mr-3 text-xl" />
+    <span className="text-white font-medium">{text}</span>
+  </motion.div>
 );
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
-  <div className="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition-colors duration-300 h-full">
-    <div className="flex items-center mb-4">
-      <Icon className="text-blue-400 text-2xl mr-3" />
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
+  <motion.div
+    className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 h-full group"
+    whileHover={{ y: -5 }}
+  >
+    <div className="flex items-center mb-6">
+      <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mr-4 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300">
+        <Icon className="text-2xl" />
+      </div>
+      <h3 className="text-xl font-bold text-white">{title}</h3>
     </div>
-    <p className="text-gray-300">{description}</p>
-  </div>
+    <p className="text-gray-300 group-hover:text-white transition-colors duration-300">
+      {description}
+    </p>
+
+    {/* Hover effect line */}
+    <div className="absolute bottom-0 left-0 h-0.5 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-500"></div>
+  </motion.div>
 );
 
 const ClientLogo = ({ src, alt }) => (
-  <div className="mx-4 lg:mx-8 inline-flex items-center">
+  <motion.div
+    className="mx-4 lg:mx-8 inline-flex items-center bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+    whileHover={{ scale: 1.1 }}
+  >
     <img
       src={src}
       alt={alt}
       className="h-12 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
       loading="lazy"
     />
-  </div>
+  </motion.div>
+);
+
+const StatCard = ({ icon: Icon, value, label }) => (
+  <motion.div
+    className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-center"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true }}
+  >
+    <div className="w-16 h-16 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mx-auto mb-4 text-[#D4AF37]">
+      <Icon className="text-2xl" />
+    </div>
+    <div className="text-3xl font-bold text-white mb-2">{value}</div>
+    <div className="text-gray-300">{label}</div>
+  </motion.div>
 );
 
 const HeroStaffing = () => {
@@ -62,7 +99,7 @@ const HeroStaffing = () => {
       icon: FaShieldAlt,
       title: "Start Hiring with Zero Risk",
       description:
-        "No upfront payments required, our process is fast, affordable, and hassle-free. We’re ready to get started immediately, handling payroll, taxes, and compliance for you.",
+        "No upfront payments required, our process is fast, affordable, and hassle-free. We're ready to get started immediately, handling payroll, taxes, and compliance for you.",
     },
     {
       icon: FaExchangeAlt,
@@ -78,44 +115,69 @@ const HeroStaffing = () => {
     },
   ];
 
+  const stats = [
+    { icon: FaRocket, value: "87%", label: "Faster Hiring" },
+    { icon: FaGlobe, value: "50+", label: "Countries Served" },
+    { icon: FaAward, value: "98%", label: "Client Satisfaction" },
+    { icon: FaClock, value: "24/7", label: "Support" },
+  ];
+
   const ourClient = [
-    { clogo: clogo1 },
-    { clogo: clogo2 },
-    { clogo: clogo3 },
-    { clogo: clogo4 },
-    { clogo: clogo5 },
-    { clogo: clogo6 },
-    { clogo: clogo7 },
-    { clogo: clogo8 },
+    { clogo: clogo1, alt: "Client 1" },
+    { clogo: clogo2, alt: "Client 2" },
+    { clogo: clogo3, alt: "Client 3" },
+    { clogo: clogo4, alt: "Client 4" },
+    { clogo: clogo5, alt: "Client 5" },
+    { clogo: clogo6, alt: "Client 6" },
+    { clogo: clogo7, alt: "Client 7" },
+    { clogo: clogo8, alt: "Client 8" },
   ];
 
   return (
-    <div className="bg-gray-900 text-white">
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900/80 via-indigo-800/70 to-cyan-700/80">
-        <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M15 15h30v30H15z' fill='%23ffffff' fill-opacity='0.2'/%3E%3C/svg%3E")`,
-            backgroundSize: "60px 60px",
-          }}
-          aria-hidden="true"
-        />
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Hero Image Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroStaffing})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
+      </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
-          <div className="text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float3"></div>
+      </div>
+
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        {/* Main Content - Single Column */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="relative z-10 text-center mb-20"
+        >
+          <div className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/20 max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               Staffing & Outstaffing Services
             </h1>
-            <p className="text-2xl mb-8 opacity-90">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#D4AF37] mb-6">
               Scale Smarter. Hire Faster.
-            </p>
-            <p className="text-xl mb-8 opacity-90">
+            </h2>
+            <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
               Scale your team seamlessly with our expert outstaffing solutions
               designed to help fast-growing companies expand their workforce,
               enhance flexibility, and drive productivity.
             </p>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-2xl mx-auto">
               {benefits.map((benefit, index) => (
                 <BenefitItem
                   key={index}
@@ -125,49 +187,86 @@ const HeroStaffing = () => {
               ))}
             </div>
 
-            <button
+            <motion.button
               onClick={() => setShowCalendly(true)}
-              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-all duration-300 flex items-center group"
-              aria-label="Book a call about staffing services"
+              className="relative inline-flex cursor-pointer items-center px-8 py-4 bg-[#D4AF37] text-[#000b30] font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 group overflow-hidden text-lg mx-auto"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Book a Call
-              <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+              <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+              <span className="relative z-10 flex items-center">
+                <span>Book a Call</span>
+                <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </motion.button>
           </div>
+        </motion.div>
 
-          <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-            <img
-              src={heroStaffing}
-              alt="Professional team working together"
-              className="w-full h-full object-cover"
-              loading="eager"
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
+        >
+          {stats.map((stat, index) => (
+            <StatCard
+              key={index}
+              icon={stat.icon}
+              value={stat.value}
+              label={stat.label}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent"></div>
-          </div>
+          ))}
+        </motion.div>
 
-          <div className="md:col-span-2 relative py-8 overflow-hidden bg-white/10 backdrop-blur-sm border-t border-b border-white/20">
-            <div
-              className="flex items-center justify-center animate-marquee whitespace-nowrap"
-              aria-hidden="true"
-            >
-              {[...ourClient, ...ourClient].map((client, idx) => (
-                <ClientLogo key={idx} src={client.clogo} alt={client.alt} />
-              ))}
+        {/* Clients Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mb-20 text-center"
+        >
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Trusted By Industry Leaders
+            </h3>
+            <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+              We're trusted by fast-scaling companies across industries from
+              startups to enterprise-level brands who rely on us to power their
+              workforce growth.
+            </p>
+
+            <div className="relative py-8 overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl mt-8">
+              <motion.div
+                className="flex items-center justify-center animate-marquee whitespace-nowrap"
+                aria-hidden="true"
+              >
+                {[...ourClient, ...ourClient].map((client, idx) => (
+                  <ClientLogo key={idx} src={client.clogo} alt={client.alt} />
+                ))}
+              </motion.div>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      <section className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        {/* Features Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Flexible Staffing Solutions
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Our comprehensive approach ensures you get the right talent with
               the right terms for your business needs.
             </p>
+            <div className="w-20 h-1 bg-[#D4AF37] mx-auto rounded-full mt-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -180,10 +279,39 @@ const HeroStaffing = () => {
               />
             ))}
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </div>
+
       <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
-      <style jsx="true">{`
+
+      <style jsx="true" global="true">{`
+        @keyframes float1 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(20px, -20px) rotate(5deg);
+          }
+        }
+        @keyframes float2 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(-15px, 15px) rotate(-5deg);
+          }
+        }
+        @keyframes float3 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(15px, 20px) rotate(3deg);
+          }
+        }
         @keyframes marquee {
           0% {
             transform: translateX(0);
@@ -191,6 +319,15 @@ const HeroStaffing = () => {
           100% {
             transform: translateX(-50%);
           }
+        }
+        .animate-float1 {
+          animation: float1 15s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float2 18s ease-in-out infinite;
+        }
+        .animate-float3 {
+          animation: float3 20s ease-in-out infinite;
         }
         .animate-marquee {
           animation: marquee 25s linear infinite;

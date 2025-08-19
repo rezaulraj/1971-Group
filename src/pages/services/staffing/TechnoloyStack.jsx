@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaSearch,
@@ -7,71 +7,13 @@ import {
   FaLightbulb,
   FaChartLine,
   FaHandshakeAltSlash,
+  FaArrowRight,
+  FaClipboardCheck,
 } from "react-icons/fa";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 10,
-    },
-  },
-  hover: {
-    y: -5,
-    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-  },
-};
-
-const SpecializationCard = ({ icon: Icon, title, description, benefits }) => (
-  <motion.div
-    className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-blue-200"
-    variants={cardVariants}
-    whileHover="hover"
-  >
-    <div className="p-6">
-      <div className="flex items-start mb-4">
-        <div className="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
-          <Icon className="text-blue-600 text-2xl" />
-        </div>
-        <div>
-          <h3 className="text-xl font-bold text-gray-800">{title}</h3>
-          <p className="text-gray-600 mt-2">{description}</p>
-        </div>
-      </div>
-
-      <div className="mt-4 pt-4 border-t border-gray-100">
-        <h4 className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-3">
-          Key Benefits
-        </h4>
-        <ul className="space-y-2">
-          {benefits.map((benefit, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-blue-500 mr-2">✓</span>
-              <span className="text-gray-700">{benefit}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </motion.div>
-);
+import Calendly from "../../../components/Calendly";
 
 const TalentSpecializations = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
   const services = [
     {
       icon: FaSearch,
@@ -83,6 +25,8 @@ const TalentSpecializations = () => {
         "Cultural fit assessments",
         "Skills-to-role alignment",
       ],
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
     {
       icon: FaUserClock,
@@ -94,6 +38,8 @@ const TalentSpecializations = () => {
         "Short-term project staffing",
         "Seamless onboarding",
       ],
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
     {
       icon: FaUsers,
@@ -105,6 +51,8 @@ const TalentSpecializations = () => {
         "Bulk candidate screening",
         "Turnkey onboarding programs",
       ],
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
     {
       icon: FaChartLine,
@@ -116,6 +64,8 @@ const TalentSpecializations = () => {
         "Succession planning",
         "Market salary benchmarking",
       ],
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
     {
       icon: FaLightbulb,
@@ -127,6 +77,8 @@ const TalentSpecializations = () => {
         "Passive candidate outreach",
         "Competitive offer strategies",
       ],
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
     {
       icon: FaHandshakeAltSlash,
@@ -138,55 +90,155 @@ const TalentSpecializations = () => {
         "Performance-based pricing",
         "90-day replacement guarantee",
       ],
+      iconColor: "text-[#D4AF37]",
+      timeBadge: "bg-[#D4AF37] text-[#000b30]",
     },
   ];
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      y: -5,
+      transition: { duration: 0.3 },
+    },
+  };
+
   return (
-    <motion.section
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d] relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold text-[#D4AF37] mb-4">
             Staffing Solutions That Deliver Results
-          </motion.h2>
-          <motion.p
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
+          </h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Whether you need one perfect candidate or an entire team, we provide{" "}
-            <span className="font-semibold text-blue-600">
+            <span className="font-semibold text-[#D4AF37]">
               flexible, scalable staffing
             </span>{" "}
             with measurable impact.
-          </motion.p>
-        </div>
+          </p>
+        </motion.div>
 
+        {/* Services Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
           variants={containerVariants}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {services.map((service, index) => (
-            <SpecializationCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              benefits={service.benefits}
-            />
-          ))}
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                whileHover="hover"
+                className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 h-full flex flex-col group"
+              >
+                {/* Success Rate Badge */}
+                <div
+                  className={`absolute -top-3 right-4 px-3 py-1 rounded-full text-sm font-medium ${service.timeBadge} shadow-lg`}
+                >
+                  {index === 0
+                    ? "90% Success"
+                    : index === 2
+                    ? "30% Faster"
+                    : index === 5
+                    ? "90-Day Guarantee"
+                    : "Premium"}
+                </div>
+
+                <div
+                  className={`flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-[#D4AF37]/10 ${service.iconColor} group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300`}
+                >
+                  <IconComponent className="text-xl" />
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-300 mb-6">{service.description}</p>
+
+                <div className="mt-auto">
+                  <h4 className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wider mb-3">
+                    Key Benefits
+                  </h4>
+                  <ul className="space-y-3">
+                    {service.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start">
+                        <span className="flex-shrink-0 mt-1 mr-3 text-[#D4AF37]">
+                          <FaClipboardCheck />
+                        </span>
+                        <span className="text-gray-300">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Hiring Process?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Let's discuss your staffing needs and how our specialized
+              solutions can drive your business forward.
+            </p>
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="bg-[#D4AF37] text-[#000b30] font-bold py-3 px-8 rounded-lg hover:bg-[#c6a22f] transition-all duration-300 transform hover:scale-105 flex items-center mx-auto"
+            >
+              Get Started
+              <FaArrowRight className="ml-2" />
+            </button>
+          </div>
         </motion.div>
       </div>
-    </motion.section>
+      <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
+    </section>
   );
 };
 

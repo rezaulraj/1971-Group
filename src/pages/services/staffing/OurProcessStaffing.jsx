@@ -103,7 +103,7 @@ const OurHiringProcess = () => {
               className={`relative rounded-xl p-8 shadow-sm border ${step.borderColor} ${step.cardColor} h-full flex flex-col`}
             >
               <div
-                className={`flex items-center justify-center w-14 h-14 mb-6 rounded-full bg-white shadow-md ${step.iconColor}`}
+                className={`flex items-center justify-center w-14 h-14 mb-6 rounded-full bg-[#D4AF37] shadow-md text-white`}
               >
                 {step.icon}
               </div>

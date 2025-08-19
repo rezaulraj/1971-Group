@@ -29,6 +29,7 @@ import indus10 from "../../assets/industry/indus10.avif?url";
 import indus11 from "../../assets/industry/indus11.avif?url";
 import indus12 from "../../assets/industry/indus12.avif?url";
 import Calendly from "../../components/Calendly";
+
 const IndustryWeServe = () => {
   const [showCalendly, setShowCalendly] = useState(false);
   const industries = [
@@ -50,7 +51,7 @@ const IndustryWeServe = () => {
         "Inventory accuracy focus",
       ],
       image: indus1,
-      icon: <FiPackage className="text-4xl text-blue-600" />,
+      icon: <FiPackage className="text-2xl" />,
       flip: false,
     },
     {
@@ -71,7 +72,7 @@ const IndustryWeServe = () => {
         "Timeliness focus",
       ],
       image: indus2,
-      icon: <FiTruck className="text-4xl text-green-600" />,
+      icon: <FiTruck className="text-2xl" />,
       flip: true,
     },
     {
@@ -92,7 +93,7 @@ const IndustryWeServe = () => {
         "Bonded and insured",
       ],
       image: indus3,
-      icon: <BiDroplet className="text-4xl text-teal-600" />,
+      icon: <BiDroplet className="text-2xl" />,
       flip: false,
     },
     {
@@ -113,7 +114,7 @@ const IndustryWeServe = () => {
         "Emergency service available",
       ],
       image: indus4,
-      icon: <LuZap className="text-4xl text-yellow-500" />,
+      icon: <LuZap className="text-2xl" />,
       flip: true,
     },
     {
@@ -134,7 +135,7 @@ const IndustryWeServe = () => {
         "Water conservation expertise",
       ],
       image: indus5,
-      icon: <BiDroplet className="text-4xl text-blue-400" />,
+      icon: <BiDroplet className="text-2xl" />,
       flip: false,
     },
     {
@@ -155,7 +156,7 @@ const IndustryWeServe = () => {
         "H2A program compliant",
       ],
       image: indus6,
-      icon: <LuCloudRainWind className="text-4xl text-green-700" />,
+      icon: <LuCloudRainWind className="text-2xl" />,
       flip: true,
     },
     {
@@ -176,7 +177,7 @@ const IndustryWeServe = () => {
         "Seasonal availability",
       ],
       image: indus7,
-      icon: <GiAnchor className="text-4xl text-blue-700" />,
+      icon: <GiAnchor className="text-2xl" />,
       flip: false,
     },
     {
@@ -197,7 +198,7 @@ const IndustryWeServe = () => {
         "Specialized trade expertise",
       ],
       image: indus8,
-      icon: <FaHardHat className="text-4xl text-amber-600" />,
+      icon: <FaHardHat className="text-2xl" />,
       flip: true,
     },
     {
@@ -217,7 +218,7 @@ const IndustryWeServe = () => {
         "Cross-trained personnel",
       ],
       image: indus9,
-      icon: <LuFactory className="text-4xl text-blue-600" />,
+      icon: <LuFactory className="text-2xl" />,
       flip: false,
     },
     {
@@ -237,7 +238,7 @@ const IndustryWeServe = () => {
         "Preventive maintenance focus",
       ],
       image: indus10,
-      icon: <FiTool className="text-4xl text-purple-600" />,
+      icon: <FiTool className="text-2xl" />,
       flip: true,
     },
     {
@@ -257,7 +258,7 @@ const IndustryWeServe = () => {
         "Multilingual staff available",
       ],
       image: indus11,
-      icon: <FiCoffee className="text-4xl text-red-600" />,
+      icon: <FiCoffee className="text-2xl" />,
       flip: false,
     },
     {
@@ -277,7 +278,7 @@ const IndustryWeServe = () => {
         "Quality-driven results",
       ],
       image: indus12,
-      icon: <FiHome className="text-4xl text-amber-800" />,
+      icon: <FiHome className="text-2xl" />,
       flip: true,
     },
   ];
@@ -339,67 +340,46 @@ const IndustryWeServe = () => {
       },
     },
   };
+
   return (
-    <div className="relative overflow-hidden bg-gray-50 py-16">
-      {/* Background elements remain the same */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-red-500/20 transform -skew-y-6 scale-125 opacity-50"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-green-500/10 via-amber-500/10 to-pink-500/10 opacity-30"></div>
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full opacity-10"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, #3b82f6 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-        animate={{
-          backgroundPosition: ["0% 0%", "100% 100%"],
-        }}
-        transition={{
-          duration: 60,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "linear",
-        }}
-      />
+    <div className="relative overflow-hidden py-20 bg-[#F6F1EE]">
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#000b30]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section remains the same */}
+        {/* Hero Section */}
         <motion.div
           className="text-center mb-20"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
-            variants={itemVariants}
-          >
+          <h2 className="text-4xl md:text-5xl font-bold text-[#000b30] mb-6">
             Comprehensive Workforce Solutions
-          </motion.h2>
-          <motion.p
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-            variants={itemVariants}
-          >
+          </h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Specialized staffing across all major industries, matching skilled
             workers with your operational needs.
-          </motion.p>
+          </p>
         </motion.div>
 
         {/* Industry Sections */}
         {industries.map((industry, index) => (
           <motion.div
             key={index}
-            className={`mb-28 flex flex-col ${
+            className={`mb-20 flex flex-col ${
               industry.flip ? "lg:flex-row-reverse" : "lg:flex-row"
             } items-center gap-12`}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
           >
             {/* Image Section */}
             <motion.div
-              className="w-full lg:w-1/2 rounded-xl h-full overflow-hidden shadow-2xl relative"
+              className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-xl"
               variants={industry.flip ? flipImageVariants : imageVariants}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
@@ -409,43 +389,41 @@ const IndustryWeServe = () => {
                 alt={industry.title}
                 className="w-full h-auto md:h-96 object-cover aspect-video"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </motion.div>
 
             {/* Content Section */}
             <motion.div className="w-full lg:w-1/2" variants={itemVariants}>
               <div className="flex items-center gap-4 mb-6">
-                <motion.div
-                  className="p-3 bg-white rounded-lg shadow-md"
-                  whileHover={{ rotate: 15, scale: 1.1 }}
-                >
+                <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37]">
                   {industry.icon}
-                </motion.div>
-                <h3 className="text-3xl font-bold text-gray-900">
+                </div>
+                <h3 className="text-3xl font-bold text-[#000b30]">
                   {industry.title}
                 </h3>
               </div>
 
-              <p className="text-gray-600 mb-6">{industry.description}</p>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                {industry.description}
+              </p>
 
               <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                  <FiUsers className="text-blue-500" />
+                <h4 className="font-semibold text-[#000b30] mb-3 flex items-center gap-2">
+                  <FiUsers className="text-[#D4AF37]" />
                   Key Roles:
                 </h4>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {industry.keyRoles.map((role, i) => (
                     <motion.li
                       key={i}
-                      className="flex items-center gap-2 text-gray-700 bg-white/50 p-2 rounded"
+                      className="flex items-center gap-2 text-gray-700 bg-white p-3 rounded-lg border border-white/20"
                       variants={benefitItem}
                       custom={i}
                       whileHover={{
                         x: 5,
-                        backgroundColor: "rgba(255,255,255,0.9)",
+                        borderColor: "#D4AF37",
                       }}
                     >
-                      <FiAward className="text-blue-400" />
+                      <FiAward className="text-[#D4AF37]" />
                       {role}
                     </motion.li>
                   ))}
@@ -453,32 +431,32 @@ const IndustryWeServe = () => {
               </div>
 
               <div className="mb-8">
-                <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                  <FiCheckCircle className="text-green-500" />
+                <h4 className="font-semibold text-[#000b30] mb-3 flex items-center gap-2">
+                  <FiCheckCircle className="text-[#D4AF37]" />
                   Your Benefits:
                 </h4>
                 <ul className="space-y-3">
                   {industry.benefits.map((benefit, i) => (
                     <motion.li
                       key={i}
-                      className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm"
+                      className="flex items-start gap-3 p-4 bg-white rounded-lg border border-white/20"
                       variants={benefitItem}
                       custom={i}
                       whileHover={{
                         x: 5,
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                        borderColor: "#D4AF37",
                       }}
                     >
-                      <FiCheckCircle className="mt-1 text-green-500 flex-shrink-0" />
-                      <span>{benefit}</span>
+                      <FiCheckCircle className="mt-1 text-[#D4AF37] flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
                     </motion.li>
                   ))}
                 </ul>
               </div>
 
-              {/* New CTA Section */}
+              {/* CTA Section */}
               <motion.div
-                className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-gray-200"
+                className="bg-gradient-to-r from-[#000b30]/10 to-[#1a2a6b]/10 p-6 rounded-xl border border-[#D4AF37]/30"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -486,19 +464,19 @@ const IndustryWeServe = () => {
               >
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                   <div>
-                    <h4 className="font-bold text-lg text-gray-800">
+                    <h4 className="font-bold text-lg text-[#000b30]">
                       Need {industry.title} Staff?
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-gray-700">
                       Get qualified professionals within 48 hours
                     </p>
                   </div>
                   <button
                     onClick={() => setShowCalendly(true)}
-                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl whitespace-nowrap group cursor-pointer"
+                    className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
                   >
                     Request Staff
-                    <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    <FiArrowRight className="ml-2" />
                   </button>
                 </div>
               </motion.div>
@@ -508,7 +486,7 @@ const IndustryWeServe = () => {
 
         {/* Global CTA Section */}
         <motion.div
-          className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl text-center my-20 shadow-xl"
+          className="bg-gradient-to-r from-[#000b30] to-[#1a2a6b] p-12 rounded-2xl text-center my-20 shadow-xl"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -517,7 +495,7 @@ const IndustryWeServe = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Ready to Build Your Ideal Team?
           </h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
             Our staffing specialists are ready to discuss your unique workforce
             needs across all industries.
           </p>

@@ -77,7 +77,7 @@ const StaffingServices = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-[#D4AF37] mb-4">
             Explore Insights on Staffing & Talent Acquisition
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -122,10 +122,10 @@ const StaffingServices = () => {
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center mb-4">
-                    <div className="bg-blue-600 p-2 rounded-lg mr-4 text-white">
+                    <div className="bg-[#D4AF37] p-2 rounded-lg mr-4 text-white">
                       {insight.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white">
+                    <h3 className="text-xl font-bold text-[#D4AF37]">
                       {insight.title}
                     </h3>
                   </div>
@@ -136,7 +136,7 @@ const StaffingServices = () => {
 
                   <a
                     href={insight.link}
-                    className="text-blue-400 font-medium hover:text-blue-300 transition-colors inline-flex items-center"
+                    className="text-[#D4AF37] font-medium hover:text-[#D4AF37] transition-colors inline-flex items-center"
                   >
                     More
                     <svg

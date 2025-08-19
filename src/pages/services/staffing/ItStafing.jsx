@@ -73,7 +73,7 @@ const ItStaffing = () => {
             viewport={{ once: true }}
             className="text-left"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-6 leading-tight">
               Your Guide to IT Outstaffing
             </h2>
             <p className="text-xl text-gray-700 mb-8">
@@ -92,7 +92,7 @@ const ItStaffing = () => {
                   viewport={{ once: true }}
                   className="flex items-center"
                 >
-                  <span className="bg-white p-2 rounded-full shadow-md mr-4 text-blue-600">
+                  <span className="bg-white p-2 rounded-full shadow-md mr-4 text-[#D4AF37]">
                     {benefit.icon}
                   </span>
                   <span className="text-lg text-gray-800">{benefit.text}</span>
@@ -105,7 +105,7 @@ const ItStaffing = () => {
               onClick={() => setShowCalendly(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all flex items-center cursor-pointer"
+              className="bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] text-black px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all flex items-center cursor-pointer"
             >
               Book Free Consultation
             </motion.button>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaHammer,
   FaBolt,
@@ -14,6 +14,7 @@ import {
   FaFish,
   FaTractor,
   FaPaintRoller,
+  FaHatCowboy,
 } from "react-icons/fa";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -22,107 +23,151 @@ const Industries = () => {
   const industries = [
     {
       name: "Construction",
-      icon: <FaHammer className="text-2xl" />,
-      gradient: "bg-gradient-to-br from-amber-600 to-orange-600",
+      icon: <FaHammer className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1681989486976-9ec9d2eac57a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Education",
+      icon: <FaHatCowboy className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     },
     {
       name: "Electrician",
-      icon: <FaBolt />,
-      gradient: "bg-gradient-to-br from-yellow-500 to-amber-600",
+      icon: <FaBolt className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661911309991-cc81afcce97d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Plumber",
-      icon: <FaWrench />,
-      gradient: "bg-gradient-to-br from-blue-500 to-cyan-600",
+      icon: <FaWrench className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1663045495725-89f23b57cfc5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Welder",
-      icon: <FaFire />,
-      gradient: "bg-gradient-to-br from-red-500 to-orange-600",
+      icon: <FaFire className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661963236181-9eb0c8d766e3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Mechanic",
-      icon: <FaCar />,
-      gradient: "bg-gradient-to-br from-gray-500 to-blue-600",
+      icon: <FaCar className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1674375348357-a25140a68bbd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Truck Driver",
-      icon: <FaTruck />,
-      gradient: "bg-gradient-to-br from-indigo-500 to-purple-600",
+      icon: <FaTruck className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661637686969-7fbcea8789ad?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Carpenter",
-      icon: <FaTools />,
-      gradient: "bg-gradient-to-br from-amber-500 to-brown-600",
+      icon: <FaTools className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1664300494539-313eac2a6095?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "HVAC Tech",
-      icon: <FaIndustry />,
-      gradient: "bg-gradient-to-br from-teal-500 to-blue-600",
+      icon: <FaIndustry className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661315526732-271aa84f480d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Factory Worker",
-      icon: <FaCog />,
-      gradient: "bg-gradient-to-br from-gray-600 to-blue-700",
+      icon: <FaCog className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1652211955967-99c892925469?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Maintenance",
-      icon: <FaWrench />,
-      gradient: "bg-gradient-to-br from-green-500 to-emerald-600",
+      icon: <FaWrench className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661644841013-fe5a56d28e7e?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Janitorial",
-      icon: <FaBroom />,
-      gradient: "bg-gradient-to-br from-gray-400 to-gray-600",
+      icon: <FaBroom className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661662917928-b1a42a08d094?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Delivery",
-      icon: <FaTruckLoading />,
-      gradient: "bg-gradient-to-br from-blue-400 to-indigo-600",
+      icon: <FaTruckLoading className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661342486992-2a08d4b466ef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Fishing",
-      icon: <FaFish />,
-      gradient: "bg-gradient-to-br from-blue-500 to-teal-600",
+      icon: <FaFish className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1551131618-3f0a5cf594b4?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Agriculture",
-      icon: <FaTractor />,
-      gradient: "bg-gradient-to-br from-green-600 to-lime-600",
+      icon: <FaTractor className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661907005604-cec7ffb6a042?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Painting",
-      icon: <FaPaintRoller />,
-      gradient: "bg-gradient-to-br from-teal to-gray-300",
+      icon: <FaPaintRoller className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1589357209136-dfcfc6e7363d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b] relative overflow-hidden">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#F6F1EE] relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-50 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#000b30] mb-4">
             Industries We Serve
           </h2>
-          <p className="text-lg text-gray-50 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Skilled professionals for your industry needs
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`${industry.gradient} rounded-lg p-4 text-white shadow-sm hover:-translate-y-2 duration-500 transition-transform`}
+              className="relative h-40 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer"
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mb-3">
-                  <span className="text-2xl">{industry.icon}</span>
+              {/* Background Image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
+                style={{
+                  backgroundImage: `url(${industry.image})`,
+                  transform: hoveredCard === index ? "scale(1.1)" : "scale(1)",
+                }}
+              >
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10 h-full flex flex-col items-center justify-end p-4 text-white">
+                <div className="w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center mb-2 shadow-md">
+                  <span className="text-white">{industry.icon}</span>
                 </div>
-                <h3 className="font-medium text-sm md:text-base">
+                <h3 className="font-medium text-sm md:text-base text-center">
                   {industry.name}
                 </h3>
               </div>
+
+              {/* Hover effect bar */}
+              <div
+                className="absolute bottom-0 left-0 h-1 bg-[#D4AF37] transition-all duration-300"
+                style={{ width: hoveredCard === index ? "100%" : "0%" }}
+              ></div>
             </div>
           ))}
         </div>
@@ -130,7 +175,7 @@ const Industries = () => {
         <div className="text-center mt-12">
           <Link
             to="/industries"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 to-indigo-600 cursor-pointer"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-[#000b30] to-[#1a2a6b] hover:from-[#1a2a6b] hover:to-[#000b30] transition-all duration-300 cursor-pointer"
           >
             More Details Info
             <HiOutlineArrowNarrowRight className="ml-2 w-5 h-5" />

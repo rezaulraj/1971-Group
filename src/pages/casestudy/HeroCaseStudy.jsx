@@ -82,7 +82,7 @@ const HeroCaseStudy = () => {
     <div className="flex flex-col">
       <section className="min-h-screen flex flex-col md:flex-row bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="w-full md:w-1/2 p-12 flex items-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-600 opacity-90 z-0"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90 z-0"></div>
 
           <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-teal-400/20 blur-2xl"></div>
           <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[200px] border-l-transparent border-t-[200px] border-t-teal-700/30"></div>
@@ -102,7 +102,7 @@ const HeroCaseStudy = () => {
               Read, enjoy and implement!
             </p>
 
-            <button className="flex items-center px-8 py-4 bg-white text-teal-600 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 group">
+            <button className="flex items-center px-8 py-4 bg-[#000b30] text-[#D4AF37] rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 group">
               <span>Explore Case Studies</span>
               <FiArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -118,7 +118,7 @@ const HeroCaseStudy = () => {
 
           <div className="w-full max-w-md mx-auto relative z-10">
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 mb-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 mx-auto w-3/4">
-              <div className="text-3xl font-bold text-teal-600 text-center mb-2">
+              <div className="text-3xl font-bold text-[#D4AF37] text-center mb-2">
                 <AnimatedNumber value="97.8%" duration={1500} />
               </div>
               <p className="text-gray-600 text-center text-sm">
@@ -128,7 +128,7 @@ const HeroCaseStudy = () => {
 
             <div className="flex justify-center gap-6 w-full">
               <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 w-1/2">
-                <div className="text-2xl font-bold text-blue-600 mb-2">
+                <div className="text-2xl font-bold text-[#000b30] mb-2">
                   <AnimatedNumber value={70} duration={1000} />+
                 </div>
                 <p className="text-gray-600 text-sm">
@@ -155,10 +155,10 @@ const HeroCaseStudy = () => {
         </div>
       </section>
 
-      <div className="bg-gradient-to-r from-teal-500 to-teal-600 py-4 overflow-hidden">
+      <div className="bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90 py-4 overflow-hidden">
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-teal-800 to-transparent z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-teal-800 to-transparent z-10"></div>
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0a1a4d]/80 to-transparent z-10"></div>
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0a1a4d]/80 to-transparent z-10"></div>
 
           <div className="flex items-center animate-marquee whitespace-nowrap">
             {duplicatedLogos.map((logo, index) => (

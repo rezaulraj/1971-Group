@@ -4,6 +4,7 @@ import {
   FaHandHoldingUsd,
   FaCalendarAlt,
   FaUsersCog,
+  FaCheckCircle,
   FaInfoCircle,
 } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
@@ -11,54 +12,72 @@ import Calendly from "../../../components/Calendly";
 
 const WhatWeDoServices = () => {
   const [showCalendly, setShowCalendly] = useState(false);
+
   const services = [
     {
       title: "Pay-Per-Hire Recruiting",
       description:
         "Results-driven recruitment where you pay only when we deliver.",
-      details:
+      backTitle: "Performance-Based Model",
+      backDescription:
         "We handle the entire hiring process from sourcing to onboarding based on a performance-based model.",
+      features: [
+        "No upfront costs",
+        "Pay only for successful placements",
+        "Full recruitment cycle management",
+        "Quality guarantee",
+      ],
       icon: <FaHandHoldingUsd className="text-2xl" />,
-      link: "#",
-      moreInfoLink: "/pay-par-hire-services",
-      gradient: "bg-gradient-to-br from-blue-600 to-indigo-700",
-      borderColor: "border-blue-400",
-      iconBg: "bg-blue-500/20",
-      iconColor: "text-blue-400",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-blue-500 to-blue-700",
+      backColor: "bg-gradient-to-br from-blue-600 to-indigo-700",
+      link: "/pay-par-hire-services",
       buttonText: "Check Pricing",
     },
     {
       title: "Subscription-Based Recruiting",
       description:
         "Flexible, full-cycle recruitment on a monthly subscription.",
-      details:
+      backTitle: "Recruitment as a Service",
+      backDescription:
         "Enjoy seamless recruitment process outsourcing tailored to your evolving hiring needs.",
+      features: [
+        "Monthly subscription model",
+        "Unlimited hiring support",
+        "Dedicated recruitment team",
+        "Scalable solutions",
+      ],
       icon: <FaCalendarAlt className="text-2xl" />,
-      link: "#",
-      moreInfoLink: "/subscription-services",
-      gradient: "bg-gradient-to-br from-purple-600 to-fuchsia-700",
-      borderColor: "border-purple-400",
-      iconBg: "bg-purple-500/20",
-      iconColor: "text-purple-400",
+      image:
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-purple-500 to-purple-700",
+      backColor: "bg-gradient-to-br from-purple-600 to-fuchsia-700",
+      link: "/subscription-services",
       buttonText: "Check Pricing",
     },
     {
       title: "Recruitment Process Outsourcing (RPO)",
       description: "Fully outsource your recruitment to our specialized teams.",
-      details:
+      backTitle: "End-to-End Recruitment",
+      backDescription:
         "We act as an extension of your HR department—handling search, selection, and onboarding at the project, department, or company level.",
+      features: [
+        "Complete process outsourcing",
+        "Customized recruitment strategies",
+        "Talent pipeline development",
+        "Metrics and reporting",
+      ],
       icon: <FaUsersCog className="text-2xl" />,
-      link: "#",
-      moreInfoLink: "/staffing-services",
-      gradient: "bg-gradient-to-br from-cyan-600 to-teal-700",
-      borderColor: "border-cyan-400",
-      iconBg: "bg-cyan-500/20",
-      iconColor: "text-cyan-400",
+      image:
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      color: "from-teal-500 to-teal-700",
+      backColor: "bg-gradient-to-br from-cyan-600 to-teal-700",
+      link: "/staffing-services",
       buttonText: "Check Pricing",
     },
   ];
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -82,11 +101,10 @@ const WhatWeDoServices = () => {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 relative overflow-hidden">
-      {/* Animated background elements */}
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b] relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <motion.div
-          className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-overlay filter blur-3xl"
+          className="absolute top-0 left-0 w-64 h-64 bg-[#D4AF37] rounded-full mix-blend-overlay filter blur-3xl"
           animate={{
             x: [0, 50, 0],
             y: [0, -30, 0],
@@ -98,7 +116,7 @@ const WhatWeDoServices = () => {
           }}
         />
         <motion.div
-          className="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-overlay filter blur-3xl"
+          className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37] rounded-full mix-blend-overlay filter blur-3xl"
           animate={{
             x: [0, -40, 0],
             y: [0, 40, 0],
@@ -110,7 +128,7 @@ const WhatWeDoServices = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500 rounded-full mix-blend-overlay filter blur-3xl"
+          className="absolute bottom-0 left-0 w-64 h-64 bg-[#D4AF37] rounded-full mix-blend-overlay filter blur-3xl"
           animate={{
             x: [0, 30, 0],
             y: [0, 30, 0],
@@ -124,7 +142,6 @@ const WhatWeDoServices = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,72 +149,117 @@ const WhatWeDoServices = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">What We Do</h2>
+          <h2 className="text-5xl font-bold text-[#D4AF37] mb-4">What We Do</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Comprehensive recruitment solutions tailored to your business needs
           </p>
         </motion.div>
 
-        {/* Services Grid */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={container}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-10"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={item}
-              whileHover={{
-                y: -10,
-                transition: { duration: 0.3 },
-              }}
-              className={`relative rounded-tl-[50px] rounded-tr-lg rounded-br-[50px] p-8 shadow-2xl transition-all duration-300 border-t-4 ${service.borderColor} ${service.gradient} h-full flex flex-col overflow-hidden group`}
+              className="group perspective w-full h-[440px]"
             >
-              {/* More Info Button - appears on hover */}
-              <a
-                href={service.moreInfoLink}
-                className="absolute right-0 bottom-0 transform -translate-y-1/2 translate-x-full group-hover:translate-x-0
-      bg-white/90 text-gray-900 px-4 py-2 rounded-l-lg flex items-center
-      transition-all duration-300 opacity-0 group-hover:opacity-100 shadow-lg"
-              >
-                <FaInfoCircle className="mr-2" />
-                More Info
-              </a>
-
-              <div
-                className={`flex items-center justify-center w-14 h-14 mb-6 rounded-full backdrop-blur-sm ${service.iconBg}`}
-              >
-                <span className={service.iconColor}>{service.icon}</span>
-              </div>
-
-              <h3 className="text-2xl font-bold text-white mb-4">
-                {service.title}
-              </h3>
-
-              <p className="text-gray-200 mb-2 font-medium">
-                {service.description}
-              </p>
-
-              <p className="text-gray-300 mb-6">{service.details}</p>
-
-              <div className="mt-auto">
-                <motion.button
-                  onClick={() => setShowCalendly(true)}
-                  className="inline-flex items-center font-semibold text-white group cursor-pointer"
-                  whileHover={{ x: 5 }}
+              <div className="relative preserve-3d w-full h-full rounded-2xl shadow-2xl transition-transform duration-700 group-hover:rotate-y-180">
+                <div
+                  className="absolute inset-0 rounded-2xl overflow-hidden backface-hidden flex flex-col justify-end p-6 text-white"
+                  style={{
+                    backgroundImage: `linear-gradient(to bottom, rgba(0, 11, 48, 0.4), rgba(10, 26, 77, 0.8)), url(${service.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
                 >
-                  {service.buttonText}
-                  <HiArrowNarrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                </motion.button>
+                  <div className="bg-[#000b30]/80 p-6 rounded-xl backdrop-blur-sm">
+                    <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-[#D4AF37]/20 backdrop-blur-sm">
+                      <span className="text-[#D4AF37]">{service.icon}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 text-gray-200">{service.description}</p>
+
+                    <button
+                      onClick={() => setShowCalendly(true)}
+                      className="mt-6 inline-flex items-center font-semibold text-[#D4AF37] group cursor-pointer"
+                    >
+                      {service.buttonText}
+                      <HiArrowNarrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  className={`absolute inset-0 rounded-2xl overflow-hidden backface-hidden rotate-y-180 flex flex-col justify-between p-6 text-white bg-[#1a2a6b]`}
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2 text-white">
+                      {service.backTitle}
+                    </h3>
+                    <p className="mb-4 text-gray-200">
+                      {service.backDescription}
+                    </p>
+
+                    <ul className="space-y-2">
+                      {service.features.map((feature, i) => (
+                        <li
+                          key={i}
+                          className="flex items-center gap-2 text-gray-200"
+                        >
+                          <FaCheckCircle className="text-[#D4AF37]" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex justify-between items-center">
+                    <a
+                      href={service.link}
+                      className="inline-flex items-center gap-2 text-[#D4AF37] px-4 py-2 rounded-lg font-semibold transition hover:text-[#c6a22f]"
+                    >
+                      <FaInfoCircle className="mr-2" />
+                      More Info
+                    </a>
+                    <button
+                      onClick={() => setShowCalendly(true)}
+                      className="inline-flex items-center font-semibold text-white cursor-pointer hover:text-[#D4AF37] transition-colors"
+                    >
+                      Get Started
+                      <HiArrowNarrowRight className="ml-2" />
+                    </button>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
+
       <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
+
+      <style>{`
+        .perspective {
+          perspective: 1000px;
+        }
+        .preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </section>
   );
 };

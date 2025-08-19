@@ -31,312 +31,233 @@ const HeroIndustry = () => {
     { clogo: clogo8 },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const imageVariants = {
-    hidden: { x: 50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const logoVariants = {
-    animate: {
-      x: ["0%", "-100%"],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 20,
-          ease: "linear",
-        },
-      },
-    },
-  };
-
-  const featureCardVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-      },
-    },
-    hover: {
-      y: -5,
-      boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-    },
-  };
-
   const serviceCards = [
     {
       title: "Talent Acquisition",
       description:
         "Find the right candidates for your open positions with precision sourcing and screening.",
-      icon: <FiUsers className="text-2xl text-blue-600" />,
-      bg: "bg-blue-50",
+      icon: <FiUsers className="text-2xl" />,
     },
     {
       title: "Executive Search",
       description:
         "Connect with proven leaders who can guide your organization to long-term success.",
-      icon: <FiBriefcase className="text-2xl text-purple-600" />,
-      bg: "bg-purple-50",
+      icon: <FiBriefcase className="text-2xl" />,
     },
     {
       title: "Workforce Planning",
       description:
         "Strategic staffing solutions that align with your growth objectives.",
-      icon: <FiTarget className="text-2xl text-green-600" />,
-      bg: "bg-green-50",
+      icon: <FiTarget className="text-2xl" />,
     },
     {
       title: "Contract Staffing",
       description:
         "Flexible, on-demand staffing for project-based and seasonal needs.",
-      icon: <FiClock className="text-2xl text-orange-600" />,
-      bg: "bg-orange-50",
+      icon: <FiClock className="text-2xl" />,
     },
   ];
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 transform -skew-y-6 -rotate-6 scale-125"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-transparent opacity-70"></div>
-
-      <motion.div
-        className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-200/30 blur-xl"
-        animate={{
-          y: [0, 20, 0],
-          opacity: [0.3, 0.5, 0.3],
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Hero Image Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroIndusty})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-purple-200/30 blur-xl"
-        animate={{
-          y: [0, -30, 0],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      />
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
+      </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          <div className="space-y-8">
-            <motion.h1
-              className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
-              variants={itemVariants}
-            >
-              Transform Your Workforce with{" "}
-              <span className="text-blue-600">Manpower Solution</span>
-            </motion.h1>
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float3"></div>
+      </div>
 
-            <motion.p className="text-lg text-gray-600" variants={itemVariants}>
-              We deliver elite talent solutions customized to your business
-              goals helping you build winning teams that accelerate growth.
-            </motion.p>
-
-            <motion.div variants={itemVariants}>
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        {/* Main Content */}
+        <div className="grid grid-cols-1 gap-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative z-10 text-center"
+          >
+            <div className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/20 max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                Transform Your Workforce
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#D4AF37] mb-6">
+                Elite Manpower Solutions for Business Growth
+              </h2>
+              <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                We deliver elite talent solutions customized to your business
+                goals helping you build winning teams that accelerate growth.
+              </p>
               <button
                 onClick={() => setShowCalendly(true)}
-                className="flex items-center gap-2 px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl group cursor-pointer"
+                className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
               >
                 Book a Call
-                <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                <FiArrowRight className="ml-2 inline-block" />
               </button>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            <motion.div
-              className="grid grid-cols-2 gap-6 mt-8"
-              variants={itemVariants}
-            >
-              <div className="flex items-start space-x-3">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <FiUsers className="text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900">Top Talent</h3>
-                  <p className="text-sm text-gray-500">
-                    Access to premium candidates
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="p-2 bg-green-100 rounded-lg">
-                  <FiBriefcase className="text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900">
-                    Industry Experts
-                  </h3>
-                  <p className="text-sm text-gray-500">
-                    Specialized recruiters
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="p-2 bg-purple-100 rounded-lg">
-                  <FiTarget className="text-purple-600" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900">
-                    Strategic Approach
-                  </h3>
-                  <p className="text-sm text-gray-500">
-                    Data-driven methodologies
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="p-2 bg-pink-100 rounded-lg">
-                  <FiClock className="text-pink-600" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-900">
-                    Quick Turnaround
-                  </h3>
-                  <p className="text-sm text-gray-500">Fast placement times</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          <motion.div className="relative" variants={imageVariants}>
-            <div className="relative rounded-xl overflow-hidden shadow-2xl">
-              <img
-                src={heroIndusty}
-                alt="Manpower Solutions"
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg max-w-xs">
-                  <h3 className="font-semibold text-gray-900">
-                    Workforce Excellence
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Building teams that drive business success
-                  </p>
-                </div>
+          {/* Service Cards Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="relative z-10"
+          >
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+                Core Services
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {serviceCards.map((service, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 group text-center"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-4 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300 mx-auto">
+                      {service.icon}
+                    </div>
+                    <h4 className="text-xl font-semibold text-white mb-2">
+                      {service.title}
+                    </h4>
+                    <p className="text-gray-200 text-sm">
+                      {service.description}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
 
+        {/* Clients Section */}
         <motion.div
-          className="mt-20 overflow-hidden"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
+          className="mt-24 text-center"
         >
-          <div className="border-t border-b border-gray-200 py-6">
-            <motion.div
-              className="flex items-center space-x-16"
-              variants={logoVariants}
-              animate="animate"
-            >
-              <span className="text-lg font-medium text-gray-500 whitespace-nowrap">
-                Trusted by Industry Leaders
-              </span>
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Trusted By Industry Leaders
+            </h3>
+            <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+              We're trusted by fast-scaling companies across industries from
+              startups to enterprise-level brands who rely on us to power their
+              workforce growth.
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-12">
               {ourClient.map((client, index) => (
-                <motion.img
+                <motion.div
                   key={index}
-                  src={client.clogo}
-                  alt={`Client Logo ${index + 1}`}
-                  className="h-12 object-contain opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
                   whileHover={{ scale: 1.1 }}
-                />
+                  transition={{ duration: 0.3 }}
+                  className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+                >
+                  <img
+                    src={client.clogo}
+                    alt={`Client Logo ${index + 1}`}
+                    className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </motion.div>
               ))}
-              {/* Duplicate for seamless loop */}
-              {ourClient.map((client, index) => (
-                <motion.img
-                  key={`dup-${index}`}
-                  src={client.clogo}
-                  alt={`Client Logo ${index + 1}`}
-                  className="h-12 object-contain opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                  whileHover={{ scale: 1.1 }}
-                />
-              ))}
-            </motion.div>
+            </div>
           </div>
         </motion.div>
 
+        {/* Additional Features Section */}
         <motion.div
-          className="mt-20"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Core Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {serviceCards.map((service, index) => (
-              <motion.div
-                key={index}
-                className={`p-6 rounded-xl ${service.bg} border border-transparent hover:border-gray-200 transition-all`}
-                variants={featureCardVariants}
-                initial="hidden"
-                whileInView="visible"
-                whileHover="hover"
-                viewport={{ once: true, margin: "-50px" }}
-                custom={index}
-              >
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600">{service.description}</p>
-              </motion.div>
-            ))}
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-2">
+              80+
+            </div>
+            <div className="text-gray-200">Countries</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-2">
+              15+
+            </div>
+            <div className="text-gray-200">Years Experience</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-2">
+              95%
+            </div>
+            <div className="text-gray-200">Success Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-2">
+              7 Days
+            </div>
+            <div className="text-gray-200">Average Placement</div>
           </div>
         </motion.div>
       </div>
+
       <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
+
+      <style jsx="true" global="true">{`
+        @keyframes float1 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(20px, -20px) rotate(5deg);
+          }
+        }
+        @keyframes float2 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(-15px, 15px) rotate(-5deg);
+          }
+        }
+        @keyframes float3 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(15px, 20px) rotate(3deg);
+          }
+        }
+        .animate-float1 {
+          animation: float1 15s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float2 18s ease-in-out infinite;
+        }
+        .animate-float3 {
+          animation: float3 20s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 };

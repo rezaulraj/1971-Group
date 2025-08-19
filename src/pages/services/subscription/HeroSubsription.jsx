@@ -14,37 +14,42 @@ import {
   FaMoneyBillWave,
   FaBullseye,
   FaUsers,
+  FaRocket,
+  FaChartLine,
+  FaHandshake,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
 
-const ClientLogo = ({ src, alt }) => (
-  <div className="mx-4 lg:mx-8 inline-flex items-center">
-    <img
-      src={src}
-      alt={alt}
-      className="h-12 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
-      loading="lazy"
-    />
-  </div>
-);
-
-const BenefitCard = ({ icon: Icon, title, description }) => (
-  <motion.div
-    whileHover={{ y: -5 }}
-    className="bg-gradient-to-br from-indigo-900/50 to-blue-900/50 rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg"
-  >
-    <div className="flex items-start mb-3">
-      <div className="bg-white/10 p-3 rounded-full mr-4 backdrop-blur-sm">
-        <Icon className="text-white text-xl" />
-      </div>
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
-    </div>
-    <p className="text-gray-300 pl-14">{description}</p>
-  </motion.div>
-);
-
 const HeroSubscription = () => {
   const [showCalendly, setShowCalendly] = useState(false);
+
+  const benefits = [
+    {
+      icon: FaMoneyBillWave,
+      title: "Significant Cost Savings",
+      description:
+        "Reduce hiring expenses by up to 45% compared to pay-per-hire models, and cut costs by as much as 90% versus maintaining an in-house recruitment team.",
+    },
+    {
+      icon: FaBullseye,
+      title: "Customized & Scalable Hiring",
+      description:
+        "Get recruitment solutions built around your needs whether it's one role or a hundred. Our flexible, on-demand approach scales effortlessly with your business.",
+    },
+    {
+      icon: FaUsers,
+      title: "Dedicated Recruitment Experts",
+      description:
+        "Enjoy the full attention of a dedicated sourcer and recruiter assigned exclusively to your project, ensuring 24/7 support and a steady stream of qualified candidates.",
+    },
+    {
+      icon: FaRocket,
+      title: "Faster Time-to-Hire",
+      description:
+        "Accelerate your hiring process with our streamlined approach and extensive talent network, reducing time-to-fill by up to 60%.",
+    },
+  ];
+
   const ourClient = [
     { clogo: clogo1 },
     { clogo: clogo2 },
@@ -56,127 +61,243 @@ const HeroSubscription = () => {
     { clogo: clogo8 },
   ];
 
-  const benefits = [
+  const stats = [
     {
-      icon: FaMoneyBillWave,
-      title: "💰 Significant Cost Savings",
-      description:
-        "Reduce hiring expenses by up to 45% compared to pay-per-hire models, and cut costs by as much as 90% versus maintaining an in-house recruitment team.",
+      value: "45%",
+      label: "Cost Reduction",
     },
     {
-      icon: FaBullseye,
-      title: "🎯 Customized & Scalable Hiring",
-      description:
-        "Get recruitment solutions built around your needs whether it’s one role or a hundred. Our flexible, on-demand approach scales effortlessly with your business.",
+      value: "60%",
+      label: "Faster Hiring",
     },
     {
-      icon: FaUsers,
-      title: "👥 Dedicated Recruitment Experts",
-      description:
-        "Enjoy the full attention of a dedicated sourcer and recruiter assigned exclusively to your project, ensuring 24/7 support and a steady stream of qualified candidates.",
+      value: "95%",
+      label: "Client Satisfaction",
+    },
+    {
+      value: "24/7",
+      label: "Dedicated Support",
     },
   ];
 
   return (
-    <div className="bg-gray-900 text-white">
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#b84353] to-[#f63b92]">
-        <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M15 15h30v30H15z' fill='%23ffffff' fill-opacity='0.2'/%3E%3C/svg%3E")`,
-            backgroundSize: "60px 60px",
-          }}
-          aria-hidden="true"
-        />
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${subscriptionImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
+      </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-white"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Subscription Recruitment Services
-            </h1>
-            <p className="text-2xl mb-8 opacity-90">
-              Hire Smarter. Scale Faster.
-            </p>
-            <p className="text-lg mb-8 opacity-90">
-              We offer monthly, embedded recruitment support to help you fill
-              open roles quickly, consistently, and cost-effectively.
-            </p>
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float3"></div>
+      </div>
 
-            <motion.button
-              onClick={() => setShowCalendly(true)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-all duration-300 flex items-center group cursor-pointer"
-              // aria-label="Book a call about subscription services"
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        {/* Main Content */}
+        <motion.div
+          className="grid grid-cols-1 gap-16"
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Text Content */}
+          <div className="space-y-8 relative z-10 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/20 max-w-4xl mx-auto"
             >
-              Book a Call
-              <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-            </motion.button>
-          </motion.div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                Subscription Recruitment Services
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#D4AF37] mb-6">
+                Hire Smarter. Scale Faster.
+              </h2>
+              <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                We offer monthly, embedded recruitment support to help you fill
+                open roles quickly, consistently, and cost-effectively.
+                Transform your hiring process with our subscription-based model.
+              </p>
+              <button
+                onClick={() => setShowCalendly(true)}
+                className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+              >
+                Book a Call
+                <FaArrowRight className="ml-2 inline-block" />
+              </button>
+            </motion.div>
 
+            {/* Stats Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
+            >
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-200 text-sm md:text-base">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Benefits Section */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="relative z-10"
           >
-            <img
-              src={subscriptionImage}
-              alt="Subscription recruitment team"
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a8a]/50 via-transparent to-transparent"></div>
-          </motion.div>
-
-          <div className="md:col-span-2 relative py-8 overflow-hidden bg-white/10 backdrop-blur-sm border-t border-b border-white/20">
-            <div className="text-center text-2xl font-medium text-white mb-4">
-              Trusted by Leading Brands
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+                Why Choose Our Subscription Service?
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 group text-center"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-4 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300 mx-auto">
+                      <benefit.icon className="text-2xl" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-white mb-2">
+                      {benefit.title}
+                    </h4>
+                    <p className="text-gray-200 text-sm">
+                      {benefit.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-            <div
-              className="flex items-center justify-center animate-marquee whitespace-nowrap"
-              aria-hidden="true"
-            >
-              {[...ourClient, ...ourClient].map((client, idx) => (
-                <ClientLogo key={idx} src={client.clogo} alt="cliend logo" />
+          </motion.div>
+        </motion.div>
+
+        {/* Client Logos Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-24 text-center relative z-10"
+        >
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Trusted By Industry Leaders
+            </h3>
+            <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+              We partner with forward-thinking companies across industries to
+              transform their recruitment strategies with our subscription
+              model.
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-12">
+              {ourClient.map((client, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+                >
+                  <img
+                    src={client.clogo}
+                    alt={`Client Logo ${index + 1}`}
+                    className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      <section className="bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <BenefitCard
-                key={index}
-                icon={benefit.icon}
-                title={benefit.title}
-                description={benefit.description}
-              />
-            ))}
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-24 text-center relative z-10"
+        >
+          <div className="bg-gradient-to-r from-[#D4AF37]/20 to-[#1a2a6b]/50 backdrop-blur-md p-12 rounded-2xl border border-[#D4AF37]/30">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Hiring Process?
+            </h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+              Let us help you build a recruitment strategy that delivers top
+              talent and drives sustainable business growth.
+            </p>
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+            >
+              Start Your Transformation
+            </button>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </div>
+
       <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
-      <style jsx="true">{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
+
+      <style jsx="true" global="true">{`
+        @keyframes float1 {
+          0%,
           100% {
-            transform: translateX(-50%);
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(20px, -20px) rotate(5deg);
           }
         }
-        .animate-marquee {
-          animation: marquee 25s linear infinite;
-          display: inline-block;
+        @keyframes float2 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(-15px, 15px) rotate(-5deg);
+          }
+        }
+        @keyframes float3 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(15px, 20px) rotate(3deg);
+          }
+        }
+        .animate-float1 {
+          animation: float1 15s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float2 18s ease-in-out infinite;
+        }
+        .animate-float3 {
+          animation: float3 20s ease-in-out infinite;
         }
       `}</style>
     </div>

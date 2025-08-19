@@ -58,7 +58,7 @@ const CaseStudyBlog = () => {
             Proven results in diverse sectors through strategic talent
             acquisition
           </p>
-          <div className="w-24 h-1 bg-teal-500 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-[#D4AF37] mx-auto mt-6"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -75,17 +75,17 @@ const CaseStudyBlog = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>
                 <div className="absolute top-4 left-4 flex items-center space-x-2">
-                  <div className="p-2 bg-teal-500/20 rounded-lg text-teal-600">
+                  <div className="p-2 bg-teal-500/20 rounded-lg text-[#1a2a6b]">
                     {caseStudy.icon}
                   </div>
-                  <span className="text-sm font-medium text-white bg-teal-600 px-3 py-1 rounded-full">
+                  <span className="text-sm font-medium text-white bg-[#D4AF37] px-3 py-1 rounded-full">
                     {caseStudy.category}
                   </span>
                 </div>
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#D4AF37] transition-colors">
                   {caseStudy.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{caseStudy.summary}</p>
@@ -95,7 +95,7 @@ const CaseStudyBlog = () => {
 
                 <Link
                   to={`/case-study/${caseStudy.id}`}
-                  className="inline-flex items-center text-teal-600 font-medium group-hover:text-teal-800 transition-colors"
+                  className="inline-flex items-center text-[#D4AF37] font-medium group-hover:text-[#D4AF37] transition-colors"
                 >
                   <span>Read full case study</span>
                   <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -108,7 +108,7 @@ const CaseStudyBlog = () => {
         <div className="flex items-center justify-center mt-12">
           <Link
             to={"/blogs"}
-            className="px-8 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors flex items-center mx-auto"
+            className="px-8 py-3 bg-[#000b30]/90 text-white rounded-lg font-medium hover:bg-[#000b30] transition-colors flex items-center mx-auto"
           >
             <span>View All Case Studies</span>
             <FiArrowRight className="ml-2" />

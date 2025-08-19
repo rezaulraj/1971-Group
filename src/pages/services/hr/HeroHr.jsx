@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import herohr1 from "../../../assets/hr/herohr1.jpg";
-import herohr2 from "../../../assets/hr/hero2.avif";
-import herohr3 from "../../../assets/hr/hero3.jpg";
-import herohr4 from "../../../assets/hr/hero4.jpg";
+import { motion } from "framer-motion";
+import herohr from "../../../assets/hr/herohr1.jpg";
 import clogo1 from "../../../assets/clined/cl1.png?url";
 import clogo2 from "../../../assets/clined/cl2.png?url";
 import clogo3 from "../../../assets/clined/cl3.png?url";
@@ -17,48 +15,39 @@ import {
   FaSearch,
   FaHandshake,
   FaChartLine,
+  FaGlobe,
+  FaUsers,
+  FaRocket,
+  FaAward,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
 
-// Extracted components for better organization
-const BenefitItem = ({ icon: Icon, text }) => (
-  <div className="flex items-center">
-    <Icon className="text-yellow-300 mr-2 text-xl" />
-    <span>{text}</span>
-  </div>
-);
-
-const ClientLogo = ({ src }) => (
-  <div className="mx-4 lg:mx-8 inline-flex items-center">
-    <img
-      src={src}
-      alt={"cliend logo"}
-      className="h-12 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
-      loading="lazy"
-    />
-  </div>
-);
-
-const HeroImage = ({ src, alt, className = "" }) => (
-  <div
-    className={`rounded-xl overflow-hidden shadow-lg border-2 border-white ${className}`}
-  >
-    <img
-      src={src}
-      alt={alt}
-      className="w-full h-full object-cover"
-      loading="lazy"
-    />
-  </div>
-);
-
 const HeroHr = () => {
   const [showCalendly, setShowCalendly] = useState(false);
+
   const benefits = [
-    { icon: FaUserTie, text: "Top Talent" },
-    { icon: FaSearch, text: "Better Visibility" },
-    { icon: FaHandshake, text: "Stronger Engagement" },
-    { icon: FaChartLine, text: "Improved Metrics" },
+    {
+      icon: FaUserTie,
+      text: "Top Talent Acquisition",
+      description: "Access to premium candidates through our extensive network",
+    },
+    {
+      icon: FaSearch,
+      text: "Enhanced Visibility",
+      description:
+        "Stand out in competitive job markets with strong employer branding",
+    },
+    {
+      icon: FaHandshake,
+      text: "Stronger Engagement",
+      description: "Build meaningful connections with potential candidates",
+    },
+    {
+      icon: FaChartLine,
+      text: "Improved Metrics",
+      description:
+        "Boost recruitment KPIs and reduce time-to-hire significantly",
+    },
   ];
 
   const ourClient = [
@@ -72,109 +61,245 @@ const HeroHr = () => {
     { clogo: clogo8 },
   ];
 
+  const stats = [
+    {
+      value: "85%",
+      label: "Reduction in Time-to-Hire",
+    },
+    {
+      value: "60%",
+      label: "Cost Savings on Recruitment",
+    },
+    {
+      value: "95%",
+      label: "Client Satisfaction Rate",
+    },
+    {
+      value: "500+",
+      label: "Successful Placements",
+    },
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-purple-900/80 via-blue-800/70 to-pink-700/80">
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Hero Image Background */}
       <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M15 15h30v30H15z' fill='%23ffffff' fill-opacity='0.2'/%3E%3C/svg%3E")`,
-          backgroundSize: "60px 60px",
+          backgroundImage: `url(${herohr})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
-        aria-hidden="true"
-      />
-
-      <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
-        <div className="text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            HR Consulting Services
-          </h1>
-          <p className="text-xl mb-8 opacity-90">
-            Build a stronger employer brand. Attract, hire, and retain top
-            talent.
-          </p>
-          <p className="text-lg mb-8 opacity-90">
-            We help companies stand out in competitive markets by crafting
-            powerful HR strategies and employer branding initiatives that
-            improve recruitment metrics and employee satisfaction.
-          </p>
-
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            {benefits.map((benefit, index) => (
-              <BenefitItem
-                key={index}
-                icon={benefit.icon}
-                text={benefit.text}
-              />
-            ))}
-          </div>
-
-          <button
-            onClick={() => setShowCalendly(true)}
-            className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition-all duration-300 flex items-center group cursor-pointer"
-            aria-label="Schedule a consultation call"
-          >
-            Schedule a Call
-            <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-          </button>
-        </div>
-
-        <div className="relative h-96">
-          <div className="absolute inset-0 grid grid-cols-2 gap-4">
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
-              <img
-                src={herohr1}
-                alt="HR professionals discussing strategy"
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-            </div>
-
-            <HeroImage
-              src={herohr2}
-              alt="Team meeting in progress"
-              className="w-32 h-32 mt-2"
-            />
-            <HeroImage
-              src={herohr3}
-              alt="Office culture and workspace"
-              className="w-32 h-32 ml-10"
-            />
-
-            <HeroImage
-              src={herohr4}
-              alt="Happy employees collaborating"
-              className="w-32 h-32 mt-auto mr-8"
-            />
-          </div>
-        </div>
-
-        <div className="md:col-span-2 relative py-8 overflow-hidden bg-white/10 backdrop-blur-sm border-t border-b border-white/20">
-          <div
-            className="flex items-center justify-center animate-marquee whitespace-nowrap"
-            aria-hidden="true"
-          >
-            {[...ourClient, ...ourClient].map((client, idx) => (
-              <ClientLogo key={idx} src={client.clogo} />
-            ))}
-          </div>
-        </div>
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
       </div>
+
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float3"></div>
+      </div>
+
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        {/* Main Content */}
+        <motion.div
+          className="grid grid-cols-1 gap-16"
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Text Content */}
+          <div className="space-y-8 relative z-10 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/20 max-w-4xl mx-auto"
+            >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                HR Consulting Services
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#D4AF37] mb-6">
+                Transform Your Talent Strategy
+              </h2>
+              <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                We help companies build powerful employer brands that attract,
+                engage, and retain top talent in competitive markets. Our
+                comprehensive HR consulting services deliver measurable results
+                and sustainable growth.
+              </p>
+              <button
+                onClick={() => setShowCalendly(true)}
+                className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+              >
+                Schedule a Consultation
+              </button>
+            </motion.div>
+
+            {/* Stats Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
+            >
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-200 text-sm md:text-base">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Benefits Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="relative z-10"
+          >
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+                Why Choose Our HR Consulting Services?
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 group text-center"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-4 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300 mx-auto">
+                      <benefit.icon className="text-2xl" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-white mb-2">
+                      {benefit.text}
+                    </h4>
+                    <p className="text-gray-200 text-sm">
+                      {benefit.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Client Logos Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-24 text-center relative z-10"
+        >
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Trusted By Industry Leaders
+            </h3>
+            <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+              We partner with forward-thinking companies across industries to
+              transform their HR strategies and build exceptional workplaces.
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-12">
+              {ourClient.map((client, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+                >
+                  <img
+                    src={client.clogo}
+                    alt={`Client Logo ${index + 1}`}
+                    className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-24 text-center relative z-10"
+        >
+          <div className="bg-gradient-to-r from-[#D4AF37]/20 to-[#1a2a6b]/50 backdrop-blur-md p-12 rounded-2xl border border-[#D4AF37]/30">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your HR Strategy?
+            </h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+              Let us help you build an employer brand that attracts top talent
+              and drives sustainable business growth.
+            </p>
+            <button
+              onClick={() => setShowCalendly(true)}
+              className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+            >
+              Start Your Transformation
+            </button>
+          </div>
+        </motion.div>
+      </div>
+
       <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
-      <style jsx="true">{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
+
+      <style jsx="true" global="true">{`
+        @keyframes float1 {
+          0%,
           100% {
-            transform: translateX(-50%);
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(20px, -20px) rotate(5deg);
           }
         }
-        .animate-marquee {
-          animation: marquee 25s linear infinite;
-          display: inline-block;
+        @keyframes float2 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(-15px, 15px) rotate(-5deg);
+          }
+        }
+        @keyframes float3 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(15px, 20px) rotate(3deg);
+          }
+        }
+        .animate-float1 {
+          animation: float1 15s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float2 18s ease-in-out infinite;
+        }
+        .animate-float3 {
+          animation: float3 20s ease-in-out infinite;
         }
       `}</style>
-    </section>
+    </div>
   );
 };
 
