@@ -5,11 +5,11 @@ const NotFound = () => {
     <main className="bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-center h-screen md:px-8">
         <div className="max-w-lg mx-auto space-y-6 text-center relative">
-          {/* Animated background elements */}
+        
           <div className="absolute -top-20 -left-20 w-40 h-40 bg-purple-600/20 rounded-full blur-xl"></div>
           <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-blue-600/20 rounded-full blur-xl"></div>
 
-          {/* Main content */}
+         
           <div className="relative z-10">
             <div className="inline-flex items-center justify-center mb-6">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center">

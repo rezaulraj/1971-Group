@@ -26,24 +26,43 @@ import {
   FaBoxes,
   FaAnchor,
   FaMountain,
+  FaUmbrellaBeach,
+  FaPlaneDeparture,
 } from "react-icons/fa";
+import { FaShieldHalved } from "react-icons/fa6";
+import { GiWoodBeam } from "react-icons/gi";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { MdOutlineRoomService } from "react-icons/md";
+import { PiStudentBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
 const Industries = () => {
   const industries = [
+    {
+      name: "Education",
+      icon: <PiStudentBold className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Tourism",
+      icon: <FaPlaneDeparture className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1677002240252-af3f88114efc?q=80&w=825&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Hospitality",
+      icon: <MdOutlineRoomService className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1544986581-efac024faf62?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
     {
       name: "Construction",
       icon: <FaHammer className="text-xl" />,
       image:
         "https://plus.unsplash.com/premium_photo-1681989486976-9ec9d2eac57a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
-    {
-      name: "Education",
-      icon: <FaHatCowboy className="text-xl" />,
-      image:
-        "https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+
     {
       name: "Electrician",
       icon: <FaBolt className="text-xl" />,
@@ -69,16 +88,34 @@ const Industries = () => {
         "https://plus.unsplash.com/premium_photo-1674375348357-a25140a68bbd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
+      name: "Shipbuilding",
+      icon: <FaCar className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1677535509270-2e557eb1ad4f?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
       name: "Truck Driver",
       icon: <FaTruck className="text-xl" />,
       image:
         "https://plus.unsplash.com/premium_photo-1661637686969-7fbcea8789ad?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
+      name: "Security Guard",
+      icon: <FaShieldHalved className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1618371731836-2b9bff9ac72a?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
       name: "Carpenter",
       icon: <FaTools className="text-xl" />,
       image:
         "https://plus.unsplash.com/premium_photo-1664300494539-313eac2a6095?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Wood Industry",
+      icon: <GiWoodBeam className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1663133662619-dc71fedecfaa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "HVAC Tech",
@@ -88,6 +125,12 @@ const Industries = () => {
     },
     {
       name: "Factory Worker",
+      icon: <FaCog className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1652211955967-99c892925469?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Office Staff",
       icon: <FaCog className="text-xl" />,
       image:
         "https://images.unsplash.com/photo-1652211955967-99c892925469?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -170,12 +213,6 @@ const Industries = () => {
       icon: <FaDrumstickBite className="text-xl" />,
       image:
         "https://plus.unsplash.com/premium_photo-1682129511550-6a1a403caa75?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      name: "Logging",
-      icon: <FaTree className="text-xl" />,
-      image:
-        "https://plus.unsplash.com/premium_photo-1664303728191-c20df8ee9775?q=80&w=768&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Textile Worker",

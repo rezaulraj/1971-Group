@@ -62,12 +62,11 @@ const Header = () => {
   return (
     <header className="bg-white sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo */}
         <a href="/">
           <img src={logo} alt="1971 Group" className="h-12" />
         </a>
 
-        {/* Mobile Menu Button */}
+
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -81,7 +80,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6 items-center">
           {navItems.map((item, index) => (
             <div
@@ -96,7 +94,7 @@ const Header = () => {
               {item.path ? (
                 <a
                   href={item.path}
-                  className="text-gray-800 text-lg font-semibold hover:text-[#D4AF37] transition-colors px-3 py-2"
+                  className="text-gray-800 text-lg font-semibold hover:text-[#0a1a4d] transition-colors px-3 py-2"
                 >
                   {item.level}
                 </a>
@@ -106,8 +104,8 @@ const Header = () => {
                     onClick={() => toggleDropdown(index)}
                     className={`text-gray-800 font-semibold text-lg flex items-center gap-1 px-3 py-2 transition-colors ${
                       activeDropdown === index
-                        ? "text-[#D4AF37]"
-                        : "hover:text-[#D4AF37]"
+                        ? "text-[#0a1a4d]"
+                        : "hover:text-[#0a1a4d]"
                     }`}
                   >
                     {item.level}
@@ -118,7 +116,6 @@ const Header = () => {
                     />
                   </button>
 
-                  {/* SubNav Dropdown */}
                   {activeDropdown === index && (
                     <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md w-56 z-40 border border-gray-100">
                       {item.subNavs.map((subItem, subIndex) => (
@@ -132,7 +129,7 @@ const Header = () => {
                                 onClick={() => toggleChildDropdown(subIndex)}
                                 className={`w-full text-left px-4 py-3 font-medium flex justify-between items-center transition-colors ${
                                   activeChildDropdown === subIndex
-                                    ? "text-[#D4AF37] bg-gray-50"
+                                    ? "text-[#0a1a4d] bg-gray-50"
                                     : "text-gray-800 hover:bg-gray-50"
                                 }`}
                               >
@@ -145,7 +142,7 @@ const Header = () => {
                                   }`}
                                 />
                               </button>
-                              {/* ChildNav */}
+                              
                               {activeChildDropdown === subIndex && (
                                 <div className="bg-gray-50 pl-6">
                                   {subItem.childNavs.map(
@@ -153,7 +150,7 @@ const Header = () => {
                                       <a
                                         key={childIndex}
                                         href={child.path}
-                                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#D4AF37] hover:bg-gray-100 transition-colors"
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#0a1a4d] hover:bg-gray-100 transition-colors"
                                       >
                                         {child.level}
                                       </a>
@@ -165,7 +162,7 @@ const Header = () => {
                           ) : (
                             <a
                               href={subItem.path}
-                              className="block px-4 py-3 text-gray-800 hover:text-[#D4AF37] hover:bg-gray-50 transition-colors"
+                              className="block px-4 py-3 text-gray-800 hover:text-[#0a1a4d] hover:bg-gray-50 transition-colors"
                             >
                               {subItem.level}
                             </a>
@@ -180,7 +177,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Hire Talent */}
         <div className="hidden md:block">
           <button
             onClick={() => setShowCalendly(true)}
@@ -191,7 +187,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+     
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3">
@@ -211,7 +207,7 @@ const Header = () => {
                       onClick={() => toggleDropdown(index)}
                       className={`w-full text-left py-3 px-4 font-medium rounded-md flex justify-between items-center transition-colors ${
                         activeDropdown === index
-                          ? "bg-gray-50 text-[#5cc082]"
+                          ? "bg-gray-50 text-[#0a1a4d]"
                           : "text-gray-800 hover:bg-gray-50"
                       }`}
                     >
@@ -235,7 +231,7 @@ const Header = () => {
                                   onClick={() => toggleChildDropdown(subIndex)}
                                   className={`w-full text-left py-2 px-4 text-sm flex justify-between items-center transition-colors ${
                                     activeChildDropdown === subIndex
-                                      ? "text-[#5cc082] bg-gray-100"
+                                      ? "text-[#0a1a4d] bg-gray-100"
                                       : "text-gray-700 hover:bg-gray-100"
                                   }`}
                                 >
@@ -255,7 +251,7 @@ const Header = () => {
                                         <a
                                           key={childIndex}
                                           href={child.path}
-                                          className="block py-2 px-4 text-xs text-gray-600 hover:text-[#5cc082] hover:bg-gray-100 transition-colors"
+                                          className="block py-2 px-4 text-xs text-gray-600 hover:text-[#0a1a4d] hover:bg-gray-100 transition-colors"
                                           onClick={() =>
                                             setMobileMenuOpen(false)
                                           }
@@ -270,7 +266,7 @@ const Header = () => {
                             ) : (
                               <a
                                 href={subItem.path}
-                                className="block py-2 px-4 text-sm text-gray-700 hover:text-[#5cc082] hover:bg-gray-100 transition-colors"
+                                className="block py-2 px-4 text-sm text-gray-700 hover:text-[#0a1a4d] hover:bg-gray-100 transition-colors"
                                 onClick={() => setMobileMenuOpen(false)}
                               >
                                 {subItem.level}
@@ -286,7 +282,7 @@ const Header = () => {
             ))}
             <button
               onClick={() => setShowContactForm(true)}
-              className="mt-4 w-full bg-[#5cc082] text-white py-3 rounded-md font-semibold hover:bg-[#4daa72] transition-colors shadow-md"
+              className="mt-4 w-full bg-[#D4AF37] text-black py-3 rounded-md font-semibold hover:bg-[#c09b21] transition-colors shadow-md cursor-pointer"
             >
               Hire Talent
             </button>

@@ -15,7 +15,6 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white pt-12 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo and Description */}
           <div className="mb-8 md:mb-0">
             <a href="/" className="flex items-center mb-8">
               <img
@@ -60,8 +59,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
-          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">
               Quick Links
@@ -110,7 +107,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Industries & Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">
               Company
@@ -159,7 +155,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">
               Contact
@@ -186,7 +181,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
           <p>© {new Date().getFullYear()} 1971 Group. All rights reserved.</p>
         </div>

@@ -58,7 +58,6 @@ const SubHeader = () => {
   return (
     <header className="bg-gray-900/50 backdrop-blur-lg shadow-sm fixed top-0 w-full z-50 border-b border-gray-700/50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo */}
         <a href="/" className="flex items-center">
           <img
             src={logo}
@@ -67,7 +66,6 @@ const SubHeader = () => {
           />
         </a>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -88,7 +86,6 @@ const SubHeader = () => {
           </button>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6 items-center">
           {navItems.map((item, index) => (
             <div
@@ -133,7 +130,6 @@ const SubHeader = () => {
                     </svg>
                   </button>
 
-                  {/* SubNav Dropdown - Glass Effect */}
                   {activeDropdown === index && (
                     <div className="absolute left-0 top-full mt-0 w-56 z-40">
                       <div className="bg-gray-600 backdrop-blur-xl rounded-lg shadow-xl border border-gray-700/30 overflow-hidden">
@@ -169,7 +165,7 @@ const SubHeader = () => {
                                     />
                                   </svg>
                                 </button>
-                                {/* ChildNav */}
+
                                 {activeChildDropdown === subIndex && (
                                   <div className="bg-black/20">
                                     {subItem.childNavs.map(
@@ -205,7 +201,6 @@ const SubHeader = () => {
           ))}
         </nav>
 
-        {/* Hire Talent Button */}
         <div className="hidden md:block">
           <button className="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-teal-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-teal-500/20">
             Hire Talent
@@ -213,7 +208,6 @@ const SubHeader = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Glass Effect */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-gray-900/80 backdrop-blur-lg border-t border-gray-700/50">
           <div className="px-4 py-4">

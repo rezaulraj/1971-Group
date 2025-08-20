@@ -171,7 +171,6 @@ const HireWorkers = () => {
           ))}
         </motion.div>
 
-      
         <motion.div
           className="mt-20"
           initial={{ opacity: 0 }}
@@ -210,8 +209,6 @@ const HireWorkers = () => {
                 </p>
               </div>
             </div>
-
-           
             <button
               onClick={prevTestimonial}
               className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#F6F1EE] flex items-center justify-center text-[#000b30] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300"
