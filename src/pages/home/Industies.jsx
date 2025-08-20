@@ -15,6 +15,17 @@ import {
   FaTractor,
   FaPaintRoller,
   FaHatCowboy,
+  FaTree,
+  FaTshirt,
+  FaTrain,
+  FaRecycle,
+  FaCut,
+  FaUtensils,
+  FaBreadSlice,
+  FaDrumstickBite,
+  FaBoxes,
+  FaAnchor,
+  FaMountain,
 } from "react-icons/fa";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -116,6 +127,61 @@ const Industries = () => {
       icon: <FaPaintRoller className="text-xl" />,
       image:
         "https://images.unsplash.com/photo-1589357209136-dfcfc6e7363d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Mining",
+      icon: <FaMountain className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1523848309072-c199db53f137?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Dock Worker",
+      icon: <FaAnchor className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1578575436981-9b5f47c8dea9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Steelworker",
+      icon: <FaIndustry className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661937421215-e27b8feb8b2d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Warehouse Worker",
+      icon: <FaBoxes className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1661537879964-0552c60d30c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Cook",
+      icon: <FaUtensils className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1673830185931-40661a11948f?q=80&w=717&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+
+    {
+      name: "Recycling Worker",
+      icon: <FaRecycle className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1717667745830-de42bb75a4fa?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Butcher",
+      icon: <FaDrumstickBite className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1682129511550-6a1a403caa75?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Logging",
+      icon: <FaTree className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1664303728191-c20df8ee9775?q=80&w=768&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Textile Worker",
+      icon: <FaTshirt className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1741176505800-caaa3a52631a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
