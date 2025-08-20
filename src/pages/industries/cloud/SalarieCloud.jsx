@@ -8,7 +8,6 @@ const SalarieCloud = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Text Content */}
           <div className="space-y-6">
             <div className="inline-block px-4 py-2 bg-blue-600/30 rounded-full border border-blue-400/30">
               <p className="text-sm font-medium text-blue-200">
@@ -35,10 +34,8 @@ const SalarieCloud = () => {
             </button>
           </div>
 
-          {/* Right Side - Image Gallery */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden">
-              {/* Main Big Image */}
               <div className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden border-2 border-white/10 backdrop-blur-sm bg-white/5">
                 <img
                   src={image1}
@@ -48,7 +45,6 @@ const SalarieCloud = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent"></div>
               </div>
 
-              {/* Small Image Overlay */}
               <div className="absolute -bottom-6 -right-6 w-2/5 rounded-xl overflow-hidden border-2 border-white/10 shadow-2xl backdrop-blur-sm bg-white/5">
                 <img
                   src={image2}

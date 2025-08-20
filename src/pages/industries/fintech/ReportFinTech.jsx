@@ -36,12 +36,10 @@ const ReportFinTech = () => {
         backgroundSize: "cover",
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gray-900/80 backdrop-blur-sm"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Text Content */}
           <div className="space-y-8">
             <div className="inline-block px-4 py-2 bg-teal-400/20 rounded-full border border-teal-400/30">
               <p className="text-sm font-medium text-teal-300">
@@ -59,7 +57,6 @@ const ReportFinTech = () => {
               talent insights in the rapidly evolving FinTech sector.
             </p>
 
-            {/* Stats Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
               {stats.map((stat, index) => (
                 <div
@@ -87,10 +84,8 @@ const ReportFinTech = () => {
             </button>
           </div>
 
-          {/* Right Image Gallery */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden">
-              {/* Main Big Image */}
               <div className="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden border-2 border-white/10 backdrop-blur-sm bg-white/5">
                 <img
                   src={chartbig}
@@ -108,7 +103,6 @@ const ReportFinTech = () => {
                 </div>
               </div>
 
-              {/* Small Image Overlay */}
               <div className="absolute -bottom-6 -right-6 w-2/5 rounded-xl overflow-hidden border-2 border-white/10 shadow-2xl backdrop-blur-sm bg-white/5">
                 <img
                   src={chartsmall}

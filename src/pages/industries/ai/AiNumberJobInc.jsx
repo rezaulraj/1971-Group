@@ -13,14 +13,12 @@ const AiNumberJobInc = () => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-900/30 via-gray-900/90 to-teal-950/80">
-      {/* Background floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-800 rounded-full filter blur-[100px] opacity-5 animate-float"></div>
         <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-gray-700 rounded-full filter blur-[100px] opacity-5 animate-float-delay"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +32,6 @@ const AiNumberJobInc = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Left side - Text content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,7 +55,6 @@ const AiNumberJobInc = () => {
             </div>
           </motion.div>
 
-          {/* Right side - Stats grid */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -84,7 +80,7 @@ const AiNumberJobInc = () => {
         </div>
       </div>
 
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0% {
             transform: translateY(0) translateX(0);

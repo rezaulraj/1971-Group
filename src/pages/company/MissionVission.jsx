@@ -11,7 +11,6 @@ import {
   FaHeart,
 } from "react-icons/fa";
 
-// Sample Unsplash images (replace with your actual image paths)
 const missionImage =
   "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80";
 const visionImage =
@@ -78,7 +77,6 @@ const MissionVision = () => {
   return (
     <div className="bg-[#F6F1EE] py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -95,7 +93,6 @@ const MissionVision = () => {
           </p>
         </motion.div>
 
-        {/* Mission Section */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -154,7 +151,6 @@ const MissionVision = () => {
           </motion.div>
         </motion.div>
 
-        {/* Vision Section */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -213,7 +209,6 @@ const MissionVision = () => {
           </motion.div>
         </motion.div>
 
-        {/* Core Values Section */}
         <motion.div
           initial="hidden"
           whileInView="show"

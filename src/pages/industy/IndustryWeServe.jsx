@@ -343,12 +343,10 @@ const IndustryWeServe = () => {
 
   return (
     <div className="relative overflow-hidden py-20 bg-[#F6F1EE]">
-      {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#000b30]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
@@ -365,7 +363,6 @@ const IndustryWeServe = () => {
           </p>
         </motion.div>
 
-        {/* Industry Sections */}
         {industries.map((industry, index) => (
           <motion.div
             key={index}
@@ -377,7 +374,6 @@ const IndustryWeServe = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
           >
-            {/* Image Section */}
             <motion.div
               className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-xl"
               variants={industry.flip ? flipImageVariants : imageVariants}
@@ -391,7 +387,6 @@ const IndustryWeServe = () => {
               />
             </motion.div>
 
-            {/* Content Section */}
             <motion.div className="w-full lg:w-1/2" variants={itemVariants}>
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37]">
@@ -454,7 +449,6 @@ const IndustryWeServe = () => {
                 </ul>
               </div>
 
-              {/* CTA Section */}
               <motion.div
                 className="bg-gradient-to-r from-[#000b30]/10 to-[#1a2a6b]/10 p-6 rounded-xl border border-[#D4AF37]/30"
                 initial={{ opacity: 0, y: 20 }}
@@ -484,7 +478,6 @@ const IndustryWeServe = () => {
           </motion.div>
         ))}
 
-        {/* Global CTA Section */}
         <motion.div
           className="bg-gradient-to-r from-[#000b30] to-[#1a2a6b] p-12 rounded-2xl text-center my-20 shadow-xl"
           initial={{ opacity: 0, y: 50 }}

@@ -40,13 +40,13 @@ const Web3Company = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-black py-24">
-      {/* Background Image with Lighting Effect */}
+     
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{ backgroundImage: `url(${web3image})` }}
       ></div>
 
-      {/* Animated Bubbles */}
+      
       {[...Array(15)].map((_, i) => (
         <div
           key={i}
@@ -70,7 +70,7 @@ const Web3Company = () => {
       ))}
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Main Heading */}
+       
         <div className="max-w-3xl mx-auto text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
@@ -84,14 +84,14 @@ const Web3Company = () => {
           </p>
         </div>
 
-        {/* Glass Stats Cards */}
+      
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {stats.map((stat, index) => (
             <div
               key={index}
               className="relative group overflow-hidden rounded-2xl border-r-4 border-b-4 p-8 backdrop-blur-sm transition-all duration-500 hover:backdrop-blur-md"
             >
-              {/* Glass Background with Different Effects */}
+              
               <div
                 className={`absolute inset-0 ${
                   index % 5 === 0
@@ -106,10 +106,10 @@ const Web3Company = () => {
                 } border border-white/10 rounded-2xl transition-all duration-500 group-hover:border-white/20`}
               ></div>
 
-              {/* Inner Glow */}
+              
               <div className="absolute inset-0 bg-radial-gradient from-white/10 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
 
-              {/* Content */}
+           
               <div className="relative z-10 h-full flex flex-col items-center text-center">
                 <div className="p-4 mb-6 rounded-xl bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
                   {stat.icon}
@@ -123,7 +123,7 @@ const Web3Company = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
+       
         <div className="mt-20 text-center">
           <button
             onClick={() => {
@@ -138,8 +138,8 @@ const Web3Company = () => {
         </div>
       </div>
 
-      {/* Animation Styles */}
-      <style jsx global>{`
+     
+      <style jsx="true" global="true">{`
         @keyframes float {
           0% { transform: translate(0, 0) rotate(0deg); }
           50% { transform: translate(${Math.random() * 100 - 50}px, ${

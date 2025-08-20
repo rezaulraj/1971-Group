@@ -23,7 +23,7 @@ const SecretSauce = () => {
               90.8% successfully passing probation
             </p>
 
-            {/* Stats Grid */}
+       
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
                 <h3 className="text-3xl font-bold text-[#D4AF37]">10k+</h3>

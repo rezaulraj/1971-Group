@@ -91,7 +91,6 @@ const HeroHome = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
-      {/* Background with Gradient */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -104,7 +103,6 @@ const HeroHome = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95"></div>
       </div>
 
-      {/* Animated Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
@@ -112,7 +110,6 @@ const HeroHome = () => {
       </div>
 
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -152,7 +149,6 @@ const HeroHome = () => {
             </div>
           </motion.div>
 
-          {/* Stats Cards */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -183,7 +179,6 @@ const HeroHome = () => {
           </motion.div>
         </div>
 
-        {/* Benefits Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -215,7 +210,6 @@ const HeroHome = () => {
           </div>
         </motion.div>
 
-        {/* Clients Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

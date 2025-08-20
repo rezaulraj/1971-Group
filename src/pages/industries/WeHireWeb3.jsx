@@ -14,7 +14,7 @@ import {
 import { SiBlockchaindotcom } from "react-icons/si";
 
 const WeHireWeb3 = () => {
-  // Categories with icons
+
   const categories = [
     {
       name: "Web3 Specialists & Engineers",
@@ -58,7 +58,7 @@ const WeHireWeb3 = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 to-black py-20 px-4 sm:px-6 lg:px-8">
-      {/* Animated bubbles */}
+    
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(15)].map((_, i) => (
           <div
@@ -93,10 +93,10 @@ const WeHireWeb3 = () => {
               key={index}
               className="group relative p-6 rounded-2xl bg-gray-800/20 backdrop-blur-lg border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 overflow-hidden"
             >
-              {/* Glassy card background effect */}
+              
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              {/* Card content */}
+            
               <div className="relative z-10 flex flex-col items-center text-center">
                 <div className="mb-4 p-4 rounded-full bg-gray-700/30 group-hover:bg-blue-400/20 backdrop-blur-sm border border-gray-600/50 group-hover:border-blue-400/50 transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(96,165,250,0.3)]">
                   {category.icon}
@@ -106,7 +106,7 @@ const WeHireWeb3 = () => {
                 </h3>
               </div>
 
-              {/* Hover light effect */}
+            
               <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute -inset-1 bg-blue-400/10 rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500"></div>
               </div>
@@ -115,7 +115,7 @@ const WeHireWeb3 = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0% {
             transform: translate(0, 0) rotate(0deg);

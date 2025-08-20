@@ -126,7 +126,7 @@ const OurServices = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
+     
         <motion.div
           className="text-center mt-16 bg-gradient-to-r from-[#D4AF37]/10 to-[#c6a22f]/10 p-8 rounded-2xl border border-[#D4AF37]/20"
           initial={{ opacity: 0, y: 20 }}

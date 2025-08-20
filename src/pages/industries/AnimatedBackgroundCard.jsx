@@ -5,23 +5,18 @@ import { SiBinance, SiSolana } from "react-icons/si";
 const AnimatedBackgroundCard = () => {
   return (
     <div className="relative overflow-hidden rounded-3xl shadow-2xl w-full h-[500px] max-w-6xl mx-auto my-20">
-      {/* Multicolor Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-500 to-emerald-400 opacity-90"></div>
 
-      {/* Web2 Background Pattern (Grid) */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-grid-white/10"></div>
       </div>
 
-      {/* Moving Shapes - Rectangles */}
       <div className="absolute top-1/4 -left-20 w-40 h-12 bg-white/10 backdrop-blur-sm rounded-lg animate-float1"></div>
       <div className="absolute bottom-1/3 -right-16 w-32 h-10 bg-white/15 backdrop-blur-sm rounded-lg animate-float2"></div>
 
-      {/* Moving Shapes - Circles */}
       <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full animate-float3"></div>
       <div className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-white/15 backdrop-blur-sm rounded-full animate-float4"></div>
 
-      {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-white p-10 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-white">
@@ -59,8 +54,7 @@ const AnimatedBackgroundCard = () => {
         </div>
       </div>
 
-      {/* Animation Keyframes */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float1 {
           0%,
           100% {

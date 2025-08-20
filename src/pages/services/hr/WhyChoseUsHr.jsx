@@ -49,7 +49,7 @@ const WhyChoseUsHr = () => {
     },
   ];
 
-  // Animation variants
+
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -74,7 +74,7 @@ const WhyChoseUsHr = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d]">
-      {/* Decorative elements */}
+
       <div className="absolute top-0 right-0 w-72 h-72 bg-[#D4AF37]/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full -translate-x-1/3 translate-y-1/3 blur-3xl"></div>
 
@@ -122,13 +122,13 @@ const WhyChoseUsHr = () => {
                 {feature.description}
               </p>
 
-              {/* Hover effect line */}
+       
               <div className="absolute bottom-0 left-0 h-0.5 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-500"></div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* CTA Button Section */}
+     
         <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}

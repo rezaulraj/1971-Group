@@ -41,7 +41,6 @@ const WhatWeDoWeb3 = () => {
 
   return (
     <section className="relative py-20 overflow-hidden bg-gradient-to-br from-gray-900 to-black">
-      {/* Floating Bubbles */}
       {[...Array(12)].map((_, i) => (
         <div
           key={i}
@@ -71,15 +70,12 @@ const WhatWeDoWeb3 = () => {
               key={index}
               className={`relative group overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/20 ${service.border}`}
             >
-              {/* Glass Card */}
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${service.color} backdrop-blur-md border border-white/10 rounded-2xl transition-all duration-500 group-hover:backdrop-blur-lg group-hover:border-white/20`}
               ></div>
 
-              {/* Inner Glow */}
               <div className="absolute inset-0 bg-radial-gradient from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-              {/* Content */}
               <div className="relative z-10 h-full p-8 flex flex-col">
                 <div className="mb-6 p-4 bg-white/10 rounded-xl w-fit backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300">
                   {service.icon}
@@ -112,8 +108,7 @@ const WhatWeDoWeb3 = () => {
         </div>
       </div>
 
-      {/* Animation Styles */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0% { transform: translate(0, 0) rotate(0deg); }
           50% { transform: translate(${Math.random() * 100 - 50}px, ${

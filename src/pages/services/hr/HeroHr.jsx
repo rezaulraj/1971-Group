@@ -82,7 +82,6 @@ const HeroHr = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
-      {/* Hero Image Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -95,7 +94,6 @@ const HeroHr = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
       </div>
 
-      {/* Animated Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
@@ -103,13 +101,11 @@ const HeroHr = () => {
       </div>
 
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        {/* Main Content */}
         <motion.div
           className="grid grid-cols-1 gap-16"
           initial="hidden"
           animate="visible"
         >
-          {/* Text Content */}
           <div className="space-y-8 relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -138,7 +134,6 @@ const HeroHr = () => {
               </button>
             </motion.div>
 
-            {/* Stats Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -162,7 +157,6 @@ const HeroHr = () => {
             </motion.div>
           </div>
 
-          {/* Benefits Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -197,7 +191,6 @@ const HeroHr = () => {
           </motion.div>
         </motion.div>
 
-        {/* Client Logos Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +226,6 @@ const HeroHr = () => {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

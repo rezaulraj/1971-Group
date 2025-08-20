@@ -65,7 +65,7 @@ const CaseStudies = () => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b] relative overflow-hidden">
-      {/* Animated background elements */}
+      
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <motion.div
           className="absolute top-0 left-0 w-64 h-64 bg-[#D4AF37] rounded-full mix-blend-overlay filter blur-3xl"
@@ -106,7 +106,7 @@ const CaseStudies = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header Section */}
+     
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -126,7 +126,7 @@ const CaseStudies = () => {
           </p>
         </motion.div>
 
-        {/* Case Studies Grid */}
+    
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {studies.map((study) => (
             <motion.div
@@ -148,7 +148,7 @@ const CaseStudies = () => {
               ></div>
 
               <div className="relative bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 h-full">
-                {/* Icon Header */}
+             
                 <div className="flex items-center justify-between mb-6">
                   <div className="w-12 h-12 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37]">
                     {study.icon}
@@ -161,13 +161,12 @@ const CaseStudies = () => {
                     }`}
                   ></div>
                 </div>
-
-                {/* Title */}
+ 
                 <h3 className="text-xl font-bold text-white mb-4 leading-tight">
                   {study.title}
                 </h3>
 
-                {/* Content */}
+            
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
                     <FaRocket className="text-[#D4AF37] mt-1 flex-shrink-0" />
@@ -182,7 +181,7 @@ const CaseStudies = () => {
                   </div>
                 </div>
 
-                {/* Stats */}
+            
                 <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
                   <FaUsers className="text-[#D4AF37] flex-shrink-0" />
                   <p className="text-white font-medium text-sm">
@@ -194,7 +193,7 @@ const CaseStudies = () => {
           ))}
         </div>
 
-        {/* Stats Bar */}
+ 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -224,7 +223,7 @@ const CaseStudies = () => {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

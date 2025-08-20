@@ -34,7 +34,6 @@ const Web3Blog = () => {
     },
   ];
 
-  // Initialize bubbles with horizontal movement
   useEffect(() => {
     const initialBubbles = Array.from({ length: 12 }, (_, i) => ({
       id: i,
@@ -49,14 +48,12 @@ const Web3Blog = () => {
     setBubbles(initialBubbles);
   }, []);
 
-  // Animate bubbles horizontally
   useEffect(() => {
     const animate = () => {
       setBubbles((prevBubbles) =>
         prevBubbles.map((bubble) => {
           let newX = bubble.x + bubble.speed * bubble.direction;
 
-          // Reset position when going off screen
           if (newX > 110) newX = -10;
           if (newX < -10) newX = 110;
 
@@ -75,7 +72,6 @@ const Web3Blog = () => {
 
   return (
     <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-blue-900/60 overflow-hidden">
-      {/* Full-width slow moving bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {bubbles.map((bubble) => (
           <div
@@ -106,7 +102,6 @@ const Web3Blog = () => {
               key={index}
               className="group relative rounded-2xl overflow-hidden bg-gray-800/40 backdrop-blur-lg border-2 border-gray-700/50 hover:border-blue-400/50 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 hover:border-r-8 hover:border-t-8"
             >
-              {/* Double border effect */}
               <div className="absolute inset-0 rounded-2xl border-2 border-white/10 pointer-events-none"></div>
 
               <div className="relative h-48 overflow-hidden p-4">
@@ -138,7 +133,6 @@ const Web3Blog = () => {
                 </a>
               </div>
 
-              {/* Hover light effect */}
               <div className="absolute inset-0 rounded-2xl pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-600/10"></div>
               </div>

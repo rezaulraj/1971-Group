@@ -28,7 +28,7 @@ const Speciality = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-gray-800 py-20 px-4 sm:px-6 lg:px-8">
-      {/* Animated floating elements */}
+ 
       {[...Array(15)].map((_, i) => (
         <div
           key={i}
@@ -66,7 +66,7 @@ const Speciality = () => {
               key={index}
               className="group relative p-6 rounded-2xl bg-gray-800/30 backdrop-blur-lg border border-gray-700/50 hover:border-purple-400/50 transition-all duration-500 shadow-lg hover:shadow-xl shadow-black/30 hover:shadow-purple-500/20"
             >
-              {/* Animated background element */}
+          
               <div
                 className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
                 style={{
@@ -90,14 +90,14 @@ const Speciality = () => {
                 </h3>
               </div>
 
-              {/* Hover light effect */}
+           
               <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-purple-400/20 pointer-events-none transition-all duration-700 group-hover:scale-[1.03]"></div>
             </div>
           ))}
         </div>
       </div>
 
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0% {
             transform: translate(0, 0) rotate(0deg);

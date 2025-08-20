@@ -55,13 +55,11 @@ const FintechBlog = () => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-      {/* Background image covering 60% width */}
       <div
         className="absolute inset-y-0 right-0 w-3/5 bg-cover bg-no-repeat bg-center opacity-20"
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
 
-      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-teal-800/70 to-gray-700/80"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -75,7 +73,6 @@ const FintechBlog = () => {
           </p>
         </div>
 
-        {/* Top Hiring Cases - 2 large cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 max-w-5xl mx-auto">
           {hiringCases.map((caseStudy, index) => (
             <div
@@ -88,7 +85,6 @@ const FintechBlog = () => {
                 className="w-full h-64 object-cover object-center"
               />
 
-              {/* Content container with glass effect */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-gray-900 via-gray-900/90 to-transparent backdrop-blur-sm">
                 <div className="flex items-center space-x-2 mb-3">
                   <div className="p-2 bg-teal-400/20 rounded-lg">
@@ -103,7 +99,6 @@ const FintechBlog = () => {
                 </h3>
               </div>
 
-              {/* Hover button */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
                 <a
                   href="/case-study"
@@ -119,7 +114,7 @@ const FintechBlog = () => {
         <h2 className="text-4xl font-bold text-white mb-4 max-w-2xl leading-tight mb-10">
           The articles about FinTech recruitment and FinTech talents
         </h2>
-        {/* Bottom Blog Articles - 3 cards */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogArticles.map((article, index) => (
             <div

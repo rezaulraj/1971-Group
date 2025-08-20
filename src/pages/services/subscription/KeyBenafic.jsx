@@ -49,7 +49,7 @@ const KeyBenafic = () => {
     },
   ];
 
-  // Animation variants
+ 
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -74,7 +74,7 @@ const KeyBenafic = () => {
 
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d] overflow-hidden">
-      {/* Decorative elements */}
+      
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
@@ -127,7 +127,7 @@ const KeyBenafic = () => {
           ))}
         </motion.div>
 
-        {/* Stats Section */}
+     
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

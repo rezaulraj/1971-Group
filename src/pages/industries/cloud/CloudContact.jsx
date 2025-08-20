@@ -11,7 +11,6 @@ import contactbg from "../../../assets/fintech/contactbg.webp";
 const CloudContact = () => {
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative overflow-hidden">
-      {/* Gradient background with texture */}
       <div className="absolute inset-0 bg-gray-500/10">
         <div
           className="absolute inset-0 opacity-10"
@@ -24,14 +23,7 @@ const CloudContact = () => {
         />
       </div>
 
-      {/* Decorative elements */}
-      {/* <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-blue-600/10 blur-3xl"></div>
-          <div className="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-blue-800/10 blur-3xl"></div>
-        </div> */}
-
       <div className="relative max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 z-10">
-        {/* Left - Contact Form */}
         <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/90 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-gray-700/50 shadow-2xl">
           <h3 className="text-2xl font-bold text-white mb-8">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
@@ -41,7 +33,6 @@ const CloudContact = () => {
 
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Name field */}
               <div className="relative">
                 <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                   <FaUser />
@@ -53,7 +44,6 @@ const CloudContact = () => {
                 />
               </div>
 
-              {/* Email field */}
               <div className="relative">
                 <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                   <FaEnvelope />
@@ -66,7 +56,6 @@ const CloudContact = () => {
               </div>
             </div>
 
-            {/* Phone field */}
             <div className="relative">
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                 <FaPhone />
@@ -78,7 +67,6 @@ const CloudContact = () => {
               />
             </div>
 
-            {/* Company field */}
             <div className="relative">
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                 <FaBuilding />
@@ -90,7 +78,6 @@ const CloudContact = () => {
               />
             </div>
 
-            {/* Message field */}
             <div className="relative">
               <div className="absolute left-3 top-4 text-gray-400">
                 <FaComment />
@@ -108,12 +95,10 @@ const CloudContact = () => {
             >
               <span className="relative z-10">Send Message</span>
               <FiArrowRight className="relative z-10 group-hover:translate-x-1 transition-transform" />
-              {/* <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300"></span> */}
             </button>
           </form>
         </div>
 
-        {/* Right - Information */}
         <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/90 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-gray-700/50 shadow-2xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">

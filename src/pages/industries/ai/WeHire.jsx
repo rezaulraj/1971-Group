@@ -44,14 +44,13 @@ const roles = [
 const WeHire = () => {
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background with image */}
       <div className="absolute inset-0 -top-10 z-0">
         <img
           src={bgimage}
           alt="background"
           className="w-full h-full object-cover"
         />
-        {/* Bubble effects */}
+
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
@@ -69,21 +68,16 @@ const WeHire = () => {
         ))}
       </div>
 
-      {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-8 backdrop-blur-sm">
-        {/* Glass panel */}
         <div className="w-full max-w-6xl bg-gradient-to-br from-teal-900/20 via-gray-900/20 to-teal-950/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl overflow-hidden">
-          {/* Title */}
           <div className="relative p-8 md:p-12">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 relative inline-block">
               <span className="relative z-10">We hire</span>
               <span className="absolute bottom-0 left-0 w-full h-2 bg-teal-400/80 rounded-full z-0"></span>
             </h1>
 
-            {/* Roles grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {roles.map((role, index) => {
-                // Alternate between teal, gray, and orange
                 let bgColor;
                 if (index % 3 === 0) {
                   bgColor = "bg-teal-500/20 hover:bg-teal-500/30";
@@ -110,8 +104,7 @@ const WeHire = () => {
         </div>
       </div>
 
-      {/* Bubble animation */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0%,
           100% {

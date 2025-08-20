@@ -64,19 +64,15 @@ const WhatWeDoFintech = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="group relative h-full">
-              {/* Glass card with border accent */}
               <div className="h-full bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                {/* Right accent border */}
                 <div
                   className={`absolute right-0 top-0 h-full w-1 bg-gradient-to-b ${service.accent}`}
                 ></div>
 
-                {/* Top accent border */}
                 <div
                   className={`absolute left-0 top-0 w-full h-1 bg-gradient-to-r ${service.accent}`}
                 ></div>
 
-                {/* Image with glass overlay */}
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={service.image}
@@ -86,14 +82,12 @@ const WhatWeDoFintech = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 via-transparent to-transparent"></div>
                 </div>
 
-                {/* Icon bubble */}
                 <div
                   className={`absolute top-6 right-6 w-14 h-14 rounded-full bg-gradient-to-br ${service.accent} flex items-center justify-center text-white shadow-lg border-2 border-white/30`}
                 >
                   {service.icon}
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">
                     {service.title}

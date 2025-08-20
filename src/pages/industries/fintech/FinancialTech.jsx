@@ -6,7 +6,7 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import { FiDollarSign, FiClock, FiAward, FiUsers } from "react-icons/fi";
-import avatarImage from "../../../assets/fintech/avatar-group.png"; // Replace with your avatar image
+import avatarImage from "../../../assets/fintech/avatar-group.png";
 
 const FinancialTech = () => {
   const stats = [
@@ -59,14 +59,12 @@ const FinancialTech = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-teal-800 to-gray-900 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left Text */}
           <div className="space-y-6">
             <h2 className="text-4xl font-bold leading-tight">
               The financial technology industry is one of the most in-demand in
               terms of qualified specialists today.
             </h2>
 
-            {/* Service Cards Grid */}
             <div className="grid grid-cols-2 gap-4 mt-8">
               {services.map((service, index) => (
                 <div
@@ -91,7 +89,6 @@ const FinancialTech = () => {
             </div>
           </div>
 
-          {/* Right Avatar with Text */}
           <div className="relative">
             <div className="bg-gradient-to-br from-blue-500/20 to-teal-400/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
               <img
@@ -109,7 +106,6 @@ const FinancialTech = () => {
           </div>
         </div>
 
-        {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {stats.map((stat, index) => (
             <div

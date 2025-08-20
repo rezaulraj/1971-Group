@@ -37,7 +37,7 @@ const Vacancies = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    
     console.log(formData);
     alert("Application submitted successfully!");
   };

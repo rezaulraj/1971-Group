@@ -11,23 +11,19 @@ import image from "../../../assets/ai/bg5.webp?url";
 const ContactAi = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-900/20 via-gray-900/80 to-blue-900/10 py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative overflow-hidden">
-      {/* Background image on right side */}
       <div
         className="hidden lg:block absolute right-0 top-0 bottom-0 w-2/2 bg-cover bg-no-repeat bg-center opacity-20"
         style={{ backgroundImage: `url(${image})` }}
       />
 
-      {/* Gradient overlay for background image */}
       <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-blue-900/40 to-transparent" />
 
-      {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-red-900/50 to-transparent" />
         <div className="absolute bottom-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-900/50 to-transparent" />
       </div>
 
       <div className="relative max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 z-10">
-        {/* Left side - Text with glass effect */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/10 shadow-2xl">
           <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-gray-100 to-blue-300 mb-6">
             Let's have a call
@@ -95,9 +91,7 @@ const ContactAi = () => {
           </button>
         </div>
 
-        {/* Right side - Form with enhanced glass effect */}
         <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/10 shadow-2xl overflow-hidden">
-          {/* Additional glass effect layer */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-red-900/20 backdrop-blur-sm z-0" />
 
           <div className="relative z-10">
@@ -105,7 +99,6 @@ const ContactAi = () => {
 
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Name field */}
                 <div className="relative">
                   <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                     <FaUser />
@@ -118,7 +111,6 @@ const ContactAi = () => {
                   />
                 </div>
 
-                {/* Email field */}
                 <div className="relative">
                   <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                     <FaEnvelope />
@@ -132,7 +124,6 @@ const ContactAi = () => {
                 </div>
               </div>
 
-              {/* Phone field */}
               <div className="relative">
                 <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                   <FaPhone />
@@ -145,7 +136,6 @@ const ContactAi = () => {
                 />
               </div>
 
-              {/* Company field */}
               <div className="relative">
                 <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                   <FaBuilding />
@@ -158,7 +148,6 @@ const ContactAi = () => {
                 />
               </div>
 
-              {/* Message field */}
               <div className="relative">
                 <div className="absolute left-3 top-4 text-gray-400">
                   <FaComment />

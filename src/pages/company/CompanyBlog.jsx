@@ -6,7 +6,6 @@ import ceo from "../../assets/company/ceo.jpg?url";
 import defferents from "../../assets/company/deff.jpg?url";
 
 const CompanyBlog = () => {
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -65,7 +64,6 @@ const CompanyBlog = () => {
       className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-gray-50"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div variants={item} className="text-center mb-16">
           <motion.div whileHover={{ scale: 1.1 }} className="inline-block mb-6">
             <FaSearch className="text-4xl text-[#D4AF37]" />
@@ -76,7 +74,6 @@ const CompanyBlog = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        {/* Blog Posts Grid */}
         <motion.div
           variants={container}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -133,7 +130,6 @@ const CompanyBlog = () => {
           ))}
         </motion.div>
 
-        {/* Decorative Elements */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}

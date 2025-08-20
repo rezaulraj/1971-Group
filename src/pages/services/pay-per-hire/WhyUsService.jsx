@@ -54,7 +54,7 @@ const WhyUsService = () => {
           ))}
         </div>
 
-        {/* Trust Badge */}
+       
         <div className="mt-16 flex flex-col items-center">
           <div className="flex items-center">
             <FiAward className="w-8 h-8 text-yellow-400 mr-2" />

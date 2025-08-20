@@ -26,7 +26,7 @@ import Industry from "./pages/industy/Industry";
 import ContactForm from "./pages/contact/ContactForm";
 import CaseStudyBlogDetails from "./pages/casestudy/CaseStudyBlogDetails";
 
-// Scroll to top component
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 

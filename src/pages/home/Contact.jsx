@@ -22,18 +22,17 @@ const Contact = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [bgImage, setBgImage] = useState("");
 
-  // Fetch a professional background image from Unsplash
   useEffect(() => {
     const fetchBackgroundImage = async () => {
       try {
         const response = await fetch(
-          "https://api.unsplash.com/photos/random?query=business-office,professional&client_id=YOUR_UNSPLASH_ACCESS_KEY" // Replace with your Unsplash Access Key
+          "https://api.unsplash.com/photos/random?query=business-office,professional&client_id=YOUR_UNSPLASH_ACCESS_KEY"
         );
         const data = await response.json();
         setBgImage(data.urls.regular);
       } catch (error) {
         console.error("Error fetching background image:", error);
-        // Fallback to a default Unsplash image if API fails
+
         setBgImage(
           "https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
         );
@@ -70,7 +69,6 @@ const Contact = () => {
       id="contact-us"
       className="relative min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-8"
     >
-      {/* Background Image from Unsplash */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -100,7 +98,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -215,7 +212,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Information */}
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -287,7 +283,6 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Map Integration */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

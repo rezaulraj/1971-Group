@@ -14,10 +14,8 @@ import hero from "../../assets/web/heroimage.jpg";
 const HeroWeb3 = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Multicolor Gradient Background Layer */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-800 to-emerald-900 opacity-90 z-0"></div>
 
-      {/* Background Image with Pan Animation */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
@@ -27,15 +25,12 @@ const HeroWeb3 = () => {
         }}
       ></div>
 
-      {/* Huge Glow Shadow Effect */}
       <div className="absolute inset-0 bg-radial-gradient from-blue-500/20 via-transparent to-transparent z-0"></div>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-1"></div>
 
       <div className="container mx-auto px-6 relative z-10 py-20">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Text Content with Glass Card */}
           <div className="lg:w-1/2">
             <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/10 shadow-2xl shadow-blue-500/20">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-300">
@@ -57,7 +52,6 @@ const HeroWeb3 = () => {
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </button>
 
-              {/* Features grid with animated icons */}
               <div className="grid grid-cols-2 gap-6 mt-16">
                 {[
                   {
@@ -90,10 +84,8 @@ const HeroWeb3 = () => {
             </div>
           </div>
 
-          {/* Right Side Animated Image */}
           <div className="lg:w-1/2 relative">
             <div className="relative max-w-lg mx-auto">
-              {/* Main Image */}
               <div className="relative z-10">
                 <img
                   src={hero}
@@ -102,7 +94,6 @@ const HeroWeb3 = () => {
                 />
               </div>
 
-              {/* Floating Tech Icons */}
               <div className="absolute -top-8 -left-8 w-20 h-20 bg-blue-600/20 backdrop-blur-sm rounded-full flex items-center justify-center animate-float1">
                 <FaEthereum className="text-3xl text-blue-300" />
               </div>
@@ -119,7 +110,6 @@ const HeroWeb3 = () => {
                 <FaCode className="text-xl text-blue-200" />
               </div>
 
-              {/* Glow Effects */}
               <div className="absolute -inset-8 rounded-3xl bg-blue-500/10 blur-2xl -z-10"></div>
               <div className="absolute top-0 left-0 w-full h-full rounded-2xl border-2 border-white/10 -z-20"></div>
             </div>
@@ -127,8 +117,7 @@ const HeroWeb3 = () => {
         </div>
       </div>
 
-      {/* Animation Styles */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes pan {
           0% {
             background-position: 0% 0%;

@@ -25,7 +25,6 @@ const CaseStudy = () => {
 
   return (
     <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-      {/* Floating background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(8)].map((_, i) => (
           <div
@@ -56,7 +55,6 @@ const CaseStudy = () => {
               key={index}
               className="group relative rounded-2xl overflow-hidden bg-gray-800/60 backdrop-blur-lg border border-blue-400/20 hover:border-blue-400/50 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 transform transition-transform hover:-translate-y-2 border-r-10 border-t-10"
             >
-              {/* Image with glass overlay */}
               <div className="relative h-60 overflow-hidden p-4">
                 <img
                   src={study.image}
@@ -68,7 +66,6 @@ const CaseStudy = () => {
                 ></div>
               </div>
 
-              {/* Content without text effects */}
               <div className="p-6">
                 <h3 className="text-2xl font-semibold text-white mb-2">
                   {study.title}
@@ -77,14 +74,12 @@ const CaseStudy = () => {
                   {study.description}
                 </p>
 
-                {/* Simple CTA */}
                 <div className="flex items-center text-blue-400">
                   <span className="mr-2">{study.cta}</span>
                   <FiArrowRight />
                 </div>
               </div>
 
-              {/* Hover light effect */}
               <div className="absolute inset-0 rounded-2xl pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-600/10"></div>
               </div>

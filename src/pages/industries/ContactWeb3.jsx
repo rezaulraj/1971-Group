@@ -20,7 +20,6 @@ const ContactWeb3 = () => {
   const [bubbles, setBubbles] = useState([]);
   const [rightBubbles, setRightBubbles] = useState([]);
 
-  // Initialize left background bubbles
   useEffect(() => {
     const initialBubbles = Array.from({ length: 8 }, (_, i) => ({
       id: i,
@@ -35,7 +34,6 @@ const ContactWeb3 = () => {
     setBubbles(initialBubbles);
   }, []);
 
-  // Initialize right floating bubbles
   useEffect(() => {
     const initialRightBubbles = Array.from({ length: 5 }, (_, i) => ({
       id: i + 100,
@@ -50,7 +48,6 @@ const ContactWeb3 = () => {
     setRightBubbles(initialRightBubbles);
   }, []);
 
-  // Animate left bubbles
   useEffect(() => {
     const animate = () => {
       setBubbles((prevBubbles) =>
@@ -69,7 +66,6 @@ const ContactWeb3 = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  // Animate right bubbles
   useEffect(() => {
     const animate = () => {
       setRightBubbles((prevBubbles) =>
@@ -77,7 +73,6 @@ const ContactWeb3 = () => {
           let newX = bubble.x + bubble.speedX;
           let newY = bubble.y + bubble.speedY;
 
-          // Bounce off edges
           if (newX > 85 || newX < 70) bubble.speedX *= -1;
           if (newY > 90 || newY < 10) bubble.speedY *= -1;
 
@@ -101,7 +96,7 @@ const ContactWeb3 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+
     console.log(formData);
   };
 
@@ -110,7 +105,6 @@ const ContactWeb3 = () => {
       id="contact"
       className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-blue-900/60 overflow-hidden"
     >
-      {/* Left background bubbles (big) */}
       {bubbles.map((bubble) => (
         <div
           key={`left-${bubble.id}`}
@@ -128,7 +122,6 @@ const ContactWeb3 = () => {
         />
       ))}
 
-      {/* Right floating bubbles (smaller) */}
       {rightBubbles.map((bubble) => (
         <div
           key={`right-${bubble.id}`}
@@ -147,9 +140,7 @@ const ContactWeb3 = () => {
       ))}
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Left content - Glass card */}
         <div className="relative rounded-2xl overflow-hidden bg-gray-800/20 backdrop-blur-lg border-2 border-gray-700/50 p-8 shadow-xl">
-          {/* Date badge */}
           <div className="absolute -top-3 -right-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-bold py-2 px-4 rounded-full shadow-lg">
             {new Date().toLocaleDateString("en-US", {
               month: "short",
@@ -179,7 +170,6 @@ const ContactWeb3 = () => {
           </div>
         </div>
 
-        {/* Right form - Glass card */}
         <div className="relative rounded-2xl overflow-hidden bg-gray-800/20 backdrop-blur-lg border-2 border-gray-700/50 p-8 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

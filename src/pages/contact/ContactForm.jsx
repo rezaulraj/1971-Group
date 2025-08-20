@@ -46,10 +46,6 @@ const ContactForm = () => {
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 opacity-70"></div>
-        {/* <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float1"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float2"></div>
-        <div className="absolute top-2/3 left-1/3 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float3"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float4"></div> */}
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -77,7 +73,7 @@ const ContactForm = () => {
             className="relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-2xl"></div>
-            <div className="relative bg-white/80 rounded-2xl shadow-2xl p-8 border border-white/20">
+            <div className="relative bg-white/50 rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">
                 Send Us a Message
               </h3>
@@ -254,7 +250,6 @@ const ContactForm = () => {
               </div>
             </motion.div>
 
-            {/* Embedded Map Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

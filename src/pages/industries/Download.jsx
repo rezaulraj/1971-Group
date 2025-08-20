@@ -6,7 +6,6 @@ const Download = () => {
   const [dimensions, setDimensions] = React.useState({ width: 0, height: 0 });
   const [bubbles, setBubbles] = React.useState([]);
 
-  // Initialize 3D bubbles with depth (z-axis)
   useEffect(() => {
     if (dimensions.width && dimensions.height) {
       setBubbles(
@@ -14,19 +13,18 @@ const Download = () => {
           id: i,
           x: Math.random() * 80 + 10,
           y: Math.random() * 80 + 10,
-          z: Math.random() * 5 + 1, // Depth factor (1-6)
+          z: Math.random() * 5 + 1,
           size: Math.random() * 60 + 40,
           vx: (Math.random() - 0.5) * 0.6,
           vy: (Math.random() - 0.5) * 0.6,
           vz: (Math.random() - 0.5) * 0.02,
           opacity: Math.random() * 0.15 + 0.1,
-          color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`, // Blue-purple range
+          color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`,
         }))
       );
     }
   }, [dimensions]);
 
-  // Get container dimensions
   useEffect(() => {
     const updateDimensions = () => {
       if (containerRef.current) {
@@ -42,7 +40,6 @@ const Download = () => {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  // 3D physics animation
   useEffect(() => {
     if (!dimensions.width || !dimensions.height) return;
 
@@ -55,12 +52,10 @@ const Download = () => {
         return prevBubbles.map((bubble) => {
           let { x, y, z, vx, vy, vz, size } = bubble;
 
-          // Update position with depth-affected velocity
           x += vx * z;
           y += vy * z;
-          z = Math.max(0.5, Math.min(6, z + vz)); // Keep z within bounds
+          z = Math.max(0.5, Math.min(6, z + vz));
 
-          // Boundary collision with depth-based bounce
           if (x < 10 || x > 90) {
             vx = (-vx * 0.8) / z;
             x = x < 10 ? 10 : 90;
@@ -70,10 +65,8 @@ const Download = () => {
             y = y < 10 ? 10 : 90;
           }
 
-          // Simple gravity effect
           vy += 0.01 * z;
 
-          // Bubble interactions with depth consideration
           prevBubbles.forEach((other) => {
             if (bubble.id !== other.id) {
               const dx = x - other.x;
@@ -104,12 +97,10 @@ const Download = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-blue-900/40 via-gray-900 to-purple-900/40 py-20 px-4 sm:px-6 lg:px-8">
-      {/* 3D Bubble Container */}
       <div
         ref={containerRef}
         className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden"
       >
-        {/* Interactive 3D bubbles */}
         {bubbles.map((bubble) => {
           const scale = bubble.z / 4;
           const blur = (6 - bubble.z) * 2;
@@ -142,10 +133,8 @@ const Download = () => {
         })}
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8 items-center">
-          {/* Glassy download card with 3D effect */}
           <div className="w-full md:w-1/2 p-8 rounded-3xl bg-gray-800/40 backdrop-blur-xl border border-gray-700/50 hover:border-blue-400/50 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_40px_rgba(59,130,246,0.4)] transition-all duration-500 group transform-style-preserve-3d perspective-1000 hover:rotate-x-[5deg] hover:rotate-y-[2deg]">
             <div className="flex flex-col items-center text-center transform transition-transform duration-500 group-hover:translate-z-10">
               <div className="mb-6 p-5 rounded-2xl bg-gray-700/40 backdrop-blur-md border border-gray-600/50 group-hover:border-blue-400/60 transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]">
@@ -162,7 +151,6 @@ const Download = () => {
             </div>
           </div>
 
-          {/* Additional content area with 3D effect */}
           <div className="w-full md:w-1/2 p-8 rounded-3xl bg-gray-800/30 backdrop-blur-lg border border-gray-700/40 shadow-xl shadow-blue-900/10 hover:shadow-blue-500/20 transition-all duration-500 transform-style-preserve-3d perspective-1000 hover:rotate-x-[3deg]">
             <h3 className="text-2xl font-semibold text-gray-200 mb-4 transform transition-transform duration-500 group-hover:translate-z-5">
               What's Inside?
@@ -188,8 +176,7 @@ const Download = () => {
         </div>
       </div>
 
-      {/* Add these to your global CSS */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         .transform-style-preserve-3d {
           transform-style: preserve-3d;
         }

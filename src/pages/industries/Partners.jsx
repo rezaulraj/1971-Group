@@ -6,24 +6,23 @@ import {
   SiSolana,
   SiPolkadot,
   SiStellar,
-//   SiEos,
-//   SiTezos,
+  //   SiEos,
+  //   SiTezos,
   SiPolygon,
   SiCardano,
   SiHedera,
-//   SiKlaytn,
+  //   SiKlaytn,
   SiIota,
-//   SiTron,
-//   SiNeo,
+  //   SiTron,
+  //   SiNeo,
   SiAlgorand,
-//   SiWaves,
+  //   SiWaves,
 
-//   SiNearprotocol,
+  //   SiNearprotocol,
   SiLightning,
 } from "react-icons/si";
 
 const Partners = () => {
-  // Array of ecosystem icons with their corresponding React Icons
   const ecosystems = [
     { name: "Ethereum", icon: <SiEthereum /> },
     { name: "Solana", icon: <SiSolana /> },
@@ -49,7 +48,6 @@ const Partners = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 to-black py-20 px-4 sm:px-6 lg:px-8">
-      {/* Animated bubbles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(10)].map((_, i) => (
           <div

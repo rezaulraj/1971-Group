@@ -50,7 +50,6 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
       {description}
     </p>
 
-    {/* Hover effect line */}
     <div className="absolute bottom-0 left-0 h-0.5 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-500"></div>
   </motion.div>
 );
@@ -135,7 +134,6 @@ const HeroStaffing = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
-      {/* Hero Image Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -148,7 +146,6 @@ const HeroStaffing = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
       </div>
 
-      {/* Animated Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
@@ -156,7 +153,6 @@ const HeroStaffing = () => {
       </div>
 
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        {/* Main Content - Single Column */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +198,6 @@ const HeroStaffing = () => {
           </div>
         </motion.div>
 
-        {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -220,7 +215,6 @@ const HeroStaffing = () => {
           ))}
         </motion.div>
 
-        {/* Clients Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -251,7 +245,6 @@ const HeroStaffing = () => {
           </div>
         </motion.div>
 
-        {/* Features Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

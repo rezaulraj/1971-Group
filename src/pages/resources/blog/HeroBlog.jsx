@@ -46,15 +46,10 @@ const HeroBlog = () => {
 
   return (
     <div className="relative bg-gradient-to-br from-blue-900 to-indigo-900 text-white overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIxNSIgeT0iMTUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')]"></div> */}
-      </div>
+      <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
 
-      {/* Main content */}
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Text content */}
           <div className="lg:w-1/2">
             <div className="flex items-center mb-6">
               <img
@@ -94,7 +89,6 @@ const HeroBlog = () => {
             </div>
           </div>
 
-          {/* Featured articles */}
           <div className="lg:w-1/2 space-y-6">
             {featuredArticles.map((article) => {
               const slug = generateSlug(article.title);
@@ -131,7 +125,6 @@ const HeroBlog = () => {
         </div>
       </div>
 
-      {/* Hero image overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroblog}

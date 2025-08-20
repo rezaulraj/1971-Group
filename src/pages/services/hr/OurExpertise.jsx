@@ -3,7 +3,7 @@ import { FaStar, FaBriefcase, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Calendly from "../../../components/Calendly";
 
-// Animation variants
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {

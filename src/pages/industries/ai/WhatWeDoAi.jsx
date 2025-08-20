@@ -70,7 +70,6 @@ const WhatWeDoAi = () => {
 
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/20 via-gray-900/20 to-purple-500/20 overflow-hidden">
-      {/* Background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-64 h-64 bg-teal-400 rounded-full filter blur-3xl opacity-10 animate-float"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-500 rounded-full filter blur-3xl opacity-10 animate-float-delay"></div>
@@ -93,7 +92,6 @@ const WhatWeDoAi = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Left Side - Tabs */}
           <div className="col-span-1 lg:col-span-4 space-y-4">
             {tabs.map((tab) => (
               <motion.button
@@ -136,7 +134,6 @@ const WhatWeDoAi = () => {
             ))}
           </div>
 
-          {/* Right Side - Content */}
           <div className="col-span-1 lg:col-span-8 relative h-full min-h-[500px]">
             <AnimatePresence mode="wait">
               {tabs.map(
@@ -151,7 +148,6 @@ const WhatWeDoAi = () => {
                       className="absolute inset-0 h-full"
                     >
                       <div className="h-full flex flex-col lg:flex-row gap-6">
-                        {/* Image Card */}
                         <motion.div
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
@@ -165,7 +161,6 @@ const WhatWeDoAi = () => {
                           />
                         </motion.div>
 
-                        {/* Text Card */}
                         <div className="flex-1 bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 shadow-xl flex flex-col">
                           <div className="flex items-start gap-6 mb-6">
                             <div className="bg-teal-400/10 text-teal-400 text-3xl font-bold rounded-lg w-16 h-16 flex items-center justify-center border border-teal-400/20">
@@ -216,7 +211,7 @@ const WhatWeDoAi = () => {
         </div>
       </div>
 
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0% {
             transform: translateY(0) translateX(0);

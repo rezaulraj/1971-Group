@@ -28,10 +28,8 @@ const ItStaffing = () => {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Multicolor gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-10"></div>
 
-      {/* Subtle grid pattern */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
@@ -48,7 +46,6 @@ const ItStaffing = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
-          {/* Left side - Image */}
           <motion.div
             initial={{ x: -50 }}
             whileInView={{ x: 0 }}
@@ -65,7 +62,6 @@ const ItStaffing = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
           </motion.div>
 
-          {/* Right side - Text content */}
           <motion.div
             initial={{ x: 50 }}
             whileInView={{ x: 0 }}
@@ -81,7 +77,6 @@ const ItStaffing = () => {
               business to scale faster, reduce costs, and boost efficiency.
             </p>
 
-            {/* Benefits list */}
             <ul className="space-y-4 mb-10">
               {benefits.map((benefit, index) => (
                 <motion.li
@@ -100,7 +95,6 @@ const ItStaffing = () => {
               ))}
             </ul>
 
-            {/* Download button */}
             <motion.button
               onClick={() => setShowCalendly(true)}
               whileHover={{ scale: 1.05 }}

@@ -44,7 +44,6 @@ import engi from "../../../assets/blog/engt.avif?url";
 const BlogDetails = () => {
   const { slug } = useParams();
 
-  // Mock data - in a real app you would fetch this based on the slug
   const blogData = {
     blogs: [
       {
@@ -1921,7 +1920,6 @@ const BlogDetails = () => {
     ],
   };
 
-  // Find current post
   const currentPost = blogData.blogs.find(
     (post) =>
       post.slug === slug ||
@@ -1935,7 +1933,6 @@ const BlogDetails = () => {
     return <div className="text-center py-20">Blog post not found</div>;
   }
 
-  // Find author information
   const author = blogData.authors.find((a) => a.id === currentPost.author) || {
     id: 0,
     name: "Unknown Author",
@@ -1948,13 +1945,11 @@ const BlogDetails = () => {
     },
   };
 
-  // Get related posts
   const relatedPosts =
     blogData.blogs.filter((post) =>
       currentPost.relatedPosts?.includes(post.id)
     ) || [];
 
-  // Function to render content blocks with proper error handling
   const renderContent = (content) => {
     if (!content || !Array.isArray(content)) {
       return <p>Content not available</p>;
@@ -2073,7 +2068,6 @@ const BlogDetails = () => {
   };
   return (
     <div className="bg-white">
-      {/* Hero Section */}
       <div className="relative bg-gray-900">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <img
@@ -2103,10 +2097,8 @@ const BlogDetails = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="lg:flex lg:space-x-12">
-          {/* Article Content */}
           <div className="lg:w-2/3">
             <div className="prose prose-lg max-w-none text-gray-700">
               <img
@@ -2117,7 +2109,6 @@ const BlogDetails = () => {
               {renderContent(currentPost.content)}
             </div>
 
-            {/* Tags */}
             <div className="mt-12">
               <h3 className="text-sm font-medium text-gray-500">Tags</h3>
               <div className="mt-2 flex flex-wrap gap-2">
@@ -2132,7 +2123,6 @@ const BlogDetails = () => {
               </div>
             </div>
 
-            {/* Author Bio */}
             <div className="mt-12 border-t border-gray-200 pt-12">
               <div className="flex items-center">
                 <img
@@ -2151,9 +2141,7 @@ const BlogDetails = () => {
             </div>
           </div>
 
-          {/* Sidebar */}
           <div className="lg:w-1/3 mt-12 lg:mt-0">
-            {/* Share Options */}
             <div className="bg-gray-50 p-6 rounded-lg sticky top-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">
                 Share this article
@@ -2174,7 +2162,6 @@ const BlogDetails = () => {
               </button>
             </div>
 
-            {/* Related Posts */}
             <div className="mt-8">
               <h3 className="text-lg font-medium text-gray-900 mb-4">
                 Related Articles

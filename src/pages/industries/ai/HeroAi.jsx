@@ -72,10 +72,10 @@ const HeroAi = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background */}
+  
       <div className="absolute inset-0 bg-gradient-to-br from-teal-900 via-black to-orange-900"></div>
 
-      {/* Decorative BG images */}
+    
       <div
         className="absolute right-0 top-10 w-1/2 h-[80vh] bg-cover bg-no-repeat bg-right z-10"
         style={{ backgroundImage: `url(${herobig})` }}
@@ -87,7 +87,7 @@ const HeroAi = () => {
         style={{ backgroundImage: `url(${herosmall})` }}
       ></div>
 
-      {/* Floating Lights */}
+  
       {lights.map((light) => (
         <div
           key={light.id}
@@ -105,7 +105,7 @@ const HeroAi = () => {
         />
       ))}
 
-      {/* Hero content */}
+   
       <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
         <div className="max-w-5xl text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
@@ -128,7 +128,7 @@ const HeroAi = () => {
         </div>
       </div>
 
-      {/* AI Bubbles */}
+    
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
         {bubbles.map((bubble) => (
           <div
@@ -152,7 +152,7 @@ const HeroAi = () => {
         ))}
       </div>
 
-      {/* Floating crypto icons */}
+     
       <div className="absolute inset-0 overflow-hidden z-10 pointer-events-none">
         {[FaEthereum, SiBinance, FaBitcoin, SiSolana, FaLink].map((Icon, i) => (
           <div
@@ -171,7 +171,7 @@ const HeroAi = () => {
         ))}
       </div>
 
-      {/* Logo Marquee */}
+    
       <section className="relative py-28 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl mx-auto mb-20 p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg hover:shadow-teal-500/10 transition-all duration-300">
@@ -217,7 +217,7 @@ const HeroAi = () => {
               ))}
             </div>
 
-            {/* Gradient edge fade */}
+            
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-900/90 to-transparent z-20" />
             <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-900/90 to-transparent z-20" />
           </div>

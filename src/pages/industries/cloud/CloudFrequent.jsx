@@ -47,7 +47,7 @@ const CloudFrequent = () => {
 
   return (
     <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/80 via-gray-900/70 to-blue-900/80">
-      {/* Floating 3D elements */}
+   
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(10)].map((_, i) => (
           <div
@@ -114,8 +114,8 @@ const CloudFrequent = () => {
         </div>
       </div>
 
-      {/* Animation styles */}
-      <style jsx global>{`
+      
+      <style jsx="true" global="true">{`
         @keyframes float {
           0%,
           100% {

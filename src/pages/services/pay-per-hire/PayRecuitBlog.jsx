@@ -39,7 +39,6 @@ const PayRecuitBlog = () => {
     },
   ];
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -68,12 +67,10 @@ const PayRecuitBlog = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-      {/* Multicolor Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 via-purple-500/15 to-green-500/15 transform -skew-y-6 scale-125 opacity-70"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 via-pink-500/10 to-amber-500/10 opacity-40"></div>
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -87,7 +84,6 @@ const PayRecuitBlog = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
         </motion.div>
 
-        {/* Blog Posts Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={container}
@@ -102,7 +98,6 @@ const PayRecuitBlog = () => {
               variants={item}
               whileHover="hover"
             >
-              {/* Blog Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={post.image}
@@ -117,12 +112,13 @@ const PayRecuitBlog = () => {
                 </div>
               </div>
 
-              {/* Blog Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-6 line-clamp-3">{post.description}</p>
+                <p className="text-gray-600 mb-6 line-clamp-3">
+                  {post.description}
+                </p>
                 <a
                   href="/blogs"
                   className={`flex items-center gap-2 text-sm font-medium ${post.color} hover:underline`}

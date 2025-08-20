@@ -51,7 +51,6 @@ const WhatWeDoCloud = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          {/* Left Side - Smaller Compass Image */}
           <div className="lg:w-2/5 flex justify-center">
             <div className="relative w-64 h-64">
               <img
@@ -63,7 +62,6 @@ const WhatWeDoCloud = () => {
             </div>
           </div>
 
-          {/* Right Side - Service Cards */}
           <div className="lg:w-3/5 grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, index) => (
               <div

@@ -9,14 +9,14 @@ import clogo5 from "../../../assets/home/l5.webp";
 
 const HeroCloud = () => {
   const logos = [clogo1, clogo2, clogo3, clogo4, clogo5];
-  const duplicatedLogos = [...logos, ...logos]; // For seamless looping
+  const duplicatedLogos = [...logos, ...logos]; 
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-700/80 to-blue-800/80">
-      {/* Main Hero Section */}
+     
       <div className="container mx-auto px-6 py-20 md:py-24 lg:py-32 ">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left Side - Text Content */}
+          
           <div className="lg:w-2/2 space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Global Cloud Computing recruitment & staffing
@@ -36,7 +36,7 @@ const HeroCloud = () => {
             </div>
           </div>
 
-          {/* Right Side - Image */}
+         
           <div className="lg:w-1/2 relative">
             <div className="relative overflow-hidden">
               <img
@@ -49,7 +49,7 @@ const HeroCloud = () => {
         </div>
       </div>
 
-      {/* Client Logo Carousel */}
+    
       <div className="bg-gradient-to-r from-blue-700 to-blue-800 py-8 md:py-12 overflow-hidden">
         <div className="container mx-auto px-6">
           <h3 className="text-center text-white/80 text-sm uppercase tracking-wider font-medium mb-8">
@@ -80,7 +80,7 @@ const HeroCloud = () => {
         </div>
       </div>
 
-      {/* Decorative elements */}
+    
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-r from-cyan-100/30 to-transparent -z-10"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-b from-blue-100/20 to-transparent -z-10"></div>
     </div>

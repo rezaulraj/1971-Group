@@ -129,7 +129,6 @@ const WhatWeDo = () => {
         </div>
       </div>
 
-      {/* Tailwind extra utilities */}
       <style>{`
         .perspective {
           perspective: 1000px;

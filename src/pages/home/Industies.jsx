@@ -42,7 +42,7 @@ const Industries = () => {
       name: "Education",
       icon: <FaHatCowboy className="text-xl" />,
       image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        "https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Electrician",
@@ -207,7 +207,6 @@ const Industries = () => {
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              {/* Background Image */}
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
                 style={{
@@ -215,11 +214,9 @@ const Industries = () => {
                   transform: hoveredCard === index ? "scale(1.1)" : "scale(1)",
                 }}
               >
-                {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
               </div>
 
-              {/* Content */}
               <div className="relative z-10 h-full flex flex-col items-center justify-end p-4 text-white">
                 <div className="w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center mb-2 shadow-md">
                   <span className="text-white">{industry.icon}</span>
@@ -229,7 +226,6 @@ const Industries = () => {
                 </h3>
               </div>
 
-              {/* Hover effect bar */}
               <div
                 className="absolute bottom-0 left-0 h-1 bg-[#D4AF37] transition-all duration-300"
                 style={{ width: hoveredCard === index ? "100%" : "0%" }}

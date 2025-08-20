@@ -13,10 +13,8 @@ const TrustedBy = () => {
 
   return (
     <section className="relative py-28 overflow-hidden bg-gradient-to-br from-gray-900 to-black">
-      {/* Glassmorphism Container */}
       <div className="absolute inset-0 backdrop-blur-xl bg-white/5 z-0"></div>
 
-      {/* Floating Crypto Icons */}
       <div className="absolute inset-0 overflow-hidden z-1">
         {[FaEthereum, SiBinance, FaBitcoin, SiSolana, FaLink].map((Icon, i) => (
           <div
@@ -36,7 +34,6 @@ const TrustedBy = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Glassmorphism Title Card */}
         <div className="max-w-2xl mx-auto mb-20 p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg">
           <h3 className="text-center text-2xl md:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300">
             TRUSTED BY WEB3 PIONEERS
@@ -46,7 +43,6 @@ const TrustedBy = () => {
           </p>
         </div>
 
-        {/* Glass Logo Marquee */}
         <div className="relative h-32 overflow-hidden group">
           <div className="absolute inset-0 backdrop-blur-sm bg-black/30 rounded-xl border border-white/5"></div>
 
@@ -79,14 +75,12 @@ const TrustedBy = () => {
             ))}
           </div>
 
-          {/* Gradient fades */}
           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-900/90 to-transparent z-20"></div>
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-900/90 to-transparent z-20"></div>
         </div>
       </div>
 
-      {/* Animation styles */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0% {
             transform: translate(0, 0) rotate(0deg);

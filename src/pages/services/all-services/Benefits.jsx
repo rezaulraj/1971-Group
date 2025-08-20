@@ -135,7 +135,7 @@ const Benefits = () => {
 
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background Image */}
+ 
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -148,7 +148,7 @@ const Benefits = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/85 to-[#1a2a6b]/90"></div>
       </div>
 
-      {/* Animated background elements */}
+    
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <motion.div
           className="absolute top-0 left-0 w-64 h-64 bg-[#D4AF37] rounded-full mix-blend-overlay filter blur-3xl"
@@ -243,7 +243,7 @@ const Benefits = () => {
           ))}
         </motion.div>
 
-        {/* Infinite Logo Carousel */}
+
         <div className="mt-24 overflow-hidden py-8">
           <motion.div
             className="flex items-center"

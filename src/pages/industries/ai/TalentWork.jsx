@@ -125,12 +125,10 @@ const TalentWork = () => {
 
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900/50 to-gray-800/90 overflow-hidden py-16">
-      {/* Center Image */}
       <div className="relative z-10 w-32 h-32 rounded-full overflow-hidden border-4 border-white/20 shadow-xl shadow-purple-500/40">
         <img src={image} alt="AI Core" className="w-full h-full object-cover" />
       </div>
 
-      {/* Orbit rings and items */}
       {techSolarSystem.map((system, systemIndex) => (
         <div
           key={systemIndex}
@@ -142,7 +140,6 @@ const TalentWork = () => {
             animation: `spin ${system.speed}s linear infinite`,
           }}
         >
-          {/* Orbit ring */}
           <div
             className={`absolute rounded-full border ${system.ringColor}`}
             style={{
@@ -151,7 +148,6 @@ const TalentWork = () => {
             }}
           ></div>
 
-          {/* Orbiting icons */}
           {system.items.map((tech, techIndex) => {
             const angle = (techIndex * 360) / system.items.length;
             const x = system.radius * Math.cos((angle * Math.PI) / 180);
@@ -176,7 +172,6 @@ const TalentWork = () => {
         </div>
       ))}
 
-      {/* Legend */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-6 z-30">
         {techSolarSystem.map((system, index) => (
           <div
@@ -191,8 +186,7 @@ const TalentWork = () => {
         ))}
       </div>
 
-      {/* Animations */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes spin {
           from {
             transform: rotate(0deg);

@@ -36,7 +36,6 @@ const AboutRecruitmentServices = () => {
     },
   ];
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,7 +71,6 @@ const AboutRecruitmentServices = () => {
   return (
     <div className="bg-gray-900 text-gray-100 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -86,7 +84,6 @@ const AboutRecruitmentServices = () => {
           <div className="w-20 h-1 bg-blue-500 mx-auto"></div>
         </motion.div>
 
-        {/* Services Grid - Equal Height Cards */}
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8"
           variants={containerVariants}
@@ -105,7 +102,6 @@ const AboutRecruitmentServices = () => {
                 className={`relative rounded-xl overflow-hidden shadow-2xl h-full flex flex-col bg-gray-800`}
                 variants={hoverCard}
               >
-                {/* Image with overlay - Fixed height */}
                 <div className="relative h-64 flex-shrink-0">
                   <img
                     src={service.image}
@@ -115,9 +111,7 @@ const AboutRecruitmentServices = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent"></div>
                 </div>
 
-                {/* Content - Flex-grow for equal height */}
                 <div className="p-8 flex-grow flex flex-col">
-                  {/* Icon */}
                   <div
                     className={`p-4 ${service.textColor} rounded-full bg-black/20 w-16 h-16 flex items-center justify-center mb-6 border ${service.borderColor}`}
                   >
@@ -142,7 +136,6 @@ const AboutRecruitmentServices = () => {
           ))}
         </motion.div>
 
-        {/* Additional Info Cards */}
         <motion.div
           className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6"
           initial={{ opacity: 0, y: 30 }}

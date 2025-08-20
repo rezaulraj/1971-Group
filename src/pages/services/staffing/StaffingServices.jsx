@@ -33,7 +33,7 @@ const StaffingServices = () => {
     },
   ];
 
-  // Animation variants
+
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,7 +69,7 @@ const StaffingServices = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ const StaffingServices = () => {
           </p>
         </motion.div>
 
-        {/* Insights Grid */}
+      
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -106,7 +106,7 @@ const StaffingServices = () => {
                 variants={hoverCard}
                 className="h-full bg-gray-800 rounded-xl overflow-hidden shadow-lg flex flex-col"
               >
-                {/* Image */}
+              
                 <motion.div
                   variants={hoverImage}
                   className="overflow-hidden h-48"
@@ -119,7 +119,7 @@ const StaffingServices = () => {
                   />
                 </motion.div>
 
-                {/* Content */}
+                
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center mb-4">
                     <div className="bg-[#D4AF37] p-2 rounded-lg mr-4 text-white">

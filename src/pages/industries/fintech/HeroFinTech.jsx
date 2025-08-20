@@ -61,7 +61,6 @@ const HeroFinTech = () => {
               alt="FinTech Card"
               className="w-full max-w-lg transform rotate-2 hover:rotate-0 transition-transform duration-500 opacity-95"
             />
-            {/* <div className="absolute -inset-4 bg-gradient-to-br from-teal-400/20 to-blue-500/20 rounded-2xl -z-10 blur-md"></div> */}
           </div>
         </div>
       </div>

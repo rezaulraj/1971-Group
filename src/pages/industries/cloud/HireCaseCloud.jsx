@@ -28,7 +28,7 @@ const HireCaseCloud = () => {
         backgroundSize: "cover",
       }}
     >
-      {/* Overlay */}
+ 
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/80 to-gray-900/90"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">

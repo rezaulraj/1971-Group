@@ -31,7 +31,6 @@ import subscriptionImage from "../../../assets/subscription/sebc.avif?url";
 import guide from "../../../assets/subscription/gide.webp";
 import cyber from "../../../assets/blog/cy.png?url";
 const Blogs = () => {
-  // Function to generate slug from title
   const generateSlug = (title) => {
     return title
       .toLowerCase()
@@ -265,7 +264,6 @@ const Blogs = () => {
   return (
     <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Latest Insights
@@ -276,14 +274,12 @@ const Blogs = () => {
           </p>
         </div>
 
-        {/* Blog Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {blogs.map((blog) => {
             const slug = generateSlug(blog.title);
             return (
               <Link to={`/blogs/${slug}`} key={blog.id} className="group">
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full flex flex-col">
-                  {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={blog.image}
@@ -296,7 +292,6 @@ const Blogs = () => {
                     </span>
                   </div>
 
-                  {/* Content */}
                   <div className="p-6 flex-grow flex flex-col">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                       {blog.title}
@@ -305,7 +300,6 @@ const Blogs = () => {
                       {blog.excerpt}
                     </p>
 
-                    {/* Metadata */}
                     <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-sm text-gray-500">
                       <span className="flex items-center">
                         <FaCalendarAlt className="mr-1.5" /> {blog.date}
@@ -315,7 +309,6 @@ const Blogs = () => {
                       </span>
                     </div>
 
-                    {/* Read More */}
                     <div className="mt-4 flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition-colors">
                       Read more
                       <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />

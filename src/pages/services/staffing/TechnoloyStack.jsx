@@ -95,7 +95,6 @@ const TalentSpecializations = () => {
     },
   ];
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -124,12 +123,10 @@ const TalentSpecializations = () => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d] relative overflow-hidden">
-      {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -149,7 +146,6 @@ const TalentSpecializations = () => {
           </p>
         </motion.div>
 
-        {/* Services Grid */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -166,7 +162,6 @@ const TalentSpecializations = () => {
                 whileHover="hover"
                 className="relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 h-full flex flex-col group"
               >
-                {/* Success Rate Badge */}
                 <div
                   className={`absolute -top-3 right-4 px-3 py-1 rounded-full text-sm font-medium ${service.timeBadge} shadow-lg`}
                 >
@@ -211,7 +206,6 @@ const TalentSpecializations = () => {
           })}
         </motion.div>
 
-        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

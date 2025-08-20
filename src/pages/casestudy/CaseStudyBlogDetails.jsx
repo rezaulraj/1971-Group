@@ -112,7 +112,7 @@ const CaseStudyBlogDetails = () => {
 
   return (
     <div className="bg-gray-50">
-      {/* Hero Section */}
+    
       <div className="relative h-96 w-full overflow-hidden">
         <img
           src={caseStudy.image}
@@ -143,7 +143,7 @@ const CaseStudyBlogDetails = () => {
         </div>
       </div>
 
-      {/* Back Button */}
+     
       <div className="container mx-auto px-6 pt-8">
         <Link
           to="/case-studies"
@@ -154,10 +154,10 @@ const CaseStudyBlogDetails = () => {
         </Link>
       </div>
 
-      {/* Main Content */}
+     
       <div className="container mx-auto px-6 py-12 max-w-5xl">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          {/* Summary Section */}
+        
           <div className="p-8 md:p-12 border-b border-gray-100">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Overview</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
@@ -165,7 +165,7 @@ const CaseStudyBlogDetails = () => {
             </p>
           </div>
 
-          {/* Stats Section */}
+         
           <div className="p-8 md:p-12 bg-gray-50">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
               Key Results
@@ -185,7 +185,7 @@ const CaseStudyBlogDetails = () => {
             </div>
           </div>
 
-          {/* Challenges & Solutions */}
+         
           <div className="p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -217,7 +217,7 @@ const CaseStudyBlogDetails = () => {
             </div>
           </div>
 
-          {/* Detailed Description */}
+       
           <div className="p-8 md:p-12 bg-gray-50">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
               Case Study Details
@@ -229,7 +229,7 @@ const CaseStudyBlogDetails = () => {
             </div>
           </div>
 
-          {/* Testimonial */}
+         
           {caseStudy.testimonial && (
             <div className="p-8 md:p-12 bg-teal-50">
               <div className="max-w-3xl mx-auto">
@@ -246,8 +246,8 @@ const CaseStudyBlogDetails = () => {
             </div>
           )}
 
-          {/* CTA
-          <div className="p-8 md:p-12 text-center">
+         
+          {/* <div className="p-8 md:p-12 text-center">
             <Link
               to="/case-studies"
               className="inline-flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
@@ -255,7 +255,7 @@ const CaseStudyBlogDetails = () => {
               View All Case Studies
               <FiArrowRight className="ml-2" />
             </Link>
-          </div> */}
+          </div>  */}
         </div>
       </div>
     </div>

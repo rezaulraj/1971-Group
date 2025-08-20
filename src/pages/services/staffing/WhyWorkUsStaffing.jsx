@@ -80,7 +80,6 @@ const WhyWorkUsStaffing = () => {
     },
   ];
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -117,7 +116,6 @@ const WhyWorkUsStaffing = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[#F6F1EE]">
-      {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#000b30]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
@@ -172,7 +170,6 @@ const WhyWorkUsStaffing = () => {
           })}
         </motion.div>
 
-        {/* Testimonials Section */}
         <motion.div
           className="mt-20"
           initial={{ opacity: 0 }}
@@ -186,7 +183,6 @@ const WhyWorkUsStaffing = () => {
 
           <div className="relative max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
             <div className="text-center">
-              {/* Rating Stars */}
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map(
                   (_, i) => (
@@ -212,7 +208,6 @@ const WhyWorkUsStaffing = () => {
               </div>
             </div>
 
-            {/* Navigation Arrows */}
             <button
               onClick={prevTestimonial}
               className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#F6F1EE] flex items-center justify-center text-[#000b30] hover:bg-[#D4AF37] hover:text-white transition-colors duration-300"
@@ -227,7 +222,6 @@ const WhyWorkUsStaffing = () => {
               <FaChevronRight className="w-5 h-5" />
             </button>
 
-            {/* Dots Indicator */}
             <div className="flex justify-center mt-6 space-x-2">
               {testimonials.map((_, index) => (
                 <button

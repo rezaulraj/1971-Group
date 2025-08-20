@@ -45,7 +45,6 @@ const FrequentlyAskedWeb3 = () => {
 
   return (
     <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-blue-900/50">
-      {/* Floating 3D elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(10)].map((_, i) => (
           <div
@@ -112,8 +111,7 @@ const FrequentlyAskedWeb3 = () => {
         </div>
       </div>
 
-      {/* Animation styles */}
-      <style jsx global>{`
+      <style jsx="true" global="true">{`
         @keyframes float {
           0%,
           100% {

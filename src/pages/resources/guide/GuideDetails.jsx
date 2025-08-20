@@ -127,7 +127,7 @@ const GuideHeader = ({ guide }) => (
 );
 
 const MainContent = ({ guide }) => {
-  const isEnhancedGuide = guide.id >= 5; // Check if guide is one of the new enhanced ones
+  const isEnhancedGuide = guide.id >= 5;
 
   return (
     <div className="lg:w-2/3">
@@ -328,7 +328,7 @@ const Sidebar = ({ guide }) => {
           return 3;
       }
     }
-    // Fallback for older guides
+
     switch (guide.field) {
       case "Technology":
         return 4;
