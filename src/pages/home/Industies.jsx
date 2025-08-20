@@ -30,7 +30,7 @@ import {
   FaPlaneDeparture,
 } from "react-icons/fa";
 import { FaShieldHalved } from "react-icons/fa6";
-import { GiWoodBeam } from "react-icons/gi";
+import { GiCargoShip, GiWoodBeam } from "react-icons/gi";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { MdOutlineRoomService } from "react-icons/md";
 import { PiStudentBold } from "react-icons/pi";
@@ -89,7 +89,7 @@ const Industries = () => {
     },
     {
       name: "Shipbuilding",
-      icon: <FaCar className="text-xl" />,
+      icon: <GiCargoShip className="text-xl" />,
       image:
         "https://plus.unsplash.com/premium_photo-1677535509270-2e557eb1ad4f?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
