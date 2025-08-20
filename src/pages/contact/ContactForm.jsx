@@ -8,7 +8,7 @@ import {
   FaCheck,
   FaArrowRight,
 } from "react-icons/fa";
-import Calendly from "../../components/Calendly"
+import Calendly from "../../components/Calendly";
 const ContactForm = () => {
   const [showCalendly, setShowCalendly] = useState(false);
   const [formData, setFormData] = useState({
@@ -45,11 +45,11 @@ const ContactForm = () => {
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 opacity-70"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float1"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 opacity-70"></div>
+        {/* <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float1"></div>
         <div className="absolute bottom-1/3 right-1/3 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float2"></div>
         <div className="absolute top-2/3 left-1/3 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float3"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float4"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float4"></div> */}
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -60,7 +60,7 @@ const ContactForm = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
+          <h2 className="text-4xl font-bold text-[#0a1a4d] sm:text-5xl mb-4">
             Contact Us
           </h2>
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -174,7 +174,7 @@ const ContactForm = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center group"
+                  className="w-full bg-gradient-to-r from-[#D4AF37]/90 to-[#D4AF37] text-[#0a1a4d] font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center group"
                 >
                   <span className="mr-2">Send Message</span>
                   <FaPaperPlane className="transform group-hover:translate-x-1 transition-transform" />
@@ -203,7 +203,7 @@ const ContactForm = () => {
 
                 <div className="space-y-6">
                   <div className="flex items-start group">
-                    <div className="flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-3 rounded-lg text-blue-600 group-hover:from-blue-200 group-hover:to-blue-300 transition-all">
+                    <div className="flex-shrink-0 bg-gradient-to-br from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95 p-3 rounded-lg text-white group-hover:from-[#D4AF37] group-hover:to-[#D4AF37] transition-all">
                       <FaPhone className="text-xl" />
                     </div>
                     <div className="ml-4">
@@ -215,7 +215,7 @@ const ContactForm = () => {
                   </div>
 
                   <div className="flex items-start group">
-                    <div className="flex-shrink-0 bg-gradient-to-br from-purple-100 to-purple-200 p-3 rounded-lg text-purple-600 group-hover:from-purple-200 group-hover:to-purple-300 transition-all">
+                    <div className="flex-shrink-0 bg-gradient-to-br from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95 p-3 rounded-lg text-white group-hover:from-[#D4AF37] group-hover:to-[#D4AF37] transition-all">
                       <FaEnvelope className="text-xl" />
                     </div>
                     <div className="ml-4">
@@ -227,7 +227,7 @@ const ContactForm = () => {
                   </div>
 
                   <div className="flex items-start group">
-                    <div className="flex-shrink-0 bg-gradient-to-br from-indigo-100 to-indigo-200 p-3 rounded-lg text-indigo-600 group-hover:from-indigo-200 group-hover:to-indigo-300 transition-all">
+                    <div className="flex-shrink-0 bg-gradient-to-br from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95 p-3 rounded-lg text-white group-hover:from-[#D4AF37] group-hover:to-[#D4AF37] transition-all">
                       <FaMapMarkerAlt className="text-xl" />
                     </div>
                     <div className="ml-4">
@@ -245,7 +245,7 @@ const ContactForm = () => {
                 <div className="mt-6">
                   <button
                     onClick={() => setShowCalendly(true)}
-                    className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-br from-blue-500 bg-purple-700 transition-all duration-300 text-white cursor-pointer hover:shadow-lg hover:scale-105"
+                    className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-r from-[#D4AF37]/90 to-[#D4AF37] text-[#0a1a4d] transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-105"
                   >
                     Book a Call
                     <FaArrowRight className="ml-2 animate-pulse" />

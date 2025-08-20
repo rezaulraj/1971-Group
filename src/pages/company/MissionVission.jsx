@@ -7,7 +7,17 @@ import {
   FaUsers,
   FaLightbulb,
   FaChartLine,
+  FaGlobe,
+  FaHeart,
 } from "react-icons/fa";
+
+// Sample Unsplash images (replace with your actual image paths)
+const missionImage =
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80";
+const visionImage =
+  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80";
+const valuesImage =
+  "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80";
 
 const MissionVision = () => {
   const container = {
@@ -39,140 +49,221 @@ const MissionVision = () => {
     },
   };
 
+  const coreValues = [
+    {
+      icon: <FaHandshake className="text-xl" />,
+      title: "Partnership",
+      description:
+        "We build lasting relationships based on trust and mutual success",
+    },
+    {
+      icon: <FaGlobe className="text-xl" />,
+      title: "Global Mindset",
+      description:
+        "We connect talent across borders to create diverse, high-performing teams",
+    },
+    {
+      icon: <FaHeart className="text-xl" />,
+      title: "Passion",
+      description:
+        "We're driven by our commitment to helping people and businesses thrive",
+    },
+    {
+      icon: <FaChartLine className="text-xl" />,
+      title: "Excellence",
+      description: "We pursue the highest standards in everything we do",
+    },
+  ];
+
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={container}
-      className="min-h-screen flex items-center justify-center p-4"
-    >
-      <div className="max-w-6xl w-full rounded-2xl overflow-hidden shadow-2xl">
+    <div className="bg-[#F6F1EE] py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
         <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
           variants={header}
-          className="bg-gradient-to-r from-purple-600 via-blue-500 to-teal-400 p-6 text-white text-center"
+          className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold">Our Core Values</h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.9 }}
-            transition={{ delay: 0.5 }}
-            className="mt-2 text-xl"
-          >
-            Driving success through people and partnerships
-          </motion.p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Our <span className="text-[#D4AF37]">Purpose</span> &{" "}
+            <span className="text-[#1a2a6b]">Promise</span>
+          </h1>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            The foundation of everything we do at 1971 Group
+          </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row bg-white">
-          <motion.div
-            variants={item}
-            className="w-full md:w-1/2 p-8 md:p-12 bg-gradient-to-br from-gray-50 to-blue-50"
-          >
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="flex items-center mb-6"
-            >
-              <motion.div
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 4 }}
-                className="bg-blue-100 p-3 rounded-full mr-4"
-              >
-                <FaRocket className="text-blue-600 text-2xl" />
-              </motion.div>
-              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-                Our Approach
-              </h2>
-            </motion.div>
+        {/* Mission Section */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={container}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"
+        >
+          <motion.div variants={item} className="order-2 lg:order-1">
+            <div className="flex items-center mb-6">
+              <div className="bg-[#D4AF37]/20 p-3 rounded-full mr-4">
+                <FaBullseye className="text-[#D4AF37] text-2xl" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
+            </div>
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              To connect ambitious organizations with exceptional global talent,
+              creating partnerships that drive growth, innovation, and lasting
+              success for both businesses and professionals.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <div className="bg-[#1a2a6b]/10 p-2 rounded-full mt-1 mr-4">
+                  <FaRocket className="text-[#1a2a6b] text-lg" />
+                </div>
+                <span className="text-gray-700">
+                  Accelerate hiring processes for fast-growing companies
+                </span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-[#1a2a6b]/10 p-2 rounded-full mt-1 mr-4">
+                  <FaUsers className="text-[#1a2a6b] text-lg" />
+                </div>
+                <span className="text-gray-700">
+                  Build diverse, high-performing teams across industries
+                </span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-[#1a2a6b]/10 p-2 rounded-full mt-1 mr-4">
+                  <FaHandshake className="text-[#1a2a6b] text-lg" />
+                </div>
+                <span className="text-gray-700">
+                  Create meaningful career opportunities worldwide
+                </span>
+              </li>
+            </ul>
+          </motion.div>
 
-            <motion.div variants={container} className="space-y-6">
-              {[
-                {
-                  icon: (
-                    <FaUsers className="text-teal-500 text-xl mt-1 mr-3 flex-shrink-0" />
-                  ),
-                  text: "At 1971 Group, we're a goal-driven team that values culture over rigid processes.",
-                },
-                {
-                  icon: (
-                    <FaChartLine className="text-purple-500 text-xl mt-1 mr-3 flex-shrink-0" />
-                  ),
-                  text: "We've created a workplace where growth, collaboration, and shared success are at the heart of everything we do.",
-                },
-                {
-                  icon: (
-                    <FaHandshake className="text-blue-500 text-xl mt-1 mr-3 flex-shrink-0" />
-                  ),
-                  text: "There's nothing more rewarding than learning together — and celebrating every win as one team.",
-                },
-                {
-                  icon: (
-                    <FaLightbulb className="text-yellow-500 text-xl mt-1 mr-3 flex-shrink-0" />
-                  ),
-                  text: "Get to know us, and you'll feel the energy that fuels our mission.",
-                },
-              ].map((point, index) => (
+          <motion.div variants={item} className="order-1 lg:order-2">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={missionImage}
+                alt="Our mission - diverse team collaborating"
+                className="w-full h-80 object-cover"
+              />
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Vision Section */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={container}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20"
+        >
+          <motion.div variants={item}>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={visionImage}
+                alt="Our vision - global business connections"
+                className="w-full h-80 object-cover"
+              />
+            </div>
+          </motion.div>
+
+          <motion.div variants={item}>
+            <div className="flex items-center mb-6">
+              <div className="bg-[#1a2a6b]/20 p-3 rounded-full mr-4">
+                <FaLightbulb className="text-[#1a2a6b] text-2xl" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
+            </div>
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              To redefine global recruitment by creating a world where
+              businesses effortlessly access the best talent and professionals
+              find opportunities that fuel their growth and purpose.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <div className="bg-[#D4AF37]/10 p-2 rounded-full mt-1 mr-4">
+                  <FaGlobe className="text-[#D4AF37] text-lg" />
+                </div>
+                <span className="text-gray-700">
+                  Become the most trusted global recruitment partner
+                </span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-[#D4AF37]/10 p-2 rounded-full mt-1 mr-4">
+                  <FaChartLine className="text-[#D4AF37] text-lg" />
+                </div>
+                <span className="text-gray-700">
+                  Set new standards for excellence in talent acquisition
+                </span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-[#D4AF37]/10 p-2 rounded-full mt-1 mr-4">
+                  <FaHeart className="text-[#D4AF37] text-lg" />
+                </div>
+                <span className="text-gray-700">
+                  Make meaningful impacts on businesses and careers worldwide
+                </span>
+              </li>
+            </ul>
+          </motion.div>
+        </motion.div>
+
+        {/* Core Values Section */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={container}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
+          <motion.div variants={item}>
+            <div className="flex items-center mb-6">
+              <div className="bg-[#D4AF37]/20 p-3 rounded-full mr-4">
+                <FaHeart className="text-[#D4AF37] text-2xl" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">Our Values</h2>
+            </div>
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              These core principles guide every decision we make and every
+              relationship we build:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {coreValues.map((value, index) => (
                 <motion.div
                   key={index}
-                  variants={item}
-                  whileHover={{ x: 5 }}
-                  className="flex items-start"
+                  whileHover={{ y: -5 }}
+                  className="bg-white p-5 rounded-xl shadow-md border border-white"
                 >
-                  {point.icon}
-                  <p className="text-lg text-gray-700">{point.text}</p>
+                  <div className="bg-[#1a2a6b]/10 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+                    {value.icon}
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{value.description}</p>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </motion.div>
 
-          <motion.div
-            variants={item}
-            className="w-full md:w-1/2 p-8 md:p-12 bg-gradient-to-br from-gray-50 to-purple-50"
-          >
-            <motion.div variants={container} className="mb-12">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center mb-4"
-              >
-                <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ repeat: Infinity, duration: 3 }}
-                  className="bg-purple-100 p-3 rounded-full mr-4"
-                >
-                  <FaBullseye className="text-purple-600 text-2xl" />
-                </motion.div>
-                <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-                  Our Mission
-                </h2>
-              </motion.div>
-              <motion.p variants={item} className="text-lg text-gray-700 pl-16">
-                To connect ambitious organizations with exceptional talent, building teams that create lasting impact.
-              </motion.p>
-            </motion.div>
-
-            <motion.div variants={container}>
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center mb-4"
-              >
-                <motion.div
-                  animate={{ rotate: [0, 15, -15, 0] }}
-                  transition={{ repeat: Infinity, duration: 4 }}
-                  className="bg-pink-100 p-3 rounded-full mr-4"
-                >
-                  <FaLightbulb className="text-pink-600 text-2xl" />
-                </motion.div>
-                <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-red-600">
-                  Our Vision
-                </h2>
-              </motion.div>
-              <motion.p variants={item} className="text-lg text-gray-700 pl-16">
-                To be the trusted recruitment partner of choice for both clients and candidates, every time.
-              </motion.p>
-            </motion.div>
+          <motion.div variants={item}>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={valuesImage}
+                alt="Our values - team collaboration and trust"
+                className="w-full h-80 object-cover"
+              />
+            </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -9,11 +9,11 @@ import {
   FaPiggyBank,
   FaBriefcase,
   FaChartLine,
+  FaHandshake,
+  FaAward,
+  FaUsers,
 } from "react-icons/fa";
-import heroi1 from "../../assets/company/c1.webp";
-import heroi3 from "../../assets/company/c3.jpg";
-import heroi5 from "../../assets/company/c5.jpeg";
-import heroi6 from "../../assets/company/c7.jpeg";
+import companybg from "../../assets/company/companybg.jpg?url";
 import clogo1 from "../../assets/clined/cl1.png?url";
 import clogo2 from "../../assets/clined/cl2.png?url";
 import clogo3 from "../../assets/clined/cl3.png?url";
@@ -33,24 +33,20 @@ const HeroCompany = () => {
 
   const features = [
     {
-      icon: <FaGlobe className="text-teal-400" size={20} />,
-      text: "Access to a broad global talent network",
+      icon: <FaGlobe className="text-2xl" />,
+      title: "Global Talent Network",
+      text: "Access to a broad global talent network across 80+ countries",
     },
     {
-      icon: <FaRocket className="text-purple-400" size={20} />,
-      text: "Accelerated hiring processes",
+      icon: <FaRocket className="text-2xl" />,
+      title: "Accelerated Hiring",
+      text: "Streamlined processes that reduce time-to-hire by up to 50%",
     },
     {
-      icon: <FaUserTie className="text-blue-400" size={20} />,
-      text: "Experienced and specialized recruitment teams",
+      icon: <FaUserTie className="text-2xl" />,
+      title: "Expert Recruiters",
+      text: "Specialized recruitment teams with industry expertise",
     },
-  ];
-
-  const companyImages = [
-    { src: heroi1, alt: "Tech team working" },
-    { src: heroi3, alt: "Team meeting" },
-    { src: heroi5, alt: "Company event" },
-    { src: heroi6, alt: "Team collaboration" },
   ];
 
   const ourClient = [
@@ -63,9 +59,10 @@ const HeroCompany = () => {
     { clogo: clogo7 },
     { clogo: clogo8 },
   ];
+
   const achievements = [
     {
-      icon: <FaBuilding className="text-blue-400" size={24} />,
+      icon: <FaBuilding className="text-2xl" />,
       value: 70,
       suffix: "+",
       title: "Companies Transformed",
@@ -73,7 +70,7 @@ const HeroCompany = () => {
         "We've helped over 70+ businesses optimize their hiring processes and boost profitability.",
     },
     {
-      icon: <FaPiggyBank className="text-green-400" size={24} />,
+      icon: <FaPiggyBank className="text-2xl" />,
       value: 32,
       suffix: "%",
       title: "Average Cost Savings",
@@ -81,20 +78,41 @@ const HeroCompany = () => {
         "Our clients save an average of 32% on recruitment expenses with our efficient hiring solutions.",
     },
     {
-      icon: <FaBriefcase className="text-purple-400" size={24} />,
+      icon: <FaBriefcase className="text-2xl" />,
       value: 150,
       suffix: "+",
-      title: "Hires at Top Global Companies",
+      title: "Hires at Top Companies",
       description:
         "Hundreds of our candidates are now thriving at some of the world's leading organizations.",
     },
     {
-      icon: <FaChartLine className="text-teal-400" size={24} />,
+      icon: <FaChartLine className="text-2xl" />,
       value: 97.8,
       suffix: "%",
       title: "Probation Success Rate",
       description:
         "Nearly all specialists we place successfully pass their probation periods, proving the quality of our selection process.",
+    },
+  ];
+
+  const benefits = [
+    {
+      icon: <FaHandshake className="text-2xl" />,
+      title: "Partnership Approach",
+      description:
+        "We become an extension of your team, understanding your unique culture and needs",
+    },
+    {
+      icon: <FaAward className="text-2xl" />,
+      title: "Quality Guarantee",
+      description:
+        "Rigorous vetting process ensures only the top 5% of candidates make it through",
+    },
+    {
+      icon: <FaUsers className="text-2xl" />,
+      title: "Cultural Fit",
+      description:
+        "We prioritize candidates who align with your company values and long-term vision",
     },
   ];
 
@@ -110,7 +128,7 @@ const HeroCompany = () => {
         setCounters({
           companies: Math.floor(progress * 70),
           savings: Math.floor(progress * 32),
-          hires: Math.floor(progress * 100),
+          hires: Math.floor(progress * 150),
           successRate: parseFloat((progress * 97.8).toFixed(1)),
         });
 
@@ -126,193 +144,228 @@ const HeroCompany = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
-      <svg
-        className="absolute inset-0 w-full h-full -z-10"
-        preserveAspectRatio="none"
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Background with Company Image and Gradient */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${companybg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
       >
-        <defs>
-          <linearGradient
-            id="hero-gradient"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
-            <stop offset="0%" stopColor="#f0f9ff" />
-            <stop offset="50%" stopColor="#e0f2fe" />
-            <stop offset="100%" stopColor="#bae6fd" />
-          </linearGradient>
-          <pattern
-            id="grid-pattern"
-            width="60"
-            height="60"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect width="60" height="60" fill="url(#hero-gradient)" />
-            <path
-              d="M60 0L0 60"
-              stroke="rgba(255,255,255,0.3)"
-              strokeWidth="1"
-            />
-            <path
-              d="M-60 60L60-60"
-              stroke="rgba(255,255,255,0.3)"
-              strokeWidth="1"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width="100%"
-          height="100%"
-          fill="url(#grid-pattern)"
-          opacity="0.8"
-        />
-        <rect
-          width="100%"
-          height="100%"
-          fill="url(#hero-gradient)"
-          opacity="0.4"
-        />
-      </svg>
-
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500">
-              Worldwide Recruitment & Staffing Solutions for Growing Businesses
-            </h1>
-
-            <p className="text-xl text-gray-700">
-              We provide tailored recruitment services that enable companies to
-              scale efficiently, strategically, and sustainably.
-            </p>
-
-            <div className="space-y-4">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
-                  className="flex items-center bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <span className="mr-3 bg-gradient-to-br from-blue-100 to-teal-100 p-2 rounded-full">
-                    {feature.icon}
-                  </span>
-                  <span className="text-gray-800 font-medium">
-                    {feature.text}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-600 to-teal-500 text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all flex items-center shadow-md"
-            >
-              Book a Call Today
-              <FaArrowRight className="ml-2" />
-            </motion.button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-4"
-          >
-            {companyImages.map((image, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -5 }}
-                className={`relative rounded-xl overflow-hidden shadow-lg ${
-                  index === 0 || index === 3 ? "h-64" : "h-48"
-                }`}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 via-transparent to-transparent"></div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-16 pt-8 border-t border-gray-300/50"
-        >
-          <p className="text-center text-2xl text-gray-600 mb-6 font-medium">
-            Trusted by innovative companies worldwide
-          </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            {ourClient.map((logo, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.1 }}
-                className="h-12 grayscale hover:grayscale-0 transition-all bg-white/80 backdrop-blur-sm p-2 rounded-lg"
-              >
-                <img
-                  src={logo.src}
-                  alt="Cliend Logo"
-                  className="h-full object-contain opacity-80 hover:opacity-100"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95"></div>
       </div>
 
-      <div className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float3"></div>
+      </div>
+
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        {/* Main Content */}
+        <div className="grid grid-cols-1 gap-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 text-center"
+          >
+            <div className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/20 max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                About 1971 Group
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#D4AF37] mb-6">
+                Global Recruitment Solutions Partner
+              </h2>
+              <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                Founded with a vision to transform how companies access global
+                talent, 1971 Group has become a trusted partner for businesses
+                seeking to scale efficiently, strategically, and sustainably
+                through exceptional recruitment solutions.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 group"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-4 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300 mx-auto">
+                      {feature.icon}
+                    </div>
+                    <h4 className="text-xl font-semibold text-white text-center mb-2">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-200 text-center text-sm">
+                      {feature.text}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Benefits Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="relative z-10"
+          >
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+                Our Approach to Recruitment
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 group"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-4 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300 mx-auto">
+                      {benefit.icon}
+                    </div>
+                    <h4 className="text-xl font-semibold text-white text-center mb-2">
+                      {benefit.title}
+                    </h4>
+                    <p className="text-gray-200 text-center text-sm">
+                      {benefit.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Clients Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Trusted By Industry Leaders
+              </h3>
+              <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+                We partner with forward-thinking companies across industries who
+                rely on our expertise to build high-performing teams that drive
+                innovation and growth.
+              </p>
+
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-12">
+                {ourClient.map((client, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                    className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+                  >
+                    <img
+                      src={client.clogo}
+                      alt={`Client Logo ${index + 1}`}
+                      className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Achievements Section */}
+      <div className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a1a4d]/90 to-[#000b30]/90">
         <div className="max-w-7xl mx-auto">
-          <motion.section
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Our Achievements
-            </h2>
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+              <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-12">
+                Our Impact & Achievements
+              </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {achievements.map((achievement, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ y: -5 }}
-                  className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-all"
-                >
-                  <div className="flex items-center justify-center w-14 h-14 bg-gray-700 rounded-full mb-4">
-                    {achievement.icon}
-                  </div>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {index === 0 && counters.companies}
-                    {index === 1 && counters.savings}
-                    {index === 2 && counters.hires}
-                    {index === 3 && counters.successRate}
-                    {achievement.suffix}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {achievement.title}
-                  </h3>
-                  <p className="text-gray-400">{achievement.description}</p>
-                </motion.div>
-              ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {achievements.map((achievement, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ y: -5 }}
+                    className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 text-center"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-4 text-[#D4AF37] mx-auto">
+                      {achievement.icon}
+                    </div>
+                    <div className="text-4xl font-bold text-white mb-2">
+                      {index === 0 && counters.companies}
+                      {index === 1 && counters.savings}
+                      {index === 2 && counters.hires}
+                      {index === 3 && counters.successRate}
+                      {achievement.suffix}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {achievement.title}
+                    </h3>
+                    <p className="text-gray-200 text-sm">
+                      {achievement.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </motion.section>
+          </motion.div>
         </div>
       </div>
+
+      <style jsx="true" global="true">{`
+        @keyframes float1 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(20px, -20px) rotate(5deg);
+          }
+        }
+        @keyframes float2 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(-15px, 15px) rotate(-5deg);
+          }
+        }
+        @keyframes float3 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(15px, 20px) rotate(3deg);
+          }
+        }
+        .animate-float1 {
+          animation: float1 15s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float2 18s ease-in-out infinite;
+        }
+        .animate-float3 {
+          animation: float3 20s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 };

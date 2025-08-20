@@ -68,7 +68,7 @@ const CompanyBlog = () => {
         {/* Header */}
         <motion.div variants={item} className="text-center mb-16">
           <motion.div whileHover={{ scale: 1.1 }} className="inline-block mb-6">
-            <FaSearch className="text-4xl text-blue-600" />
+            <FaSearch className="text-4xl text-[#D4AF37]" />
           </motion.div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Recruitment Insights at Their Best
@@ -123,7 +123,7 @@ const CompanyBlog = () => {
                 <div className="mt-6">
                   <a
                     href="/blogs"
-                    className=" px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-full shadow-md"
+                    className=" px-6 py-2 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37]/80 text-white font-medium rounded-full shadow-md"
                   >
                     Read More
                   </a>

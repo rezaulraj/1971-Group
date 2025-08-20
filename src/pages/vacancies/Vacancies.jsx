@@ -46,7 +46,7 @@ const Vacancies = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-indigo-800 mb-4">
+          <h1 className="text-4xl font-bold text-[#0a1a4d] mb-4">
             Join Our Team
           </h1>
           <p className="text-xl text-gray-600">
@@ -59,9 +59,9 @@ const Vacancies = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-4">
               <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <FiBriefcase className="text-indigo-600 text-xl" />
+                <FiBriefcase className="text-[#0a1a4d] text-xl" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-[#0a1a4d]">
                 Warehouse Associate
               </h3>
             </div>
@@ -85,9 +85,9 @@ const Vacancies = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-4">
               <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <FiBriefcase className="text-indigo-600 text-xl" />
+                <FiBriefcase className="text-[#0a1a4d] text-xl" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-[#0a1a4d]">
                 Delivery Driver
               </h3>
             </div>
@@ -111,9 +111,9 @@ const Vacancies = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-4">
               <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <FiHome className="text-indigo-600 text-xl" />
+                <FiHome className="text-[#0a1a4d] text-xl" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-[#0a1a4d]">
                 Construction Worker
               </h3>
             </div>
@@ -137,9 +137,9 @@ const Vacancies = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-4">
               <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <FiTool className="text-indigo-600 text-xl" />
+                <FiTool className="text-[#0a1a4d] text-xl" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-[#0a1a4d]">
                 Cleaner / Janitor
               </h3>
             </div>
@@ -163,9 +163,9 @@ const Vacancies = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-4">
               <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <FiDroplet className="text-indigo-600 text-xl" />
+                <FiDroplet className="text-[#0a1a4d] text-xl" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">Plumber</h3>
+              <h3 className="text-xl font-semibold text-[#0a1a4d]">Plumber</h3>
             </div>
             <p className="text-gray-600 mb-4">
               Licensed plumbers needed for residential and commercial projects.
@@ -186,9 +186,9 @@ const Vacancies = () => {
           <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
             <div className="flex items-center mb-4">
               <div className="bg-indigo-100 p-3 rounded-full mr-4">
-                <FiZap className="text-indigo-600 text-xl" />
+                <FiZap className="text-[#0a1a4d] text-xl" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-[#0a1a4d]">
                 Electrician
               </h3>
             </div>
@@ -211,7 +211,7 @@ const Vacancies = () => {
         </div>
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-700/80 p-6">
+          <div className="bg-gradient-to-br from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95 p-6">
             <h2 className="text-2xl font-bold text-white">
               Apply for Position
             </h2>
@@ -384,7 +384,7 @@ const Vacancies = () => {
             <div className="mt-8">
               <button
                 type="submit"
-                className="w-full bg-indigo-600/90 hover:bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg transition duration-200"
+                className="w-full bg-[#D4AF37]/90 hover:bg-[#D4AF37] text-[#0a1a4d] font-bold py-3 px-4 rounded-lg transition duration-200 cursor-pointer"
               >
                 Submit Application
               </button>

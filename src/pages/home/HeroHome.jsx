@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { FaArrowRight, FaClock, FaStar, FaUserTie } from "react-icons/fa";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import herogrobaltanent from "../../assets/home/grobaltanent.webp?url";
 import clogo1 from "../../assets/clined/cl1.png?url";
 import clogo2 from "../../assets/clined/cl2.png?url";
 import clogo3 from "../../assets/clined/cl3.png?url";
@@ -11,53 +10,20 @@ import clogo6 from "../../assets/clined/cl6.png?url";
 import clogo7 from "../../assets/clined/cl7.png?url";
 import clogo8 from "../../assets/clined/cl8.png?url";
 import Calendly from "../../components/Calendly";
+import {
+  FaArrowRight,
+  FaClock,
+  FaStar,
+  FaUserTie,
+  FaGlobe,
+  FaHandshake,
+  FaChartLine,
+  FaAward,
+  FaRocket,
+} from "react-icons/fa";
+
 const HeroHome = () => {
-  const controls = useAnimation();
   const [showCalendly, setShowCalendly] = useState(false);
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hover: {
-      y: -10,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    },
-  };
 
   const ourClient = [
     { clogo: clogo1 },
@@ -70,67 +36,111 @@ const HeroHome = () => {
     { clogo: clogo8 },
   ];
 
-  return (
-    <div className="relative overflow-hidden" ref={ref}>
-      <motion.div
-        className="absolute inset-0 z-0 h-full w-full"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, #000b30 0%, #0a1a4d 50%, #1a2a6b 100%)",
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M15 15h30v30H15z' fill='%23ffffff' fill-opacity='0.2'/%3E%3C/svg%3E")`,
-            backgroundSize: "60px 60px",
-          }}
-          aria-hidden="true"
-        />
-      </motion.div>
+  const stats = [
+    {
+      icon: <FaClock className="text-2xl" />,
+      value: "4 weeks",
+      label: "Average time to fill positions",
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "bg-emerald-500/20",
+    },
+    {
+      icon: <FaStar className="text-2xl" />,
+      value: "40+",
+      label: "Glowing client testimonials",
+      color: "from-amber-500 to-amber-600",
+      bgColor: "bg-amber-500/20",
+    },
+    {
+      icon: <FaUserTie className="text-2xl" />,
+      value: "350+",
+      label: "Top professionals successfully placed",
+      color: "from-indigo-500 to-indigo-600",
+      bgColor: "bg-indigo-500/20",
+    },
+  ];
 
-      <section className="relative pt-16 pb-0 md:pt-20 lg:pt-24">
-        <div className="container mx-auto px-4 relative z-10">
+  const benefits = [
+    {
+      icon: <FaGlobe className="text-2xl" />,
+      title: "Global Talent Access",
+      description:
+        "Connect with exceptional professionals from 80+ countries worldwide",
+    },
+    {
+      icon: <FaHandshake className="text-2xl" />,
+      title: "Trusted Partnership",
+      description: "15+ years of recruitment excellence with proven results",
+    },
+    {
+      icon: <FaChartLine className="text-2xl" />,
+      title: "Growth Acceleration",
+      description: "Talent solutions designed to drive your business forward",
+    },
+    {
+      icon: <FaAward className="text-2xl" />,
+      title: "Award-Winning Service",
+      description: "Recognized for excellence in global recruitment",
+    },
+    {
+      icon: <FaRocket className="text-2xl" />,
+      title: "Rapid Placement",
+      description: "Streamlined process for faster hiring outcomes",
+    },
+  ];
+
+  return (
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Background with Gradient */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${herogrobaltanent})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95"></div>
+      </div>
+
+      {/* Animated Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float3"></div>
+      </div>
+
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            className="flex flex-col lg:flex-row items-center"
-            variants={containerVariants}
-            initial="hidden"
-            animate={controls}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center lg:text-left"
           >
-            <motion.div
-              className="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8"
-              variants={itemVariants}
-            >
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                <span className="text-[#D4AF37]">Global Tech Recruitment</span>{" "}
-                <br />
-                <span className="font-light text-[#F9FAFB]">
-                  for Fast-Growing Companies
+                <span className="text-[#D4AF37]">Global Talent</span>{" "}
+                <span className="font-light">Recruitment</span> <br />
+                <span className="font-light text-white">
+                  for Visionary Companies
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-                1971 Group is your Gulf-based gateway to top-tier global talent.
-                We're professionals who simplify and streamline your hiring
-                process whether you're scaling a startup or expanding a
-                multinational.
+                1971 Group is your premier Gulf-based partner for accessing
+                world-class talent. We simplify global hiring with tailored
+                solutions that help fast-growing companies build exceptional
+                teams and accelerate their success.
               </p>
               <motion.button
                 onClick={() => setShowCalendly(true)}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 8px 25px rgba(99, 102, 241, 0.6)",
-                }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center px-8 py-4 rounded-full text-lg font-bold bg-[#D4AF37] text-[#000b30]  transition-all duration-300 cursor-pointer"
-                
+                className="flex items-center justify-center lg:justify-start px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] transition-all duration-300 mx-auto lg:mx-0"
               >
-                Hire Talent
+                Discover Talent Solutions
                 <motion.span
                   animate={{ x: [0, 5, 0] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
@@ -139,117 +149,150 @@ const HeroHome = () => {
                   <FaArrowRight />
                 </motion.span>
               </motion.button>
-            </motion.div>
+            </div>
+          </motion.div>
 
-            <motion.div
-              className="lg:w-1/2 relative mt-10 lg:mt-0"
-              variants={itemVariants}
-            >
-              <div className="relative h-full max-w-md mx-auto">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.4, duration: 0.8 }}
-                  className="relative h-full rounded-tl-[100px] rounded-br-[100px] overflow-hidden"
-                >
-                  <div className="grid grid-rows-3 h-full gap-4 p-6">
-                    <motion.div
-                      variants={cardVariants}
-                      whileHover="hover"
-                      className="bg-white rounded-tl-[50px] rounded-br-[50px] shadow-xl flex items-center justify-center p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 border-t-4 border-emerald-500"
-                    >
-                      <div className="flex items-center">
-                        <div className="mr-4 p-3 rounded-full bg-emerald-500/20">
-                          <FaClock className="text-2xl text-emerald-600" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-slate-800">
-                            4 weeks
-                          </h3>
-                          <p className="text-slate-900 text-lg font-semibold">
-                            On Average To Close A Vacancy
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-
-                    <motion.div
-                      variants={cardVariants}
-                      whileHover="hover"
-                      className="bg-white rounded-tl-[50px] rounded-br-[50px] shadow-xl flex items-center justify-center p-6 bg-gradient-to-br from-amber-50 to-amber-100 border-t-4 border-amber-500"
-                    >
-                      <div className="flex items-center">
-                        <div className="mr-4 p-3 rounded-full bg-amber-500/20">
-                          <FaStar className="text-2xl text-amber-600" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-slate-800">
-                            40+
-                          </h3>
-                          <p className=" text-slate-900 text-lg font-semibold">
-                            Positive reviews as a top-rated global agency
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-
-                    <motion.div
-                      variants={cardVariants}
-                      whileHover="hover"
-                      className="bg-white rounded-tl-[50px] rounded-br-[50px] shadow-xl flex items-center justify-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 border-t-4 border-indigo-500"
-                    >
-                      <div className="flex items-center">
-                        <div className="mr-4 p-3 rounded-full bg-indigo-500/20">
-                          <FaUserTie className="text-2xl text-indigo-600" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-slate-800">
-                            350+
-                          </h3>
-                          <p className="text-slate-900 text-lg font-semibold">
-                            Professionals placed in leading companies worldwide
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
+          {/* Stats Cards */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-1 gap-6"
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -5 }}
+                className="bg-white/10 backdrop-blur-md p-6 rounded-tl-[45px] rounded-br-[45px] border border-white/20 hover:border-[#D4AF37]/30 transition-all duration-300"
+              >
+                <div className="flex items-center">
+                  <div className={`p-4 rounded-full ${stat.bgColor} mr-4`}>
+                    {stat.icon}
                   </div>
-                </motion.div>
-              </div>
-            </motion.div>
+                  <div>
+                    <h3
+                      className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
+                    >
+                      {stat.value}
+                    </h3>
+                    <p className="text-gray-200 font-medium">{stat.label}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
-      </section>
 
-      <div className="pt-16 md:pt-14 lg:pt-12"></div>
-
-      <section className="relative py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-blue-900/5 to-transparent"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-2xl font-bold text-center mb-8 text-slate-800">
-            Trusted By Industry Leaders
-          </h2>
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
-            {ourClient.map((item, index) => (
-              <div
-                key={index}
-                className="p-2 bg-white rounded-lg transition-all duration-300 hover:shadow-md hover:-translate-y-1"
-                style={{
-                  boxShadow: "0 2px 4px rgba(15, 23, 42, 0.1)",
-                }}
-              >
-                <div className="h-8 md:h-10 w-20 md:w-28 flex items-center justify-center">
-                  <img
-                    src={item.clogo}
-                    alt="Client logo"
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              </div>
-            ))}
+        {/* Benefits Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-12">
+              Why Partner With 1971 Group?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300 group text-center"
+                >
+                  <div className="w-14 h-14 rounded-full bg-[#D4AF37]/20 flex items-center justify-center mb-4 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-colors duration-300 mx-auto">
+                    {benefit.icon}
+                  </div>
+                  <h4 className="text-xl font-semibold text-white mb-2">
+                    {benefit.title}
+                  </h4>
+                  <p className="text-gray-200 text-sm">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+
+        {/* Clients Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-20 text-center"
+        >
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Trusted By Industry Innovators
+            </h3>
+            <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+              We partner with forward-thinking companies across industries who
+              rely on our expertise to build high-performing teams that drive
+              innovation and growth.
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-12">
+              {ourClient.map((client, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-300"
+                >
+                  <img
+                    src={client.clogo}
+                    alt={`Client Logo ${index + 1}`}
+                    className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       <Calendly show={showCalendly} onClose={() => setShowCalendly(false)} />
+
+      <style jsx="true" global="true">{`
+        @keyframes float1 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(20px, -20px) rotate(5deg);
+          }
+        }
+        @keyframes float2 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(-15px, 15px) rotate(-5deg);
+          }
+        }
+        @keyframes float3 {
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          50% {
+            transform: translate(15px, 20px) rotate(3deg);
+          }
+        }
+        .animate-float1 {
+          animation: float1 15s ease-in-out infinite;
+        }
+        .animate-float2 {
+          animation: float2 18s ease-in-out infinite;
+        }
+        .animate-float3 {
+          animation: float3 20s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 };
