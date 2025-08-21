@@ -81,7 +81,7 @@ const PayRecuitBlog = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Recruitment Insights & Trends
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#D4AF37] to-purple-600 mx-auto rounded-full"></div>
         </motion.div>
 
         <motion.div
@@ -121,7 +121,7 @@ const PayRecuitBlog = () => {
                 </p>
                 <a
                   href="/blogs"
-                  className={`flex items-center gap-2 text-sm cursor-pointer font-medium ${post.color} hover:underline`}
+                  className={`flex items-center gap-2 text-sm cursor-pointer font-medium text-[#D4AF37] hover:underline`}
                 >
                   Read more
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />

@@ -10,13 +10,14 @@ import {
   FaHandshake,
   FaCar,
 } from "react-icons/fa";
-import benefitc1 from "../../../assets/allservice/be1.webp";
-import benefitc2 from "../../../assets/allservice/be2.webp";
-import benefitc3 from "../../../assets/allservice/be3.webp";
-import benefitc4 from "../../../assets/allservice/be4.webp";
-import benefitc5 from "../../../assets/allservice/be5.webp";
-import benefitc6 from "../../../assets/allservice/be6.webp";
-import benefitc7 from "../../../assets/allservice/be7.webp";
+import clogo1 from "../../../assets/clined/cl1.png?url";
+import clogo2 from "../../../assets/clined/cl2.png?url";
+import clogo3 from "../../../assets/clined/cl3.png?url";
+import clogo4 from "../../../assets/clined/cl4.png?url";
+import clogo5 from "../../../assets/clined/cl5.png?url";
+import clogo6 from "../../../assets/clined/cl6.png?url";
+import clogo7 from "../../../assets/clined/cl7.png?url";
+import clogo8 from "../../../assets/clined/cl8.png?url";
 import bgkeybenific from "../../../assets/industry/keybenific.jpeg";
 
 const Benefits = () => {
@@ -88,13 +89,14 @@ const Benefits = () => {
   ];
 
   const logos = [
-    benefitc1,
-    benefitc2,
-    benefitc3,
-    benefitc4,
-    benefitc5,
-    benefitc6,
-    benefitc7,
+    clogo1,
+    clogo2,
+    clogo3,
+    clogo4,
+    clogo5,
+    clogo6,
+    clogo7,
+    clogo8,
   ];
 
   const container = {
@@ -135,7 +137,6 @@ const Benefits = () => {
 
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
- 
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -148,7 +149,6 @@ const Benefits = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/85 to-[#1a2a6b]/90"></div>
       </div>
 
-    
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <motion.div
           className="absolute top-0 left-0 w-64 h-64 bg-[#D4AF37] rounded-full mix-blend-overlay filter blur-3xl"
@@ -242,7 +242,6 @@ const Benefits = () => {
             </motion.div>
           ))}
         </motion.div>
-
 
         <div className="mt-24 overflow-hidden py-8">
           <motion.div

@@ -29,7 +29,7 @@ const GuideCard = ({ guide }) => (
     </div>
 
     <div className="p-6">
-      <span className="inline-block px-3 py-1 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full mb-2">
+      <span className="inline-block px-3 py-1 text-sm font-semibold text-[#a5810b] bg-blue-100 rounded-full mb-2">
         {guide.field}
       </span>
 
@@ -47,7 +47,7 @@ const GuideCard = ({ guide }) => (
 
       <Link
         to={`/guides/${guide.slug}`}
-        className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
+        className="inline-block mt-4 px-4 py-2 bg-[#b89113] text-[#000b30] font-medium rounded-md hover:bg-blue-700 transition-colors"
       >
         Read Guide
       </Link>

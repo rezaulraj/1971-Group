@@ -287,7 +287,7 @@ const Blogs = () => {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
-                    <span className="absolute top-4 right-4 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center">
+                    <span className="absolute top-4 right-4 bg-[#D4AF37] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center">
                       <MdCategory className="mr-1" /> {blog.category}
                     </span>
                   </div>
@@ -309,7 +309,7 @@ const Blogs = () => {
                       </span>
                     </div>
 
-                    <div className="mt-4 flex items-center text-indigo-600 font-medium group-hover:text-indigo-800 transition-colors">
+                    <div className="mt-4 flex items-center text-[#b89113] font-medium group-hover:text-[#9b790a] transition-colors">
                       Read more
                       <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                     </div>

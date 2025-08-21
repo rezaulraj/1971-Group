@@ -6,7 +6,7 @@ import ceo from "../../../assets/allservice/ceo.jpeg?url";
 const ServicesRecuit = () => {
   const services = [
     {
-      icon: <FiLayers className="w-6 h-6 text-blue-600" />,
+      icon: <FiLayers className="w-6 h-6 text-[#D4AF37]" />,
       title: "Limitless IT Recruitment with 1971 group",
       description:
         "At 1971 Group, we thrive on challenges. Our expert team is ready to tackle even the most complex IT hiring needs with precision and confidence.",
@@ -14,7 +14,7 @@ const ServicesRecuit = () => {
       bg: "bg-blue-50",
     },
     {
-      icon: <FiMic className="w-6 h-6 text-blue-600" />,
+      icon: <FiMic className="w-6 h-6 text-[#D4AF37]" />,
       title: "CEO Insights: Meeting Every Hiring Demand",
       description:
         "In this exclusive interview, the CEO of 1971 Group  reveals how our flexible recruitment model is designed to meet a wide range of talent acquisition needs, from junior roles to executive hires.",
@@ -22,7 +22,7 @@ const ServicesRecuit = () => {
       image: ceo,
     },
     {
-      icon: <FiDollarSign className="w-6 h-6 text-blue-600" />,
+      icon: <FiDollarSign className="w-6 h-6 text-[#D4AF37]" />,
       title: "Pay-Per-Hire Recruitment: A Smart, Risk-Free Start",
       description:
         "Our comprehensive pay-per-hire solution is perfect for companies seeking a dependable recruitment partner pay only when the right candidate is successfully placed.",
@@ -35,11 +35,11 @@ const ServicesRecuit = () => {
     <div className="bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-950 sm:text-4xl">
             Explore Our Recruitment Services
           </h2>
           <p className="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
-            Discover how OnHires delivers flexible, results-driven hiring
+            Discover how 1971 Group delivers flexible, results-driven hiring
             solutions tailored to your needs.
           </p>
         </div>
@@ -60,7 +60,7 @@ const ServicesRecuit = () => {
                 </div>
               )}
               <div className="p-8">
-                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-white text-blue-600 shadow-sm mx-auto">
+                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-white text-[#D4AF37] shadow-sm mx-auto">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
@@ -72,7 +72,7 @@ const ServicesRecuit = () => {
                 <div className="text-center">
                   <a
                     href="/blogs"
-                    className="inline-flex items-center px-6 py-2 border border-transparent text-sm font-medium rounded-md text-white  bg-blue-600 hover:bg-blue-700 transition-colors group"
+                    className="inline-flex items-center px-6 py-2 border border-transparent text-sm font-medium rounded-md text-black  bg-[#D4AF37] hover:bg-[#caa21e] transition-colors group"
                   >
                     Learn more
                     <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />

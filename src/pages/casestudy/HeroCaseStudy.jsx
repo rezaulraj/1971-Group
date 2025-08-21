@@ -102,10 +102,13 @@ const HeroCaseStudy = () => {
               Read, enjoy and implement!
             </p>
 
-            <button className="flex items-center px-8 py-4 bg-[#000b30] text-[#D4AF37] rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 group">
+            <a
+              href="/blogs"
+              className="inline-flex items-center px-8 py-4 bg-[#000b30] text-[#D4AF37] rounded-lg font-bold hover:bg-[#D4AF37] hover:text-[#000b30] transition-all duration-300 group"
+            >
               <span>Explore Case Studies</span>
               <FiArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
 
