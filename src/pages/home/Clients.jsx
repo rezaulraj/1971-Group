@@ -8,50 +8,51 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 const testimonials = [
   {
     quote:
-      "“The most impressive aspect of the 1971 Group was their round-the-clock communication.”",
-    author: "Founder & CEO, Generect Inc",
-    position: "Technology Industry",
+      "“Working in the construction sector with 1971 Group was seamless. They ensured the workforce was skilled and reliable.”",
+    author: "Project Manager",
+    position: "Construction",
     verified: true,
     rating: 5,
   },
   {
     quote:
-      "“They stand out for their specialized approach, creative thinking, and data-driven strategies.”",
-    author: "CEO, OrbitEdge Labs",
-    position: "AI Research Sector",
+      "“Their recruitment support in the hospitality industry has been top-notch. We received motivated staff that fit our needs perfectly.”",
+    author: "Hotel Operations Head",
+    position: "Hospitality",
     verified: true,
     rating: 5,
   },
   {
-    quote: "“Our experience with the 1971 Group was overwhelmingly positive.”",
-    author: "CEO, Recursion",
-    position: "Healthcare Technology",
+    quote:
+      "“The electricians sourced through 1971 Group were not only highly trained but also safety compliant.”",
+    author: "Site Supervisor",
+    position: "Electrical Services",
     verified: true,
     rating: 4,
   },
   {
     quote:
-      "“They consistently provided progress updates, candidate feedback, and support throughout the process.”",
-    author: "Founder, Vertex Consulting",
-    position: "Management Consulting",
+      "“Our factory operations became more efficient thanks to the hardworking manpower provided.”",
+    author: "Factory Owner",
+    position: "Manufacturing",
     verified: true,
     rating: 5,
   },
   {
     quote:
-      "“They sourced candidates who perfectly aligned with our team culture and values.”",
-    author: "CTO, QuantumStack",
-    position: "Quantum Computing",
+      "“They connected us with skilled carpenters who elevated the quality of our woodwork projects.”",
+    author: "Furniture Business Owner",
+    position: "Wood Industry",
     verified: true,
     rating: 5,
   },
   {
     quote:
-      "“Their exceptional team made a significant impact on the success of our projects.”",
-    author: "Co-Founder, CloudBridge Ventures",
-    position: "Cloud Infrastructure",
+      "“Their team made it easy to find reliable drivers and delivery staff, streamlining our logistics.”",
+    author: "Logistics Manager",
+    position: "Transportation",
     verified: true,
-    rating: 5,
+    rating: 4,
   },
 ];
 

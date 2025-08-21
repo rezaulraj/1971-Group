@@ -16,7 +16,7 @@ import Calendly from "../../components/Calendly";
 
 const HireWorkers = () => {
   const [showCalendly, setShowCalendly] = useState(false);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  // const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const benefits = [
     {
@@ -57,29 +57,29 @@ const HireWorkers = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      position: "HR Director, Tech Innovations Inc.",
-      content:
-        "The quality of candidates from 1971 Group is exceptional. We've reduced our hiring time by 60% and improved retention significantly.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      position: "CEO, Global Solutions Ltd.",
-      content:
-        "Working with 1971 Group transformed our recruitment process. Their pre-vetted professionals integrate seamlessly into our teams.",
-      rating: 5,
-    },
-    {
-      name: "Elena Rodriguez",
-      position: "Talent Acquisition Manager, Growth Partners",
-      content:
-        "The 95% retention rate is real. We've seen a dramatic decrease in turnover since partnering with 1971 Group for our hiring needs.",
-      rating: 5,
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     name: "Sarah Johnson",
+  //     position: "HR Director, Tech Innovations Inc.",
+  //     content:
+  //       "The quality of candidates from 1971 Group is exceptional. We've reduced our hiring time by 60% and improved retention significantly.",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "Michael Chen",
+  //     position: "CEO, Global Solutions Ltd.",
+  //     content:
+  //       "Working with 1971 Group transformed our recruitment process. Their pre-vetted professionals integrate seamlessly into our teams.",
+  //     rating: 5,
+  //   },
+  //   {
+  //     name: "Elena Rodriguez",
+  //     position: "Talent Acquisition Manager, Growth Partners",
+  //     content:
+  //       "The 95% retention rate is real. We've seen a dramatic decrease in turnover since partnering with 1971 Group for our hiring needs.",
+  //     rating: 5,
+  //   },
+  // ];
 
   const container = {
     hidden: { opacity: 0 },
@@ -103,17 +103,17 @@ const HireWorkers = () => {
     },
   };
 
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
-  };
+  // const nextTestimonial = () => {
+  //   setCurrentTestimonial((prev) =>
+  //     prev === testimonials.length - 1 ? 0 : prev + 1
+  //   );
+  // };
 
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
-  };
+  // const prevTestimonial = () => {
+  //   setCurrentTestimonial((prev) =>
+  //     prev === 0 ? testimonials.length - 1 : prev - 1
+  //   );
+  // };
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[#F6F1EE]">
@@ -171,7 +171,7 @@ const HireWorkers = () => {
           ))}
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="mt-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -238,7 +238,7 @@ const HireWorkers = () => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           className="text-center mt-20 bg-gradient-to-r from-[#000b30] to-[#1a2a6b] rounded-2xl p-10 shadow-xl"
