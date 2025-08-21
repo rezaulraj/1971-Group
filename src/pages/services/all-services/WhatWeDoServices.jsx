@@ -223,14 +223,14 @@ const WhatWeDoServices = () => {
                   <div className="flex justify-between items-center">
                     <a
                       href={service.link}
-                      className="inline-flex items-center gap-2 text-[#D4AF37] px-4 py-2 rounded-lg font-semibold transition hover:text-[#c6a22f]"
+                      className="inline-flex items-center gap-2 text-[#D4AF37] px-4 py-2 rounded-lg font-semibold transition hover:text-[#c6a22f] cursor-pointer"
                     >
                       <FaInfoCircle className="mr-2" />
                       More Info
                     </a>
                     <button
                       onClick={() => setShowCalendly(true)}
-                      className="inline-flex items-center font-semibold text-white cursor-pointer hover:text-[#D4AF37] transition-colors"
+                      className="inline-flex items-center font-semibold text-white cursor-pointer hover:text-[#D4AF37] transition-colors cursor-pointer"
                     >
                       Get Started
                       <HiArrowNarrowRight className="ml-2" />

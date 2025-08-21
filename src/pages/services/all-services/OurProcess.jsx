@@ -166,7 +166,7 @@ const OurProcess = () => {
               Let's discuss your hiring needs and how we can streamline the
               process for you.
             </p>
-            <button className="bg-[#D4AF37] text-[#000b30] font-bold py-3 px-8 rounded-lg hover:bg-[#c6a22f] transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
+            <button className="bg-[#D4AF37] text-[#000b30] font-bold py-3 px-8 rounded-lg hover:bg-[#c6a22f] transition-all duration-300 transform hover:scale-105 flex items-center mx-auto cursor-pointer">
               Get Started
               <FaArrowRight className="ml-2" />
             </button>

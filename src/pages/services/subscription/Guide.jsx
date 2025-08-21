@@ -124,7 +124,7 @@ const Guide = () => {
             <motion.div variants={itemVariants} className="pt-4">
               <button
                 onClick={() => setShowCalendly(true)}
-                className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center"
+                className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center cursor-pointer"
               >
                 Book Free Consultation
                 <FiArrowRight className="ml-2" />
@@ -149,7 +149,7 @@ const Guide = () => {
             </p>
             <button
               onClick={() => setShowCalendly(true)}
-              className="bg-[#D4AF37] text-[#000b30] font-bold py-3 px-8 rounded-lg hover:bg-[#c6a22f] transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+              className="bg-[#D4AF37] text-[#000b30] font-bold py-3 px-8 rounded-lg hover:bg-[#c6a22f] transition-all duration-300 transform hover:scale-105 inline-flex items-center cursor-pointer"
             >
               Download Free Guide
               <FiDownload className="ml-2" />

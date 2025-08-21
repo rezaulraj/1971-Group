@@ -185,7 +185,7 @@ const HeroStaffing = () => {
 
             <motion.button
               onClick={() => setShowCalendly(true)}
-              className="relative inline-flex cursor-pointer items-center px-8 py-4 bg-[#D4AF37] text-[#000b30] font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 group overflow-hidden text-lg mx-auto"
+              className="relative inline-flex cursor-pointer items-center px-8 py-4 bg-[#D4AF37] text-[#000b30] font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 group overflow-hidden text-lg mx-auto "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

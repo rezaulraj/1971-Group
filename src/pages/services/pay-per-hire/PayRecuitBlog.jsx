@@ -121,7 +121,7 @@ const PayRecuitBlog = () => {
                 </p>
                 <a
                   href="/blogs"
-                  className={`flex items-center gap-2 text-sm font-medium ${post.color} hover:underline`}
+                  className={`flex items-center gap-2 text-sm cursor-pointer font-medium ${post.color} hover:underline`}
                 >
                   Read more
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />

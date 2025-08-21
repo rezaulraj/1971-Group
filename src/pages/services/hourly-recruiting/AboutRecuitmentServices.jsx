@@ -125,7 +125,7 @@ const AboutRecruitmentServices = () => {
 
                   <a
                     href="/blogs"
-                    className={`flex items-center gap-2 text-sm font-medium self-start ${service.buttonColor} transition-colors`}
+                    className={`flex items-center gap-2 text-sm font-medium self-start ${service.buttonColor} transition-colors cursor-pointer`}
                   >
                     Learn more
                     <FiArrowRight className="group-hover:translate-x-1 transition-transform" />

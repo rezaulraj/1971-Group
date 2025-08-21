@@ -467,7 +467,7 @@ const IndustryWeServe = () => {
                   </div>
                   <button
                     onClick={() => setShowCalendly(true)}
-                    className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
+                    className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center cursor-pointer"
                   >
                     Request Staff
                     <FiArrowRight className="ml-2" />

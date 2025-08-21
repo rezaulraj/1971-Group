@@ -67,7 +67,6 @@ const HeroServices = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
-    
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -80,7 +79,6 @@ const HeroServices = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#000b30]/90 via-[#0a1a4d]/80 to-[#1a2a6b]/90"></div>
       </div>
 
-   
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-20 left-20 w-64 h-64 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float1"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#D4AF37]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-float2"></div>
@@ -88,7 +86,6 @@ const HeroServices = () => {
       </div>
 
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-  
         <div className="grid grid-cols-1 gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -111,14 +108,13 @@ const HeroServices = () => {
               </p>
               <button
                 onClick={() => setShowCalendly(true)}
-                className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+                className="bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer"
               >
                 Book a Call
               </button>
             </div>
           </motion.div>
 
-      
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

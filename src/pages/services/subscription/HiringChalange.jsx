@@ -239,7 +239,7 @@ const HiringChallenge = () => {
               </div>
               <button
                 onClick={() => setShowCalendly(true)}
-                className="mt-6 bg-[#D4AF37] text-[#000b30] font-bold py-3 px-6 rounded-lg hover:bg-[#c6a22f] transition-all duration-300 transform hover:scale-105 flex items-center"
+                className="mt-6 bg-[#D4AF37] text-[#000b30] font-bold py-3 px-6 rounded-lg hover:bg-[#c6a22f] transition-all duration-300 transform hover:scale-105 flex items-center cursor-pointer"
               >
                 Get Started
                 <FaArrowRight className="ml-2" />

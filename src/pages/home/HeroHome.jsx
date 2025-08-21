@@ -135,7 +135,7 @@ const HeroHome = () => {
                 onClick={() => setShowCalendly(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center lg:justify-start px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] transition-all duration-300 mx-auto lg:mx-0"
+                className="flex items-center justify-center lg:justify-start px-8 py-4 rounded-full text-lg font-bold bg-gradient-to-r from-[#D4AF37] to-[#c6a22f] hover:from-[#c6a22f] hover:to-[#D4AF37] text-[#000b30] transition-all duration-300 mx-auto lg:mx-0 cursor-pointer"
               >
                 Discover Talent Solutions
                 <motion.span

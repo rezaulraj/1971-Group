@@ -145,7 +145,7 @@ const OurServices = () => {
             onClick={() => setShowCalendly(true)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#D4AF37] text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-[#c6a22f] transition-colors duration-300 flex items-center mx-auto"
+            className="bg-[#D4AF37] text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-[#c6a22f] transition-colors duration-300 flex items-center mx-auto cursor-pointer"
           >
             Get Started <FaArrowRight className="ml-2" />
           </motion.button>

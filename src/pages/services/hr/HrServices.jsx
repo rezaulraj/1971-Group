@@ -73,7 +73,7 @@ const HrServices = () => {
                 <p className="text-gray-400 mb-5">{service.description}</p>
                 <a
                   href={service.link}
-                  className="inline-flex items-center text-blue-400 font-medium hover:text-blue-300 transition-colors"
+                  className="inline-flex items-center text-blue-400 font-medium hover:text-blue-300 transition-colors cursor-pointer"
                 >
                   Learn more
                   <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />

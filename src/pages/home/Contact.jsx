@@ -203,7 +203,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#000b30] to-[#1a2a6b] hover:from-[#1a2a6b] hover:to-[#000b30] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center group"
+                  className="w-full bg-gradient-to-r from-[#000b30] to-[#1a2a6b] hover:from-[#1a2a6b] hover:to-[#000b30] text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center group cursor-pointer"
                 >
                   <span className="mr-2">Send Message</span>
                   <FaPaperPlane className="transform group-hover:translate-x-1 transition-transform" />
