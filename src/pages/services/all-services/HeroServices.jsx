@@ -18,6 +18,7 @@ import {
   FaChartLine,
   FaAward,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const HeroServices = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -67,6 +68,45 @@ const HeroServices = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>Global Recruitment Services | 1971 Group</title>
+        <meta
+          name="description"
+          content="1971 Group provides global recruitment solutions with access to talent from 80+ countries. Expert vetting, fast placement, and 15+ years of recruitment excellence."
+        />
+        <meta
+          name="keywords"
+          content="global recruitment services, international staffing, talent acquisition, workforce solutions, overseas hiring, recruitment agency"
+        />
+        <meta
+          property="og:title"
+          content="Global Recruitment Services - 1971 Group"
+        />
+        <meta
+          property="og:description"
+          content="Access talent from 80+ countries with our expert recruitment services. Fast placement and rigorous vetting process."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Global Recruitment Services",
+            description:
+              "Full-cycle recruitment services providing access to talent from 80+ countries worldwide",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+            },
+            areaServed: "Global",
+            serviceType: "Recruitment & Staffing",
+            offers: {
+              "@type": "Offer",
+              description:
+                "Comprehensive recruitment solutions with global reach and expert vetting",
+            },
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

@@ -17,6 +17,7 @@ import clogo7 from "../../assets/clined/cl7.png?url";
 import clogo8 from "../../assets/clined/cl8.png?url";
 import heroIndusty from "../../assets/industry/recruitment_industry.jpg";
 import Calendly from "../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const HeroIndustry = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -60,6 +61,98 @@ const HeroIndustry = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>
+          Elite Recruitment Solutions for Businesses | Workforce Growth
+        </title>
+        <meta
+          name="description"
+          content="Transform your workforce with our elite recruitment services. Talent acquisition, executive search, contract staffing, and workforce planning tailored for your business growth."
+        />
+        <meta
+          name="keywords"
+          content="recruitment services, talent acquisition, executive search, workforce planning, contract staffing, staffing solutions"
+        />
+        <meta
+          property="og:title"
+          content="Elite Recruitment Solutions for Businesses | Workforce Growth"
+        />
+        <meta
+          property="og:description"
+          content="Discover our elite recruitment solutions designed to help companies build winning teams, accelerate growth, and improve hiring efficiency."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/industry/hero-image.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://yourwebsite.com/industry-solutions"
+        />
+        <link
+          rel="canonical"
+          href="https://yourwebsite.com/industry-solutions"
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Recruitment Industry Solutions",
+            description:
+              "Elite talent solutions customized to business goals, including talent acquisition, executive search, workforce planning, and contract staffing.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Core Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Talent Acquisition",
+                    description:
+                      "Find the right candidates for your open positions with precision sourcing and screening.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Executive Search",
+                    description:
+                      "Connect with proven leaders who can guide your organization to long-term success.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Workforce Planning",
+                    description:
+                      "Strategic staffing solutions that align with your growth objectives.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Contract Staffing",
+                    description:
+                      "Flexible, on-demand staffing for project-based and seasonal needs.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

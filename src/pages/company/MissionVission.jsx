@@ -10,6 +10,7 @@ import {
   FaGlobe,
   FaHeart,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const missionImage =
   "https://plus.unsplash.com/premium_photo-1722859269438-dcacf0c6f26a?q=80&w=734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -76,6 +77,60 @@ const MissionVision = () => {
 
   return (
     <div className="bg-[#F6F1EE] py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <meta
+          name="description"
+          content="Discover 1971 Group's mission to connect global talent, our vision to redefine recruitment, and the core values guiding our work."
+        />
+        <meta
+          name="keywords"
+          content="mission, vision, values, recruitment, global talent, staffing, career opportunities"
+        />
+        <meta
+          property="og:title"
+          content="1971 Group | Our Mission, Vision & Values"
+        />
+        <meta
+          property="og:description"
+          content="1971 Group connects ambitious organizations with exceptional global talent while promoting meaningful career opportunities worldwide."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={missionImage} />
+        <meta
+          property="og:url"
+          content="https://yourwebsite.com/mission-vision"
+        />
+        <link rel="canonical" href="https://yourwebsite.com/mission-vision" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "1971 Group",
+            url: "https://yourwebsite.com",
+            logo: "https://yourwebsite.com/logo.png",
+            sameAs: [
+              "https://www.linkedin.com/company/1971group",
+              "https://www.facebook.com/1971group",
+              "https://twitter.com/1971group",
+            ],
+            description:
+              "1971 Group connects businesses with exceptional global talent, providing recruitment solutions guided by mission, vision, and values.",
+            foundingDate: "2019",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Dubai",
+              addressCountry: "United Arab Emiratesh",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              telephone: "+880123456789",
+              email: "info@1971group.com",
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"

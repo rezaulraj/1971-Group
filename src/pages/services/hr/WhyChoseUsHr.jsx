@@ -8,6 +8,7 @@ import {
   FaCreditCard,
   FaUsers,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const WhyChoseUsHr = () => {
   const features = [
@@ -49,7 +50,6 @@ const WhyChoseUsHr = () => {
     },
   ];
 
-
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -74,7 +74,84 @@ const WhyChoseUsHr = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d]">
-
+      <Helmet>
+        <meta
+          name="description"
+          content="Discover our comprehensive HR solutions, including HR audits, strategic insights, actionable solutions, employer branding, and recruitment support. Trusted by 150+ companies."
+        />
+        <meta
+          name="keywords"
+          content="HR consulting, HR audit, talent strategy, recruitment support, employer branding, HR solutions"
+        />
+        <meta
+          property="og:title"
+          content="HR Consulting Services - What We Offer"
+        />
+        <meta
+          property="og:description"
+          content="We provide expert HR services to streamline your HR processes, boost profitability, and attract top talent."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/path-to-image.jpg"
+        />
+        <meta property="og:url" content="https://yourwebsite.com/hr-services" />
+        <link rel="canonical" href="https://yourwebsite.com/hr-services" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "1971 Group",
+            url: "https://yourwebsite.com",
+            logo: "https://yourwebsite.com/logo.png",
+            description:
+              "Comprehensive HR solutions including audits, strategic insights, actionable solutions, and recruitment support.",
+            sameAs: [
+              "https://www.linkedin.com/company/yourcompany",
+              "https://www.facebook.com/yourcompany",
+            ],
+            department: [
+              {
+                "@type": "Service",
+                name: "HR Audit",
+                description:
+                  "Analyze current HR practices and identify areas for improvement across the employee lifecycle.",
+              },
+              {
+                "@type": "Service",
+                name: "Strategic Insights",
+                description:
+                  "Provide data-driven insights and highlight opportunities for growth.",
+              },
+              {
+                "@type": "Service",
+                name: "Actionable Solutions",
+                description:
+                  "Develop and implement a winning HR strategy tailored to your business needs.",
+              },
+              {
+                "@type": "Service",
+                name: "Employer Brand Expertise",
+                description:
+                  "Craft a strong employer brand that aligns with your values and attracts top talent.",
+              },
+              {
+                "@type": "Service",
+                name: "Flexible Payments",
+                description:
+                  "Multiple pricing plans and payment methods including wire transfers and crypto.",
+              },
+              {
+                "@type": "Service",
+                name: "Effective Recruitment Support",
+                description:
+                  "Refine recruitment strategy and assist in finding top-tier candidates across industries.",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
       <div className="absolute top-0 right-0 w-72 h-72 bg-[#D4AF37]/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full -translate-x-1/3 translate-y-1/3 blur-3xl"></div>
 
@@ -122,13 +199,11 @@ const WhyChoseUsHr = () => {
                 {feature.description}
               </p>
 
-       
               <div className="absolute bottom-0 left-0 h-0.5 bg-[#D4AF37] w-0 group-hover:w-full transition-all duration-500"></div>
             </motion.div>
           ))}
         </motion.div>
 
-     
         <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}

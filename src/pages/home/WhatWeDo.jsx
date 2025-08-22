@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import DOMPurify from "dompurify";
+import { Helmet } from "react-helmet-async";
 
 const WhatWeDo = () => {
   const services = [
@@ -67,6 +68,27 @@ const WhatWeDo = () => {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b] relative overflow-hidden">
+      <Helmet>
+        <meta
+          name="description"
+          content="Explore 1971 Group services: Recruitment, HR Consulting, and Outstaffing. We provide tailored staffing and HR solutions to help your business thrive."
+        />
+        <meta
+          name="keywords"
+          content="Recruitment Services, HR Consulting, Outstaffing, Talent Acquisition, Staffing Solutions, HR Strategies"
+        />
+        <meta property="og:title" content="What We Do | 1971 Group Services" />
+        <meta
+          property="og:description"
+          content="Discover how 1971 Group supports businesses with Recruitment, HR Consulting, and Outstaffing solutions for growth and success."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://yourdomain.com/services" />
+      </Helmet>
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl font-bold text-center mb-12 text-[#D4AF37]">
           What we do

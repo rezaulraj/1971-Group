@@ -9,6 +9,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const ServiceCard = ({ icon: Icon, title, description, index }) => (
   <motion.div
@@ -79,6 +80,97 @@ const OurServices = () => {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
+      <Helmet>
+        <meta
+          name="description"
+          content="Explore our comprehensive HR and people solutions, including strategic hiring partnerships, executive talent acquisition, high-volume recruitment, workforce planning, and employer brand development."
+        />
+        <meta
+          name="keywords"
+          content="HR solutions, people solutions, talent acquisition, strategic hiring, workforce planning, employer branding, high-volume recruitment, executive recruitment"
+        />
+        <meta
+          property="og:title"
+          content="HR & People Solutions | Strategic Hiring & Talent Acquisition"
+        />
+        <meta
+          property="og:description"
+          content="We deliver tailored HR and people solutions to drive organizational success. From strategic hiring to employer brand development, we help companies attract and retain top talent."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/images/hr-services.jpg"
+        />
+        <meta property="og:url" content="https://yourwebsite.com/services" />
+        <link rel="canonical" href="https://yourwebsite.com/services" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "HR & People Solutions",
+            description:
+              "Comprehensive HR and people solutions including strategic hiring, executive recruitment, workforce planning, and employer brand development.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "HR Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Strategic Hiring Partnerships",
+                    description:
+                      "Extend your HR team with exceptional candidates aligned to your culture.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Executive Talent Acquisition",
+                    description:
+                      "Find visionary leaders to drive organizational success.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "High-Volume Recruitment",
+                    description:
+                      "Quickly scale your workforce while maintaining quality.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Workforce Planning Solutions",
+                    description:
+                      "Build talent pipelines and succession plans to future-proof your organization.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Employer Brand Development",
+                    description:
+                      "Attract top talent by showcasing what makes your company special.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -126,7 +218,6 @@ const OurServices = () => {
           </div>
         </div>
 
-     
         <motion.div
           className="text-center mt-16 bg-gradient-to-r from-[#D4AF37]/10 to-[#c6a22f]/10 p-8 rounded-2xl border border-[#D4AF37]/20"
           initial={{ opacity: 0, y: 20 }}

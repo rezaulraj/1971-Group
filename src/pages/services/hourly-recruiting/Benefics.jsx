@@ -10,6 +10,7 @@ import {
   FiClock,
   FiBarChart2,
 } from "react-icons/fi";
+import { Helmet } from "react-helmet-async";
 
 const Benefits = () => {
   const benefits = [
@@ -75,6 +76,44 @@ const Benefits = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d]">
+      <Helmet>
+        <meta
+          name="description"
+          content="Partner with 1971 Group for cost-efficient hiring, fast results, top 10% talent pool, white-glove service, risk-free guarantees, and data-driven matching solutions."
+        />
+        <meta
+          name="keywords"
+          content="recruitment partnership, hiring benefits, cost-efficient staffing, fast recruitment, talent acquisition, guaranteed placements, data-driven hiring"
+        />
+        <meta
+          property="og:title"
+          content="Recruitment Partnership Benefits - 1971 Group"
+        />
+        <meta
+          property="og:description"
+          content="Experience cost-efficient hiring, lightning-fast results, and top talent access with our proven recruitment partnership model."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Recruitment Partnership Services",
+            description:
+              "Professional recruitment partnership offering cost-efficient hiring, fast results, and guaranteed talent placement",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+            },
+            serviceType: "Recruitment & Staffing",
+            areaServed: "Global",
+            offers: {
+              "@type": "Offer",
+              description:
+                "Comprehensive recruitment partnership with performance-based pricing and guaranteed results",
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#D4AF37]/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
 

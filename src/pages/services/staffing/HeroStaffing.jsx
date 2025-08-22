@@ -24,6 +24,7 @@ import {
   FaClock,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const BenefitItem = ({ icon: Icon, text }) => (
   <motion.div
@@ -134,6 +135,83 @@ const HeroStaffing = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>
+          Staffing & Outstaffing Services | Scale Smarter, Hire Faster | 1971
+          Group
+        </title>
+        <meta
+          name="description"
+          content="Scale your team seamlessly with our expert staffing and outstaffing solutions. Fast onboarding, flexible staffing, and specialized expertise for growing companies."
+        />
+        <meta
+          name="keywords"
+          content="staffing services, outstaffing, hire remote teams, flexible workforce, talent acquisition, recruitment solutions, HR outsourcing"
+        />
+        <meta
+          property="og:title"
+          content="Staffing & Outstaffing Services - Scale Smarter, Hire Faster"
+        />
+        <meta
+          property="og:description"
+          content="Our staffing and outstaffing solutions help fast-growing companies expand their workforce efficiently, with quick onboarding and flexible hiring options."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/staffing/hero-staffing.jpg"
+        />
+        <meta property="og:url" content="https://yourwebsite.com/staffing" />
+        <link rel="canonical" href="https://yourwebsite.com/staffing" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Staffing & Outstaffing Services",
+            description:
+              "Comprehensive staffing and outstaffing solutions for fast-growing companies, including scalable teams, flexible hiring, and HR support.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Staffing Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Flexible Staffing",
+                    description:
+                      "Temporary and long-term staffing solutions tailored to project needs.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Outstaffing",
+                    description:
+                      "Remote workforce solutions with payroll, taxes, and compliance managed by us.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "HR Support",
+                    description:
+                      "Onboarding, training, and retention support for a successful workforce.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

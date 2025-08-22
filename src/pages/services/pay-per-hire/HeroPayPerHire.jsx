@@ -26,6 +26,7 @@ import {
   FaChartLine,
   FaRocket,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const HeroPayPerHire = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -84,6 +85,57 @@ const HeroPayPerHire = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>
+          Pay-Per-Hire Recruitment | Success-Based Hiring Model | 1971 Group
+        </title>
+        <meta
+          name="description"
+          content="1971 Group offers pay-per-hire recruitment with zero upfront costs. Pay only when we place the right candidate. Risk-free, cost-effective hiring with 90-day guarantee."
+        />
+        <meta
+          name="keywords"
+          content="pay-per-hire recruitment, success-based hiring, recruitment agency, commission-based hiring, risk-free hiring, 1971 Group"
+        />
+        <meta
+          property="og:title"
+          content="Pay-Per-Hire Recruitment | 1971 Group"
+        />
+        <meta
+          property="og:description"
+          content="Hire top talent with our pay-per-hire recruitment model. Zero upfront fees, only pay after successful placement. Backed by 90-day replacement guarantee."
+        />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Pay-Per-Hire Recruitment",
+            description:
+              "Success-based recruitment services with zero upfront fees. Pay only when a candidate is successfully placed.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            areaServed: {
+              "@type": "Place",
+              name: "Global",
+            },
+            offers: {
+              "@type": "Offer",
+              name: "Pay-Per-Hire Model",
+              description:
+                "Risk-free recruitment model. Clients only pay when a successful placement is made.",
+              priceCurrency: "USD",
+              eligibleRegion: "Global",
+            },
+            termsOfService: "https://yourwebsite.com/terms",
+            serviceType: "Recruitment",
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

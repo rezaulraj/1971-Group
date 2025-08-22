@@ -21,6 +21,7 @@ import {
   FaAward,
   FaRocket,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const HeroHome = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -91,6 +92,28 @@ const HeroHome = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>1971 Group | Global Talent Recruitment</title>
+        <meta
+          name="description"
+          content="1971 Group is your Gulf-based partner for world-class talent recruitment. Access global professionals, accelerate hiring, and build visionary teams."
+        />
+        <meta
+          name="keywords"
+          content="Global Talent Recruitment, Gulf Recruitment, Hire Professionals, International Hiring, 1971 Group"
+        />
+        <meta
+          property="og:title"
+          content="1971 Group | Global Talent Recruitment"
+        />
+        <meta
+          property="og:description"
+          content="Partner with 1971 Group for global recruitment solutions. We connect fast-growing companies with top professionals worldwide."
+        />
+        <meta property="og:image" content={herogrobaltanent} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

@@ -9,6 +9,7 @@ import {
 } from "react-icons/fi";
 import hourlyWhat from "../../../assets/allservice/hourll.jpg?url";
 import hourlyfee from "../../../assets/allservice/recfee.jpg?url";
+import { Helmet } from "react-helmet-async";
 
 const AboutRecruitmentServices = () => {
   const services = [
@@ -70,6 +71,58 @@ const AboutRecruitmentServices = () => {
 
   return (
     <div className="bg-gray-900 text-gray-100 py-20 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <meta
+          name="description"
+          content="Learn about hourly recruiting, recruitment fees, and flexible hiring models. 1971 Group helps employers cut costs, scale hiring, and access global talent pools."
+        />
+        <meta
+          name="keywords"
+          content="recruitment services, hourly recruiting, recruitment fees, hiring models, flexible hiring, global talent sourcing"
+        />
+        <meta
+          property="og:title"
+          content="Recruitment Services - Hourly & Flexible Hiring | 1971 Group"
+        />
+        <meta
+          property="og:description"
+          content="1971 Group offers recruitment services with hourly billing, transparent fees, and global talent sourcing to help businesses scale hiring efficiently."
+        />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Recruitment Services",
+            description:
+              "1971 Group provides hourly recruiting and flexible recruitment fee models for global employers, including CV sourcing and cost-effective hiring solutions.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            areaServed: {
+              "@type": "Place",
+              name: "Global",
+            },
+            offers: [
+              {
+                "@type": "Offer",
+                name: "Hourly Recruiting",
+                description:
+                  "Flexible hourly recruitment model with pay-per-hour pricing and global candidate sourcing.",
+              },
+              {
+                "@type": "Offer",
+                name: "Recruitment Fee Models",
+                description:
+                  "Transparent fixed-fee and percentage-based recruitment options for businesses of all sizes.",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-16"

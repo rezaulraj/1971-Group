@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Calendly from "../../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const WhatWeDoServices = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -102,6 +103,53 @@ const WhatWeDoServices = () => {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#000b30] via-[#0a1a4d] to-[#1a2a6b] relative overflow-hidden">
+      <Helmet>
+        <meta
+          name="description"
+          content="1971 Group offers comprehensive recruitment solutions: Pay-Per-Hire, Subscription-Based Recruiting, and RPO services. Flexible, cost-effective hiring models."
+        />
+        <meta
+          name="keywords"
+          content="recruitment services, pay-per-hire, subscription recruiting, RPO services, staffing solutions, hiring models, recruitment process outsourcing"
+        />
+        <meta
+          property="og:title"
+          content="Recruitment Services & Solutions - 1971 Group"
+        />
+        <meta
+          property="og:description"
+          content="Flexible recruitment solutions including Pay-Per-Hire, Subscription-Based, and RPO services tailored to your business needs."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Recruitment Services",
+            description:
+              "Comprehensive recruitment solutions including Pay-Per-Hire, Subscription-Based, and RPO services",
+            itemListElement: [
+              {
+                "@type": "Service",
+                name: "Pay-Per-Hire Recruiting",
+                description:
+                  "Results-driven recruitment where you pay only when we deliver successful placements",
+              },
+              {
+                "@type": "Service",
+                name: "Subscription-Based Recruiting",
+                description:
+                  "Flexible, full-cycle recruitment on a monthly subscription model",
+              },
+              {
+                "@type": "Service",
+                name: "Recruitment Process Outsourcing (RPO)",
+                description:
+                  "Fully outsource your recruitment to our specialized teams",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <motion.div
           className="absolute top-0 left-0 w-64 h-64 bg-[#D4AF37] rounded-full mix-blend-overlay filter blur-3xl"

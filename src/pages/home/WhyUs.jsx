@@ -9,6 +9,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { motion, useInView, useAnimation } from "framer-motion";
 import ReactCountryFlag from "react-country-flag";
 import Calendly from "../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const AnimatedNumber = ({ value }) => {
   const controls = useAnimation();
@@ -132,6 +133,57 @@ const WhyUs = () => {
 
   return (
     <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d]">
+      <Helmet>
+        <meta
+          name="description"
+          content="Discover why 1971 Group is the trusted global recruitment partner, connecting businesses with pre-vetted candidates and delivering successful placements worldwide. 1971 Group helps employers in Europe, USA, Canada, and beyond with recruitment solutions. 94% success rate, 8,000+ pre-vetted candidates."
+        />
+        <meta
+          name="keywords"
+          content="global recruitment, staffing agency, HR services, talent acquisition, career opportunities, workforce solutions, hire workers, Gulf recruitmen"
+        />
+        <meta property="og:title" content="1971 Group | Why Choose Us" />
+        <meta
+          property="og:description"
+          content="We provide top global talent, serving 80+ countries with fast, reliable, and high-quality recruitment solutions."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/path-to-your-og-image.jpg"
+        />
+        <meta property="og:url" content="https://yourwebsite.com/why-us" />
+        <link rel="canonical" href="https://yourwebsite.com/why-us" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "1971 Group",
+            url: "https://yourwebsite.com",
+            logo: "https://yourwebsite.com/logo.png",
+            sameAs: [
+              "https://www.linkedin.com/company/1971group",
+              "https://www.facebook.com/1971group",
+              "https://twitter.com/1971group",
+            ],
+            description:
+              "1971 Group connects businesses with pre-vetted global talent, serving 80+ countries and delivering recruitment solutions that drive success.",
+            foundingDate: "2010",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Dubai",
+              addressCountry: "United Arab Emiratesh",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              telephone: "+880123456789",
+              email: "info@1971group.com",
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-[#D4AF37] opacity-10 blur-3xl animate-float"></div>
         <div className="absolute bottom-10 right-10 w-72 h-72 rounded-full bg-[#D4AF37] opacity-10 blur-3xl animate-float-delay"></div>

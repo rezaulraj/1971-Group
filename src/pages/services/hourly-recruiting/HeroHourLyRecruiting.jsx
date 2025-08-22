@@ -24,6 +24,7 @@ import {
   FaChartLine,
   FaAward,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const HeroHourLyRecruiting = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -151,6 +152,44 @@ const HeroHourLyRecruiting = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>Hourly Recruiting Services | Flexible Hiring Solutions</title>
+        <meta
+          name="description"
+          content="1971 Group offers hourly recruiting services with 80% cost savings. Pay only for hours worked, access global talent, and get CV sourcing services on demand."
+        />
+        <meta
+          name="keywords"
+          content="hourly recruiting, flexible hiring, on-demand recruitment, CV sourcing, cost-effective hiring, pay-per-hour recruitment"
+        />
+        <meta
+          property="og:title"
+          content="Hourly Recruiting Services - 1971 Group"
+        />
+        <meta
+          property="og:description"
+          content="Flexible hourly recruiting model with 80% cost savings compared to traditional agencies. Pay only for hours worked."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Hourly Recruiting Services",
+            description:
+              "Flexible hourly recruitment model with pay-per-hour pricing and global talent access",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+            },
+            areaServed: "Global",
+            offers: {
+              "@type": "Offer",
+              description:
+                "Cost-effective hourly recruiting with 80% savings compared to traditional agencies",
+            },
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

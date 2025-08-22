@@ -19,6 +19,7 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const HeroSubscription = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -82,6 +83,98 @@ const HeroSubscription = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>
+          Subscription Recruitment Services | Hire Smarter & Scale Faster
+        </title>
+        <meta
+          name="description"
+          content="Transform your hiring process with subscription recruitment services. Access dedicated recruitment experts, reduce costs, and hire top talent faster."
+        />
+        <meta
+          name="keywords"
+          content="subscription recruitment, staffing services, hiring solutions, dedicated recruitment experts, cost-effective hiring"
+        />
+        <meta
+          property="og:title"
+          content="Subscription Recruitment Services | Hire Smarter & Scale Faster"
+        />
+        <meta
+          property="og:description"
+          content="Our subscription recruitment services provide flexible, cost-effective staffing solutions with dedicated recruitment experts to help your business scale."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/subscription/herosub.jpeg"
+        />
+        <meta
+          property="og:url"
+          content="https://yourwebsite.com/hero-subscription"
+        />
+        <link
+          rel="canonical"
+          href="https://yourwebsite.com/hero-subscription"
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Subscription Recruitment Services",
+            description:
+              "Monthly, embedded recruitment support to help you fill open roles quickly, consistently, and cost-effectively.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Recruitment Benefits",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Significant Cost Savings",
+                    description:
+                      "Reduce hiring expenses by up to 45% compared to pay-per-hire models.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Customized & Scalable Hiring",
+                    description:
+                      "Flexible recruitment solutions for one role or a hundred.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Dedicated Recruitment Experts",
+                    description:
+                      "Enjoy 24/7 support and a steady stream of qualified candidates.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Faster Time-to-Hire",
+                    description:
+                      "Streamlined hiring approach reducing time-to-fill by up to 60%.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

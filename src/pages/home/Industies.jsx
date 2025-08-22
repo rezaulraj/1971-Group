@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   FaHammer,
   FaBolt,
@@ -226,6 +227,39 @@ const Industries = () => {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#F6F1EE] relative overflow-hidden">
+      <Helmet>
+        <meta
+          name="description"
+          content="1971 Group provides skilled professionals across 30+ industries including construction, manufacturing, hospitality, healthcare, IT, and logistics. Find specialized talent for your sector."
+        />
+        <meta
+          name="keywords"
+          content="industry recruitment, skilled workers, construction staffing, manufacturing jobs, hospitality staff, healthcare recruitment, IT professionals, logistics workers, industrial staffing solutions"
+        />
+        <meta
+          property="og:description"
+          content="Specialized recruitment services for 30+ industries. Find skilled professionals for construction, manufacturing, hospitality, healthcare and more."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Industries We Serve - 1971 Group Recruitment",
+            description:
+              "Skilled professionals for various industry needs including construction, manufacturing, hospitality, and healthcare",
+            itemListElement: industries.map((industry, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              item: {
+                "@type": "Service",
+                name: `${industry.name} Recruitment`,
+                description: `Professional staffing solutions for ${industry.name} industry`,
+                image: industry.image,
+              },
+            })),
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#000b30] mb-4">

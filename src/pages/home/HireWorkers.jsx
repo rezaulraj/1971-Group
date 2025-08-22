@@ -13,6 +13,7 @@ import {
   FiChevronRight,
 } from "react-icons/fi";
 import Calendly from "../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const HireWorkers = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -117,7 +118,42 @@ const HireWorkers = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[#F6F1EE]">
-      
+      <Helmet>
+        <meta
+          name="description"
+          content="Access 1971 Group's premium talent network with 95% retention rate. Hire pre-vetted, growth-ready professionals with full compliance and rapid placement."
+        />
+        <meta
+          name="keywords"
+          content="hire professionals, pre-vetted talent, recruitment solutions, workforce solutions, skilled workers, verified candidates, hiring platform"
+        />
+        <meta
+          property="og:title"
+          content="Hire Elite Professionals - 1971 Group"
+        />
+        <meta
+          property="og:description"
+          content="Access our exclusive network of pre-vetted professionals with 95% retention rate and rapid placement guarantees."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EmploymentAgency",
+            name: "1971 Group Talent Solutions",
+            description:
+              "Premium talent network providing pre-vetted professionals with 95% retention rate",
+            url: window.location.href,
+            areaServed: "Global",
+            serviceType: "Professional Recruitment",
+            offers: {
+              "@type": "Offer",
+              description:
+                "Access to pre-vetted professionals with guaranteed retention and compliance",
+            },
+          })}
+        </script>
+      </Helmet>
+
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#000b30]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 

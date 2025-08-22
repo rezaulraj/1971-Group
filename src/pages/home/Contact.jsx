@@ -9,6 +9,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import Calendly from "../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -69,6 +70,42 @@ const Contact = () => {
       id="contact-us"
       className="relative min-h-screen overflow-hidden py-20 px-4 sm:px-6 lg:px-8"
     >
+      <Helmet>
+        <meta
+          name="description"
+          content="Contact 1971 Group for premium recruitment services. Get access to pre-vetted professionals, discuss your hiring needs, and find the best talent solutions."
+        />
+        <meta
+          name="keywords"
+          content="contact recruitment agency, hire workers, staffing solutions, talent acquisition, employer contact, recruitment consultation"
+        />
+        <meta
+          property="og:title"
+          content="Contact 1971 Group - Recruitment Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Get in touch with 1971 Group for premium recruitment services and access to pre-vetted professionals."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "Contact 1971 Group",
+            description: "Contact page for 1971 Group recruitment services",
+            url: window.location.href,
+            mainEntity: {
+              "@type": "Organization",
+              name: "1971 Group",
+              description:
+                "Premium recruitment and staffing solutions provider",
+              email: "contact@1971group.com",
+              telephone: "+1-555-0197",
+              areaServed: "Global",
+            },
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

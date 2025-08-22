@@ -21,6 +21,7 @@ import {
   FaAward,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const HeroHr = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -82,6 +83,46 @@ const HeroHr = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>HR Consulting Services | Transform Your Talent Strategy</title>
+        <meta
+          name="description"
+          content="We provide expert HR consulting services to help companies attract, engage, and retain top talent. Transform your HR strategy and build exceptional workplaces."
+        />
+        <meta
+          name="keywords"
+          content="HR consulting, talent acquisition, employer branding, recruitment strategy, HR transformation"
+        />
+        <meta
+          property="og:title"
+          content="HR Consulting Services - 1971 Group"
+        />
+        <meta
+          property="og:description"
+          content="Expert HR consulting services for companies looking to transform their talent strategy and attract top candidates."
+        />
+        <meta property="og:image" content={herohr} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "1971 Group",
+            url: "https://yourwebsite.com",
+            logo: "https://yourwebsite.com/logo.png",
+            sameAs: [
+              "https://www.linkedin.com/company/yourcompany",
+              "https://www.facebook.com/yourcompany",
+            ],
+            description:
+              "We provide expert HR consulting services to help companies attract, engage, and retain top talent.",
+            department: benefits.map((b) => ({
+              "@type": "Service",
+              name: b.text,
+              description: b.description,
+            })),
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

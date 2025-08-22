@@ -3,11 +3,57 @@ import { motion } from "framer-motion";
 import { FiDownload, FiArrowRight } from "react-icons/fi";
 import guide from "../../../assets/allservice/gride.jpg?url";
 import Calendly from "../../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const Guide = () => {
   const [showCalendly, setShowCalendly] = useState(false);
   return (
     <div className="relative overflow-hidden">
+      <Helmet>
+        <meta
+          name="description"
+          content="Download our Talent Acquisition Guide to master hiring strategies. Learn expert-approved, actionable tips to attract top talent and streamline your recruitment process."
+        />
+        <meta
+          name="keywords"
+          content="talent acquisition guide, hiring strategies, recruitment tips, recruitment process, expert hiring tips"
+        />
+        <meta
+          property="og:title"
+          content="Talent Acquisition Guide - Your Company Name"
+        />
+        <meta
+          property="og:description"
+          content="Practical tips and expert strategies to improve your hiring process. Download our guide and hire the best talent efficiently."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Mastering Talent Acquisition",
+            description:
+              "Practical tips to streamline your hiring process and attract the right talent your company needs.",
+            image: guide,
+            author: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "1971 Group",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://yourwebsite.com/logo.png",
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://yourwebsite.com/guide",
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="absolute inset-0 bg-gradient-to-br from-[#001153] via-[#1a2a6b] to-[#334380] opacity-95"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
@@ -53,7 +99,6 @@ const Guide = () => {
               <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
 
-          
             <div className="mt-8 flex items-center gap-4 text-gray-200">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>

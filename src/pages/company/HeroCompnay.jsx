@@ -22,6 +22,7 @@ import clogo5 from "../../assets/clined/cl5.png?url";
 import clogo6 from "../../assets/clined/cl6.png?url";
 import clogo7 from "../../assets/clined/cl7.png?url";
 import clogo8 from "../../assets/clined/cl8.png?url";
+import { Helmet } from "react-helmet-async";
 
 const HeroCompany = () => {
   const [counters, setCounters] = useState({
@@ -145,6 +146,61 @@ const HeroCompany = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Helmet>
+        <title>1971 Group | Global Recruitment Solutions Partner</title>
+        <meta
+          name="description"
+          content="1971 Group provides global recruitment solutions to transform companies’ workforce. Expert recruiters, accelerated hiring, and global talent network."
+        />
+        <meta
+          name="keywords"
+          content="recruitment, global hiring, talent acquisition, executive search, staffing solutions, workforce optimization"
+        />
+        <meta
+          property="og:title"
+          content="1971 Group | Global Recruitment Solutions Partner"
+        />
+        <meta
+          property="og:description"
+          content="Partner with 1971 Group for elite recruitment solutions, transforming your hiring processes and building high-performing teams worldwide."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/company/companybg.jpg"
+        />
+        <meta property="og:url" content="https://yourwebsite.com/company" />
+        <link rel="canonical" href="https://yourwebsite.com/company" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "1971 Group",
+            url: "https://yourwebsite.com",
+            logo: "https://yourwebsite.com/logo.png",
+            sameAs: [
+              "https://www.linkedin.com/company/1971group",
+              "https://www.facebook.com/1971group",
+              "https://twitter.com/1971group",
+            ],
+            description:
+              "1971 Group provides global recruitment solutions with expert recruiters, accelerated hiring, and access to a worldwide talent network.",
+            foundingDate: "2010",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Dubai",
+              addressCountry: "United Arab Emiratesh",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              telephone: "+880123456789",
+              email: "info@1971group.com",
+            },
+          })}
+        </script>
+      </Helmet>
       <div
         className="absolute inset-0 z-0"
         style={{

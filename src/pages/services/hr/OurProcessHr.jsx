@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHandshake, FaChess, FaRocket, FaCheck } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const OurProcessHr = () => {
   const steps = [
@@ -44,6 +45,66 @@ const OurProcessHr = () => {
 
   return (
     <section className="relative py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-gray-50">
+      <Helmet>
+        <meta
+          name="description"
+          content="Learn about our structured HR process: from understanding your company, driving strategic change, to delivering final results with top-tier recruitment support. Receive your first batch of qualified CVs within 3–5 days."
+        />
+        <meta
+          name="keywords"
+          content="HR process, recruitment process, talent acquisition, HR strategy, HR consulting, employer branding, hiring process"
+        />
+        <meta
+          property="og:title"
+          content="Our HR Process - Faster Hiring & Smarter Strategy"
+        />
+        <meta
+          property="og:description"
+          content="Discover our step-by-step HR process designed to optimize recruitment, improve HR strategies, and deliver measurable results quickly."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/path-to-hr-process-image.jpg"
+        />
+        <meta property="og:url" content="https://yourwebsite.com/hr-process" />
+        <link rel="canonical" href="https://yourwebsite.com/hr-process" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "HR Process Consulting",
+            description:
+              "Step-by-step HR process from company analysis, strategic change, to final delivery with recruitment support.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            hasPart: [
+              {
+                "@type": "HowToStep",
+                name: "Tell Us About Your Company",
+                description:
+                  "Overview of your organization, audit employer brand, identify employee value proposition",
+              },
+              {
+                "@type": "HowToStep",
+                name: "We Drive the Change",
+                description:
+                  "Map employee touchpoints, define lifecycle stages, design efficient HR processes",
+              },
+              {
+                "@type": "HowToStep",
+                name: "Final Delivery",
+                description:
+                  "Recommend technology, provide leadership training, present strategic roadmap",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
       <div className="max-w-5xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

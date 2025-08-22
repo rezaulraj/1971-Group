@@ -8,6 +8,7 @@ import {
   FaDollarSign,
   FaHandshake,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const KeyBenafic = () => {
   const benefits = [
@@ -49,7 +50,6 @@ const KeyBenafic = () => {
     },
   ];
 
- 
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -74,7 +74,111 @@ const KeyBenafic = () => {
 
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d] overflow-hidden">
-      
+      <Helmet>
+        <meta
+          name="description"
+          content="Discover the key benefits of our subscription recruitment services, including faster hiring, dedicated support, cost reduction, and predictable monthly fees."
+        />
+        <meta
+          name="keywords"
+          content="subscription recruitment, recruitment benefits, faster hiring, cost reduction, dedicated recruitment team"
+        />
+        <meta
+          property="og:title"
+          content="Key Benefits of Subscription Recruitment Services | Hire Smarter"
+        />
+        <meta
+          property="og:description"
+          content="Learn why leading companies choose our subscription recruitment model to accelerate hiring and reduce costs while ensuring dedicated support."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/hero-image.jpeg"
+        />
+        <meta
+          property="og:url"
+          content="https://yourwebsite.com/key-benefits"
+        />
+        <link rel="canonical" href="https://yourwebsite.com/key-benefits" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Subscription Recruitment Services",
+            description:
+              "Discover key benefits of our subscription recruitment model, including faster hiring, cost reduction, and dedicated recruitment support.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Key Benefits",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Fixed Monthly Fee",
+                    description:
+                      "Clear, predictable costs with a fixed-fee model, no hidden charges.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Dedicated Recruitment Team",
+                    description:
+                      "Tailored team of skilled sourcers and recruiters to meet your hiring goals.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Fast & Reliable Hiring",
+                    description:
+                      "Start recruiting immediately with an average 3-week time-to-fill.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Replacement Guarantee",
+                    description:
+                      "3-month candidate replacement guarantee with real-time CRM access.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Reduced Hiring Costs",
+                    description:
+                      "Access a broad talent pool while lowering unnecessary hiring expenses.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Long-Term Partnership",
+                    description:
+                      "Build lasting relationships and enhance recruitment and retention strategies.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
@@ -127,7 +231,6 @@ const KeyBenafic = () => {
           ))}
         </motion.div>
 
-     
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

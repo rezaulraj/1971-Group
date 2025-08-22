@@ -12,6 +12,7 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const WhyWorkUsStaffing = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -116,6 +117,110 @@ const WhyWorkUsStaffing = () => {
 
   return (
     <div className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[#F6F1EE]">
+      <Helmet>
+        <meta
+          name="description"
+          content="Discover the advantages of partnering with our staffing and recruitment services. Flexible hiring options, top-tier talent, fast hiring, risk-free partnerships, cost-efficient solutions, and boosted productivity."
+        />
+        <meta
+          name="keywords"
+          content="staffing solutions, recruitment services, flexible hiring, top talent, fast hiring, risk-free partnership, cost-efficient staffing, productivity"
+        />
+        <meta
+          property="og:title"
+          content="Why Work With Us | Staffing & Recruitment Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Partner with our recruitment and staffing services to access flexible hiring options, top talent quality, fast hiring, risk-free partnerships, cost-efficient solutions, and boosted productivity."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/images/why-work-with-us.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://yourwebsite.com/why-work-with-us"
+        />
+        <link rel="canonical" href="https://yourwebsite.com/why-work-with-us" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Staffing & Recruitment Solutions",
+            description:
+              "Flexible hiring options, top-tier talent, fast hiring, risk-free partnerships, cost-efficient solutions, and boosted productivity.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Staffing Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Flexible Hiring Options",
+                    description:
+                      "Hire top developers, engineers, executives, and C-level specialists tailored to your project timeline.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Top-Tier Talent Quality",
+                    description:
+                      "Access a global talent pool of highly qualified professionals matching your requirements.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Fast Hiring Process",
+                    description:
+                      "Rapidly fill critical roles and project gaps with candidate CVs and onboarding support.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Risk-Free Partnership",
+                    description:
+                      "Minimize hiring risks with a vetted process ensuring reliable professionals from the start.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Cost-Efficient Solutions",
+                    description:
+                      "All-inclusive pricing with flexible plans and multiple payment options including traditional and crypto.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Boosted Productivity",
+                    description:
+                      "Smart staffing and business strategies to expand team output and achieve business goals faster.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#000b30]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 

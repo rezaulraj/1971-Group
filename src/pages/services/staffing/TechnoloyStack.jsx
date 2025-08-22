@@ -11,6 +11,7 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
+import { Helmet } from "react-helmet-async";
 
 const TalentSpecializations = () => {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -123,6 +124,113 @@ const TalentSpecializations = () => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d] relative overflow-hidden">
+      <Helmet>
+        <meta
+          name="description"
+          content="Discover our specialized staffing solutions: precision talent matching, flexible staffing, high-volume hiring, strategic workforce planning, and managed recruitment programs."
+        />
+        <meta
+          name="keywords"
+          content="staffing solutions, talent matching, recruitment services, flexible staffing, high-volume hiring, workforce planning, managed staffing"
+        />
+        <meta
+          property="og:title"
+          content="Talent Specializations | Flexible Staffing & Recruitment Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Explore our specialized staffing services to access top-tier talent and flexible recruitment solutions tailored to your business needs."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/assets/images/talent-specializations.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://yourwebsite.com/talent-specializations"
+        />
+        <link
+          rel="canonical"
+          href="https://yourwebsite.com/talent-specializations"
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Talent Specializations",
+            description:
+              "Precision talent matching, flexible staffing, high-volume hiring, strategic workforce planning, specialized recruitment, and managed staffing programs.",
+            provider: {
+              "@type": "Organization",
+              name: "1971 Group",
+              url: "https://yourwebsite.com",
+              logo: "https://yourwebsite.com/logo.png",
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Staffing Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Precision Talent Matching",
+                    description:
+                      "Find candidates who excel in your unique environment with 90% first-year retention rate and skills-to-role alignment.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Flexible Staffing Solutions",
+                    description:
+                      "Scale your workforce with contract-to-hire options, short-term project staffing, and seamless onboarding.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "High-Volume Hiring",
+                    description:
+                      "Rapidly deploy quality talent for seasonal peaks or expansion initiatives with bulk candidate screening.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Strategic Workforce Planning",
+                    description:
+                      "Proactively build talent pipelines, succession planning, and market salary benchmarking for critical roles.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Specialized Recruitment",
+                    description:
+                      "Access niche talent pools for hard-to-fill roles with industry-specific networks and competitive offer strategies.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Managed Staffing Programs",
+                    description:
+                      "Outsource your recruitment function with dedicated account management, performance-based pricing, and 90-day replacement guarantee.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 

@@ -7,6 +7,7 @@ import {
   FaClipboardCheck,
   FaArrowRight,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const OurProcess = () => {
   const steps = [
@@ -72,6 +73,50 @@ const OurProcess = () => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#000b30] to-[#0a1a4d] relative overflow-hidden">
+      <Helmet>
+        <meta
+          name="description"
+          content="Discover 1971 Group's 3-step recruitment process: Discovery, Full-Cycle Recruitment, and Selection & Offer. Fast, transparent hiring in 4-6 weeks."
+        />
+        <meta
+          name="keywords"
+          content="recruitment process, hiring methodology, talent acquisition process, candidate selection, recruitment timeline, hiring steps"
+        />
+        <meta property="og:title" content="Recruitment Process - 1971 Group" />
+        <meta
+          property="og:description"
+          content="Our 3-step recruitment process ensures fast, transparent, and effective hiring with complete candidate vetting and selection."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "1971 Group Recruitment Process",
+            description: "3-step recruitment process for effective hiring",
+            totalTime: "PT6W",
+            step: [
+              {
+                "@type": "HowToStep",
+                name: "Discovery",
+                text: "Company & role briefing, vacancy documentation, contract initiation",
+                totalTime: "PT3D",
+              },
+              {
+                "@type": "HowToStep",
+                name: "Full-Cycle Recruitment",
+                text: "Talent sourcing, screening, scheduling & interviews, weekly updates",
+                totalTime: "PT4W",
+              },
+              {
+                "@type": "HowToStep",
+                name: "Selection & Offer",
+                text: "Offer negotiation, NDA signing, final candidate handover",
+                totalTime: "PT2W",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 
