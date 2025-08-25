@@ -29,9 +29,19 @@ import {
   FaMountain,
   FaUmbrellaBeach,
   FaPlaneDeparture,
+  FaWindowMaximize,
+  FaHome,
+  FaLeaf,
+  FaRoad,
 } from "react-icons/fa";
 import { FaShieldHalved } from "react-icons/fa6";
-import { GiCargoShip, GiWoodBeam } from "react-icons/gi";
+import {
+  GiCargoShip,
+  GiHammerBreak,
+  GiMetalBar,
+  GiWoodBeam,
+} from "react-icons/gi";
+import { GrTools } from "react-icons/gr";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { MdOutlineRoomService } from "react-icons/md";
 import { PiStudentBold } from "react-icons/pi";
@@ -40,10 +50,10 @@ import { Link } from "react-router-dom";
 const Industries = () => {
   const industries = [
     {
-      name: "Education",
-      icon: <PiStudentBold className="text-xl" />,
+      name: "Hospitality",
+      icon: <MdOutlineRoomService className="text-xl" />,
       image:
-        "https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1544986581-efac024faf62?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Tourism",
@@ -51,12 +61,7 @@ const Industries = () => {
       image:
         "https://plus.unsplash.com/premium_photo-1677002240252-af3f88114efc?q=80&w=825&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
-    {
-      name: "Hospitality",
-      icon: <MdOutlineRoomService className="text-xl" />,
-      image:
-        "https://images.unsplash.com/photo-1544986581-efac024faf62?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
+
     {
       name: "Construction",
       icon: <FaHammer className="text-xl" />,
@@ -81,6 +86,13 @@ const Industries = () => {
       icon: <FaFire className="text-xl" />,
       image:
         "https://plus.unsplash.com/premium_photo-1661963236181-9eb0c8d766e3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+
+    {
+      name: "Glass Installer",
+      icon: <FaWindowMaximize className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1683140920401-36b43c727bb5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Mechanic",
@@ -220,6 +232,37 @@ const Industries = () => {
       icon: <FaTshirt className="text-xl" />,
       image:
         "https://images.unsplash.com/photo-1741176505800-caaa3a52631a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Roofing",
+      icon: <FaHome className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1682617326551-4749611516f6?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Landscaping",
+      icon: <FaLeaf className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?q=80&w=719&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Heavy Equipment Operator",
+      icon: <GrTools className="text-xl" />,
+      image:
+        "https://plus.unsplash.com/premium_photo-1680658492774-6e2b4b5e7766?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Road Worker",
+      icon: <FaRoad className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1696383147248-a9d66ae8d7bd?q=80&w=786&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+
+    {
+      name: "Blacksmith",
+      icon: <GiHammerBreak className="text-xl" />,
+      image:
+        "https://images.unsplash.com/photo-1528717384022-f8d665c86909?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
