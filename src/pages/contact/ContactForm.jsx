@@ -190,7 +190,7 @@ const ContactForm = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-2xl"></div>
               <div className="relative bg-white/80 rounded-2xl shadow-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-                  Let's Have a Call
+                  Reach Out
                 </h3>
                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                   We're always ready to provide personal consultations and craft
@@ -198,17 +198,17 @@ const ContactForm = () => {
                 </p>
 
                 <div className="space-y-6">
-                  <div className="flex items-start group">
+                  {/* <div className="flex items-start group">
                     <div className="flex-shrink-0 bg-gradient-to-br from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95 p-3 rounded-lg text-white group-hover:from-[#D4AF37] group-hover:to-[#D4AF37] transition-all">
                       <FaPhone className="text-xl" />
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-medium text-gray-800">
-                        Phone
+                        Reach Out
                       </h4>
                       <p className="text-gray-600">+1 (555) 123-4567</p>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="flex items-start group">
                     <div className="flex-shrink-0 bg-gradient-to-br from-[#000b30]/95 via-[#0a1a4d]/90 to-[#1a2a6b]/95 p-3 rounded-lg text-white group-hover:from-[#D4AF37] group-hover:to-[#D4AF37] transition-all">
@@ -216,9 +216,9 @@ const ContactForm = () => {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-medium text-gray-800">
-                        Email
+                        Email Our Team
                       </h4>
-                      <p className="text-gray-600">marketing@1971.group</p>
+                      <p className="text-gray-600">support@1971.group</p>
                     </div>
                   </div>
 
@@ -231,9 +231,11 @@ const ContactForm = () => {
                         Office
                       </h4>
                       <p className="text-gray-600">
-                        123 Business Ave, Suite 500
-                        <br />
-                        New York, NY 10001
+                        Sheikh Zayed Rd - Al Barsha - Al Barsha 1 - Dubai -
+                        United Arab Emirates
+                      </p>
+                      <p className="text-gray-600">
+                        28A Vicarage Ln, London E15 4ES, United Kingdom
                       </p>
                     </div>
                   </div>
@@ -264,7 +266,7 @@ const ContactForm = () => {
                 </h3>
                 <div className="h-80 w-full">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573813864!2d-73.98784492416413!3d40.74844047138951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1712345678901!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.3239996610864!2d55.13450567537759!3d25.069954377793096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f13435f3abe57%3A0xb4c00b9d46311cd0!2sSheikh%20Zayed%20Rd%20-%20Dubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sbd!4v1756126264239!5m2!1sen!2sbd"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -274,12 +276,12 @@ const ContactForm = () => {
                     className="rounded-b-2xl"
                   ></iframe>
                 </div>
-                <div className="p-6 pt-4">
+                {/* <div className="p-6 pt-4">
                   <p className="text-gray-600">
                     Visit our office at the Empire State Building for a personal
                     consultation.
                   </p>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </div>
