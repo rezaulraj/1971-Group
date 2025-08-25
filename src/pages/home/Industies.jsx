@@ -488,14 +488,14 @@ const Industries = () => {
 
             <button
               onClick={() => navigateIndustry("prev")}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#D4AF37] transition-colors"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#D4AF37] transition-colors cursor-pointer"
             >
               <FaChevronLeft className="w-5 h-5" />
             </button>
 
             <button
               onClick={() => navigateIndustry("next")}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#D4AF37] transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#D4AF37] transition-colors cursor-pointer"
             >
               <FaChevronRight className="w-5 h-5" />
             </button>
