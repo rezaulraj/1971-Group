@@ -163,10 +163,10 @@ const Footer = () => {
               <li className="flex items-start">
                 <FaRegEnvelope className="mt-1 mr-3 flex-shrink-0" />
                 <a
-                  href="mailto:hello@1971group.com"
+                  href="mailto:support@1971.group"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  hello@1971group.com
+                  support@1971.group
                 </a>
               </li>
               <li className="flex items-start">

@@ -12,6 +12,7 @@ import {
 import image1 from "../../assets/case/hospitality.jpg?url";
 import image2 from "../../assets/case/constraction.webp?url";
 import image3 from "../../assets/case/agreculture.webp?url";
+
 const CaseStudyBlogDetails = () => {
   const caseStudies = [
     {
@@ -44,6 +45,11 @@ const CaseStudyBlogDetails = () => {
         "Created competitive compensation packages with clear career paths",
         "Implemented ongoing training programs",
       ],
+      testimonial: {
+        text: "The recruitment team delivered exceptional candidates who truly understand luxury service. Their approach to cultural fit has significantly improved our guest satisfaction scores.",
+        author: "Sarah Johnson",
+        role: "HR Director, Luxury Hotel Group",
+      },
     },
     {
       id: "workforce-solutions-construction",
@@ -65,6 +71,21 @@ const CaseStudyBlogDetails = () => {
         { value: "0", label: "Project delays due to staffing" },
         { value: "100%", label: "Certification compliance" },
       ],
+      challenges: [
+        "Regional labor shortages in skilled trades",
+        "Tight project deadlines requiring rapid staffing",
+        "Strict safety and certification requirements",
+      ],
+      solutions: [
+        "Partnered with trade schools and apprenticeship programs",
+        "Implemented mobile-friendly application process",
+        "Enhanced verification process for certifications",
+      ],
+      testimonial: {
+        text: "Their ability to source certified tradespeople under tight deadlines kept our $500M project on track. Zero delays due to staffing was remarkable.",
+        author: "Mike Rodriguez",
+        role: "Project Manager, Construction Firm",
+      },
     },
     {
       id: "seasonal-agricultural-workforce",
@@ -86,12 +107,39 @@ const CaseStudyBlogDetails = () => {
         { value: "25%", label: "Productivity increase" },
         { value: "40%", label: "Reduced onboarding time" },
       ],
+      challenges: [
+        "Seasonal nature of agricultural work",
+        "Need for specialized agricultural skills",
+        "Multiple locations requiring coordinated staffing",
+      ],
+      solutions: [
+        "Established partnerships with agricultural communities",
+        "Created multi-lingual training materials",
+        "Developed flexible onboarding processes",
+      ],
+      testimonial: {
+        text: "The seasonal workforce solution transformed our harvest operations. The 25% productivity increase and multi-lingual support made a significant difference.",
+        author: "Emily Chen",
+        role: "Operations Director, Agricultural Enterprise",
+      },
     },
   ];
+
   const { id } = useParams();
   const caseStudy = caseStudies.find((study) => study.id === id);
 
-  if (!caseStudy) {
+  const caseStudyWithDefaults = caseStudy
+    ? {
+        ...caseStudy,
+        stats: caseStudy.stats || [],
+        challenges: caseStudy.challenges || [],
+        solutions: caseStudy.solutions || [],
+        description: caseStudy.description || [],
+        testimonial: caseStudy.testimonial || null,
+      }
+    : null;
+
+  if (!caseStudyWithDefaults) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -112,30 +160,29 @@ const CaseStudyBlogDetails = () => {
 
   return (
     <div className="bg-gray-50">
-    
       <div className="relative h-96 w-full overflow-hidden">
         <img
-          src={caseStudy.image}
-          alt={caseStudy.title}
+          src={caseStudyWithDefaults.image}
+          alt={caseStudyWithDefaults.title}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent">
           <div className="container mx-auto px-6 h-full flex flex-col justify-end pb-12">
             <div className="max-w-3xl">
-              <span className="inline-block px-3 py-1 mb-4 text-sm font-medium text-white bg-teal-600 rounded-full">
-                {caseStudy.category}
+              <span className="inline-block px-3 py-1 mb-4 text-sm font-medium text-white bg-[#cfa827] rounded-full">
+                {caseStudyWithDefaults.category}
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                {caseStudy.title}
+                {caseStudyWithDefaults.title}
               </h1>
               <div className="flex items-center text-white space-x-6">
                 <div className="flex items-center">
                   <FiCalendar className="mr-2" />
-                  <span>{caseStudy.date}</span>
+                  <span>{caseStudyWithDefaults.date}</span>
                 </div>
                 <div className="flex items-center">
                   <FiClock className="mr-2" />
-                  <span>{caseStudy.readTime}</span>
+                  <span>{caseStudyWithDefaults.readTime}</span>
                 </div>
               </div>
             </div>
@@ -143,119 +190,134 @@ const CaseStudyBlogDetails = () => {
         </div>
       </div>
 
-     
       <div className="container mx-auto px-6 pt-8">
         <Link
           to="/case-studies"
-          className="inline-flex items-center text-teal-600 hover:text-teal-800 transition-colors"
+          className="inline-flex items-center text-gray-900 hover:text-gray-950 font-medium transition-colors"
         >
           <FiChevronLeft className="mr-1" />
           Back to Case Studies
         </Link>
       </div>
 
-     
+      {/* Content */}
       <div className="container mx-auto px-6 py-12 max-w-5xl">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-        
+          {/* Overview */}
           <div className="p-8 md:p-12 border-b border-gray-100">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Overview</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              {caseStudy.summary}
+              {caseStudyWithDefaults.summary}
             </p>
           </div>
 
-         
-          <div className="p-8 md:p-12 bg-gray-50">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Key Results
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {caseStudy.stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-lg shadow-sm text-center"
-                >
-                  <p className="text-4xl font-bold text-teal-600 mb-2">
-                    {stat.value}
-                  </p>
-                  <p className="text-gray-600">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-         
-          <div className="p-8 md:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-red-600 mb-4">
-                  Challenges
-                </h3>
-                <ul className="space-y-3">
-                  {caseStudy.challenges.map((challenge, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-red-500 mr-2">•</span>
-                      <span className="text-gray-700">{challenge}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-green-600 mb-4">
-                  Our Solutions
-                </h3>
-                <ul className="space-y-3">
-                  {caseStudy.solutions.map((solution, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
-                      <span className="text-gray-700">{solution}</span>
-                    </li>
-                  ))}
-                </ul>
+          {/* Key Results */}
+          {caseStudyWithDefaults.stats.length > 0 && (
+            <div className="p-8 md:p-12 bg-gray-50">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                Key Results
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {caseStudyWithDefaults.stats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-sm text-center"
+                  >
+                    <p className="text-4xl font-bold text-[#D4AF37] mb-2">
+                      {stat.value}
+                    </p>
+                    <p className="text-gray-600">{stat.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
+          )}
 
-       
-          <div className="p-8 md:p-12 bg-gray-50">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Case Study Details
-            </h2>
-            <div className="space-y-6 text-gray-700 leading-relaxed">
-              {caseStudy.description.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+          {/* Challenges & Solutions */}
+          {(caseStudyWithDefaults.challenges.length > 0 ||
+            caseStudyWithDefaults.solutions.length > 0) && (
+            <div className="p-8 md:p-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Challenges */}
+                {caseStudyWithDefaults.challenges.length > 0 && (
+                  <div>
+                    <h3 className="text-xl font-bold text-[#D4AF37] mb-4">
+                      Challenges
+                    </h3>
+                    <ul className="space-y-3">
+                      {caseStudyWithDefaults.challenges.map((challenge, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className="text-[#D4AF37] mr-2">•</span>
+                          <span className="text-gray-700">{challenge}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Solutions */}
+                {caseStudyWithDefaults.solutions.length > 0 && (
+                  <div>
+                    <h3 className="text-xl font-bold text-green-600 mb-4">
+                      Our Solutions
+                    </h3>
+                    <ul className="space-y-3">
+                      {caseStudyWithDefaults.solutions.map((solution, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className="text-green-500 mr-2">•</span>
+                          <span className="text-gray-700">{solution}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
+          )}
 
-         
-          {caseStudy.testimonial && (
+          {/* Case Study Details */}
+          {caseStudyWithDefaults.description.length > 0 && (
+            <div className="p-8 md:p-12 bg-gray-50">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                Case Study Details
+              </h2>
+              <div className="space-y-6 text-gray-700 leading-relaxed">
+                {caseStudyWithDefaults.description.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Testimonial */}
+          {caseStudyWithDefaults.testimonial && (
             <div className="p-8 md:p-12 bg-teal-50">
               <div className="max-w-3xl mx-auto">
                 <blockquote className="text-xl italic text-gray-700 mb-4">
-                  "{caseStudy.testimonial.text}"
+                  "{caseStudyWithDefaults.testimonial.text}"
                 </blockquote>
                 <div className="font-medium">
-                  <p className="text-teal-600">
-                    {caseStudy.testimonial.author}
+                  <p className="text-[#D4AF37]">
+                    {caseStudyWithDefaults.testimonial.author}
                   </p>
-                  <p className="text-gray-500">{caseStudy.testimonial.role}</p>
+                  <p className="text-gray-500">
+                    {caseStudyWithDefaults.testimonial.role}
+                  </p>
                 </div>
               </div>
             </div>
           )}
 
-         
-          {/* <div className="p-8 md:p-12 text-center">
+          {/* Call to Action */}
+          <div className="p-8 md:p-12 text-center">
             <Link
               to="/case-studies"
-              className="inline-flex items-center px-6 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-[#927209] text-white rounded-lg font-medium hover:bg-[#584505] transition-colors"
             >
               View All Case Studies
               <FiArrowRight className="ml-2" />
             </Link>
-          </div>  */}
+          </div>
         </div>
       </div>
     </div>
