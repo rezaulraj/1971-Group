@@ -28,7 +28,7 @@ const CaseStudyBlogDetails = () => {
         "The candidate screening process was enhanced with role-specific assessments that evaluated both technical skills and service orientation.",
       ],
       category: "Hospitality",
-      date: "March 15, 2023",
+      date: "March 15, 2025",
       readTime: "5 min read",
       stats: [
         { value: "85+", label: "Positions filled" },
@@ -100,7 +100,7 @@ const CaseStudyBlogDetails = () => {
         "Created multi-lingual training materials and onboarding processes.",
       ],
       category: "Agriculture",
-      date: "November 5, 2022",
+      date: "November 5, 2024",
       readTime: "6 min read",
       stats: [
         { value: "300+", label: "Workers placed" },
