@@ -311,7 +311,7 @@ const CaseStudyBlogDetails = () => {
           {/* Call to Action */}
           <div className="p-8 md:p-12 text-center">
             <Link
-              to="/case-studies"
+              to="/case-study"
               className="inline-flex items-center px-6 py-3 bg-[#927209] text-white rounded-lg font-medium hover:bg-[#584505] transition-colors"
             >
               View All Case Studies
