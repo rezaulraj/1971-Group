@@ -24,7 +24,7 @@ import {
   FaClock,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const BenefitItem = ({ icon: Icon, text }) => (
   <motion.div

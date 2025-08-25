@@ -10,7 +10,7 @@ import {
   FiClock,
   FiBarChart2,
 } from "react-icons/fi";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const Benefits = () => {
   const benefits = [

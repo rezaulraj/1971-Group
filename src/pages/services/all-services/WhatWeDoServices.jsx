@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Calendly from "../../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const WhatWeDoServices = () => {
   const [showCalendly, setShowCalendly] = useState(false);

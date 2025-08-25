@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import DOMPurify from "dompurify";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const WhatWeDo = () => {
   const services = [

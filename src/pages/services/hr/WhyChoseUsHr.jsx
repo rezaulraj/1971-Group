@@ -8,7 +8,7 @@ import {
   FaCreditCard,
   FaUsers,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const WhyChoseUsHr = () => {
   const features = [

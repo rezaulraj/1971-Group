@@ -7,7 +7,7 @@ import {
   FaClipboardCheck,
   FaArrowRight,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const OurProcess = () => {
   const steps = [

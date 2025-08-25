@@ -12,7 +12,7 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const WhyWorkUsStaffing = () => {
   const [showCalendly, setShowCalendly] = useState(false);

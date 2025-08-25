@@ -13,7 +13,7 @@ import {
   FiChevronRight,
 } from "react-icons/fi";
 import Calendly from "../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const HireWorkers = () => {
   const [showCalendly, setShowCalendly] = useState(false);

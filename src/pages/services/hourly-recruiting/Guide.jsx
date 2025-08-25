@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FiDownload, FiArrowRight } from "react-icons/fi";
 import guide from "../../../assets/allservice/gride.jpg?url";
 import Calendly from "../../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const Guide = () => {
   const [showCalendly, setShowCalendly] = useState(false);

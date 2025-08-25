@@ -18,7 +18,7 @@ import {
   FaChartLine,
   FaAward,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const HeroServices = () => {
   const [showCalendly, setShowCalendly] = useState(false);

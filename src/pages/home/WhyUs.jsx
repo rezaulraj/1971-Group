@@ -9,7 +9,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { motion, useInView, useAnimation } from "framer-motion";
 import ReactCountryFlag from "react-country-flag";
 import Calendly from "../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const AnimatedNumber = ({ value }) => {
   const controls = useAnimation();

@@ -17,7 +17,7 @@ import clogo7 from "../../assets/clined/cl7.png?url";
 import clogo8 from "../../assets/clined/cl8.png?url";
 import heroIndusty from "../../assets/industry/recruitment_industry.jpg";
 import Calendly from "../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const HeroIndustry = () => {
   const [showCalendly, setShowCalendly] = useState(false);

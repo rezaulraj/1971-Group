@@ -9,7 +9,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const ServiceCard = ({ icon: Icon, title, description, index }) => (
   <motion.div

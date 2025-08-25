@@ -1,7 +1,7 @@
 import React from "react";
 import { FaHandshake, FaChess, FaRocket, FaCheck } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const OurProcessHr = () => {
   const steps = [

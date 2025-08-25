@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 import hourlyWhat from "../../../assets/allservice/hourll.jpg?url";
 import hourlyfee from "../../../assets/allservice/recfee.jpg?url";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const AboutRecruitmentServices = () => {
   const services = [

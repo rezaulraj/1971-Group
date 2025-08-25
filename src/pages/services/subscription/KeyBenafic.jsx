@@ -8,7 +8,7 @@ import {
   FaDollarSign,
   FaHandshake,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const KeyBenafic = () => {
   const benefits = [

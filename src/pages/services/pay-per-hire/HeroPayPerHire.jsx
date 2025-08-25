@@ -26,7 +26,7 @@ import {
   FaChartLine,
   FaRocket,
 } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const HeroPayPerHire = () => {
   const [showCalendly, setShowCalendly] = useState(false);

@@ -21,7 +21,7 @@ import {
   FaAward,
 } from "react-icons/fa";
 import Calendly from "../../../components/Calendly";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const HeroHr = () => {
   const [showCalendly, setShowCalendly] = useState(false);

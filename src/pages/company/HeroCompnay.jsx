@@ -22,7 +22,7 @@ import clogo5 from "../../assets/clined/cl5.png?url";
 import clogo6 from "../../assets/clined/cl6.png?url";
 import clogo7 from "../../assets/clined/cl7.png?url";
 import clogo8 from "../../assets/clined/cl8.png?url";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const HeroCompany = () => {
   const [counters, setCounters] = useState({
