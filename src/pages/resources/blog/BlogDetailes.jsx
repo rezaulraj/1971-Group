@@ -54,7 +54,7 @@ const BlogDetails = () => {
           "How modern talent strategies are evolving to meet the demands of tomorrow's workforce",
         slug: "from-recruitment-to-talent-acquisition",
         category: "Recruiting",
-        date: "June 15, 2023",
+        date: "June 15, 2025",
         readTime: "8 min read",
         image: recuit1,
         content: [
@@ -161,7 +161,7 @@ const BlogDetails = () => {
         excerpt: "Crafting Job Descriptions Aligned with Business Goals",
         slug: "strategic-workforce-planning-tech-companies",
         category: "Outstaffing",
-        date: "May 28, 2023",
+        date: "May 28, 2025",
         readTime: "7 min read",
         image: staff1,
         content: [
@@ -214,7 +214,7 @@ const BlogDetails = () => {
           "How we identify and attract top-tier talent for executive positions in the Gulf region",
         slug: "exclusive-recruitment-headhunting",
         category: "HR",
-        date: "July 2, 2023",
+        date: "July 2, 2025",
         readTime: "6 min read",
         image: hr1,
         content: [
@@ -292,7 +292,7 @@ const BlogDetails = () => {
           "An in-depth look at flexible recruitment models that adapt to hourly workforce needs",
         slug: "what-is-hourly-recruiting",
         category: "Insights",
-        date: "June 22, 2023",
+        date: "June 22, 2025",
         readTime: "6 min read",
         image: herohr3,
         content: [
@@ -367,7 +367,7 @@ const BlogDetails = () => {
           "A breakdown of various recruitment pricing models and what businesses should expect",
         slug: "understanding-recruitment-fees",
         category: "Recruiting",
-        date: "July 5, 2023",
+        date: "July 5, 2025",
         readTime: "5 min read",
         image: service1,
         content: [
@@ -426,7 +426,7 @@ const BlogDetails = () => {
           "How artificial intelligence is reshaping sourcing, screening, and hiring decisions",
         slug: "ai-in-modern-recruitment",
         category: "Recruiting",
-        date: "July 7, 2023",
+        date: "July 7, 2025",
         readTime: "6 min read",
         image: airecruitments,
         content: [
@@ -576,7 +576,7 @@ const BlogDetails = () => {
           "Inside our approach to tech recruitment that scales with business growth",
         slug: "limitless-it-recruitment",
         category: "Recruiting",
-        date: "July 10, 2023",
+        date: "July 10, 2025",
         readTime: "6 min read",
         image: service3,
         content: [
@@ -653,7 +653,7 @@ const BlogDetails = () => {
           "An exclusive conversation with our CEO on the advantages of embedded hiring models",
         slug: "embedded-recruitment-ceo-interview",
         category: "Recruiting",
-        date: "July 12, 2023",
+        date: "July 12, 2025",
         readTime: "7 min read",
         image: interview,
         content: [
@@ -723,7 +723,7 @@ const BlogDetails = () => {
           "Explore the benefits of performance-based recruitment for startups and SMEs",
         slug: "pay-per-hire-recruitment",
         category: "Recruiting",
-        date: "July 14, 2023",
+        date: "July 14, 2025",
         readTime: "5 min read",
         image: itservices,
         content: [
@@ -791,7 +791,7 @@ const BlogDetails = () => {
           "Comparing the pros and cons of different recruitment models to help you choose the right one",
         slug: "recruitment-models-comparison",
         category: "Recruiting",
-        date: "July 16, 2023",
+        date: "July 16, 2025",
         readTime: "6 min read",
         image: frelance,
         content: [
@@ -871,7 +871,7 @@ const BlogDetails = () => {
           "Exploring the real-world applications of AI in candidate sourcing and engagement",
         slug: "ai-impact-recruitment",
         category: "Recruiting",
-        date: "July 18, 2023",
+        date: "July 18, 2025",
         readTime: "6 min read",
         image: airecruitment,
         content: [
@@ -939,7 +939,7 @@ const BlogDetails = () => {
           "Key data and benchmarks to guide your recruitment strategy in a competitive market",
         slug: "hr-recruitment-metrics",
         category: "HR",
-        date: "July 20, 2023",
+        date: "July 20, 2025",
         readTime: "5 min read",
         image: hrrecut,
         content: [
@@ -998,7 +998,7 @@ const BlogDetails = () => {
           "Tips for writing job descriptions that attract the right candidates and align with business objectives",
         slug: "effective-job-descriptions",
         category: "HR",
-        date: "July 22, 2023",
+        date: "July 22, 2025",
         readTime: "5 min read",
         image: herohr1,
         content: [
@@ -1068,7 +1068,7 @@ const BlogDetails = () => {
           "An overview of how executive search firms identify top leadership talent across industries",
         slug: "executive-search-explained",
         category: "HR",
-        date: "July 24, 2023",
+        date: "July 24, 2025",
         readTime: "6 min read",
         image: tips,
         content: [
@@ -1147,7 +1147,7 @@ const BlogDetails = () => {
           "Why more companies are outsourcing entire projects and what it takes to manage them effectively",
         slug: "project-based-outstaffing",
         category: "Outstaffing",
-        date: "July 26, 2023",
+        date: "July 26, 2025",
         readTime: "6 min read",
         image: paypers,
         content: [
@@ -1221,7 +1221,7 @@ const BlogDetails = () => {
           "How to structure and manage offshore teams that function as seamless extensions of your organization",
         slug: "dedicated-development-teams",
         category: "Outstaffing",
-        date: "July 28, 2023",
+        date: "July 28, 2025",
         readTime: "5 min read",
         image: subscriptionImage,
         content: [
@@ -1285,7 +1285,7 @@ const BlogDetails = () => {
           "Step-by-step guide to building a dedicated offshore support center with skilled talent",
         slug: "technical-support-hub",
         category: "Outstaffing",
-        date: "July 30, 2023",
+        date: "July 30, 2025",
         readTime: "5 min read",
         image: ceoImage,
         content: [
@@ -1359,7 +1359,7 @@ const BlogDetails = () => {
           "What makes our headhunting services unique, and how we ensure high-quality executive matches",
         slug: "exclusive-headhunting",
         category: "Outstaffing",
-        date: "August 1, 2023",
+        date: "August 1, 2025",
         readTime: "6 min read",
         image: guide,
         content: [
@@ -1438,7 +1438,7 @@ const BlogDetails = () => {
           "Explore the most in-demand cybersecurity roles and how salaries compare globally",
         slug: "cybersecurity-roles-salary-trends",
         category: "Outstaffing",
-        date: "August 3, 2023",
+        date: "August 3, 2025",
         readTime: "7 min read",
         image: cyber,
         content: [
@@ -1538,7 +1538,7 @@ const BlogDetails = () => {
           "An exclusive interview with 1971 Group's CEO on talent strategies for hypergrowth markets",
         slug: "ceo-interview-scaling-teams",
         category: "Insights",
-        date: "August 5, 2023",
+        date: "August 5, 2025",
         readTime: "8 min read",
         image: ceo,
         content: [
@@ -1661,7 +1661,7 @@ const BlogDetails = () => {
           "How emerging technologies are transforming hiring practices in Middle Eastern tech markets.",
         slug: "future-tech-recruitment-gulf-region",
         category: "Industry Trends",
-        date: "May 15, 2023",
+        date: "May 15, 2025",
         readTime: "8 min read",
         image: techg,
         content: [
@@ -1717,7 +1717,7 @@ const BlogDetails = () => {
           {
             type: "heading",
             level: 2,
-            text: "2023 Gulf Tech Salary Benchmarks",
+            text: "2025 Gulf Tech Salary Benchmarks",
           },
           {
             type: "table",
@@ -1774,7 +1774,7 @@ const BlogDetails = () => {
           "Strategies for creating inclusive technical teams that drive innovation.",
         slug: "building-diverse-engineering-teams",
         category: "Best Practices",
-        date: "June 2, 2023",
+        date: "June 2, 2025",
         readTime: "6 min read",
         image: engi,
         content: [
@@ -2078,7 +2078,7 @@ const BlogDetails = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-600 text-white mb-4">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-600 text-white mb-4">
               <MdCategory className="mr-1" /> {currentPost.category}
             </span>
             <h1 className="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
