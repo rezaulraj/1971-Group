@@ -173,7 +173,7 @@ const Industries = () => {
         "https://images.unsplash.com/photo-1551131618-3f0a5cf594b4?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      name: "Agriculture",
+      name: "Agriculture & Farming",
       icon: <FaTractor className="text-xl" />,
       image:
         "https://plus.unsplash.com/premium_photo-1661907005604-cec7ffb6a042?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

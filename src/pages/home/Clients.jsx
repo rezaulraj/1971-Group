@@ -140,7 +140,7 @@ const Clients = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-white sm:text-5xl mb-4">
-            What Our <span className="text-blue-300">Clients</span> Say
+            What Our <span className="text-[#D4AF37]">Clients</span> Say
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Trusted by CEOs, HR managers, and hiring partners across global
@@ -184,7 +184,7 @@ const Clients = () => {
                           key={i}
                           className={`${
                             i < testimonials[current].rating
-                              ? "text-yellow-400"
+                              ? "text-[#D4AF37]"
                               : "text-gray-500/30"
                           } text-xl`}
                         />
@@ -240,7 +240,7 @@ const Clients = () => {
                 onClick={() => goToTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
                   current === index
-                    ? "bg-blue-400 w-6 scale-125"
+                    ? "bg-[#D4AF37] w-6 scale-125"
                     : "bg-white/30 hover:bg-white/50"
                 }`}
               />
